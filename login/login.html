@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CompostCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="login.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="../components/component.js" defer></script>
+    <script src="../global/global.js" defer></script>
+    <script src="login.js" defer></script>
+  </head>
+  <body>
+    <!-- =========================================================
+       LOGIN PAGE
+  ========================================================= -->
+
+    <main class="login-page">
+      
+      <!-- =====================================================
+     PAGE CONTROLS
+===================================================== -->
+
+      <div class="login-page-controls">
+        <button
+          type="button"
+          class="login-control-btn"
+          id="rtlToggle"
+          aria-label="Toggle RTL"
+        >
+          <i data-lucide="languages"></i>
+        </button>
+
+        <button
+          type="button"
+          class="login-control-btn"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <i data-lucide="sun"></i>
+        </button>
+      </div>
+
+      <!-- =====================================================
+     LOGIN CONTAINER
+===================================================== -->
+
+      <section class="login-container">
+        <!-- =================================================
+       LOGO + BRAND
+  ================================================= -->
+
+        <a
+          href="../Home1/home1.html"
+          class="login-brand"
+          aria-label="CompostCare Home"
+        >
+          <img src="../images/logo.png" alt="CompostCare Logo" />
+
+          <span class="login-brand-text">
+            <span class="login-brand-primary">Compost</span
+            ><span class="login-brand-secondary">Care</span>
+          </span>
+        </a>
+
+        <!-- =================================================
+       LOGIN INTRO
+  ================================================= -->
+
+        <div class="login-intro">
+          <h1>Login</h1>
+
+          <p>Access your CompostCare account.</p>
+        </div>
+
+        <!-- =================================================
+       LOGIN FORM
+  ================================================= -->
+
+        <form class="login-form" id="loginForm">
+          <!-- =================================================
+         EMAIL
+    ================================================= -->
+
+          <div class="login-field">
+            <label for="loginEmail"> Email Address </label>
+
+            <div class="login-input-wrapper">
+              <i data-lucide="mail"></i>
+
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- =================================================
+         PASSWORD
+    ================================================= -->
+
+          <div class="login-field">
+            <label for="loginPassword"> Password </label>
+
+            <div class="login-input-wrapper">
+              <i data-lucide="lock"></i>
+
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                class="login-password-toggle"
+                id="loginPasswordToggle"
+                aria-label="Show password"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- =================================================
+         LOGIN BUTTON
+    ================================================= -->
+
+          <button type="submit" class="login-submit">Login</button>
+
+          <!-- =================================================
+         SOCIAL LOGIN DIVIDER
+    ================================================= -->
+
+          <div class="login-divider">
+            <span></span>
+
+            <p>Or continue with</p>
+
+            <span></span>
+          </div>
+
+          <!-- =================================================
+         SOCIAL LOGIN OPTIONS
+    ================================================= -->
+
+          <div class="login-social-options">
+            <!-- GOOGLE -->
+
+            <button type="button" class="login-social-btn login-google">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="#4285F4"
+                  d="M21.35 12.27c0-.79-.07-1.55-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"
+                />
+
+                <path
+                  fill="#34A853"
+                  d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.5A9.74 9.74 0 0 0 12 21.75z"
+                />
+
+                <path
+                  fill="#FBBC05"
+                  d="M6.54 13.85A5.85 5.85 0 0 1 6.23 12c0-.64.11-1.27.31-1.85v-2.5H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.06 1.05 4.35l3.24-2.5z"
+                />
+
+                <path
+                  fill="#EA4335"
+                  d="M12 6.12c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.2 14.63 2.25 12 2.25a9.74 9.74 0 0 0-8.7 5.4l3.24 2.5C6.31 7.84 8.46 6.12 12 6.12z"
+                />
+              </svg>
+
+              <span>Google</span>
+            </button>
+
+            <!-- APPLE -->
+
+            <button type="button" class="login-social-btn login-apple">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.09.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.97.48 7.12-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.34 4.5-3.74 4.25z"
+                />
+              </svg>
+
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <!-- =================================================
+         SIGN UP LINK
+    ================================================= -->
+
+          <p class="login-signup-link">
+            Don't have an account?
+
+            <a href="../signup/singup.html"> Sign Up </a>
+          </p>
+        </form>
+      </section>
+      
+    </main>
+  </body>
+</html>

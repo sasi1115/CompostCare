@@ -1,0 +1,3290 @@
+/* =====================================================
+   HOME1 HERO SECTION
+===================================================== */
+
+.home1-hero {
+  padding-top: 50px;
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 0;
+
+  display: flex;
+  align-items: flex-start;
+  background-image: url("../images/home1-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* =====================================================
+   HERO OVERLAY
+===================================================== */
+
+.home1-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 1;
+}
+
+/* =====================================================
+   HERO CONTAINER
+===================================================== */
+
+.home1-hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: 85%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.home1-hero-content {
+  width: 680px;
+  max-width: 100%;
+
+  padding: 45px 0;
+}
+
+/* =========================================================
+   HERO TAG
+========================================================= */
+
+.home1-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.home1-hero-tag svg {
+  width: 18px;
+  height: 18px;
+  color: var(--light-bg);
+  flex-shrink: 0;
+}
+/* =====================================================
+   HERO HEADING
+===================================================== */
+
+.home1-hero-content h1 {
+  margin: 0 0 24px;
+
+  font-size: clamp(46px, 5vw, 68px);
+  line-height: 1.12;
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  color: var(--white);
+}
+
+.home1-hero-content h1 span {
+  display: block;
+
+  color: var(--secondary-color);
+}
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.home1-hero-description {
+  max-width: 630px;
+
+  margin: 0 0 32px;
+
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--white);
+}
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.home1-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 50px;
+  margin-bottom: 36px;
+}
+
+/* =====================================================
+   COMMON HERO BUTTON
+===================================================== */
+
+.home1-hero-primary-btn,
+.home1-hero-secondary-btn {
+  min-height: 50px;
+
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 50px;
+
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =====================================================
+   PRIMARY HERO BUTTON
+===================================================== */
+
+.home1-hero-primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+
+  border: 1px solid var(--primary-color);
+}
+
+.home1-hero-primary-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.home1-hero-primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   SECONDARY HERO BUTTON
+===================================================== */
+
+.home1-hero-secondary-btn {
+  background-color: transparent;
+  color: var(--white);
+
+  border: 1px solid var(--white);
+}
+
+.home1-hero-secondary-btn:hover {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+.dark-mode .home1-hero-overlay {
+  background: rgba(0, 0, 0, 0.68);
+}
+
+/* =====================================================
+   NEST HUB
+   1024 × 600
+===================================================== */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .home1-hero-container {
+    width: 85%;
+  }
+
+  .home1-hero-content {
+    width: 600px;
+    padding: 40px 0;
+  }
+
+  .home1-hero-tag {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  .home1-hero-content h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+
+  .home1-hero-description {
+    max-width: 560px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home1-hero-buttons {
+    margin-bottom: 28px;
+  }
+}
+
+/* =====================================================
+   IPAD MINI
+   768 × 1024
+===================================================== */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-hero {
+    padding: 100px 0;
+    height: 70vh;
+    background-position: 65% center;
+  }
+
+  .home1-hero-overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .home1-hero-container {
+    width: 88%;
+  }
+
+  .home1-hero-content {
+    width: 100%;
+    max-width: 620px;
+    padding: 45px 0;
+  }
+
+  .home1-hero-tag {
+    gap: 7px;
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+
+  .home1-hero-tag svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home1-hero-content h1 {
+    margin-bottom: 20px;
+    font-size: 46px;
+    line-height: 1.15;
+  }
+
+  .home1-hero-description {
+    max-width: 580px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .home1-hero-buttons {
+    margin-bottom: 30px;
+  }
+}
+
+/* =====================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+===================================================== */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home1-hero {
+    height: 100vh;
+    background-position: 68% center;
+  }
+
+  .home1-hero-overlay {
+    background: rgba(0, 0, 0, 0.68);
+  }
+
+  .home1-hero-container {
+    width: 88%;
+  }
+
+  .home1-hero-content {
+    width: 100%;
+    padding: 35px 0;
+  }
+
+  .home1-hero-tag {
+    gap: 7px;
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+
+  .home1-hero-tag svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home1-hero-content h1 {
+    margin-bottom: 18px;
+    font-size: 34px;
+    line-height: 1.16;
+    letter-spacing: -0.5px;
+  }
+
+  .home1-hero-description {
+    margin-bottom: 26px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home1-hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 11px;
+
+    margin-bottom: 30px;
+  }
+
+  .home1-hero-primary-btn,
+  .home1-hero-secondary-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+/* =========================================================
+   HOME 1 - IMPACT SECTION
+========================================================= */
+
+.home1-impact {
+  width: 100%;
+  padding: 90px 0;
+  background: var(--light-bg);
+}
+
+.home1-impact-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   IMPACT SECTION HEADER
+========================================================= */
+
+.home1-impact-header {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+/* =========================================================
+   IMPACT TAG
+========================================================= */
+
+.home1-impact-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-bottom: 14px;
+  padding: 6px 16px;
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home1-impact-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+
+  color: var(--light-bg);
+  background: var(--primary-color);
+
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   IMPACT HEADING
+========================================================= */
+
+.home1-impact-header h2 {
+  margin: 0 0 16px;
+
+  font-size: 38px;
+  line-height: 1.25;
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+
+.home1-impact-header h2 span {
+  color: var(--secondary-color);
+}
+/* =========================================================
+   IMPACT DESCRIPTION
+========================================================= */
+
+.home1-impact-header p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   IMPACT COUNTER GRID
+========================================================= */
+
+.home1-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* =========================================================
+   IMPACT COUNTER ITEM
+========================================================= */
+
+.home1-impact-item {
+  min-height: 150px;
+  padding: 28px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================================================
+   IMPACT NUMBER
+========================================================= */
+
+.home1-impact-number {
+  margin-bottom: 8px;
+
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   IMPACT TEXT
+========================================================= */
+
+.home1-impact-item p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.home1-impact-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary-color);
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-impact {
+    padding: 65px 0;
+  }
+
+  .home1-impact-container {
+    width: 85%;
+  }
+
+  .home1-impact-header {
+    margin-bottom: 40px;
+  }
+
+  .home1-impact-header h2 {
+    font-size: 34px;
+  }
+
+  .home1-impact-header p {
+    font-size: 15px;
+  }
+
+  .home1-impact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .home1-impact-item {
+    min-height: 135px;
+    padding: 22px 15px;
+  }
+
+  .home1-impact-number {
+    font-size: 34px;
+  }
+
+  .home1-impact-item p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-impact {
+    padding: 70px 0;
+  }
+
+  .home1-impact-container {
+    width: 88%;
+  }
+
+  .home1-impact-header {
+    margin-bottom: 40px;
+  }
+
+  .home1-impact-tag {
+    font-size: 13px;
+    padding: 6px 15px;
+  }
+
+  .home1-impact-header h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .home1-impact-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home1-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .home1-impact-item {
+    min-height: 140px;
+    padding: 25px 15px;
+  }
+
+  .home1-impact-number {
+    font-size: 34px;
+  }
+
+  .home1-impact-item p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home1-impact {
+    padding: 55px 0;
+  }
+
+  .home1-impact-container {
+    width: 88%;
+  }
+
+  .home1-impact-header {
+    margin-bottom: 35px;
+  }
+
+  .home1-impact-tag {
+    gap: 6px;
+    font-size: 13px;
+    padding: 5px 14px;
+  }
+
+  .home1-impact-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home1-impact-header h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .home1-impact-header p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .home1-impact-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home1-impact-item {
+    min-height: 125px;
+    padding: 22px 15px;
+  }
+
+  .home1-impact-number {
+    font-size: 32px;
+  }
+
+  .home1-impact-item p {
+    font-size: 14px;
+  }
+}
+/* =====================================================
+   HOME1 ABOUT / INTRODUCTION SECTION
+===================================================== */
+
+.home1-about {
+  width: 100%;
+  padding: 90px 0;
+
+  background-color: var(--light-bg);
+}
+
+/* =====================================================
+   ABOUT CONTAINER
+===================================================== */
+
+.home1-about-container {
+  width: 85%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 70px;
+}
+
+/* =====================================================
+   ABOUT IMAGE
+===================================================== */
+
+.home1-about-image {
+  width: 100%;
+  height: 510px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.home1-about-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =====================================================
+   ABOUT CONTENT
+===================================================== */
+
+.home1-about-content {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* =====================================================
+   ABOUT TAG
+===================================================== */
+
+/* =========================================================
+   ABOUT TAG
+========================================================= */
+
+.home1-about-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  padding: 7px 15px 7px 10px;
+
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  color: var(--primary-color);
+
+  background: var(--light-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+
+  box-shadow: 0 4px 12px rgba(179, 90, 58, 0.1);
+}
+
+.home1-about-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+
+  color: var(--light-bg);
+  background: var(--primary-color);
+
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   ABOUT HEADING
+===================================================== */
+
+.home1-about-content h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+
+.home1-about-content h2 span {
+  display: block;
+
+  color: var(--secondary-color);
+}
+
+/* =====================================================
+   ABOUT DESCRIPTION
+===================================================== */
+
+.home1-about-description {
+  margin: 0 0 30px;
+
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =====================================================
+   ABOUT FEATURES
+===================================================== */
+
+.home1-about-features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  margin-bottom: 32px;
+}
+
+/* =====================================================
+   SINGLE ABOUT FEATURE
+===================================================== */
+
+.home1-about-feature {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+}
+
+/* =====================================================
+   FEATURE ICON
+===================================================== */
+
+.home1-about-feature-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background-color: var(--primary-color);
+}
+
+.home1-about-feature-icon svg {
+  width: 19px;
+  height: 19px;
+
+  color: var(--white);
+}
+
+/* =====================================================
+   FEATURE CONTENT
+===================================================== */
+
+.home1-about-feature-content {
+  flex: 1;
+}
+
+.home1-about-feature-content h3 {
+  margin: 0 0 4px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color: var(--primary-color);
+}
+
+.home1-about-feature-content p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =====================================================
+   LEARN MORE BUTTON
+===================================================== */
+
+.home1-about-btn {
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 50px;
+
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.home1-about-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.home1-about-btn:hover {
+  transform: translateY(-2px);
+}
+/* =====================================================
+   NEST HUB
+   1024 × 600
+===================================================== */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-about {
+    padding: 65px 0;
+  }
+
+  .home1-about-container {
+    width: 85%;
+    gap: 45px;
+  }
+
+  .home1-about-image {
+    height: 400px;
+  }
+
+  .home1-about-content h2 {
+    font-size: 38px;
+  }
+
+  .home1-about-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .home1-about-features {
+    gap: 16px;
+    margin-bottom: 26px;
+  }
+
+  .home1-about-feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home1-about-feature-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home1-about-feature-content h3 {
+    font-size: 15px;
+  }
+
+  .home1-about-feature-content p {
+    font-size: 12px;
+  }
+}
+
+/* =====================================================
+   IPAD MINI
+   768 × 1024
+===================================================== */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-about {
+    padding: 70px 0;
+  }
+
+  .home1-about-container {
+    width: 88%;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .home1-about-image {
+    height: 420px;
+  }
+
+  .home1-about-tag {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .home1-about-content h2 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .home1-about-description {
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home1-about-features {
+    gap: 15px;
+    margin-bottom: 26px;
+  }
+
+  .home1-about-feature {
+    gap: 11px;
+  }
+
+  .home1-about-feature-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home1-about-feature-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home1-about-feature-content h3 {
+    font-size: 14px;
+  }
+
+  .home1-about-feature-content p {
+    font-size: 12px;
+  }
+
+  .home1-about-btn {
+    min-height: 46px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+===================================================== */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home1-about {
+    padding: 50px 0;
+  }
+
+  .home1-about-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .home1-about-image {
+    height: 270px;
+    border-radius: 8px;
+  }
+
+  .home1-about-content {
+    max-width: 100%;
+  }
+
+  .home1-about-tag {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .home1-about-content h2 {
+    margin-bottom: 16px;
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .home1-about-description {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .home1-about-features {
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .home1-about-feature {
+    gap: 11px;
+  }
+
+  .home1-about-feature-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home1-about-feature-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home1-about-feature-content h3 {
+    font-size: 13px;
+  }
+
+  .home1-about-feature-content p {
+    font-size: 11px;
+  }
+
+  .home1-about-btn {
+    min-height: 46px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   HOME1 SERVICES SECTION
+========================================================= */
+
+.home1-services {
+  width: 100%;
+  padding: 90px 0;
+  background: var(--light-bg);
+}
+
+.home1-services-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SERVICES HEADER
+========================================================= */
+
+.home1-services-header {
+  max-width: 680px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.home1-services-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 6px 14px 6px 10px;
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  color: var(--primary-color);
+  background: var(--light-bg);
+
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+
+  box-shadow: 0 4px 12px rgba(179, 90, 58, 0.1);
+}
+
+.home1-services-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+
+  color: var(--light-bg);
+  background: var(--primary-color);
+
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.home1-services-header h2 {
+  margin: 0 0 18px;
+  color: var(--primary-color);
+  font-size: 38px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.home1-services-header h2 span {
+  display: block;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.home1-services-header p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.home1-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.home1-service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 30px 24px;
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  text-align: center;
+  align-items: center;
+}
+
+.home1-service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
+.home1-service-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  background: var(--primary-color);
+  color: var(--light-bg);
+  border-radius: 8px;
+}
+
+.home1-service-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.8;
+}
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.home1-service-card h3 {
+  min-height: 56px;
+  margin: 0 0 14px;
+  color: var(--primary-color);
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.home1-service-card h3 span {
+  display: block;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* =========================================================
+   SERVICE DESCRIPTION
+========================================================= */
+
+.home1-service-card p {
+  min-height: 96px;
+  margin: 0 0 22px;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* =========================================================
+   SERVICE LINK
+========================================================= */
+
+.home1-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-top: auto;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.home1-service-link:hover {
+  color: var(--secondary-color);
+}
+
+.home1-service-link svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.home1-service-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .home1-service-card {
+  box-shadow: none;
+}
+
+.dark-mode .home1-service-card:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-services {
+    padding: 65px 0;
+  }
+
+  .home1-services-container {
+    width: 85%;
+  }
+
+  .home1-services-header {
+    margin-bottom: 40px;
+  }
+
+  .home1-services-header h2 {
+    font-size: 32px;
+  }
+
+  .home1-services-header p {
+    font-size: 15px;
+  }
+
+  .home1-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .home1-service-card {
+    padding: 24px 18px;
+  }
+
+  .home1-service-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+  }
+
+  .home1-service-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .home1-service-card h3 {
+    font-size: 18px;
+    min-height: 52px;
+  }
+
+  .home1-service-card p {
+    font-size: 13px;
+    min-height: 100px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-services {
+    padding: 75px 0;
+  }
+
+  .home1-services-container {
+    width: 88%;
+  }
+
+  .home1-services-header {
+    max-width: 620px;
+    margin-bottom: 42px;
+  }
+
+  .home1-services-tag {
+    font-size: 13px;
+  }
+
+  .home1-services-header h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .home1-services-header p {
+    font-size: 15px;
+  }
+
+  .home1-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .home1-service-card {
+    padding: 28px 22px;
+  }
+
+  .home1-service-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 20px;
+  }
+
+  .home1-service-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .home1-service-card h3 {
+    font-size: 19px;
+    min-height: 54px;
+  }
+
+  .home1-service-card p {
+    min-height: 92px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home1-services {
+    padding: 50px 0;
+  }
+
+  .home1-services-container {
+    width: 88%;
+  }
+
+  .home1-services-header {
+    margin-bottom: 35px;
+  }
+
+  .home1-services-tag {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .home1-services-header h2 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .home1-services-header p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .home1-services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .home1-service-card {
+    padding: 25px 22px;
+  }
+
+  .home1-service-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+  }
+
+  .home1-service-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .home1-service-card h3 {
+    min-height: auto;
+    margin-bottom: 12px;
+    font-size: 19px;
+  }
+
+  .home1-service-card p {
+    min-height: auto;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+/* =========================================================
+   KNOW YOUR WASTE
+========================================================= */
+
+.home1-waste {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--light-bg);
+}
+
+.home1-waste-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* =========================================================
+   LEFT IMAGE
+========================================================= */
+
+.home1-waste-image {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.home1-waste-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+   /* object-position: center; */
+}
+
+.home1-waste-image-badge {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 8px;
+  background: var(--white);
+  color: var(--primary-color);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.14);
+}
+
+.home1-waste-badge-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home1-waste-badge-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.home1-waste-content {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* =========================================================
+   SECTION TAG
+========================================================= */
+
+.home1-waste-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 16px 6px 6px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.home1-waste-tag-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home1-waste-tag-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.home1-waste-title {
+  margin: 22px 0 16px;
+  color: var(--primary-color);
+  font-size: 42px;
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+}
+
+.home1-waste-title span {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.home1-waste-description {
+  max-width: 520px;
+  margin: 0 0 34px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   WASTE LIST
+========================================================= */
+
+.home1-waste-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home1-waste-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.home1-waste-item:first-child {
+  padding-top: 0;
+}
+
+.home1-waste-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* =========================================================
+   WASTE ICON
+========================================================= */
+
+.home1-waste-item-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home1-waste-item-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* =========================================================
+   WASTE ITEM CONTENT
+========================================================= */
+
+.home1-waste-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.home1-waste-item-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.home1-waste-item-number {
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.home1-waste-item-heading h3 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 650;
+}
+
+.home1-waste-item-content p {
+  margin: 0 0 9px;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   DESTINATION
+========================================================= */
+
+.home1-waste-destination {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.home1-waste-destination svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-waste {
+    padding: 70px 0;
+  }
+
+  .home1-waste-container {
+    width: 88%;
+    gap: 45px;
+  }
+
+  .home1-waste-image {
+    height: 430px;
+    border-radius: 20px;
+  }
+
+  .home1-waste-image-badge {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .home1-waste-title {
+    font-size: 34px;
+    margin-top: 18px;
+  }
+
+  .home1-waste-description {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .home1-waste-item {
+    padding: 14px 0;
+    gap: 14px;
+  }
+
+  .home1-waste-item-icon {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .home1-waste-item-heading h3 {
+    font-size: 17px;
+  }
+
+  .home1-waste-item-content p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) {
+  .home1-waste {
+    padding: 80px 0;
+  }
+
+  .home1-waste-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .home1-waste-content {
+  order: 1;
+}
+
+.home1-waste-image {
+  order: 2;
+}
+
+  .home1-waste-image {
+    height: 420px;
+  }
+
+  .home1-waste-content {
+    max-width: 100%;
+  }
+
+  .home1-waste-title {
+    font-size: 36px;
+  }
+
+  .home1-waste-description {
+    max-width: 650px;
+  }
+
+  .home1-waste-item {
+    padding: 18px 0;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) {
+  .home1-waste {
+    padding: 60px 0;
+  }
+
+  .home1-waste-container {
+    width: 88%;
+    gap: 35px;
+  }
+  .home1-waste-content {
+  order: 1;
+}
+
+.home1-waste-image {
+  order: 2;
+}
+
+  .home1-waste-image {
+    height: 300px;
+    border-radius: 18px;
+  }
+
+  .home1-waste-image-badge {
+    left: 12px;
+    bottom: 12px;
+    gap: 7px;
+    padding: 6px 12px 6px 6px;
+    font-size: 11px;
+  }
+
+  .home1-waste-badge-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home1-waste-badge-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .home1-waste-tag {
+    gap: 7px;
+    padding: 5px 12px 5px 5px;
+    font-size: 10px;
+  }
+
+  .home1-waste-tag-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .home1-waste-tag-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .home1-waste-title {
+    margin: 18px 0 12px;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .home1-waste-description {
+    margin-bottom: 22px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .home1-waste-item {
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .home1-waste-item-icon {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+  }
+
+  .home1-waste-item-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home1-waste-item-heading {
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .home1-waste-item-number {
+    font-size: 10px;
+  }
+
+  .home1-waste-item-heading h3 {
+    font-size: 16px;
+  }
+
+  .home1-waste-item-content p {
+    margin-bottom: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .home1-waste-destination {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .home1-waste-destination svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+/* =========================================================
+    HOME1 HOW IT WORKS SECTION
+ ========================================================= */
+
+.home1-how-it-works {
+  width: 100%;
+
+  padding: 90px 0;
+
+  background: var(--light-bg);
+}
+
+.home1-how-it-works-container {
+  width: 85%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HOW IT WORKS HEADER
+========================================================= */
+
+.home1-how-it-works-header {
+  max-width: 680px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.home1-how-it-works-tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  padding: 6px 14px 6px 10px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: var(--primary-color);
+
+  background: var(--light-bg);
+
+  border: 2px solid var(--secondary-color);
+
+  border-radius: 50px;
+}
+
+.home1-how-it-works-tag svg {
+  width: 20px;
+
+  height: 20px;
+
+  padding: 3px;
+
+  color: var(--light-bg);
+
+  background: var(--primary-color);
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+.home1-how-it-works-header h2 {
+  margin: 0 0 18px;
+
+  color: var(--primary-color);
+
+  font-size: 38px;
+
+  line-height: 1.25;
+
+  font-weight: 600;
+}
+
+.home1-how-it-works-header h2 span {
+  display: block;
+
+  color: var(--secondary-color);
+
+  font-weight: 600;
+}
+
+.home1-how-it-works-header p {
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   PROCESS STEPS
+========================================================= */
+
+.home1-how-it-works-steps {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.home1-how-step {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 285px;
+
+  padding: 28px 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  text-align: center;
+
+  background: var(--light-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.home1-how-step:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--secondary-color);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   STEP NUMBER
+========================================================= */
+
+.home1-how-step-number {
+  position: absolute;
+
+  top: 12px;
+
+  right: 14px;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  color: var(--secondary-color);
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   STEP ICON
+========================================================= */
+
+.home1-how-step-icon {
+  width: 58px;
+
+  height: 58px;
+
+  margin: 4px auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--primary-color);
+
+  color: var(--light-bg);
+
+  border-radius: 50%;
+}
+
+.home1-how-step-icon svg {
+  width: 26px;
+
+  height: 26px;
+
+  stroke-width: 1.8;
+}
+
+/* =========================================================
+   STEP TITLE
+========================================================= */
+
+.home1-how-step h3 {
+  margin: 0 0 12px;
+
+  color: var(--primary-color);
+
+  font-size: 19px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   STEP DESCRIPTION
+========================================================= */
+
+.home1-how-step p {
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.home1-how-step-connector {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--secondary-color);
+}
+
+.home1-how-step-connector svg {
+  width: 22px;
+
+  height: 22px;
+
+  stroke-width: 1.8;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .home1-how-step {
+  box-shadow: none;
+}
+
+.dark-mode .home1-how-step:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-how-it-works {
+    padding: 65px 0;
+  }
+
+  .home1-how-it-works-container {
+    width: 85%;
+  }
+
+  .home1-how-it-works-header {
+    margin-bottom: 40px;
+  }
+
+  .home1-how-it-works-header h2 {
+    font-size: 34px;
+  }
+
+  .home1-how-it-works-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home1-how-it-works-steps {
+    grid-template-columns:
+      1fr
+      auto
+      1fr
+      auto
+      1fr
+      auto
+      1fr;
+
+    gap: 10px;
+  }
+
+  .home1-how-step {
+    min-height: 255px;
+    padding: 24px 16px;
+  }
+
+  .home1-how-step-number {
+    top: 11px;
+    right: 12px;
+    font-size: 11px;
+  }
+
+  .home1-how-step-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+
+  .home1-how-step-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .home1-how-step h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .home1-how-step p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .home1-how-step-connector svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-how-it-works {
+    padding: 70px 0;
+  }
+
+  .home1-how-it-works-container {
+    width: 88%;
+  }
+
+  .home1-how-it-works-header {
+    max-width: 620px;
+    margin-bottom: 42px;
+  }
+
+  .home1-how-it-works-tag {
+    font-size: 13px;
+  }
+
+  .home1-how-it-works-header h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .home1-how-it-works-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home1-how-it-works-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .home1-how-step {
+    min-height: 270px;
+    padding: 26px 20px;
+  }
+
+  .home1-how-step-connector {
+    display: none;
+  }
+
+  .home1-how-step-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+  }
+
+  .home1-how-step-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .home1-how-step h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .home1-how-step p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home1-how-it-works {
+    padding: 55px 0;
+  }
+
+  .home1-how-it-works-container {
+    width: 88%;
+  }
+
+  .home1-how-it-works-header {
+    margin-bottom: 35px;
+  }
+
+  .home1-how-it-works-tag {
+    gap: 7px;
+    margin-bottom: 12px;
+    padding: 5px 11px 5px 8px;
+    font-size: 12px;
+  }
+
+  .home1-how-it-works-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home1-how-it-works-header h2 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .home1-how-it-works-header p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .home1-how-it-works-steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home1-how-step {
+    min-height: auto;
+    padding: 24px 18px;
+  }
+
+  .home1-how-step-number {
+    top: 10px;
+    right: 12px;
+    font-size: 11px;
+  }
+
+  .home1-how-step-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+
+  .home1-how-step-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .home1-how-step h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .home1-how-step p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
+/* =====================================================
+   TESTIMONIAL SECTION
+===================================================== */
+
+.home1-testimonial {
+  width: 100%;
+  padding: 90px 0;
+  background: var(--light-bg);
+}
+
+.home1-testimonial-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.home1-testimonial-header {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.home1-testimonial-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+  padding: 6px 14px;
+
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
+}
+
+.home1-testimonial-tag svg {
+  width: 20px;
+  height: 20px;
+
+  padding: 3px;
+
+  color: var(--light-bg);
+  background: var(--primary-color);
+
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.home1-testimonial-title {
+  margin: 0 0 16px;
+
+  font-size: 38px;
+  line-height: 1.25;
+  font-weight: 600;
+
+  color: var(--primary-color);
+
+  text-align: center;
+}
+.home1-testimonial-title span {
+  color: var(--secondary-color);
+}
+
+.home1-testimonial-description {
+  max-width: 680px;
+  margin: 0 auto;
+
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+
+  text-align: center;
+}
+
+/* =====================================================
+   TESTIMONIAL CONTENT
+===================================================== */
+
+.home1-testimonial-content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.home1-testimonial-main {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =====================================================
+   CUSTOMER IMAGE
+===================================================== */
+
+.home1-testimonial-image {
+  width: 100px;
+  height: 100px;
+
+  margin: 0 auto 28px;
+
+  overflow: hidden;
+
+  border: 5px solid var(--secondary-color);
+  border-radius: 50%;
+
+  background: var(--primary-color);
+}
+
+.home1-testimonial-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =====================================================
+   RATING
+===================================================== */
+
+.home1-testimonial-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin-bottom: 28px;
+}
+
+.home1-testimonial-rating svg {
+  width: 21px;
+  height: 21px;
+
+  color: var(--secondary-color);
+
+  stroke-width: 1.8;
+
+  fill: none;
+}
+
+/* =====================================================
+   TESTIMONIAL TEXT
+===================================================== */
+
+.home1-testimonial-text {
+  max-width: 780px;
+
+  margin: 0 auto 24px;
+  padding: 0;
+
+  font-size: 22px;
+  line-height: 1.8;
+  font-weight: 400;
+  font-style: italic;
+
+  color: var(--text-color);
+
+  text-align: center;
+}
+
+/* =====================================================
+   CUSTOMER DETAILS
+===================================================== */
+
+.home1-testimonial-customer {
+  text-align: center;
+}
+
+.home1-testimonial-name {
+  margin: 0 0 4px;
+
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 600;
+
+  color: var(--text-color);
+}
+
+.home1-testimonial-role {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =====================================================
+   NAVIGATION ARROWS
+===================================================== */
+
+.home1-testimonial-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--primary-color);
+  color: var(--button-text);
+
+  cursor: pointer;
+
+  z-index: 10;
+  pointer-events: auto;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.home1-testimonial-arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+
+  pointer-events: none;
+}
+
+.home1-testimonial-arrow:hover {
+  opacity: 0.9;
+}
+
+.home1-testimonial-prev {
+  left: 0;
+}
+
+.home1-testimonial-next {
+  right: 0;
+}
+/* =====================================================
+   NEST HUB
+   1024 × 600
+===================================================== */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-testimonial {
+    padding: 65px 0;
+  }
+
+  .home1-testimonial-container {
+    width: 85%;
+  }
+
+  .home1-testimonial-header {
+    margin-bottom: 42px;
+  }
+
+  .home1-testimonial-tag {
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+
+  .home1-testimonial-title {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .home1-testimonial-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home1-testimonial-main {
+    max-width: 680px;
+  }
+
+  .home1-testimonial-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 22px;
+  }
+
+  .home1-testimonial-rating {
+    margin-bottom: 22px;
+  }
+
+  .home1-testimonial-rating svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .home1-testimonial-text {
+    max-width: 650px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 1.7;
+  }
+
+  .home1-testimonial-name {
+    font-size: 16px;
+  }
+
+  .home1-testimonial-role {
+    font-size: 12px;
+  }
+
+  .home1-testimonial-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .home1-testimonial-arrow svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+/* =====================================================
+   IPAD MINI
+   768 × 1024
+===================================================== */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-testimonial {
+    padding: 70px 0;
+  }
+
+  .home1-testimonial-container {
+    width: 88%;
+  }
+
+  .home1-testimonial-header {
+    margin-bottom: 42px;
+  }
+
+  .home1-testimonial-tag {
+    margin-bottom: 18px;
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+
+  .home1-testimonial-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .home1-testimonial-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home1-testimonial-content {
+    padding: 0 35px;
+  }
+
+  .home1-testimonial-main {
+    max-width: 600px;
+  }
+
+  .home1-testimonial-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 22px;
+  }
+
+  .home1-testimonial-rating {
+    gap: 5px;
+    margin-bottom: 22px;
+  }
+
+  .home1-testimonial-rating svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .home1-testimonial-text {
+    max-width: 540px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .home1-testimonial-name {
+    font-size: 16px;
+  }
+
+  .home1-testimonial-role {
+    font-size: 13px;
+  }
+
+  .home1-testimonial-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+  .home1-testimonial-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* =====================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+===================================================== */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home1-testimonial {
+    padding: 55px 0;
+  }
+
+  .home1-testimonial-container {
+    width: 88%;
+  }
+
+  .home1-testimonial-header {
+    margin-bottom: 35px;
+  }
+
+  .home1-testimonial-tag {
+    gap: 7px;
+    margin-bottom: 14px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .home1-testimonial-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home1-testimonial-title {
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  .home1-testimonial-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* =================================================
+     TESTIMONIAL CONTENT
+  ================================================= */
+
+  .home1-testimonial-content {
+    padding: 0;
+  }
+
+  .home1-testimonial-main {
+    max-width: 100%;
+  }
+
+  .home1-testimonial-image {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 18px;
+    border-width: 4px;
+  }
+
+  .home1-testimonial-rating {
+    gap: 4px;
+    margin-bottom: 18px;
+  }
+
+  .home1-testimonial-rating svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home1-testimonial-text {
+    max-width: 250px;
+    margin: 0 auto 18px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .home1-testimonial-name {
+    font-size: 15px;
+  }
+
+  .home1-testimonial-role {
+    font-size: 12px;
+  }
+
+  /* =================================================
+     MOBILE ARROWS
+     Move arrows below testimonial content
+  ================================================= */
+
+  .home1-testimonial-arrow {
+    position: relative;
+    inset: auto;
+
+    width: 38px;
+    height: 38px;
+
+    margin-top: 24px;
+  }
+
+  .home1-testimonial-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home1-testimonial-prev {
+    margin-right: 8px;
+  }
+
+  .home1-testimonial-next {
+    margin-left: 8px;
+  }
+}
+/* =====================================================
+   CTA SECTION
+===================================================== */
+
+.home1-cta {
+  width: 100%;
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.home1-cta-container {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home1-cta-content {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 55px 50px;
+  text-align: center;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+/* =====================================================
+   CTA TAG
+===================================================== */
+
+.home1-cta-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: var(--primary-color);
+  padding: 7px;
+  border-radius: 50px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--white);
+}
+
+.home1-cta-tag svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  color: var(--white);
+  border-radius: 50px;
+  padding: 2px;
+
+  background-color: var(--primary-color);
+}
+
+/* =====================================================
+   CTA TITLE
+===================================================== */
+
+.home1-cta-title {
+  margin-bottom: 14px;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--light-bg);
+}
+
+/* =====================================================
+   CTA DESCRIPTION
+===================================================== */
+
+.home1-cta-description {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--light-bg);
+}
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.home1-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 175px;
+  padding: 13px 24px;
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.home1-cta-button i {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+.home1-cta-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   RTL
+===================================================== */
+
+[dir="rtl"] .home1-cta {
+  direction: rtl;
+}
+
+/* =====================================================
+   NEST HUB / TABLET
+===================================================== */
+
+@media screen and (max-width: 1024px) {
+  .home1-cta {
+    padding: 70px 0;
+  }
+
+  .home1-cta-container {
+    width: 85%;
+  }
+
+  .home1-cta-content {
+    max-width: 800px;
+    padding: 50px 40px;
+  }
+
+  .home1-cta-title {
+    font-size: 30px;
+  }
+}
+
+/* =====================================================
+   IPAD MINI
+===================================================== */
+
+@media screen and (max-width: 768px) {
+  .home1-cta {
+    padding: 60px 0;
+  }
+
+  .home1-cta-container {
+    width: 88%;
+  }
+
+  .home1-cta-content {
+    padding: 45px 30px;
+    border-radius: 18px;
+  }
+
+  .home1-cta-title {
+    font-size: 27px;
+  }
+
+  .home1-cta-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 480px) {
+  .home1-cta {
+    padding: 50px 0;
+  }
+
+  .home1-cta-container {
+    width: 90%;
+  }
+
+  .home1-cta-content {
+    padding: 38px 20px;
+    border-radius: 16px;
+  }
+
+  .home1-cta-tag {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .home1-cta-title {
+    margin-bottom: 12px;
+    font-size: 23px;
+    line-height: 1.35;
+  }
+
+  .home1-cta-description {
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home1-cta-button {
+    min-width: 160px;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+}

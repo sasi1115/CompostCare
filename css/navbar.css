@@ -1,0 +1,974 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  width: 100%;
+  background: var(--light-bg);
+  border-bottom: 1px solid var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+}
+
+.dark-mode .site-header {
+  background: var(--dark-bg);
+}
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.header-container {
+  width: 1200px;
+  min-height: 60px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+/* =========================================================
+   BOX 1 — LOGO
+========================================================= */
+
+.header-logo {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  direction: ltr;
+  unicode-bidi: isolate;
+
+  text-decoration: none;
+}
+
+html[dir="rtl"] .logo {
+  flex-direction: row-reverse;
+}
+
+.logo-image {
+  width: 55px;
+  height: 50px;
+
+  display: block;
+  object-fit: contain;
+  margin: 0 -8px 0 0;
+}
+
+.logo-text {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.logo-primary {
+  color: var(--primary-color);
+}
+
+.logo-secondary {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   BOX 2 — MAIN NAVIGATION
+========================================================= */
+
+.main-navigation {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 10px 2px;
+
+  color: var(--text-color);
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+/* =========================================================
+   ACTIVE NAVIGATION LINK
+========================================================= */
+
+.nav-link.active,
+.dropdown-link.active {
+  color: var(--primary-color);
+  position: relative;
+}
+
+/* =========================================================
+   ACTIVE LINK UNDERLINE
+========================================================= */
+
+.nav-link.active::after,
+.dropdown-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 2px;
+
+  height: 2px;
+
+  background: var(--primary-color);
+
+  border-radius: 2px;
+}
+
+.nav-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* =========================================================
+   DESKTOP HOME DROPDOWN
+========================================================= */
+
+.dropdown-menu {
+  position: absolute;
+
+  top: calc(100%);
+  left: 50%;
+
+  min-width: 95px;
+
+  padding: 8px;
+  margin: 0;
+
+  list-style: none;
+
+  background: var(--light-bg);
+  border: 1px solid var(--primary-color);
+
+  border-radius: 8px;
+
+  transform: translateX(-50%) translateY(8px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+
+  padding: 10px 12px;
+
+  color: var(--text-color);
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  border-radius: 6px;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.dropdown-link:hover {
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   BOX 3 — HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 15px;
+}
+
+/* =========================================================
+   RTL BUTTON
+========================================================= */
+
+.rtl-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+
+  color: var(--text-color);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.rtl-toggle:hover {
+  color: var(--light-bg);
+  background: var(--primary-color);
+}
+
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+
+  color: var(--text-color);
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  /* Important */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make the entire button area clickable */
+.theme-toggle svg,
+.theme-toggle i {
+  pointer-events: none;
+}
+
+/* Hover */
+.theme-toggle:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+/* Icon */
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+  pointer-events: none;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-link {
+  min-width: 76px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 16px;
+
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: transform 0.2s ease;
+}
+
+.login-link:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+
+  background: var(--primary-color);
+  color: var(--light-bg);
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.mobile-menu-toggle:active {
+  transform: scale(0.95);
+}
+
+.mobile-menu-toggle:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+.mobile-menu-toggle i {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+   KEEP DESKTOP NAVIGATION
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .header-container {
+    width: calc(100% - 32px);
+    min-height: 60px;
+    gap: 16px;
+  }
+
+  .header-logo {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .main-navigation {
+    width: auto;
+    flex: 1;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .header-actions {
+    width: auto;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+
+  .rtl-toggle,
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .login-link {
+    min-width: 72px;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(8px);
+  }
+
+  .dropdown.active > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .dropdown .nav-link svg,
+  .dropdown .nav-link i {
+    pointer-events: none;
+  }
+}
+
+/* =========================================================
+   IPAD MINI + MOBILE
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  /* =======================================================
+     HEADER
+  ======================================================= */
+
+  .header-container {
+    width: calc(100% - 32px);
+    min-height: 70px;
+
+    gap: 10px;
+
+    flex-wrap: nowrap;
+  }
+
+  .header-logo {
+    width: auto;
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .header-actions {
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+  }
+
+  .rtl-toggle,
+  .theme-toggle,
+  .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+  }
+
+  /* =======================================================
+     MOBILE NAVIGATION
+  ======================================================= */
+
+  .main-navigation {
+    display: none;
+  }
+
+  .main-navigation.active {
+    display: flex;
+
+    position: fixed;
+
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: var(--light-bg);
+
+    z-index: 999;
+  }
+
+  /* =======================================================
+     NAVIGATION LIST
+  ======================================================= */
+
+  .nav-links {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 0;
+
+    padding: 10px 0 20px 0;
+
+    list-style: none;
+  }
+
+  /* =======================================================
+     NAVIGATION ITEMS
+  ======================================================= */
+
+  .nav-item {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* =======================================================
+     NAVIGATION LINKS
+  ======================================================= */
+
+  .nav-link {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+
+    text-align: center;
+
+    font-size: 15px;
+    line-height: 1;
+
+    box-sizing: border-box;
+
+    position: relative;
+  }
+
+  /* =======================================================
+     MOBILE ACTIVE LINK
+  ======================================================= */
+
+  .nav-link.active::after,
+  .dropdown-link.active::after {
+    left: 50%;
+    right: auto;
+
+    width: 50px;
+
+    transform: translateX(-50%);
+
+    bottom: 4px;
+  }
+
+  /* =======================================================
+     HOME DROPDOWN
+  ======================================================= */
+
+  .nav-item.dropdown {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .nav-item.dropdown > .nav-link {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  /* =======================================================
+     MOBILE DROPDOWN
+  ======================================================= */
+
+  .dropdown-menu {
+    position: static;
+
+    width: 100%;
+    min-width: 0;
+
+    display: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+
+    background: var(--light-bg);
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    transform: none;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: none;
+  }
+
+  /* =======================================================
+     OPEN DROPDOWN
+  ======================================================= */
+
+  .nav-item.dropdown > .nav-link[aria-expanded="true"] + .dropdown-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    height: auto;
+
+    position: static;
+
+    visibility: visible;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+  /* =======================================================
+     DROPDOWN ITEMS
+  ======================================================= */
+
+  .dropdown-menu li {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  /* =======================================================
+     DROPDOWN LINKS
+  ======================================================= */
+
+  .dropdown-menu .dropdown-link {
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    position: relative;
+  }
+
+  /* =======================================================
+     ACTIVE DROPDOWN LINK
+  ======================================================= */
+
+  .dropdown-menu .dropdown-link.active {
+    position: relative;
+  }
+
+  .dropdown-menu .dropdown-link.active::after {
+    left: 50%;
+    right: auto;
+
+    width: 50px;
+
+    transform: translateX(-50%);
+
+    bottom: 3px;
+  }
+
+  /* =======================================================
+     LOGIN INSIDE MOBILE MENU
+  ======================================================= */
+
+  .main-navigation .login-link {
+    width: auto;
+
+    min-width: 90px;
+    height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    background: var(--primary-color);
+
+    border: 1px solid var(--primary-color);
+
+    border-radius: 50px;
+
+    color: var(--light-bg);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+   ONLY SMALL-SCREEN ADJUSTMENTS
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  /* =======================================================
+     HEADER
+  ======================================================= */
+
+  .header-container {
+    width: calc(100% - 20px);
+
+    min-height: 64px;
+
+    gap: 6px;
+
+    flex-wrap: nowrap;
+  }
+
+  /* =======================================================
+     LOGO
+  ======================================================= */
+
+  .logo {
+    gap: 6px;
+  }
+
+  .logo-image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  /* =======================================================
+     HEADER ACTIONS
+  ======================================================= */
+
+  .header-actions {
+    width: auto;
+
+    gap: 5px;
+  }
+
+  .rtl-toggle,
+  .theme-toggle,
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* =======================================================
+     ICON SIZES
+  ======================================================= */
+
+  .theme-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mobile-menu-toggle i {
+    font-size: 19px;
+  }
+
+  /* =======================================================
+     MOBILE MENU
+  ======================================================= */
+
+  .main-navigation.active {
+    top: 64px;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /* =======================================================
+     NAVIGATION LIST
+  ======================================================= */
+
+  .nav-links {
+    width: 100%;
+
+    padding: 8px 0 16px 0;
+  }
+
+  /* =======================================================
+     NAV LINKS
+  ======================================================= */
+
+  .nav-link {
+    min-height: 46px;
+
+    padding: 7px 12px;
+
+    font-size: 14px;
+  }
+
+  /* =======================================================
+     DROPDOWN LINKS
+  ======================================================= */
+
+  .dropdown-menu .dropdown-link {
+    min-height: 40px;
+
+    padding: 7px 12px;
+  }
+
+  /* =======================================================
+     LOGIN
+  ======================================================= */
+
+  .main-navigation .login-link {
+    min-width: 85px;
+    height: 38px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+  }
+}

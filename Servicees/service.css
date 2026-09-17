@@ -1,0 +1,2247 @@
+/* =========================================================
+   SERVICES HERO
+========================================================= */
+
+.services-hero-section {
+  width: 100%;
+  padding: 100px 0 70px;
+  background: var(--light-bg);
+}
+
+.services-hero-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.services-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.services-hero-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+  padding: 7px 13px;
+  background-color: var(--primary-color);
+
+  border-radius: 50px;
+
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.services-hero-tagline i {
+  width: 16px;
+  height: 16px;
+  color: var(--secondary-color);
+  stroke-width: 1.8;
+}
+
+.services-hero-title {
+  max-width: 600px;
+  margin: 0;
+
+  color: var(--primary-color);
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.services-hero-title span {
+  display: block;
+  color: var(--secondary-color);
+}
+
+.services-hero-description {
+  max-width: 520px;
+  margin: 24px 0 30px;
+
+  color: var(--text-color);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.services-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.services-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 27px;
+
+  border-radius: 50px;
+
+  background: var(--primary-color);
+  color: var(--white);
+
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: transform 0.25s ease;
+}
+
+.services-hero-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.services-hero-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 27px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+
+  background: transparent;
+  color: var(--primary-color);
+
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.services-hero-secondary-button:hover {
+  color: var(--text-color);
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.services-hero-image-wrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.services-hero-image {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+}
+
+.services-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* =========================================================
+   NEST HUB — 1024 × 600
+   Keep desktop-style layout
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .services-hero-section {
+    padding: 80px 0 50px;
+  }
+
+  .services-hero-container {
+    width: 88%;
+    gap: 45px;
+  }
+
+  .services-hero-title {
+    font-size: 48px;
+  }
+
+  .services-hero-description {
+    margin: 18px 0 24px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .services-hero-image-wrapper {
+    height: 350px;
+  }
+
+  .services-hero-image {
+    max-width: 430px;
+    border-radius: 24px;
+  }
+}
+
+/* =========================================================
+   iPAD MINI — 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .services-hero-section {
+    padding: 100px 0 60px;
+  }
+
+  .services-hero-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .services-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .services-hero-title {
+    max-width: 650px;
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .services-hero-description {
+    max-width: 600px;
+    margin: 20px auto 28px;
+    font-size: 16px;
+  }
+
+  .services-hero-actions {
+    justify-content: center;
+  }
+
+  .services-hero-image-wrapper {
+    height: auto;
+    justify-content: center;
+  }
+
+  .services-hero-image {
+    width: 75%;
+    max-width: 520px;
+    aspect-ratio: 16 / 10;
+    border-radius: 24px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .services-hero-section {
+    padding: 80px 0;
+  }
+
+  .services-hero-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .services-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .services-hero-tagline {
+    gap: 6px;
+    margin-bottom: 16px;
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+
+  .services-hero-tagline i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .services-hero-title {
+    max-width: 330px;
+    font-size: 36px;
+    line-height: 1.12;
+    letter-spacing: -0.7px;
+  }
+
+  .services-hero-description {
+    max-width: 320px;
+    margin: 17px auto 24px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .services-hero-actions {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .services-hero-button,
+  .services-hero-secondary-button {
+    min-height: 45px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .services-hero-image-wrapper {
+    height: auto;
+    justify-content: center;
+  }
+
+  .services-hero-image {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+  }
+}
+/* =========================================================
+OUR COMPOSTING SERVICES
+========================================================= */
+
+.services-main-section {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--light-bg);
+}
+
+.services-main-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+SECTION HEADER
+========================================================= */
+
+.services-main-header {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.services-main-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px 6px 7px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.services-main-tag-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.services-main-tag-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.services-main-title {
+  margin: 22px 0 16px;
+  color: var(--primary-color);
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.services-main-title span {
+  color: var(--secondary-color);
+}
+
+.services-main-description {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+SERVICES GRID
+========================================================= */
+
+.services-main-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* =========================================================
+SERVICE CARD
+========================================================= */
+
+.services-main-card {
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  background: var(--light-bg);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.services-main-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.1);
+}
+
+/* =========================================================
+SERVICE IMAGE
+========================================================= */
+
+.services-main-image {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.services-main-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.services-main-card:hover .services-main-image img {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+SERVICE CONTENT
+========================================================= */
+
+.services-main-content {
+  padding: 30px;
+}
+
+.services-main-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.services-main-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* =========================================================
+SERVICE TITLE
+========================================================= */
+
+.services-main-content h3 {
+  margin: 0 0 14px;
+  color: var(--primary-color);
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.services-main-content h3 span {
+  display: block;
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+SERVICE DESCRIPTION
+========================================================= */
+
+.services-main-content p {
+  min-height: 88px;
+  margin: 0 0 24px;
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+VIEW SERVICE BUTTON
+========================================================= */
+
+.services-main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 125px;
+  padding: 11px 22px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.services-main-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+NEST HUB — 1024 × 600
+Keep 4-column desktop-style layout
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .services-main-section {
+    padding: 75px 0;
+  }
+
+  .services-main-container {
+    width: 88%;
+  }
+
+  .services-main-header {
+    margin-bottom: 45px;
+  }
+
+  .services-main-title {
+    font-size: 36px;
+  }
+
+  .services-main-description {
+    font-size: 15px;
+  }
+
+  .services-main-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .services-main-image {
+    height: 210px;
+  }
+
+  .services-main-content {
+    padding: 22px;
+  }
+
+  .services-main-content h3 {
+    font-size: 19px;
+  }
+
+  .services-main-content p {
+    min-height: 105px;
+    font-size: 14px;
+  }
+
+  .services-main-button {
+    min-width: 115px;
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+iPAD MINI — 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .services-main-section {
+    padding: 80px 0;
+  }
+
+  .services-main-container {
+    width: 88%;
+  }
+
+  .services-main-header {
+    margin-bottom: 50px;
+  }
+
+  .services-main-title {
+    font-size: 34px;
+  }
+
+  .services-main-description {
+    font-size: 15px;
+  }
+
+  .services-main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .services-main-image {
+    height: 230px;
+  }
+
+  .services-main-content {
+    padding: 26px;
+  }
+
+  .services-main-content h3 {
+    font-size: 21px;
+  }
+
+  .services-main-content p {
+    min-height: 88px;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .services-main-section {
+    padding: 65px 0;
+  }
+
+  .services-main-container {
+    width: 88%;
+  }
+
+  .services-main-header {
+    margin-bottom: 38px;
+  }
+
+  .services-main-tag {
+    font-size: 11px;
+    letter-spacing: 0.7px;
+  }
+
+  .services-main-tag-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .services-main-title {
+    margin-top: 18px;
+    font-size: 29px;
+  }
+
+  .services-main-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .services-main-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .services-main-image {
+    height: 210px;
+  }
+
+  .services-main-content {
+    padding: 24px 22px;
+  }
+
+  .services-main-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 17px;
+  }
+
+  .services-main-content h3 {
+    font-size: 20px;
+  }
+
+  .services-main-content p {
+    min-height: auto;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .services-main-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   WASTE IMPACT CALCULATOR
+========================================================= */
+
+.waste-calculator-section {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--light-bg);
+}
+
+.waste-calculator-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.waste-calculator-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.waste-calculator-tagline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-bottom: 18px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.waste-calculator-tagline svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 3px;
+  border-radius: 50px;
+}
+
+.waste-calculator-title {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.waste-calculator-title span {
+  color: var(--secondary-color);
+}
+
+.waste-calculator-description {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* =========================================================
+   MAIN CALCULATOR BOX
+========================================================= */
+
+.waste-calculator-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  background: var(--white);
+}
+
+/* =========================================================
+   LEFT - FORM
+========================================================= */
+
+.waste-calculator-form {
+  padding: 48px;
+  background: var(--white);
+}
+
+.waste-calculator-form-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 38px;
+}
+
+.waste-calculator-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--button-text);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.waste-calculator-form-heading h3 {
+  margin: 0 0 7px;
+  color: var(--card-title);
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.waste-calculator-form-heading p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.waste-calculator-field {
+  margin-bottom: 24px;
+}
+
+.waste-calculator-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--card-title);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.waste-calculator-select {
+  position: relative;
+  width: 100%;
+}
+
+.waste-calculator-select select {
+  display: block;
+  width: 100%;
+  height: 54px;
+  padding: 0 48px 0 17px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  outline: none;
+  background: var(--white);
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.waste-calculator-select select:hover {
+  border-color: var(--primary-color);
+}
+
+.waste-calculator-select select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--border-color);
+}
+
+/* =========================================================
+   LUCIDE DROPDOWN ARROW
+========================================================= */
+
+.waste-calculator-select svg {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  color: var(--text-color);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* =========================================================
+   CALCULATE BUTTON
+========================================================= */
+
+.waste-calculator-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 10px;
+  padding: 12px 24px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.waste-calculator-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px var(--border-color);
+}
+
+/* =========================================================
+   RIGHT - RESULT PANEL
+========================================================= */
+
+.waste-calculator-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  background: var(--secondary-color);
+}
+
+.waste-result-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.waste-result-heading span {
+  color: var(--button-text);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+.waste-result-heading svg {
+  width: 22px;
+  height: 22px;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   MAIN RESULT
+========================================================= */
+
+.waste-result-main {
+  text-align: center;
+}
+
+.waste-result-main strong {
+  display: block;
+  color: var(--button-text);
+  font-size: clamp(54px, 6vw, 78px);
+  line-height: 1;
+  font-weight: 600;
+}
+
+.waste-result-main span {
+  display: block;
+  margin-top: 12px;
+  color: var(--button-text);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* =========================================================
+   RESULT DIVIDER
+========================================================= */
+
+.waste-result-divider {
+  width: 100%;
+  height: 1px;
+  margin: 38px 0;
+  background: var(--cta-border);
+  opacity: 0.3;
+}
+
+/* =========================================================
+   RESULT STATS
+========================================================= */
+
+.waste-result-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.waste-result-stat {
+  text-align: center;
+}
+
+.waste-result-stat + .waste-result-stat {
+  border-left: 1px solid var(--cta-border);
+}
+
+.waste-result-stat strong {
+  display: block;
+  color: var(--button-text);
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.waste-result-stat span {
+  display: block;
+  margin-top: 7px;
+  color: var(--button-text);
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* =========================================================
+   RESULT MESSAGE
+========================================================= */
+
+.waste-result-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 38px;
+  padding: 17px 18px;
+  border: 1px solid var(--cta-border);
+  border-radius: 14px;
+}
+
+.waste-result-message svg {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  margin-top: 2px;
+  color: var(--secondary-color);
+}
+
+.waste-result-message p {
+  margin: 0;
+  color: var(--button-text);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* =========================================================
+   EXPLORE YOUR SOLUTION BUTTON
+========================================================= */
+
+.waste-result-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 48px;
+  margin: 28px auto 0;
+  padding: 11px 28px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.waste-result-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+    NEST HUB — 1024 × 600
+ ========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .waste-calculator-section {
+    padding: 70px 0;
+  }
+
+  .waste-calculator-container {
+    width: 88%;
+  }
+
+  .waste-calculator-header {
+    margin-bottom: 40px;
+  }
+
+  .waste-calculator-box {
+    min-height: 470px;
+  }
+
+  .waste-calculator-form,
+  .waste-calculator-result {
+    padding: 32px;
+  }
+
+  .waste-calculator-form-heading {
+    margin-bottom: 25px;
+  }
+
+  .waste-calculator-field {
+    margin-bottom: 17px;
+  }
+
+  .waste-calculator-select select {
+    height: 48px;
+  }
+
+  .waste-calculator-button {
+    min-height: 48px;
+    margin-top: 3px;
+  }
+
+  .waste-result-heading {
+    margin-bottom: 25px;
+  }
+
+  .waste-result-main strong {
+    font-size: 58px;
+  }
+
+  .waste-result-divider {
+    margin: 25px 0;
+  }
+
+  .waste-result-message {
+    margin-top: 25px;
+  }
+
+  .waste-result-button {
+    min-height: 44px;
+    margin-top: 20px;
+  }
+}
+
+/* =========================================================
+    iPAD MINI — 768 × 1024
+ ========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .waste-calculator-section {
+    padding: 75px 0;
+  }
+
+  .waste-calculator-container {
+    width: 88%;
+  }
+
+  .waste-calculator-header {
+    margin-bottom: 42px;
+  }
+
+  .waste-calculator-box {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .waste-calculator-form {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .waste-calculator-result {
+    min-height: 500px;
+  }
+
+  .waste-result-main strong {
+    font-size: 68px;
+  }
+
+  .waste-result-stats {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .waste-result-message {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* =========================================================
+    SAMSUNG GALAXY S8+ — 360 × 740
+ ========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .waste-calculator-section {
+    padding: 60px 0;
+  }
+
+  .waste-calculator-container {
+    width: 90%;
+  }
+
+  .waste-calculator-header {
+    margin-bottom: 32px;
+  }
+
+  .waste-calculator-tagline {
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .waste-calculator-tagline svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .waste-calculator-title {
+    font-size: 29px;
+  }
+
+  .waste-calculator-description {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .waste-calculator-box {
+    border-radius: 20px;
+  }
+
+  .waste-calculator-form,
+  .waste-calculator-result {
+    padding: 26px 20px;
+  }
+
+  .waste-calculator-form-heading {
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .waste-calculator-step {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+  }
+
+  .waste-calculator-form-heading h3 {
+    font-size: 18px;
+  }
+
+  .waste-calculator-form-heading p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .waste-calculator-field {
+    margin-bottom: 18px;
+  }
+
+  .waste-calculator-field label {
+    margin-bottom: 7px;
+    font-size: 13px;
+  }
+
+  .waste-calculator-select select {
+    height: 48px;
+    padding: 0 42px 0 14px;
+    font-size: 12px;
+  }
+
+  .waste-calculator-select svg {
+    right: 14px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .waste-calculator-button {
+    min-height: 48px;
+    margin-top: 4px;
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .waste-calculator-result {
+    min-height: 450px;
+  }
+
+  .waste-result-heading {
+    margin-bottom: 28px;
+  }
+
+  .waste-result-heading span {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .waste-result-heading svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .waste-result-main strong {
+    font-size: 55px;
+  }
+
+  .waste-result-main span {
+    margin-top: 9px;
+    font-size: 12px;
+  }
+
+  .waste-result-divider {
+    margin: 25px 0;
+  }
+
+  .waste-result-stats {
+    gap: 10px;
+  }
+
+  .waste-result-stat strong {
+    font-size: 20px;
+  }
+
+  .waste-result-stat span {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .waste-result-message {
+    gap: 9px;
+    margin-top: 25px;
+    padding: 13px;
+  }
+
+  .waste-result-message svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .waste-result-message p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .waste-result-button {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 20px;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}
+/* =========================================================
+   SOLUTIONS FOR EVERY NEED
+========================================================= */
+
+.solutions-scale-section {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--light-bg);
+}
+
+.solutions-scale-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.solutions-scale-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 60px;
+}
+
+.solutions-scale-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 18px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.solutions-scale-tag-icon svg {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50px;
+  padding: 2px;
+}
+
+.solutions-scale-header h2 {
+  margin: 22px 0 16px;
+  color: var(--primary-color);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.solutions-scale-header h2 span {
+  color: var(--secondary-color);
+}
+
+.solutions-scale-header p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.solutions-scale-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.solutions-scale-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.solutions-scale-table th,
+.solutions-scale-table td {
+  width: 50%;
+  padding: 24px 30px;
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.solutions-scale-table th {
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.solutions-scale-table td {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.solutions-scale-table td:last-child {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.solutions-scale-table tbody tr {
+  transition: transform 0.25s ease;
+}
+
+.solutions-scale-table tbody tr:hover {
+  transform: translateY(-2px);
+}
+
+.solutions-scale-table tbody tr:hover td {
+  border-bottom-color: var(--secondary-color);
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .solutions-scale-section {
+    padding: 75px 0;
+  }
+
+  .solutions-scale-container {
+    width: 88%;
+  }
+
+  .solutions-scale-header {
+    max-width: 750px;
+    margin-bottom: 45px;
+  }
+
+  .solutions-scale-tag {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .solutions-scale-header h2 {
+    margin: 18px 0 14px;
+    font-size: 38px;
+  }
+
+  .solutions-scale-header p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .solutions-scale-table th,
+  .solutions-scale-table td {
+    padding: 20px 24px;
+  }
+
+  .solutions-scale-table th {
+    font-size: 13px;
+  }
+
+  .solutions-scale-table td {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .solutions-scale-section {
+    padding: 80px 0;
+  }
+
+  .solutions-scale-container {
+    width: 88%;
+  }
+
+  .solutions-scale-header {
+    max-width: 650px;
+    margin-bottom: 45px;
+  }
+
+  .solutions-scale-tag {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .solutions-scale-header h2 {
+    margin: 18px 0 14px;
+    font-size: 36px;
+  }
+
+  .solutions-scale-header p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .solutions-scale-table th,
+  .solutions-scale-table td {
+    padding: 22px 20px;
+  }
+
+  .solutions-scale-table th {
+    font-size: 13px;
+  }
+
+  .solutions-scale-table td {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .solutions-scale-section {
+    padding: 60px 0;
+  }
+
+  .solutions-scale-container {
+    width: 90%;
+  }
+
+  .solutions-scale-header {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .solutions-scale-tag {
+    padding: 6px 13px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .solutions-scale-header h2 {
+    margin: 17px 0 12px;
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .solutions-scale-header p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .solutions-scale-table-wrapper {
+    overflow-x: visible;
+  }
+
+  .solutions-scale-table {
+    table-layout: auto;
+  }
+
+  .solutions-scale-table th,
+  .solutions-scale-table td {
+    width: auto;
+    padding: 17px 12px;
+  }
+
+  .solutions-scale-table th {
+    font-size: 11px;
+    letter-spacing: 0.7px;
+  }
+
+  .solutions-scale-table td {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+/* =========================================================
+   WHAT OUR SERVICE COVERS
+========================================================= */
+
+.service-covers-section {
+  width: 100%;
+  padding: 90px 0;
+  background: var(--light-bg);
+}
+
+.service-covers-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.service-covers-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.service-covers-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 8px 18px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.service-covers-tag svg {
+  width: 17px;
+  height: 17px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50px;
+}
+
+.service-covers-header h2 {
+  margin: 0 0 18px;
+  color: var(--primary-color);
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.service-covers-header h2 span {
+  color: var(--secondary-color);
+}
+
+.service-covers-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* =========================================================
+   COVERAGE GRID
+========================================================= */
+
+.service-covers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+/* =========================================================
+   COVERAGE ITEM
+========================================================= */
+
+.service-covers-item {
+  min-height: 235px;
+  padding: 40px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.service-covers-item:hover {
+  border-right-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+/* =========================================================
+   COVERAGE NUMBER
+========================================================= */
+
+.service-covers-number {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   COVERAGE TITLE
+========================================================= */
+
+.service-covers-item h3 {
+  margin: 0 0 12px;
+  color: var(--primary-color);
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================================================
+   COVERAGE DESCRIPTION
+========================================================= */
+
+.service-covers-item p {
+  max-width: 250px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .service-covers-section {
+    padding: 70px 0;
+  }
+
+  .service-covers-container {
+    width: 88%;
+  }
+
+  .service-covers-header {
+    max-width: 700px;
+    margin-bottom: 40px;
+  }
+
+  .service-covers-tag {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+
+  .service-covers-tag svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .service-covers-header h2 {
+    margin-bottom: 15px;
+    font-size: 36px;
+  }
+
+  .service-covers-header p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .service-covers-grid {
+    gap: 0;
+  }
+
+  .service-covers-item {
+    min-height: 205px;
+    padding: 30px 22px;
+  }
+
+  .service-covers-number {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .service-covers-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .service-covers-item p {
+    max-width: 230px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .service-covers-section {
+    padding: 80px 0;
+  }
+
+  .service-covers-container {
+    width: 88%;
+  }
+
+  .service-covers-header {
+    max-width: 650px;
+    margin-bottom: 50px;
+  }
+
+  .service-covers-tag {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+
+  .service-covers-tag svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .service-covers-header h2 {
+    margin-bottom: 16px;
+    font-size: 34px;
+  }
+
+  .service-covers-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .service-covers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-covers-item {
+    min-height: 220px;
+    padding: 35px 24px;
+  }
+
+  .service-covers-number {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .service-covers-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .service-covers-item p {
+    max-width: 230px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .service-covers-section {
+    padding: 60px 0;
+  }
+
+  .service-covers-container {
+    width: 88%;
+  }
+
+  .service-covers-header {
+    margin-bottom: 38px;
+  }
+
+  .service-covers-tag {
+    gap: 6px;
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+
+  .service-covers-tag svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .service-covers-header h2 {
+    margin-bottom: 14px;
+    font-size: 29px;
+    line-height: 1.25;
+  }
+
+  .service-covers-header p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .service-covers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-covers-item {
+    min-height: 190px;
+    padding: 30px 20px;
+  }
+
+  .service-covers-number {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .service-covers-item h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .service-covers-item p {
+    max-width: 260px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
+/* =========================================================
+   SERVICES FINAL CTA
+========================================================= */
+
+.services-final-cta-section {
+  width: 100%;
+  padding: 90px 0;
+  background: var(--primary-color);
+}
+
+.services-final-cta-container {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 50px;
+  background: var(--cta-bg);
+  border: 1px solid var(--cta-border);
+  border-radius: 28px;
+  text-align: center;
+}
+
+.services-final-cta-content {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.services-final-cta-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 22px;
+  padding: 9px 18px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--white);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.services-final-cta-tag i,
+.services-final-cta-tag svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.services-final-cta-heading {
+  margin: 0;
+  color: var(--white);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.services-final-cta-heading span {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.services-final-cta-description {
+  max-width: 650px;
+  margin: 18px auto 30px;
+  color: var(--cta-text);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.services-final-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 145px;
+  min-height: 50px;
+  padding: 13px 28px;
+  border: 1px solid var(--cta-border);
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--button-text);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.services-final-cta-button:hover {
+  transform: translateY(-2px);
+  color: var(--button-text);
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media (max-width: 1024px) and (max-height: 700px) {
+  .services-final-cta-section {
+    padding: 65px 0;
+  }
+
+  .services-final-cta-container {
+    width: 88%;
+    padding: 55px 40px;
+  }
+
+  .services-final-cta-heading {
+    font-size: 36px;
+  }
+
+  .services-final-cta-description {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 26px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media (max-width: 768px) and (min-height: 700px) {
+  .services-final-cta-section {
+    padding: 65px 0;
+  }
+
+  .services-final-cta-container {
+    width: 88%;
+    padding: 55px 35px;
+    border-radius: 24px;
+  }
+
+  .services-final-cta-heading {
+    font-size: 34px;
+  }
+
+  .services-final-cta-description {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 800px) {
+  .services-final-cta-section {
+    padding: 50px 0;
+  }
+
+  .services-final-cta-container {
+    width: 88%;
+    padding: 45px 20px;
+    border-radius: 20px;
+  }
+
+  .services-final-cta-tag {
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .services-final-cta-tag i,
+  .services-final-cta-tag svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .services-final-cta-heading {
+    font-size: 27px;
+    line-height: 1.25;
+  }
+
+  .services-final-cta-description {
+    margin-top: 15px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .services-final-cta-button {
+    min-width: 135px;
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

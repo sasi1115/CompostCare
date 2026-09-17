@@ -1,0 +1,3456 @@
+/* =========================================================
+   HOME2 HERO
+========================================================= */
+
+.home2-hero {
+  width: 100%;
+  min-height: 100vh;
+  padding: 90px 0 80px;
+  background: var(--light-bg);
+  overflow: hidden;
+}
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.home2-hero-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.home2-hero-content {
+  max-width: 620px;
+}
+
+/* =========================================================
+   HERO TAG
+========================================================= */
+
+.home2-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+
+  background: var(--primary-color);
+  border-radius: 50px;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color: var(--white);
+}
+
+.home2-hero-tag svg {
+  width: 18px;
+  height: 18px;
+  color: var(--light-bg);
+  flex-shrink: 0;
+}
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.home2-hero-title {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.08;
+  font-weight: 600;
+
+  letter-spacing: -2px;
+
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   TITLE HIGHLIGHT
+========================================================= */
+
+.home2-hero-title span {
+  display: block;
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.home2-hero-text {
+  max-width: 550px;
+
+  margin: 25px 0 32px;
+
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.home2-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home2-hero-btn {
+  min-height: 52px;
+  padding: 0 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.home2-hero-btn-primary {
+  color: var(--light-bg);
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.home2-hero-btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.home2-hero-btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--text-color);
+}
+
+.home2-hero-btn-secondary:hover {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  border-color: var(--text-color);
+}
+
+/* =========================================================
+   HERO TRUST
+========================================================= */
+
+.home2-hero-trust {
+  margin-top: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home2-trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home2-trust-item strong {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+
+.home2-trust-item span {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+.home2-trust-divider {
+  width: 1px;
+  height: 32px;
+
+  background: var(--border-color);
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.home2-hero-visual {
+  position: relative;
+
+  min-height: 590px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   HERO IMAGE WRAPPER
+========================================================= */
+
+.home2-hero-image-wrap {
+  width: 100%;
+  height: 590px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  position: relative;
+}
+
+.home2-hero-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.home2-hero-image-wrap:hover .home2-hero-image {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   FLOATING IMPACT CARD
+========================================================= */
+
+.home2-hero-impact {
+  position: absolute;
+
+  left: -35px;
+  bottom: 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px 20px;
+
+  background: var(--light-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+}
+
+/* =========================================================
+   IMPACT ICON
+========================================================= */
+
+.home2-impact-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--light-bg);
+  background: var(--primary-color);
+}
+
+.home2-impact-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* =========================================================
+   IMPACT CONTENT
+========================================================= */
+
+.home2-impact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.home2-impact-content span {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+.home2-impact-content strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .home2-hero-impact {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+/* =========================================================
+   NEST HUB — 1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-hero {
+    min-height: auto;
+    padding: 90px 0;
+  }
+
+  .home2-hero-container {
+    width: 85%;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 40px;
+  }
+
+  .home2-hero-content {
+    max-width: 100%;
+  }
+
+  .home2-hero-title {
+    font-size: 46px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+  }
+
+  .home2-hero-text {
+    max-width: 500px;
+    margin: 20px 0 26px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home2-hero-actions {
+    gap: 14px;
+  }
+
+  .home2-hero-btn {
+    min-height: 48px;
+    padding: 0 23px;
+    font-size: 13px;
+  }
+
+  .home2-hero-trust {
+    margin-top: 32px;
+    gap: 15px;
+  }
+
+  .home2-trust-item strong {
+    font-size: 14px;
+  }
+
+  .home2-trust-item span {
+    font-size: 11px;
+  }
+
+  .home2-trust-divider {
+    height: 28px;
+  }
+
+  .home2-hero-visual {
+    min-height: 470px;
+  }
+
+  .home2-hero-image-wrap {
+    height: 470px;
+    border-radius: 24px;
+  }
+
+  .home2-hero-impact {
+    left: -18px;
+    bottom: 28px;
+    padding: 13px 17px;
+    gap: 11px;
+  }
+
+  .home2-impact-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home2-impact-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home2-impact-content span {
+    font-size: 10px;
+  }
+
+  .home2-impact-content strong {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-hero {
+    min-height: auto;
+    padding: 90px 0;
+  }
+
+  .home2-hero-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .home2-hero-content {
+    max-width: 100%;
+  }
+
+  .home2-hero-title {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+  }
+
+  .home2-hero-text {
+    max-width: 620px;
+    margin: 22px 0 30px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .home2-hero-actions {
+    gap: 16px;
+  }
+
+  .home2-hero-btn {
+    min-height: 50px;
+    padding: 0 25px;
+  }
+
+  .home2-hero-trust {
+    margin-top: 36px;
+    gap: 18px;
+  }
+
+  .home2-trust-item strong {
+    font-size: 15px;
+  }
+
+  .home2-trust-item span {
+    font-size: 12px;
+  }
+
+  .home2-hero-visual {
+    min-height: 480px;
+  }
+
+  .home2-hero-image-wrap {
+    height: 480px;
+    border-radius: 24px;
+  }
+
+  .home2-hero-impact {
+    left: 18px;
+    bottom: 25px;
+    padding: 14px 18px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-hero {
+    min-height: auto;
+    padding: 80px 0 55px;
+  }
+
+  .home2-hero-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .home2-hero-content {
+    max-width: 100%;
+  }
+
+  .home2-hero-tag {
+    gap: 6px;
+    margin-bottom: 14px;
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .home2-hero-tag svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home2-hero-title {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+
+  .home2-hero-text {
+    max-width: 100%;
+    margin: 18px 0 25px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .home2-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .home2-hero-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+
+  .home2-hero-trust {
+    margin-top: 28px;
+    gap: 10px;
+  }
+
+  .home2-trust-item {
+    gap: 3px;
+  }
+
+  .home2-trust-item strong {
+    font-size: 13px;
+  }
+
+  .home2-trust-item span {
+    font-size: 10px;
+  }
+
+  .home2-trust-divider {
+    height: 26px;
+  }
+
+  .home2-hero-visual {
+    min-height: 340px;
+  }
+
+  .home2-hero-image-wrap {
+    height: 340px;
+    border-radius: 20px;
+  }
+
+  .home2-hero-impact {
+    left: 10px;
+    right: 10px;
+    bottom: 12px;
+    gap: 10px;
+    padding: 11px 13px;
+    border-radius: 13px;
+  }
+
+  .home2-impact-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .home2-impact-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home2-impact-content span {
+    font-size: 9px;
+  }
+
+  .home2-impact-content strong {
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   HOME2 SUSTAINABILITY SECTION
+========================================================= */
+
+.home2-sustainability {
+  width: 100%;
+  padding: 90px 0;
+  background: var(--light-bg);
+}
+
+.home2-sustainability-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.home2-sustainability-header {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.home2-sustainability-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 16px;
+  padding: 8px 16px;
+
+  border-radius: 50px;
+  border: 2px solid var(--secondary-color);
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color: var(--primary-color);
+}
+
+.home2-sustainability-tag svg {
+  width: 17px;
+  height: 17px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.home2-sustainability-title {
+  margin-bottom: 16px;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -1px;
+
+  color: var(--primary-color);
+}
+.home2-sustainability-title span {
+  color: var(--secondary-color);
+}
+
+.home2-sustainability-text {
+  max-width: 650px;
+  margin: 0 auto;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   SUSTAINABILITY GRID
+========================================================= */
+
+.home2-sustainability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =========================================================
+   SUSTAINABILITY CARD
+========================================================= */
+
+.home2-sustainability-card {
+  position: relative;
+
+  padding: 34px 30px 32px;
+
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.home2-sustainability-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary-color);
+}
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.home2-sustainability-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  background: var(--primary-color);
+  border-radius: 14px;
+
+  color: var(--white);
+}
+
+.home2-sustainability-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.home2-sustainability-number {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.home2-sustainability-card h3 {
+  margin-bottom: 12px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.home2-sustainability-card p {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+/* =========================================================
+   NEST HUB — 1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-sustainability {
+    padding: 65px 0;
+  }
+
+  .home2-sustainability-container {
+    width: 85%;
+  }
+
+  .home2-sustainability-header {
+    max-width: 650px;
+    margin-bottom: 42px;
+  }
+
+  .home2-sustainability-tag {
+    margin-bottom: 14px;
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .home2-sustainability-title {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .home2-sustainability-text {
+    max-width: 600px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home2-sustainability-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .home2-sustainability-card {
+    padding: 26px 22px;
+    border-radius: 18px;
+  }
+
+  .home2-sustainability-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+  }
+
+  .home2-sustainability-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .home2-sustainability-number {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .home2-sustainability-card h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+
+  .home2-sustainability-card p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-sustainability {
+    padding: 70px 0;
+  }
+
+  .home2-sustainability-container {
+    width: 88%;
+  }
+
+  .home2-sustainability-header {
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  .home2-sustainability-tag {
+    margin-bottom: 14px;
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .home2-sustainability-title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .home2-sustainability-text {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .home2-sustainability-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .home2-sustainability-card {
+    padding: 28px;
+    border-radius: 18px;
+  }
+
+  .home2-sustainability-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 22px;
+  }
+
+  .home2-sustainability-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .home2-sustainability-number {
+    margin-bottom: 9px;
+    font-size: 11px;
+  }
+
+  .home2-sustainability-card h3 {
+    margin-bottom: 11px;
+    font-size: 20px;
+  }
+
+  .home2-sustainability-card p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-sustainability {
+    padding: 55px 0;
+  }
+
+  .home2-sustainability-container {
+    width: 88%;
+  }
+
+  .home2-sustainability-header {
+    margin-bottom: 32px;
+  }
+
+  .home2-sustainability-tag {
+    gap: 6px;
+    margin-bottom: 13px;
+    padding: 6px 11px;
+    font-size: 11px;
+  }
+
+  .home2-sustainability-tag svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home2-sustainability-title {
+    margin-bottom: 12px;
+    font-size: 29px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  .home2-sustainability-text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home2-sustainability-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .home2-sustainability-card {
+    padding: 23px 20px;
+    border-radius: 17px;
+  }
+
+  .home2-sustainability-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 19px;
+    border-radius: 13px;
+  }
+
+  .home2-sustainability-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .home2-sustainability-number {
+    margin-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .home2-sustainability-card h3 {
+    margin-bottom: 9px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .home2-sustainability-card p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   HOME 2 — FROM WASTE TO RESOURCE
+========================================================= */
+
+.home2-resource-section {
+  width: 100%;
+  padding: 110px 0;
+  background: var(--light-bg);
+  overflow: hidden;
+}
+
+.home2-resource-container {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.home2-resource-heading {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.home2-resource-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 14px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home2-resource-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: var(--light-bg);
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.home2-resource-heading h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.18;
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+.home2-resource-heading h2 span {
+  color: var(--secondary-color);
+}
+
+.home2-resource-heading p {
+  max-width: 680px;
+  margin: 0 auto;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   TRANSFORMATION FLOW
+========================================================= */
+
+.home2-resource-flow {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr 90px 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================================================
+   RESOURCE ITEM
+========================================================= */
+
+.home2-resource-item {
+  position: relative;
+  min-width: 0;
+}
+
+.home2-resource-number {
+  margin-bottom: 18px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.home2-resource-visual {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  margin-bottom: 25px;
+
+  border-radius: 18px;
+  background: var(--border-color);
+}
+
+.home2-resource-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.home2-resource-item:hover .home2-resource-visual img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.home2-resource-content {
+  max-width: 360px;
+}
+
+.home2-resource-content h3 {
+  margin: 0 0 10px;
+
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  color: var(--text-color);
+}
+
+.home2-resource-content p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.home2-resource-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding-top: 45px;
+}
+
+.home2-resource-connector::before {
+  content: "";
+
+  width: 35px;
+  height: 1px;
+
+  background: var(--border-color);
+}
+
+.home2-resource-connector i {
+  width: 17px;
+  height: 17px;
+
+  margin-left: -1px;
+
+  color: var(--secondary-color);
+  stroke-width: 1.8;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.home2-resource-action {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 65px;
+}
+
+.home2-resource-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 50px;
+  padding: 0 25px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+
+  background: var(--primary-color);
+  color: var(--light-bg);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home2-resource-button i {
+  width: 17px;
+  height: 17px;
+
+  stroke-width: 1.8;
+}
+
+.home2-resource-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+.dark-theme .home2-resource-section {
+  background: var(--white);
+}
+
+.dark-theme .home2-resource-visual {
+  background: var(--border-color);
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+[dir="rtl"] .home2-resource-heading {
+  text-align: center;
+}
+
+[dir="rtl"] .home2-resource-content {
+  text-align: right;
+}
+
+[dir="rtl"] .home2-resource-connector i {
+  margin-left: 0;
+  margin-right: -1px;
+
+  transform: rotate(180deg);
+}
+/* =========================================================
+   NEST HUB — 1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-resource-section {
+    padding: 75px 0;
+  }
+
+  .home2-resource-container {
+    width: 85%;
+  }
+
+  .home2-resource-heading {
+    max-width: 680px;
+    margin-bottom: 50px;
+  }
+
+  .home2-resource-tag {
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-resource-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-resource-heading h2 {
+    margin-bottom: 16px;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .home2-resource-heading p {
+    max-width: 620px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .home2-resource-flow {
+    grid-template-columns: 1fr 55px 1fr 55px 1fr;
+  }
+
+  .home2-resource-number {
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .home2-resource-visual {
+    height: 215px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+  }
+
+  .home2-resource-content {
+    max-width: 100%;
+  }
+
+  .home2-resource-content h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .home2-resource-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home2-resource-connector {
+    padding-top: 35px;
+  }
+
+  .home2-resource-connector::before {
+    width: 28px;
+  }
+
+  .home2-resource-connector i {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home2-resource-action {
+    margin-top: 50px;
+  }
+
+  .home2-resource-button {
+    min-height: 48px;
+    padding: 0 23px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-resource-section {
+    padding: 80px 0;
+  }
+
+  .home2-resource-container {
+    width: 88%;
+  }
+
+  .home2-resource-heading {
+    max-width: 600px;
+    margin-bottom: 50px;
+  }
+
+  .home2-resource-tag {
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-resource-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-resource-heading h2 {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .home2-resource-heading p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .home2-resource-flow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .home2-resource-item {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    column-gap: 25px;
+    align-items: center;
+  }
+
+  .home2-resource-number {
+    grid-column: 1 / -1;
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .home2-resource-visual {
+    height: 190px;
+    margin-bottom: 0;
+    border-radius: 16px;
+  }
+
+  .home2-resource-content {
+    max-width: none;
+  }
+
+  .home2-resource-content h3 {
+    margin-bottom: 9px;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .home2-resource-content p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .home2-resource-connector {
+    height: 55px;
+    padding: 0;
+    justify-content: flex-start;
+    padding-left: 82px;
+  }
+
+  .home2-resource-connector::before {
+    width: 1px;
+    height: 35px;
+  }
+
+  .home2-resource-connector i {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-resource-section {
+    padding: 60px 0;
+  }
+
+  .home2-resource-container {
+    width: 88%;
+  }
+
+  .home2-resource-heading {
+    margin-bottom: 40px;
+  }
+
+  .home2-resource-tag {
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 6px 11px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .home2-resource-tag svg {
+    width: 17px;
+    height: 17px;
+    padding: 2px;
+  }
+
+  .home2-resource-heading h2 {
+    margin-bottom: 13px;
+    font-size: 29px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  .home2-resource-heading p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home2-resource-flow {
+    display: block;
+  }
+
+  .home2-resource-item {
+    display: block;
+  }
+
+  .home2-resource-number {
+    margin-bottom: 11px;
+    font-size: 11px;
+  }
+
+  .home2-resource-visual {
+    height: 205px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+  }
+
+  .home2-resource-content {
+    max-width: 100%;
+  }
+
+  .home2-resource-content h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .home2-resource-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home2-resource-connector {
+    height: 48px;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .home2-resource-connector::before {
+    width: 1px;
+    height: 30px;
+  }
+
+  .home2-resource-connector i {
+    display: none;
+  }
+
+  .home2-resource-action {
+    margin-top: 40px;
+  }
+
+  .home2-resource-button {
+    min-height: 47px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   HOME2 SERVICES SECTION
+========================================================= */
+
+.home2-services-section {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--light-bg);
+}
+
+.home2-services-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.home2-services-heading {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.home2-services-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 16px 6px 6px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.home2-services-tag svg {
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home2-services-heading h2 {
+  margin: 20px 0 14px;
+  color: var(--primary-color);
+  font-size: 42px;
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+}
+
+.home2-services-heading h2 span {
+  color: var(--secondary-color);
+}
+
+.home2-services-heading p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SERVICE ITEM
+========================================================= */
+
+.home2-service-item {
+  width: 100%;
+  min-height: 320px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  margin-bottom: 45px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  background: var(--white);
+}
+
+.home2-service-item:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   SERVICE CONTENT
+========================================================= */
+
+.home2-service-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 45px;
+}
+
+.home2-service-number {
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.home2-service-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home2-service-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.home2-service-content h3 {
+  max-width: 430px;
+  margin: 0 0 12px;
+  color: var(--primary-color);
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.home2-service-content h3 span {
+  color: var(--secondary-color);
+}
+
+.home2-service-content p {
+  max-width: 470px;
+  margin: 0 0 18px;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SERVICE LINK
+========================================================= */
+
+.home2-service-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+}
+
+.home2-service-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s ease;
+}
+
+.home2-service-link:hover {
+  transform: translateX(3px);
+}
+
+.home2-service-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+ /* =========================================================
+    SERVICE IMAGE
+ ========================================================= */
+
+.home2-service-image {
+  width: 100%;
+  height: 320px;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.home2-service-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.5s ease;
+}
+
+.home2-service-item:hover .home2-service-image img {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   NEST HUB — 1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-services-section {
+    padding: 70px 0;
+  }
+
+  .home2-services-container {
+    width: 88%;
+  }
+
+  .home2-services-heading {
+    margin-bottom: 50px;
+  }
+
+  .home2-services-heading h2 {
+    font-size: 35px;
+  }
+
+  .home2-services-heading p {
+    font-size: 14px;
+  }
+
+  .home2-service-item {
+    min-height: 280px;
+    margin-bottom: 38px;
+    border-radius: 20px;
+  }
+
+  .home2-service-content {
+    padding: 30px 35px;
+  }
+
+  .home2-service-number {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .home2-service-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+  }
+
+  .home2-service-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .home2-service-content h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .home2-service-content p {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .home2-service-link {
+    font-size: 12px;
+  }
+
+  .home2-service-image {
+    min-height: 280px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) {
+  .home2-services-section {
+    padding: 75px 0;
+  }
+
+  .home2-services-container {
+    width: 88%;
+  }
+
+  .home2-services-heading {
+    margin-bottom: 50px;
+  }
+
+  .home2-services-heading h2 {
+    font-size: 35px;
+  }
+
+  .home2-services-heading p {
+    font-size: 14px;
+  }
+
+  .home2-service-item {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    margin-bottom: 45px;
+    border-radius: 20px;
+  }
+
+  /* Image left / content right services */
+  .home2-service-item-image-left .home2-service-image {
+    order: 1;
+  }
+
+  .home2-service-item-image-left .home2-service-content {
+    order: 2;
+  }
+
+  /* Content left / image right services */
+  .home2-service-item-content-left .home2-service-content {
+    order: 1;
+  }
+
+  .home2-service-item-content-left .home2-service-image {
+    order: 2;
+  }
+
+  .home2-service-content {
+    padding: 38px 35px;
+  }
+
+  .home2-service-number {
+    margin-bottom: 11px;
+  }
+
+  .home2-service-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 17px;
+  }
+
+  .home2-service-content h3 {
+    font-size: 27px;
+  }
+
+  .home2-service-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .home2-service-image {
+    min-height: 300px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) {
+  .home2-services-section {
+    padding: 55px 0;
+  }
+
+  .home2-services-container {
+    width: 88%;
+  }
+
+  .home2-services-heading {
+    margin-bottom: 38px;
+  }
+
+  .home2-services-tag {
+    gap: 7px;
+    padding: 5px 12px 5px 5px;
+    font-size: 10px;
+  }
+
+  .home2-services-tag svg {
+    width: 26px;
+    height: 26px;
+    padding: 6px;
+  }
+
+  .home2-services-heading h2 {
+    margin: 17px 0 11px;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .home2-services-heading p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .home2-service-item {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    margin-bottom: 32px;
+    border-radius: 17px;
+  }
+
+  /* =====================================================
+     S8+
+     ALWAYS CONTENT FIRST → IMAGE NEXT
+  ===================================================== */
+
+  .home2-service-item-content-left .home2-service-content,
+  .home2-service-item-image-left .home2-service-content {
+    order: 1;
+  }
+
+  .home2-service-item-content-left .home2-service-image,
+  .home2-service-item-image-left .home2-service-image {
+    order: 2;
+  }
+
+  .home2-service-content {
+    padding: 27px 22px 29px;
+  }
+
+  .home2-service-number {
+    margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .home2-service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 11px;
+  }
+
+  .home2-service-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home2-service-content h3 {
+    margin-bottom: 11px;
+    font-size: 22px;
+    line-height: 1.22;
+  }
+
+  .home2-service-content p {
+    margin-bottom: 17px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .home2-service-link {
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .home2-service-link svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .home2-service-image {
+    min-height: 230px;
+  }
+}
+/* =========================================================
+   HOW COMPOSTCARE WORKS
+========================================================= */
+
+.home2-process-section {
+  width: 100%;
+  padding: 110px 0;
+  background: var(--light-bg);
+  overflow: hidden;
+}
+
+.home2-process-container {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.home2-process-heading {
+  max-width: 760px;
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.home2-process-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 14px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home2-process-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: var(--light-bg);
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.home2-process-heading h2 {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.home2-process-heading h2 span {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   PROCESS FLOW
+========================================================= */
+
+.home2-process-flow {
+  display: grid;
+  grid-template-columns: 1fr 70px 1fr 70px 1fr 70px 1fr;
+  align-items: start;
+  width: 100%;
+}
+
+/* =========================================================
+   PROCESS ITEM
+========================================================= */
+
+.home2-process-item {
+  min-width: 0;
+}
+
+.home2-process-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 62px;
+  margin-bottom: 30px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.home2-process-number {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   PROCESS CONTENT
+========================================================= */
+
+.home2-process-content {
+  max-width: 250px;
+}
+
+.home2-process-content h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+}
+
+.home2-process-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.home2-process-connector {
+  position: relative;
+  height: 62px;
+}
+
+.home2-process-connector::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  transform: translateX(-50%);
+}
+
+.home2-process-connector::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid var(--secondary-color);
+  border-right: 1px solid var(--secondary-color);
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.home2-process-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.home2-process-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 25px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home2-process-button svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+.home2-process-button:hover {
+  background: transparent;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   WHY COMPOSTCARE
+========================================================= */
+
+.home2-why-section {
+  width: 100%;
+  padding: 110px 0;
+  background: var(--light-bg);
+  overflow: hidden;
+}
+
+.home2-why-container {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.home2-why-heading {
+  max-width: 760px;
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.home2-why-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 14px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home2-why-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: var(--light-bg);
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.home2-why-heading h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.home2-why-heading h2 span {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.home2-why-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+}
+
+.home2-why-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+  padding: 30px 25px;
+}
+
+.home2-why-number {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.home2-why-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+
+/* =========================================================
+   CLOSING STATEMENT
+========================================================= */
+
+.home2-why-footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.home2-why-footer p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--text-color);
+}
+/* =========================================================
+   NEST HUB - 1024 x 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-why-section {
+    padding: 75px 0;
+  }
+
+  .home2-why-container {
+    width: 85%;
+  }
+
+  .home2-why-heading {
+    margin-bottom: 50px;
+  }
+
+  .home2-why-tag {
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-why-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-why-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .home2-why-stats {
+    max-width: 900px;
+  }
+
+  .home2-why-stat {
+    min-height: 145px;
+    padding: 25px 20px;
+  }
+
+  .home2-why-number {
+    margin-bottom: 9px;
+    font-size: 34px;
+  }
+
+  .home2-why-label {
+    font-size: 11px;
+  }
+
+  .home2-why-footer {
+    margin-top: 45px;
+  }
+
+  .home2-why-footer p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-process-section {
+    padding: 80px 0;
+  }
+
+  .home2-process-container {
+    width: 88%;
+  }
+
+  .home2-process-heading {
+    max-width: 650px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .home2-process-tag {
+    gap: 7px;
+    margin-bottom: 13px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-process-tag svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .home2-process-heading h2 {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 36px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  /* =======================================================
+     PROCESS FLOW
+  ======================================================= */
+
+  .home2-process-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* =======================================================
+     PROCESS ITEM
+  ======================================================= */
+
+  .home2-process-item {
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+  }
+
+  .home2-process-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: auto;
+    margin-bottom: 22px;
+    padding-bottom: 0;
+
+    border-bottom: none;
+    gap: 22px;
+  }
+
+  .home2-process-number {
+    position: static;
+    transform: none;
+
+    flex-shrink: 0;
+
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .home2-process-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .home2-process-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  /* =======================================================
+     PROCESS CONTENT
+  ======================================================= */
+
+  .home2-process-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home2-process-content h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .home2-process-content p {
+    font-size: 14px;
+    line-height: 1.75;
+    text-align: center;
+  }
+
+  /* =======================================================
+     VERTICAL CONNECTOR
+  ======================================================= */
+
+  .home2-process-connector {
+    position: relative;
+
+    width: 100%;
+    height: 28px;
+  }
+
+  .home2-process-connector::before {
+    top: 0;
+    left: 50%;
+
+    width: 1px;
+    height: 28px;
+
+    transform: translateX(-50%);
+    background: var(--border-color);
+  }
+
+  .home2-process-connector::after {
+    display: none;
+  }
+
+  /* =======================================================
+     CTA
+  ======================================================= */
+
+  .home2-process-action {
+    margin-top: 55px;
+  }
+
+  .home2-process-button {
+    min-height: 50px;
+    padding: 0 23px;
+    font-size: 14px;
+  }
+
+  .home2-process-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-why-section {
+    padding: 60px 0;
+  }
+
+  .home2-why-container {
+    width: 88%;
+  }
+
+  .home2-why-heading {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .home2-why-tag {
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 5px 11px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+
+  .home2-why-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-why-heading h2 {
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* =======================================================
+     STATS — COLUMN LAYOUT
+  ======================================================= */
+
+  .home2-why-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home2-why-stat {
+    min-height: 120px;
+    padding: 20px 15px;
+
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .home2-why-stat:last-child {
+    border-bottom: none;
+  }
+
+  .home2-why-number {
+    font-size: 28px;
+  }
+
+  .home2-why-label {
+    font-size: 10.5px;
+    line-height: 1.5;
+  }
+
+  /* =======================================================
+     FOOTER TEXT
+  ======================================================= */
+
+  .home2-why-footer {
+    margin-top: 40px;
+  }
+
+  .home2-why-footer p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =======================================================
+     CTA
+  ======================================================= */
+
+.home2-process-action {
+  margin-top: 40px;
+}
+
+.home2-process-button {
+  min-height: 47px;
+  padding: 0 19px;
+  font-size: 13px;
+}
+
+.home2-process-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =====================================================
+   FAQ SECTION
+===================================================== */
+
+.home2-faq-section {
+  width: 100%;
+  padding: 110px 0;
+  background: var(--light-bg);
+  overflow: hidden;
+}
+
+.home2-faq-container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   FAQ HEADING
+===================================================== */
+
+.home2-faq-heading {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.home2-faq-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 14px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home2-faq-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: var(--light-bg);
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.home2-faq-heading h2 {
+  margin: 0 0 20px;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.home2-faq-heading h2 span {
+  color: var(--secondary-color);
+}
+
+.home2-faq-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* =====================================================
+   FAQ LIST
+===================================================== */
+
+.home2-faq-list {
+  width: 100%;
+}
+
+/* =====================================================
+   FAQ ITEM
+   EACH FAQ = SEPARATE ROUNDED BOX
+===================================================== */
+
+.home2-faq-item {
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 0;
+
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+.home2-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+.home2-faq-item summary {
+  position: relative;
+
+  width: 100%;
+  min-height: 82px;
+
+  padding: 22px 75px 22px 28px;
+
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+  cursor: pointer;
+
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color: var(--primary-color);
+  background: transparent;
+
+  outline: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Remove browser marker */
+
+.home2-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.home2-faq-item summary::marker {
+  display: none;
+}
+
+/* =====================================================
+   QUESTION TEXT
+===================================================== */
+
+.home2-faq-question {
+  display: block;
+  width: 100%;
+  color: var(--primary-color);
+}
+
+/* =====================================================
+   PLUS ICON
+===================================================== */
+
+.home2-faq-icon {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--secondary-color);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.home2-faq-icon svg {
+  width: 18px;
+  height: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+/* =====================================================
+   OPEN FAQ
+===================================================== */
+
+.home2-faq-item[open] {
+  border-color: var(--border-color);
+}
+
+.home2-faq-item[open] .home2-faq-icon {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.home2-faq-item[open] .home2-faq-icon svg {
+  transform: rotate(45deg);
+}
+
+/* =====================================================
+   FAQ ANSWER
+===================================================== */
+
+.home2-faq-answer {
+  width: 100%;
+  padding: 0 75px 26px 28px;
+}
+
+.home2-faq-answer p {
+  max-width: 850px;
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.home2-faq-item summary:hover .home2-faq-icon {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.home2-faq-item summary:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: -3px;
+}
+/* =====================================================
+   NEST HUB
+   1024 × 600
+===================================================== */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-faq-section {
+    padding: 75px 0;
+  }
+
+  .home2-faq-container {
+    width: 85%;
+  }
+
+  .home2-faq-heading {
+    margin-bottom: 50px;
+  }
+
+  .home2-faq-tag {
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-faq-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-faq-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .home2-faq-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .home2-faq-item {
+    margin-bottom: 14px;
+    border-radius: 14px;
+  }
+
+  .home2-faq-item summary {
+    min-height: 72px;
+    padding: 19px 62px 19px 24px;
+    font-size: 17px;
+  }
+
+  .home2-faq-icon {
+    right: 20px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .home2-faq-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home2-faq-answer {
+    padding: 0 62px 22px 24px;
+  }
+
+  .home2-faq-answer p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =====================================================
+   IPAD MINI
+   768 × 1024
+===================================================== */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-faq-section {
+    padding: 80px 0;
+  }
+
+  .home2-faq-container {
+    width: 88%;
+  }
+
+  .home2-faq-heading {
+    margin-bottom: 50px;
+  }
+
+  .home2-faq-tag {
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-faq-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-faq-heading h2 {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .home2-faq-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home2-faq-item {
+    margin-bottom: 16px;
+    border-radius: 14px;
+  }
+
+  .home2-faq-item summary {
+    min-height: 75px;
+    padding: 20px 65px 20px 24px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .home2-faq-icon {
+    right: 22px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .home2-faq-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home2-faq-answer {
+    padding: 0 65px 22px 24px;
+  }
+
+  .home2-faq-answer p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+/* =====================================================
+   GALAXY S8+
+   360 × 740
+===================================================== */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-faq-section {
+    padding: 60px 0;
+  }
+
+  .home2-faq-container {
+    width: 88%;
+  }
+
+  .home2-faq-heading {
+    margin-bottom: 40px;
+  }
+
+  .home2-faq-tag {
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 6px 11px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+
+  .home2-faq-tag svg {
+    width: 17px;
+    height: 17px;
+    padding: 2px;
+  }
+
+  .home2-faq-heading h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .home2-faq-heading p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home2-faq-item {
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .home2-faq-item summary {
+    min-height: 66px;
+    padding: 17px 50px 17px 18px;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .home2-faq-icon {
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .home2-faq-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home2-faq-answer {
+    padding: 0 18px 18px;
+  }
+
+  .home2-faq-answer p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+/* =========================================================
+   HOME 2 — FINAL CTA SECTION
+========================================================= */
+
+.home2-final-cta-section {
+  width: 100%;
+  padding: 60px 0;
+  height: 70vh;
+  background: var(--primary-color);
+  overflow: hidden;
+}
+
+.home2-final-cta-container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home2-final-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* =========================================================
+   CTA TAG
+========================================================= */
+
+.home2-final-cta-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 18px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  background-color: var(--white);
+}
+
+.home2-final-cta-tag svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   CTA HEADING
+========================================================= */
+
+.home2-final-cta-content h2 {
+  margin: 0 0 20px;
+  color: var(--white);
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+.home2-final-cta-content h2 span {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.home2-final-cta-content p {
+  margin: 0 0 32px;
+  color: var(--cta-text, var(--white));
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.home2-final-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 0 25px;
+  color: var(--primary-color);
+  background: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home2-final-cta-button svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.home2-final-cta-button:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.home2-final-cta-button:hover svg {
+  transform: translate(2px, -2px);
+}
+/* =========================================================
+   NEST HUB - 1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-final-cta-section {
+    padding: 75px 0;
+  }
+
+  .home2-final-cta-container {
+    width: 85%;
+  }
+
+  .home2-final-cta-tag {
+    margin-bottom: 15px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .home2-final-cta-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-final-cta-content h2 {
+    margin-bottom: 17px;
+    font-size: 42px;
+    line-height: 1.18;
+    letter-spacing: -1px;
+  }
+
+  .home2-final-cta-content p {
+    max-width: 700px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home2-final-cta-button {
+    min-height: 49px;
+    padding: 0 23px;
+    font-size: 14px;
+  }
+
+  .home2-final-cta-button svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI - 768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-final-cta-section {
+    padding: 70px 0;
+  }
+
+  .home2-final-cta-container {
+    width: 88%;
+    padding-top: 50px;
+  }
+
+  .home2-final-cta-tag {
+    gap: 6px;
+    margin-bottom: 16px;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .home2-final-cta-tag svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .home2-final-cta-content h2 {
+    margin-bottom: 18px;
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+
+  .home2-final-cta-content p {
+    max-width: 620px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home2-final-cta-button {
+    min-height: 50px;
+    padding: 0 23px;
+    font-size: 14px;
+  }
+
+  .home2-final-cta-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* =========================================================
+   GALAXY S8+ - 360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-final-cta-section {
+    padding: 60px 0;
+  }
+
+  .home2-final-cta-container {
+    width: 88%;
+  }
+
+  .home2-final-cta-tag {
+    gap: 6px;
+    margin-bottom: 13px;
+    padding: 5px 11px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+
+  .home2-final-cta-tag svg {
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+  }
+
+  .home2-final-cta-content h2 {
+    margin-bottom: 14px;
+    font-size: 27px;
+    line-height: 1.22;
+    letter-spacing: -0.7px;
+  }
+
+  .home2-final-cta-content p {
+    max-width: 100%;
+    margin-bottom: 23px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .home2-final-cta-button {
+    min-height: 46px;
+    padding: 0 19px;
+    font-size: 13px;
+  }
+
+  .home2-final-cta-button svg {
+    width: 17px;
+    height: 17px;
+  }
+}

@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Manrope", sans-serif;
+}
+:root {
+  --primary-color: #1e704b; /* Sea Green */
+  --secondary-color: #b35a3a; /* Earth Brown */
+  --text-color: #111827;
+  --light-bg: #ffff;
+  --dark-bg: #121412;
+  --border-color: #cbd5e1;
+  --white:#ffff;
+}
+
+.dark-mode {
+  --primary-color: #1e704b;
+  --secondary-color: #b35a3a;
+  --text-color: #ffff;
+  --light-bg: #121412;
+  --dark-bg: #121412;
+  --border-color:#cbd5e1;
+  --white:#ffff;
+}
