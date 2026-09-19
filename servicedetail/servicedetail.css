@@ -11,7 +11,7 @@ SERVICE DETAIL HERO
   justify-content: center;
   overflow: hidden;
 
-  background-image: url("https://images.openai.com/static-rsc-4/xfSjoKeK4YoFkW9FGpt54hFWVnrzu58kk4_7IsCEVMLAOXrNsB9ejzJNM5ELtLbwLpgLJRh6N07eQOy1KrZKFWJL9kFaw5EEqlNzAxLABbPmKld3RR7PgS2p0mki8IVOd305KaoZkM7FtTQwvdjYlOr_VNojmZA4P71OM5EsWdQb3mBZ60aUqpjqWR5PWJwO?purpose=fullsize");
+  background-image: url("../images/servicedetail-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ HERO OVERLAY
 .service-detail-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(17, 24, 39, 0.58);
+  background: rgba(0,0,0, 0.6);
   z-index: 1;
 }
 
@@ -59,7 +59,6 @@ HERO TAG
   align-items: center;
   gap: 10px;
   padding: 6px 17px 6px 7px;
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
   background: var(--primary-color);
   color: var(--white);
@@ -133,7 +132,12 @@ HERO BUTTON
 .service-detail-hero-button:hover {
   transform: translateY(-2px);
 }
-
+.dark-mode .service-detail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0, 0.7);
+  z-index: 1;
+}
 /* =========================================================
 NEST HUB — 1024 × 600
 Keep desktop-style hero
@@ -766,7 +770,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
   content: "";
 
   position: absolute;
-  top: 35px;
+  top: 60px;
   left: 10%;
   right: 10%;
 
@@ -1108,7 +1112,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   margin: 0 auto;
 }
 
-
 /* =========================================================
    SECTION HEADER
 ========================================================= */
@@ -1152,7 +1155,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   color: var(--white);
 }
 
-
 /* =========================================================
    SECTION TITLE
 ========================================================= */
@@ -1172,7 +1174,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   color: var(--secondary-color);
 }
 
-
 /* =========================================================
    SECTION DESCRIPTION
 ========================================================= */
@@ -1187,7 +1188,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   line-height: 1.8;
 }
 
-
 /* =========================================================
    BENEFITS GRID
 ========================================================= */
@@ -1197,7 +1197,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
-
 
 /* =========================================================
    BENEFIT ITEM
@@ -1228,7 +1227,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   box-shadow: 0 18px 40px rgba(17, 24, 39, 0.1);
 }
 
-
 /* =========================================================
    BENEFIT ICON
 ========================================================= */
@@ -1254,7 +1252,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   height: 22px;
 }
 
-
 /* =========================================================
    BENEFIT NUMBER
 ========================================================= */
@@ -1268,7 +1265,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   font-weight: 800;
   letter-spacing: 1px;
 }
-
 
 /* =========================================================
    BENEFIT TITLE
@@ -1284,7 +1280,6 @@ SAMSUNG GALAXY S8+ — 360 × 740
   font-weight: 800;
 }
 
-
 /* =========================================================
    BENEFIT DESCRIPTION
 ========================================================= */
@@ -1298,14 +1293,12 @@ SAMSUNG GALAXY S8+ — 360 × 740
   line-height: 1.75;
 }
 
-
 /* =========================================================
    NEST HUB — 1024 × 600
    Keep four-column layout
 ========================================================= */
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
-
   .service-detail-benefits-section {
     padding: 75px 0;
   }
@@ -1360,14 +1353,12 @@ SAMSUNG GALAXY S8+ — 360 × 740
   }
 }
 
-
 /* =========================================================
    iPAD MINI — 768 × 1024
    Two-column layout
 ========================================================= */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
-
   .service-detail-benefits-section {
     padding: 80px 0;
   }
@@ -1416,14 +1407,12 @@ SAMSUNG GALAXY S8+ — 360 × 740
   }
 }
 
-
 /* =========================================================
    SAMSUNG GALAXY S8+ — 360 × 740
    Single-column layout
 ========================================================= */
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
-
   .service-detail-benefits-section {
     padding: 65px 0;
   }
@@ -1608,14 +1597,12 @@ SAMSUNG GALAXY S8+ — 360 × 740
   transform: translateY(-3px);
 }
 
-
 /* =========================================================
    NEST HUB
    1024 × 600
 ========================================================= */
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
-
   .service-detail-cta-section {
     padding: 70px 0;
   }
@@ -1658,14 +1645,12 @@ SAMSUNG GALAXY S8+ — 360 × 740
   }
 }
 
-
 /* =========================================================
    IPAD MINI
    768 × 1024
 ========================================================= */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
-
   .service-detail-cta-section {
     padding: 80px 0;
   }
@@ -1709,14 +1694,12 @@ SAMSUNG GALAXY S8+ — 360 × 740
   }
 }
 
-
 /* =========================================================
    SAMSUNG GALAXY S8+
    360 × 740
 ========================================================= */
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
-
   .service-detail-cta-section {
     padding: 60px 0;
   }
@@ -1763,7 +1746,3 @@ SAMSUNG GALAXY S8+ — 360 × 740
     font-size: 13px;
   }
 }
-
-
-
-

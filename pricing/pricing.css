@@ -5,11 +5,11 @@
 .pricing-hero-section {
   position: relative;
   width: 100%;
-  min-height: 560px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4r68fGrBbV1DqRT31RHg-nlZjUSuG0p5x_bIH-pYZg&s");
+  background-image: url("../images/pricing-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 .pricing-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .pricing-hero-container {
@@ -137,11 +137,15 @@
 }
 
 .pricing-hero-button:hover {
-  background: var(--white);
-  border-color: var(--white);
-  color: var(--primary-color);
+  transform: translateY(-2px);
+ 
 }
 
+.dark-mode  .pricing-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
 /* =========================================================
    NEST HUB
    1024 × 600
@@ -316,7 +320,7 @@
   gap: 10px;
   padding: 7px 16px 7px 7px;
   margin-bottom: 20px;
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 }
 
@@ -868,7 +872,7 @@
   gap: 10px;
   padding: 7px 16px 7px 7px;
   margin-bottom: 20px;
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 }
 
@@ -1315,7 +1319,7 @@
   gap: 10px;
   padding: 7px 16px 7px 7px;
   margin-bottom: 20px;
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 }
 

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CompostCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="404.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="../components/component.js" defer></script>
+    <script src="../global/global.js" defer></script>
+  </head>
+  <body>
+    <main class="error-page">
+      
+      <!-- =====================================================
+     ERROR PAGE CONTROLS
+====================================================== -->
+
+      <div class="error-page-controls">
+        <button
+          type="button"
+          id="rtlToggle"
+          class="error-rtl-toggle"
+          aria-label="Toggle RTL"
+          aria-pressed="false"
+        >
+          RTL
+        </button>
+
+        <button
+          type="button"
+          id="themeToggle"
+          class="error-theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+
+      <!-- =====================================================
+     404 ERROR SECTION
+====================================================== -->
+
+      <section class="error-section">
+        <div class="error-container">
+          <!-- LOGO + BRAND NAME -->
+            <a
+                href="../Home1/home1.html"
+                class="error-logo"
+                aria-label="Go to CompostCare Home"
+            >
+                <img src="../images/logo.png" alt="CompostCare Logo" />
+                <span class="error-logo-text">
+                <span class="error-logo-compost">Compost</span
+                ><span class="error-logo-care">Care</span>
+                </span>
+            </a>
+
+          <!-- 404 NUMBER -->
+          <div class="error-number" aria-label="404">
+            <span>4</span>
+
+            <div class="error-zero">
+              <i data-lucide="leaf"></i>
+            </div>
+
+            <span>4</span>
+          </div>
+
+          <!-- PAGE NOT FOUND TAG -->
+          <span class="error-tag">
+            <span class="error-tag-icon">
+              <i data-lucide="circle-alert"></i>
+            </span>
+
+            <span>PAGE NOT FOUND</span>
+          </span>
+
+          <!-- ERROR HEADING -->
+          <h1>
+            Oops! This Page
+            <span>Can't Be Found.</span>
+          </h1>
+
+          <!-- ERROR DESCRIPTION -->
+          <p class="error-description">
+            The page you're looking for may have been moved, removed, or the
+            link might be incorrect. Let's get you back on track.
+          </p>
+
+          <!-- BACK TO HOME BUTTON -->
+          <a href="../Home1/home1.html" class="error-home-button">
+            <i data-lucide="house"></i>
+            <span>Back to Home</span>
+          </a>
+        </div>
+      </section>
+      ```
+    </main>
+  </body>
+</html>

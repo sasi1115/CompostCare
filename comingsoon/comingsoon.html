@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CompostCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="comingsoon.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="../components/component.js" defer></script>
+    <script src="../global/global.js" defer></script>
+    <script src="comingsoon.js" defer></script>
+  </head>
+  <body>
+    <main class="coming-page">
+      
+      <div class="coming-page-controls">
+        <button
+          type="button"
+          id="rtlToggle"
+          class="coming-rtl-toggle"
+          aria-label="Toggle RTL"
+          aria-pressed="false"
+        >
+          RTL
+        </button>
+
+        <button
+          type="button"
+          id="themeToggle"
+          class="coming-theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+
+      <section class="coming-section">
+        <div class="coming-container">
+          <!-- LOGO + BRAND NAME -->
+
+          <a
+            href="../Home1/home1.html"
+            class="coming-logo"
+            aria-label="Go to CompostCare Home"
+          >
+            <img src="../images/logo.png" alt="CompostCare Logo" />
+
+            <span class="coming-logo-text">
+              <span class="coming-logo-compost">Compost</span
+              ><span class="coming-logo-care">Care</span>
+            </span>
+          </a>
+
+          <!-- COMING SOON TAG -->
+
+          <span class="coming-tag">
+            <span class="coming-tag-icon">
+              <i data-lucide="clock-3"></i>
+            </span>
+
+            <span>COMING SOON</span>
+          </span>
+
+          <!-- MAIN HEADING -->
+
+          <h1>
+            Something Great
+            <span>Is Coming Soon.</span>
+          </h1>
+
+          <!-- DESCRIPTION -->
+
+          <p class="coming-description">
+            We are preparing something fresh and sustainable for you. Our new
+            CompostCare experience will be available soon.
+          </p>
+
+          <!-- COUNTDOWN -->
+
+          <div class="coming-countdown" aria-label="Coming soon countdown">
+            <div class="coming-time-box">
+              <span id="comingDays">00</span>
+              <small>Days</small>
+            </div>
+
+            <span class="coming-separator">:</span>
+
+            <div class="coming-time-box">
+              <span id="comingHours">00</span>
+              <small>Hours</small>
+            </div>
+
+            <span class="coming-separator">:</span>
+
+            <div class="coming-time-box">
+              <span id="comingMinutes">00</span>
+              <small>Minutes</small>
+            </div>
+
+            <span class="coming-separator">:</span>
+
+            <div class="coming-time-box">
+              <span id="comingSeconds">00</span>
+              <small>Seconds</small>
+            </div>
+          </div>
+
+          <!-- BACK TO HOME -->
+
+          <a href="../Home1/home1.html" class="coming-home-button">
+            <i data-lucide="house"></i>
+            <span>Back to Home</span>
+          </a>
+        </div>
+      </section>
+      
+    </main>
+  </body>
+</html>

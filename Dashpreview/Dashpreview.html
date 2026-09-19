@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CompostCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="Dashpreview.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="../components/component.js" defer></script>
+    <script src="../global/global.js" defer></script>
+    <script src="Dashpreview.js" defer></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- =========================================================
+     DASHBOARD PREVIEW HERO
+========================================================= -->
+
+    <section class="dashboard-preview-hero-section">
+      <div class="dashboard-preview-hero-container">
+        <!-- =====================================================
+         HERO CONTENT
+    ====================================================== -->
+
+        <div class="dashboard-preview-hero-content">
+          <span class="dashboard-preview-hero-tag">
+            <span class="dashboard-preview-hero-tag-icon">
+              <i data-lucide="layout-dashboard"></i>
+            </span>
+            YOUR COMPOSTCARE DASHBOARD
+          </span>
+
+          <h1>
+            Everything You Need,
+            <span>In One Place.</span>
+          </h1>
+
+          <p>
+            Track your pickups, monitor compost deliveries, understand your
+            environmental impact, and manage your CompostCare subscription from
+            one simple dashboard.
+          </p>
+
+          <div class="dashboard-preview-hero-actions">
+            <a href="../Login/login.html" class="dashboard-preview-primary-btn">
+              Access Dashboard
+            </a>
+
+            <a
+              href="#dashboard-preview-features"
+              class="dashboard-preview-secondary-btn"
+            >
+              Explore Features
+            </a>
+          </div>
+        </div>
+
+        <!-- =====================================================
+         DASHBOARD PREVIEW
+    ====================================================== -->
+
+        <div class="dashboard-preview-hero-visual">
+          <div class="dashboard-preview-window">
+            <!-- PREVIEW HEADER -->
+            <div class="dashboard-preview-window-header">
+              <div class="dashboard-preview-window-title">
+                <div>
+                  <strong>CompostCare Dashboard</strong>
+                  <span>Subscriber Overview</span>
+                </div>
+              </div>
+
+              <span class="dashboard-preview-status">
+                <span></span>
+                Active
+              </span>
+            </div>
+
+            <!-- PREVIEW BODY -->
+            <div class="dashboard-preview-window-body">
+              <!-- WELCOME -->
+              <div class="dashboard-preview-welcome">
+                <div>
+                  <span>Welcome back</span>
+                  <h3>Sam</h3>
+                </div>
+
+                <div class="dashboard-preview-date">
+                  <i data-lucide="calendar-days"></i>
+                  September 2026
+                </div>
+              </div>
+
+              <!-- DASHBOARD STATS -->
+              <div class="dashboard-preview-stats">
+                <!-- WASTE DIVERTED -->
+                <div class="dashboard-preview-stat">
+                  <span class="dashboard-preview-stat-icon">
+                    <i data-lucide="recycle"></i>
+                  </span>
+
+                  <div>
+                    <span>Waste Diverted</span>
+                    <strong>48 kg</strong>
+                  </div>
+                </div>
+
+                <!-- PICKUPS -->
+                <div class="dashboard-preview-stat">
+                  <span class="dashboard-preview-stat-icon">
+                    <i data-lucide="truck"></i>
+                  </span>
+
+                  <div>
+                    <span>Pickups</span>
+                    <strong>12</strong>
+                  </div>
+                </div>
+
+                <!-- COMPOST RECEIVED -->
+                <div class="dashboard-preview-stat">
+                  <span class="dashboard-preview-stat-icon">
+                    <i data-lucide="package-check"></i>
+                  </span>
+
+                  <div>
+                    <span>Compost Received</span>
+                    <strong>32 kg</strong>
+                  </div>
+                </div>
+
+                <!-- CO2 BENEFIT -->
+                <div class="dashboard-preview-stat">
+                  <span class="dashboard-preview-stat-icon">
+                    <i data-lucide="sprout"></i>
+                  </span>
+
+                  <div>
+                    <span>CO₂ Benefit</span>
+                    <strong>18 kg</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- =================================================
+               PICKUP + DELIVERY
+          ================================================== -->
+
+              <div class="dashboard-preview-content-grid">
+                <!-- UPCOMING PICKUP -->
+                <div class="dashboard-preview-panel">
+                  <div class="dashboard-preview-panel-heading">
+                    <div>
+                      <span>Upcoming Pickup</span>
+                      <h4>Waste Collection</h4>
+                    </div>
+
+                    <i data-lucide="calendar-check"></i>
+                  </div>
+
+                  <div class="dashboard-preview-pickup">
+                    <div class="dashboard-preview-pickup-date">
+                      <strong>18</strong>
+                      <span>SEP</span>
+                    </div>
+
+                    <div>
+                      <strong>Thursday, 10:00 AM</strong>
+                      <span>Scheduled pickup</span>
+                    </div>
+
+                    <span class="dashboard-preview-mini-status">
+                      Scheduled
+                    </span>
+                  </div>
+                </div>
+
+                <!-- COMPOST DELIVERY -->
+                <div class="dashboard-preview-panel">
+                  <div class="dashboard-preview-panel-heading">
+                    <div>
+                      <span>Compost Delivery</span>
+                      <h4>Batch #CC-1048</h4>
+                    </div>
+
+                    <i data-lucide="package"></i>
+                  </div>
+
+                  <div class="dashboard-preview-progress">
+                    <div class="dashboard-preview-progress-line">
+                      <span class="dashboard-preview-progress-active"></span>
+                    </div>
+
+                    <div class="dashboard-preview-progress-steps">
+                      <span class="active">
+                        <i data-lucide="check"></i>
+                        Collected
+                      </span>
+
+                      <span class="active">
+                        <i data-lucide="loader"></i>
+                        Processing
+                      </span>
+
+                      <span>
+                        <i data-lucide="package-check"></i>
+                        Ready
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     DASHBOARD FEATURES
+========================================================= -->
+
+    <section
+      class="dashboard-preview-features-section"
+      id="dashboard-preview-features"
+    >
+      <div class="dashboard-preview-features-container">
+        <!-- =====================================================
+     LEFT SIDE — COMPOST DELIVERY VISUAL
+====================================================== -->
+
+        <div class="dashboard-preview-features-visual">
+          <div class="dashboard-preview-delivery-card">
+            <div class="dashboard-preview-delivery-header">
+              <div>
+                <span>COMPOST DELIVERY</span>
+                <h3>Batch #CC-1048</h3>
+              </div>
+
+              <span class="dashboard-preview-delivery-status">
+                Processing
+              </span>
+            </div>
+
+            <div class="dashboard-preview-delivery-route">
+              <div class="dashboard-preview-delivery-step active">
+                <span class="dashboard-preview-delivery-icon">
+                  <i data-lucide="check"></i>
+                </span>
+
+                <div>
+                  <strong>Waste Collected</strong>
+                  <span>September 11, 2026</span>
+                </div>
+              </div>
+
+              <div class="dashboard-preview-delivery-line active"></div>
+
+              <div class="dashboard-preview-delivery-step active">
+                <span class="dashboard-preview-delivery-icon">
+                  <i data-lucide="refresh-cw"></i>
+                </span>
+
+                <div>
+                  <strong>Processing</strong>
+                  <span>Currently in progress</span>
+                </div>
+              </div>
+
+              <div class="dashboard-preview-delivery-line"></div>
+
+              <div class="dashboard-preview-delivery-step">
+                <span class="dashboard-preview-delivery-icon">
+                  <i data-lucide="package-check"></i>
+                </span>
+
+                <div>
+                  <strong>Compost Ready</strong>
+                  <span>Upcoming</span>
+                </div>
+              </div>
+
+              <div class="dashboard-preview-delivery-line"></div>
+
+              <div class="dashboard-preview-delivery-step">
+                <span class="dashboard-preview-delivery-icon">
+                  <i data-lucide="truck"></i>
+                </span>
+
+                <div>
+                  <strong>Delivered</strong>
+                  <span>Upcoming</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-preview-delivery-footer">
+              <span>
+                <i data-lucide="package"></i>
+                32 kg compost
+              </span>
+
+              <span>
+                <i data-lucide="calendar-days"></i>
+                September 2026
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- =====================================================
+     RIGHT SIDE — DASHBOARD FEATURES
+====================================================== -->
+
+        <div class="dashboard-preview-features-content">
+          <span class="dashboard-preview-features-tag">
+            <span class="dashboard-preview-features-tag-icon">
+              <i data-lucide="layout-dashboard"></i>
+            </span>
+
+            DASHBOARD FEATURES
+          </span>
+
+          <h2>
+            Everything You Need
+            <span>To Stay on Track.</span>
+          </h2>
+
+          <p>
+            Your CompostCare Dashboard brings your pickups, deliveries,
+            environmental progress, and account details together in one place.
+          </p>
+
+          <div class="dashboard-preview-feature-list">
+            <!-- FEATURE 1 -->
+
+            <div class="dashboard-preview-feature-item">
+              <span class="dashboard-preview-feature-icon">
+                <i data-lucide="calendar-plus"></i>
+              </span>
+
+              <div>
+                <h3>Schedule Pickup</h3>
+
+                <p>
+                  Choose a convenient date and time for your waste collection.
+                </p>
+              </div>
+            </div>
+
+            <!-- FEATURE 2 -->
+
+            <div class="dashboard-preview-feature-item">
+              <span class="dashboard-preview-feature-icon">
+                <i data-lucide="package-search"></i>
+              </span>
+
+              <div>
+                <h3>Track Compost Delivery</h3>
+
+                <p>
+                  Follow your compost batch from collection through processing
+                  to delivery.
+                </p>
+              </div>
+            </div>
+
+            <!-- FEATURE 3 -->
+
+            <div class="dashboard-preview-feature-item">
+              <span class="dashboard-preview-feature-icon">
+                <i data-lucide="sprout"></i>
+              </span>
+
+              <div>
+                <h3>View Your Impact</h3>
+
+                <p>
+                  Understand how much waste you divert and the environmental
+                  impact of your composting activity.
+                </p>
+              </div>
+            </div>
+
+            <!-- FEATURE 4 -->
+
+            <div class="dashboard-preview-feature-item">
+              <span class="dashboard-preview-feature-icon">
+                <i data-lucide="credit-card"></i>
+              </span>
+
+              <div>
+                <h3>Manage Your Account</h3>
+
+                <p>
+                  Manage your subscription plan and review your payment history
+                  whenever you need.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-preview-impact-section">
+      <div class="dashboard-preview-impact-container">
+        <div class="dashboard-preview-impact-header">
+          <span class="dashboard-preview-impact-tag">
+            <span class="dashboard-preview-impact-tag-icon">
+              <i data-lucide="sprout"></i>
+            </span>
+            YOUR IMPACT
+          </span>
+
+          <h2>
+            See the Difference
+            <span>Your Composting Makes.</span>
+          </h2>
+
+          <p>
+            Your CompostCare Dashboard turns your everyday composting activity
+            into measurable environmental progress you can see over time.
+          </p>
+        </div>
+
+        <div class="dashboard-preview-impact-content">
+          <div class="dashboard-preview-impact-summary">
+            <div class="dashboard-preview-impact-summary-heading">
+              <span>ENVIRONMENTAL PROGRESS</span>
+
+              <h3>Your Impact So Far</h3>
+            </div>
+
+            <div class="dashboard-preview-impact-metrics">
+              <div class="dashboard-preview-impact-metric">
+                <div class="dashboard-preview-impact-metric-icon">
+                  <i data-lucide="recycle"></i>
+                </div>
+
+                <div>
+                  <strong>48 kg</strong>
+                  <span>Waste Diverted</span>
+                </div>
+              </div>
+
+              <div class="dashboard-preview-impact-metric">
+                <div class="dashboard-preview-impact-metric-icon">
+                  <i data-lucide="cloud-sun"></i>
+                </div>
+
+                <div>
+                  <strong>18 kg</strong>
+                  <span>CO₂ Benefit</span>
+                </div>
+              </div>
+
+              <div class="dashboard-preview-impact-metric">
+                <div class="dashboard-preview-impact-metric-icon">
+                  <i data-lucide="truck"></i>
+                </div>
+
+                <div>
+                  <strong>12</strong>
+                  <span>Pickups Completed</span>
+                </div>
+              </div>
+
+              <div class="dashboard-preview-impact-metric">
+                <div class="dashboard-preview-impact-metric-icon">
+                  <i data-lucide="package-check"></i>
+                </div>
+
+                <div>
+                  <strong>32 kg</strong>
+                  <span>Compost Received</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-preview-impact-message">
+              <p>
+                Every pickup helps reduce waste and create a positive
+                environmental impact. Keep composting, keep making a difference.
+              </p>
+            </div>
+          </div>
+
+          <div class="dashboard-preview-impact-chart">
+            <div class="dashboard-preview-impact-chart-header">
+              <div>
+                <span>MONTHLY PROGRESS</span>
+                <h3>Waste Diversion</h3>
+              </div>
+
+              <span class="dashboard-preview-impact-chart-period"> 2026 </span>
+            </div>
+
+            <div class="dashboard-preview-impact-chart-area">
+              <div class="dashboard-preview-impact-y-axis">
+                <span>12 kg</span>
+                <span>9 kg</span>
+                <span>6 kg</span>
+                <span>3 kg</span>
+                <span>0 kg</span>
+              </div>
+
+              <div class="dashboard-preview-impact-bars">
+                <div class="dashboard-preview-impact-bar-item">
+                  <div class="dashboard-preview-impact-bar-wrapper">
+                    <span
+                      class="dashboard-preview-impact-bar"
+                      style="height: 32%"
+                    ></span>
+                  </div>
+
+                  <span>APR</span>
+                </div>
+
+                <div class="dashboard-preview-impact-bar-item">
+                  <div class="dashboard-preview-impact-bar-wrapper">
+                    <span
+                      class="dashboard-preview-impact-bar"
+                      style="height: 43%"
+                    ></span>
+                  </div>
+
+                  <span>MAY</span>
+                </div>
+
+                <div class="dashboard-preview-impact-bar-item">
+                  <div class="dashboard-preview-impact-bar-wrapper">
+                    <span
+                      class="dashboard-preview-impact-bar"
+                      style="height: 51%"
+                    ></span>
+                  </div>
+
+                  <span>JUN</span>
+                </div>
+
+                <div class="dashboard-preview-impact-bar-item">
+                  <div class="dashboard-preview-impact-bar-wrapper">
+                    <span
+                      class="dashboard-preview-impact-bar"
+                      style="height: 64%"
+                    ></span>
+                  </div>
+
+                  <span>JUL</span>
+                </div>
+
+                <div class="dashboard-preview-impact-bar-item">
+                  <div class="dashboard-preview-impact-bar-wrapper">
+                    <span
+                      class="dashboard-preview-impact-bar"
+                      style="height: 76%"
+                    ></span>
+                  </div>
+
+                  <span>AUG</span>
+                </div>
+
+                <div class="dashboard-preview-impact-bar-item active">
+                  <div class="dashboard-preview-impact-bar-wrapper">
+                    <span
+                      class="dashboard-preview-impact-bar"
+                      style="height: 88%"
+                    ></span>
+                  </div>
+
+                  <span>SEP</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-preview-impact-chart-footer">
+              <span>
+                <i data-lucide="trending-up"></i>
+                Consistent progress this year
+              </span>
+
+              <strong>48 kg total</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- how it works  -->
+    <section class="dashboard-preview-how-section">
+      <div class="dashboard-preview-how-container">
+        <div class="dashboard-preview-how-header">
+          <span class="dashboard-preview-how-tag">
+            <span class="dashboard-preview-how-tag-icon">
+              <i data-lucide="circle-help"></i>
+            </span>
+            HOW IT WORKS
+          </span>
+
+          <h2>
+            See How Your Dashboard
+            <span>Works.</span>
+          </h2>
+
+          <p>
+            Your CompostCare Dashboard keeps every part of your composting
+            service simple, organized, and easy to manage.
+          </p>
+        </div>
+
+        <div class="dashboard-preview-how-grid">
+          <div class="dashboard-preview-how-card">
+            <div class="dashboard-preview-how-card-top">
+              <span class="dashboard-preview-how-number">01</span>
+
+              <span class="dashboard-preview-how-icon">
+                <i data-lucide="calendar-plus"></i>
+              </span>
+            </div>
+
+            <div class="dashboard-preview-how-card-content">
+              <h3>Schedule Pickup</h3>
+
+              <p>
+                Choose a convenient date and time for your waste collection.
+              </p>
+            </div>
+          </div>
+
+          <div class="dashboard-preview-how-card">
+            <div class="dashboard-preview-how-card-top">
+              <span class="dashboard-preview-how-number">02</span>
+
+              <span class="dashboard-preview-how-icon">
+                <i data-lucide="package-search"></i>
+              </span>
+            </div>
+
+            <div class="dashboard-preview-how-card-content">
+              <h3>Track Delivery</h3>
+
+              <p>
+                Follow your compost batch from collection through processing to
+                delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="dashboard-preview-how-card">
+            <div class="dashboard-preview-how-card-top">
+              <span class="dashboard-preview-how-number">03</span>
+
+              <span class="dashboard-preview-how-icon">
+                <i data-lucide="sprout"></i>
+              </span>
+            </div>
+
+            <div class="dashboard-preview-how-card-content">
+              <h3>Measure Your Impact</h3>
+
+              <p>
+                See your waste diversion, CO₂ benefit, and sustainability
+                progress over time.
+              </p>
+            </div>
+          </div>
+
+          <div class="dashboard-preview-how-card">
+            <div class="dashboard-preview-how-card-top">
+              <span class="dashboard-preview-how-number">04</span>
+
+              <span class="dashboard-preview-how-icon">
+                <i data-lucide="credit-card"></i>
+              </span>
+            </div>
+
+            <div class="dashboard-preview-how-card-content">
+              <h3>Manage Your Account</h3>
+
+              <p>
+                Manage your subscription and review payment history anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--  cta  -->
+    <section class="dashboard-preview-cta-section">
+      <div class="dashboard-preview-cta-container">
+      
+        <span class="dashboard-preview-cta-tag">
+          <span class="dashboard-preview-cta-tag-icon">
+            <i data-lucide="layout-dashboard"></i>
+          </span>
+          READY TO GET STARTED?
+        </span>
+
+        <h2>
+          Your Composting Journey
+          <span>Starts Here.</span>
+        </h2>
+
+        <p>
+          Access your CompostCare Dashboard to manage pickups, track deliveries,
+          and see your environmental impact.
+        </p>
+
+        <a href="../Login/login.html" class="dashboard-preview-cta-button">
+          Access Dashboard
+        </a>
+        
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+</html>

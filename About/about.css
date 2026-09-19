@@ -25,7 +25,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: url("https://i.pinimg.com/1200x/0d/2f/97/0d2f97468ebde8426e3ffd1ffd65e3d9.jpg");
+  background-image: url("../images/about-hero.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -451,7 +451,6 @@ body {
 ========================================================= */
 
 .ourstory-why-section {
-  
   margin: 0 auto;
   padding: 110px 0;
   background: var(--light-bg);
@@ -471,7 +470,7 @@ body {
   align-items: center;
 
   gap: 50px;
-  background:var(--light-bg);
+  background: var(--light-bg);
 }
 
 /* =========================================================
@@ -1545,7 +1544,7 @@ body {
 
 .about-transformation-section {
   width: 100%;
-  
+
   margin: 0 auto;
   padding: 110px 0;
   background: var(--light-bg);
@@ -1555,7 +1554,7 @@ body {
   width: 85%;
   max-width: 1200px;
   margin: 0 auto;
-  background:var(--light-bg);
+  background: var(--light-bg);
 }
 
 /* =========================================================
@@ -1585,7 +1584,7 @@ body {
 
   color: var(--primary-color);
 
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 
   box-sizing: border-box;
@@ -2071,7 +2070,7 @@ body {
 
   color: var(--primary-color);
 
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 
   box-sizing: border-box;
@@ -2482,110 +2481,154 @@ body {
 }
 
 /* =========================================================
-   ABOUT PAGE CTA
+ABOUT PAGE CTA
 ========================================================= */
 
 .about-final-cta-section {
   width: 100%;
-  padding: 70px 0;
-  background: var(--primary-color);
+  padding: 100px 0;
+  background: var(--light-bg);
 }
 
 .about-final-cta-container {
+  position: relative;
   width: 85%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 65px 70px;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: var(--light-bg);
   text-align: center;
+  overflow: hidden;
+}
+
+.about-final-cta-container::before,
+.about-final-cta-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 5px;
+  height: 110px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  transform: translateY(-50%);
+}
+
+.about-final-cta-container::before {
+  left: 0;
+}
+
+.about-final-cta-container::after {
+  right: 0;
 }
 
 /* =========================================================
-   CTA TAG
+CTA CONTENT
+========================================================= */
+
+.about-final-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================================
+CTA TAG
 ========================================================= */
 
 .about-final-cta-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 9px;
 
-  padding: 7px 14px;
   margin-bottom: 24px;
+  padding: 6px 17px 6px 6px;
 
-  font-size: 13px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: 1.2px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
 
   color: var(--primary-color);
-  background-color: var(--white);
-
-  border: 1px solid var(--secondary-color);
-  border-radius: 50px;
-
-  box-sizing: border-box;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
 }
 
-.about-final-cta-tag svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+.about-final-cta-tag-icon {
+  width: 29px;
+  height: 29px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: var(--primary-color);
   color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 50px;
-  padding: 3px;
-  stroke-width: 1.8;
+}
+
+.about-final-cta-tag-icon svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* =========================================================
-   CTA CONTENT
-========================================================= */
-
-.about-final-cta-content {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* =========================================================
-   CTA HEADING
+CTA HEADING
 ========================================================= */
 
 .about-final-cta-content h2 {
-  margin: 0 auto 20px;
+  margin: 0;
 
-  font-size: clamp(36px, 4vw, 56px);
-  line-height: 1.12;
-  font-weight: 600;
-  letter-spacing: -1.5px;
-
-  color: var(--white);
-  text-align: center;
+  color: var(--text-color);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.3px;
 }
 
 .about-final-cta-content h2 span {
-  color: var(--secondary-color);
+  display: block;
+  color: var(--primary-color);
 }
 
 /* =========================================================
-   CTA DESCRIPTION
+CTA DESCRIPTION
 ========================================================= */
 
 .about-final-cta-content p {
-  max-width: 650px;
-  margin: 0 auto 32px;
+  max-width: 620px;
+  margin: 19px auto 0;
 
-  font-size: 16px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
   line-height: 1.8;
-  font-weight: 400;
 
-  color: var(--cta-text);
-  text-align: center;
+  opacity: 0.7;
 }
 
 /* =========================================================
-   CTA BUTTON
+CTA DIVIDER
+========================================================= */
+
+.about-final-cta-divider {
+  width: 55px;
+  height: 2px;
+
+  margin-top: 25px;
+
+  border-radius: 50px;
+  background: var(--secondary-color);
+}
+
+/* =========================================================
+CTA BUTTON
 ========================================================= */
 
 .about-final-cta-button {
@@ -2593,23 +2636,25 @@ body {
   align-items: center;
   justify-content: center;
 
-  min-width: 160px;
-  padding: 13px 28px;
+  min-width: 165px;
+  min-height: 48px;
 
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 500;
+  margin-top: 25px;
+  padding: 12px 25px;
 
-  color: var(--button-text);
-  background: var(--white);
-
+  border: 1px solid var(--primary-color);
   border-radius: 50px;
+
+  background: var(--primary-color);
+  color: var(--white);
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
 
   text-decoration: none;
 
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .about-final-cta-button:hover {
@@ -2617,194 +2662,127 @@ body {
 }
 
 /* =========================================================
-   DARK THEME
+NEST HUB — 1024 × 600
 ========================================================= */
 
-.dark-theme .about-final-cta-section {
-  background: var(--cta-bg);
-}
-
-/* =========================================================
-   NEST HUB
-   1024 × 600
-========================================================= */
-
-@media (max-width: 1024px) and (max-height: 700px) {
+@media (max-width: 1024px) and (max-height: 600px) {
   .about-final-cta-section {
     padding: 80px 0;
   }
 
   .about-final-cta-container {
     width: 88%;
-  }
-
-  .about-final-cta-tag {
-    margin-bottom: 20px;
-    font-size: 12px;
-  }
-
-  .about-final-cta-content {
-    max-width: 700px;
+    padding: 50px 55px;
   }
 
   .about-final-cta-content h2 {
-    font-size: 42px;
-    line-height: 1.15;
-    letter-spacing: -1px;
+    font-size: 40px;
   }
 
   .about-final-cta-content p {
-    max-width: 600px;
-    font-size: 15px;
-    line-height: 1.75;
-    margin-bottom: 28px;
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .about-final-cta-divider {
+    margin-top: 21px;
   }
 
   .about-final-cta-button {
-    min-width: 150px;
-    padding: 12px 25px;
+    margin-top: 22px;
   }
 }
 
 /* =========================================================
-   IPAD MINI
-   768 × 1024
+IPAD MINI — 768 × 1024
 ========================================================= */
 
 @media (max-width: 768px) and (min-height: 700px) {
   .about-final-cta-section {
-    padding: 85px 0;
+    padding: 90px 0;
   }
 
   .about-final-cta-container {
-    width: 88%;
-  }
-
-  .about-final-cta-tag {
-    gap: 7px;
-    padding: 7px 13px;
-    margin-bottom: 19px;
-
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-
-  .about-final-cta-tag svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .about-final-cta-content {
-    max-width: 650px;
+    width: 84%;
+    max-width: 620px;
+    padding: 55px 40px;
+    border-radius: 26px;
   }
 
   .about-final-cta-content h2 {
-    margin-bottom: 18px;
-
     font-size: 40px;
-    line-height: 1.15;
-    letter-spacing: -0.8px;
   }
 
   .about-final-cta-content p {
-    max-width: 580px;
-    margin: 0 auto 28px;
-
-    font-size: 15px;
-    line-height: 1.75;
+    max-width: 540px;
   }
 
-  .about-final-cta-button {
-    min-width: 155px;
-    padding: 12px 25px;
-    font-size: 13px;
+  .about-final-cta-container::before,
+  .about-final-cta-container::after {
+    height: 90px;
   }
 }
 
 /* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
+SAMSUNG GALAXY S8+ — 360 × 740
 ========================================================= */
 
 @media (max-width: 360px) and (max-height: 740px) {
   .about-final-cta-section {
-    padding: 65px 0;
+    padding: 70px 0;
   }
 
   .about-final-cta-container {
     width: 88%;
+    padding: 38px 20px;
+    border-radius: 22px;
+  }
+
+  .about-final-cta-container::before,
+  .about-final-cta-container::after {
+    width: 4px;
+    height: 70px;
   }
 
   .about-final-cta-tag {
-    gap: 6px;
-
-    padding: 6px 11px;
-    margin-bottom: 15px;
-
+    margin-bottom: 19px;
+    padding: 6px 13px 6px 6px;
     font-size: 9px;
-    letter-spacing: 0.7px;
+    letter-spacing: 0.8px;
   }
 
-  .about-final-cta-tag svg {
-    width: 14px;
-    height: 14px;
+  .about-final-cta-tag-icon {
+    width: 27px;
+    height: 27px;
   }
 
-  .about-final-cta-content {
-    max-width: 100%;
+  .about-final-cta-tag-icon svg {
+    width: 13px;
+    height: 13px;
   }
 
   .about-final-cta-content h2 {
-    margin-bottom: 14px;
-
-    font-size: 29px;
-    line-height: 1.18;
-    letter-spacing: -0.5px;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.7px;
   }
 
   .about-final-cta-content p {
-    max-width: 100%;
-    margin: 0 auto 23px;
-
-    font-size: 13px;
+    margin-top: 15px;
+    font-size: 11px;
     line-height: 1.7;
   }
 
-  .about-final-cta-button {
-    min-width: 145px;
-    padding: 11px 22px;
-
-    font-size: 12px;
-    line-height: 1.4;
-  }
-}
-
-/* =========================================================
-   VERY SMALL SCREENS
-   320px AND BELOW
-========================================================= */
-
-@media (max-width: 320px) {
-  .about-final-cta-container {
-    width: 90%;
-  }
-
-  .about-final-cta-tag {
-    padding: 6px 10px;
-    font-size: 8.5px;
-  }
-
-  .about-final-cta-content h2 {
-    font-size: 27px;
-  }
-
-  .about-final-cta-content p {
-    font-size: 12.5px;
+  .about-final-cta-divider {
+    width: 45px;
+    margin-top: 20px;
   }
 
   .about-final-cta-button {
-    min-width: 140px;
-    padding: 10px 20px;
-    font-size: 11.5px;
+    min-width: 150px;
+    min-height: 46px;
+    margin-top: 21px;
+    padding: 11px 20px;
+    font-size: 11px;
   }
 }

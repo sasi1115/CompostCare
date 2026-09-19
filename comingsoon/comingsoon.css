@@ -1,0 +1,530 @@
+.coming-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--light-bg);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.coming-page-controls {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coming-rtl-toggle,
+.coming-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  min-width: 42px;
+  padding: 0 13px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+  background: var(--light-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.coming-theme-toggle {
+  width: 42px;
+  padding: 0;
+}
+.coming-rtl-toggle {
+  padding: 0 9px;
+}
+.coming-rtl-toggle:hover,
+.coming-theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.coming-theme-toggle svg {
+  width: 17px;
+  height: 17px;
+  pointer-events: none;
+}
+
+/* =========================================================
+COMING SOON SECTION
+========================================================= */
+
+.coming-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 20px;
+}
+
+.coming-container {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* =========================================================
+LOGO + BRAND NAME
+========================================================= */
+
+.coming-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0 0 18px;
+  text-decoration: none;
+}
+
+.coming-logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin:0 -5px 0 0;
+}
+
+.coming-logo-text {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.coming-logo-compost {
+  color: var(--primary-color);
+}
+
+.coming-logo-care {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+COMING SOON TAG
+========================================================= */
+
+.coming-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 5px 14px 5px 6px;
+  margin-bottom: 14px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.coming-tag-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.coming-tag-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* =========================================================
+MAIN HEADING
+========================================================= */
+
+.coming-container h1 {
+  max-width: 650px;
+  margin: 0 0 10px;
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: -1.6px;
+  color: var(--text-color);
+}
+
+.coming-container h1 span {
+  display: block;
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.coming-description {
+  max-width: 540px;
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-color);
+}
+
+/* =========================================================
+COUNTDOWN
+========================================================= */
+
+.coming-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.coming-time-box {
+  width: 92px;
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--light-bg);
+}
+
+.coming-time-box > span {
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.coming-time-box small {
+  margin-top: 7px;
+  font-size: 8px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.coming-separator {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+BACK TO HOME
+========================================================= */
+
+.coming-home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 43px;
+  padding: 0 21px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.coming-home-button:hover {
+  transform: translateY(-2px);
+}
+
+.coming-home-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================================
+NEST HUB
+1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .coming-page-controls {
+    top: 18px;
+    right: 24px;
+  }
+
+  .coming-section {
+    padding: 25px 20px;
+  }
+
+  .coming-logo {
+    margin-bottom: 10px;
+  }
+
+  .coming-logo img {
+    width: 29px;
+    height: 29px;
+  }
+
+  .coming-logo-text {
+    font-size: 18px;
+  }
+
+  .coming-tag {
+    margin-bottom: 8px;
+    padding: 4px 11px 4px 5px;
+    font-size: 9px;
+  }
+
+  .coming-tag-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .coming-tag-icon svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .coming-container h1 {
+    margin-bottom: 7px;
+    font-size: 31px;
+    letter-spacing: -1px;
+  }
+
+  .coming-description {
+    max-width: 470px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .coming-countdown {
+    gap: 7px;
+    margin-bottom: 13px;
+  }
+
+  .coming-time-box {
+    width: 72px;
+    min-height: 53px;
+    border-radius: 9px;
+  }
+
+  .coming-time-box > span {
+    font-size: 19px;
+  }
+
+  .coming-time-box small {
+    margin-top: 5px;
+    font-size: 7px;
+  }
+
+  .coming-separator {
+    font-size: 17px;
+  }
+
+  .coming-home-button {
+    min-height: 37px;
+    padding: 0 17px;
+    font-size: 11px;
+  }
+
+  .coming-home-button svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* =========================================================
+IPAD MINI
+768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .coming-page-controls {
+    top: 20px;
+    right: 22px;
+  }
+
+  .coming-section {
+    padding: 40px 20px;
+  }
+
+  .coming-container {
+    max-width: 600px;
+  }
+
+  .coming-logo {
+    margin-bottom: 14px;
+  }
+
+  .coming-logo img {
+    width: 33px;
+    height: 33px;
+  }
+
+  .coming-logo-text {
+    font-size: 20px;
+  }
+
+  .coming-tag {
+    margin-bottom: 12px;
+  }
+
+  .coming-container h1 {
+    font-size: 37px;
+    line-height: 1.12;
+  }
+
+  .coming-description {
+    max-width: 500px;
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+
+  .coming-countdown {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .coming-time-box {
+    width: 82px;
+    min-height: 64px;
+  }
+
+  .coming-time-box > span {
+    font-size: 22px;
+  }
+
+  .coming-time-box small {
+    font-size: 8px;
+  }
+
+  .coming-separator {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+
+360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .coming-page-controls {
+    top: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  .coming-rtl-toggle,
+  .coming-theme-toggle {
+    height: 34px;
+    min-width: 34px;
+    font-size: 10px;
+  }
+
+  .coming-theme-toggle {
+    width: 34px;
+  }
+
+  .coming-section {
+    min-height: 100vh;
+    padding: 32px 14px 22px;
+  }
+
+  .coming-container {
+    max-width: 330px;
+  }
+
+  .coming-logo {
+    margin-bottom: 10px;
+  }
+
+  .coming-logo img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .coming-logo-text {
+    font-size: 16px;
+  }
+
+  .coming-tag {
+    gap: 6px;
+    padding: 4px 10px 4px 5px;
+    margin-bottom: 9px;
+    font-size: 8px;
+  }
+
+  .coming-tag-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .coming-tag-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .coming-container h1 {
+    margin-bottom: 6px;
+    font-size: 25px;
+    line-height: 1.12;
+    letter-spacing: -0.7px;
+  }
+
+  .coming-description {
+    max-width: 310px;
+    margin-bottom: 13px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .coming-countdown {
+    gap: 4px;
+    margin-bottom: 14px;
+  }
+
+  .coming-time-box {
+    width: 61px;
+    min-height: 50px;
+    border-radius: 8px;
+  }
+
+  .coming-time-box > span {
+    font-size: 17px;
+  }
+
+  .coming-time-box small {
+    margin-top: 4px;
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+
+  .coming-separator {
+    font-size: 14px;
+  }
+
+  .coming-home-button {
+    min-height: 35px;
+    padding: 0 15px;
+    font-size: 10px;
+  }
+
+  .coming-home-button svg {
+    width: 13px;
+    height: 13px;
+  }
+}

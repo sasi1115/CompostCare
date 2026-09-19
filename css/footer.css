@@ -225,7 +225,7 @@ html[dir="rtl"] .footer-logo {
 }
 
 
-.footer-col p i {
+.footer-col p svg {
     flex-shrink: 0;
 
     width: 18px;

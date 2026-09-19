@@ -65,12 +65,12 @@ const serviceData = {
       {
         icon: "recycle",
         title: "Start Composting",
-        text: "Add suitable kitchen waste regularly and follow the recommended composting routine.",
+        text: "Add suitable kitchen waste regularly and follow the composting routine.",
       },
       {
         icon: "refresh-cw",
         title: "Maintain & Monitor",
-        text: "Follow simple maintenance practices to keep the composting process balanced and active.",
+        text: "Maintain the compost balance with simple, regular care practices.",
       },
       {
         icon: "sprout",
@@ -101,7 +101,7 @@ const serviceData = {
       {
         icon: "clock-3",
         title: "Simple Daily Routine",
-        text: "Follow a practical composting routine that fits naturally into everyday household life.",
+        text: "Follow a practical composting routine that fits naturally into everyday life  to  make life balance constantly.",
       },
       {
         icon: "earth",

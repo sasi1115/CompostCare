@@ -1,378 +1,475 @@
 /* =====================================================
-   HOME1 HERO SECTION
+HOME1 HERO SECTION
 ===================================================== */
 
 .home1-hero {
-  padding-top: 50px;
+padding-top: 50px;
 
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 0;
+position: relative;
+width: 100%;
+height: 100vh;
+min-height: 0;
 
-  display: flex;
-  align-items: flex-start;
-  background-image: url("../images/home1-hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
 
-  overflow: hidden;
+background-image: url("../images/home1-hero1.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+overflow: hidden;
 }
 
 /* =====================================================
-   HERO OVERLAY
+HERO OVERLAY
 ===================================================== */
 
 .home1-hero-overlay {
-  position: absolute;
-  inset: 0;
+position: absolute;
+inset: 0;
 
-  background: rgba(0, 0, 0, 0.5);
+background: rgba(0, 0, 0, 0.57);
 
-  z-index: 1;
+z-index: 1;
 }
 
 /* =====================================================
-   HERO CONTAINER
+HERO CONTAINER
 ===================================================== */
 
 .home1-hero-container {
-  position: relative;
-  z-index: 2;
+position: relative;
+z-index: 2;
 
-  width: 85%;
-  max-width: 1200px;
+width: 85%;
+max-width: 1200px;
 
-  margin: 0 auto;
+margin: 0 auto;
 
-  display: flex;
-  align-items: flex-start;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 /* =====================================================
-   HERO CONTENT
+HERO CONTENT
 ===================================================== */
 
 .home1-hero-content {
-  width: 680px;
-  max-width: 100%;
+width: 680px;
+max-width: 100%;
 
-  padding: 45px 0;
+padding: 0;
+
+text-align: center;
+
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-/* =========================================================
-   HERO TAG
-========================================================= */
+/* =====================================================
+HERO TAG
+===================================================== */
 
 .home1-hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding: 8px 16px;
-  background: var(--primary-color);
-  border-radius: 50px;
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 500;
-  color: var(--white);
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+
+margin-bottom: 20px;
+padding: 8px 16px;
+
+background: var(--primary-color);
+border-radius: 50px;
+
+font-size: 13px;
+line-height: 1.5;
+font-weight: 500;
+
+color: var(--white);
 }
 
 .home1-hero-tag svg {
-  width: 18px;
-  height: 18px;
-  color: var(--light-bg);
-  flex-shrink: 0;
+width: 18px;
+height: 18px;
+
+color: var(--white);
+
+flex-shrink: 0;
 }
+
 /* =====================================================
-   HERO HEADING
+HERO HEADING
 ===================================================== */
 
 .home1-hero-content h1 {
-  margin: 0 0 24px;
+margin: 0 0 24px;
 
-  font-size: clamp(46px, 5vw, 68px);
-  line-height: 1.12;
-  font-weight: 600;
+font-size: 68px;
+line-height: 1.12;
+font-weight: 600;
 
-  letter-spacing: -1px;
+letter-spacing: -1.5px;
 
-  color: var(--white);
+text-align: center;
+
+color: var(--white);
 }
 
 .home1-hero-content h1 span {
-  display: block;
+display: block;
 
-  color: var(--secondary-color);
+color: var(--secondary-color);
 }
 
 /* =====================================================
-   HERO DESCRIPTION
+HERO DESCRIPTION
 ===================================================== */
 
 .home1-hero-description {
-  max-width: 630px;
+max-width: 630px;
 
-  margin: 0 0 32px;
+margin: 0 auto 32px;
 
-  font-size: 16px;
-  line-height: 1.8;
-  font-weight: 400;
+font-size: 16px;
+line-height: 1.8;
+font-weight: 400;
 
-  color: var(--white);
+text-align: center;
+
+color: var(--white);
 }
 
 /* =====================================================
-   HERO BUTTONS
+HERO BUTTONS
 ===================================================== */
 
 .home1-hero-buttons {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-radius: 50px;
-  margin-bottom: 36px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+gap: 14px;
+
+margin-bottom: 0;
 }
 
 /* =====================================================
-   COMMON HERO BUTTON
+COMMON HERO BUTTON
 ===================================================== */
 
 .home1-hero-primary-btn,
 .home1-hero-secondary-btn {
-  min-height: 50px;
+min-width: 165px;
+height: 50px;
 
-  padding: 0 24px;
+padding: 0 24px;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
 
-  border-radius: 50px;
+border-radius: 50px;
 
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 500;
+font-size: 14px;
+line-height: 1;
+font-weight: 600;
 
-  text-decoration: none;
+text-decoration: none;
 
-  cursor: pointer;
+cursor: pointer;
 
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
+transition:
+transform 0.3s ease,
+background-color 0.3s ease,
+border-color 0.3s ease,
+color 0.3s ease;
 }
 
 /* =====================================================
-   PRIMARY HERO BUTTON
+PRIMARY HERO BUTTON
 ===================================================== */
 
 .home1-hero-primary-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
+background-color: var(--primary-color);
+color: var(--white);
 
-  border: 1px solid var(--primary-color);
-}
-
-.home1-hero-primary-btn svg {
-  width: 17px;
-  height: 17px;
+border: 1px solid var(--primary-color);
 }
 
 .home1-hero-primary-btn:hover {
-  transform: translateY(-2px);
+transform: translateY(-2px);
 }
 
 /* =====================================================
-   SECONDARY HERO BUTTON
+SECONDARY HERO BUTTON
 ===================================================== */
 
 .home1-hero-secondary-btn {
-  background-color: transparent;
-  color: var(--white);
+background-color: transparent;
+color: var(--white);
 
-  border: 1px solid var(--white);
+border: 1px solid var(--white);
 }
 
 .home1-hero-secondary-btn:hover {
-  background-color: var(--light-bg);
-  color: var(--primary-color);
+
+background-color: var(--white);
+color: var(--primary-color);
+
+border-color: var(--white);
 }
 
 /* =====================================================
-   DARK MODE
+DARK MODE
 ===================================================== */
 
 .dark-mode .home1-hero-overlay {
-  background: rgba(0, 0, 0, 0.68);
+background: rgba(0, 0, 0, 0.69);
 }
 
 /* =====================================================
-   NEST HUB
-   1024 × 600
+NEST HUB
+1024 × 600
 ===================================================== */
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
-  .home1-hero {
-    height: 100vh;
-    background-position: center;
-  }
+.home1-hero {
+padding-top: 50px;
 
-  .home1-hero-container {
-    width: 85%;
-  }
+height: 100vh;
 
-  .home1-hero-content {
-    width: 600px;
-    padding: 40px 0;
-  }
+background-position: center;
 
-  .home1-hero-tag {
-    font-size: 13px;
-    margin-bottom: 14px;
-  }
+}
 
-  .home1-hero-content h1 {
-    margin-bottom: 20px;
-    font-size: 50px;
-  }
+.home1-hero-container {
+width: 85%;
+}
 
-  .home1-hero-description {
-    max-width: 560px;
-    margin-bottom: 28px;
-    font-size: 15px;
-    line-height: 1.7;
-  }
+.home1-hero-content {
+width: 600px;
+}
 
-  .home1-hero-buttons {
-    margin-bottom: 28px;
-  }
+.home1-hero-tag {
+gap: 7px;
+
+margin-bottom: 16px;
+padding: 7px 15px;
+
+font-size: 12px;
+
+}
+
+.home1-hero-tag svg {
+width: 17px;
+height: 17px;
+}
+
+.home1-hero-content h1 {
+margin-bottom: 20px;
+
+font-size: 50px;
+line-height: 1.12;
+
+}
+
+.home1-hero-description {
+max-width: 560px;
+
+margin-bottom: 28px;
+
+font-size: 14px;
+line-height: 1.7;
+
+}
+
+.home1-hero-buttons {
+gap: 12px;
+}
+
+.home1-hero-primary-btn,
+.home1-hero-secondary-btn {
+min-width: 155px;
+height: 48px;
+
+padding: 0 22px;
+
+font-size: 13px;
+
+}
 }
 
 /* =====================================================
-   IPAD MINI
-   768 × 1024
+IPAD MINI
+768 × 1024
 ===================================================== */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home1-hero {
-    padding: 100px 0;
-    height: 70vh;
-    background-position: 65% center;
-  }
+.home1-hero {
+padding: 100px 0;
 
-  .home1-hero-overlay {
-    background: rgba(0, 0, 0, 0.65);
-  }
+height: 70vh;
 
-  .home1-hero-container {
-    width: 88%;
-  }
+background-position: 65% center;
 
-  .home1-hero-content {
-    width: 100%;
-    max-width: 620px;
-    padding: 45px 0;
-  }
+}
 
-  .home1-hero-tag {
-    gap: 7px;
-    margin-bottom: 16px;
-    font-size: 13px;
-  }
+.home1-hero-overlay {
+background: rgba(0, 0, 0, 0.65);
+}
 
-  .home1-hero-tag svg {
-    width: 17px;
-    height: 17px;
-  }
+.home1-hero-container {
+width: 88%;
+}
 
-  .home1-hero-content h1 {
-    margin-bottom: 20px;
-    font-size: 46px;
-    line-height: 1.15;
-  }
+.home1-hero-content {
+width: 100%;
+max-width: 620px;
+}
 
-  .home1-hero-description {
-    max-width: 580px;
-    margin-bottom: 28px;
-    font-size: 15px;
-    line-height: 1.75;
-  }
+.home1-hero-tag {
+gap: 7px;
 
-  .home1-hero-buttons {
-    margin-bottom: 30px;
-  }
+margin-bottom: 18px;
+padding: 7px 15px;
+
+font-size: 12px;
+
+}
+
+.home1-hero-tag svg {
+width: 17px;
+height: 17px;
+}
+
+.home1-hero-content h1 {
+margin-bottom: 20px;
+
+font-size: 46px;
+line-height: 1.15;
+letter-spacing: -1px;
+
+}
+
+.home1-hero-description {
+max-width: 580px;
+
+margin-bottom: 28px;
+
+font-size: 15px;
+line-height: 1.75;
+
+}
+
+.home1-hero-buttons {
+gap: 12px;
+}
+
+.home1-hero-primary-btn,
+.home1-hero-secondary-btn {
+min-width: 160px;
+height: 50px;
+
+padding: 0 22px;
+
+font-size: 13px;
+
+}
 }
 
 /* =====================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
+SAMSUNG GALAXY S8+
+360 × 740
 ===================================================== */
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
-  .home1-hero {
-    height: 100vh;
-    background-position: 68% center;
-  }
+.home1-hero {
+padding: 70px 0;
 
-  .home1-hero-overlay {
-    background: rgba(0, 0, 0, 0.68);
-  }
+height: 100vh;
 
-  .home1-hero-container {
-    width: 88%;
-  }
+background-position: 68% center;
 
-  .home1-hero-content {
-    width: 100%;
-    padding: 35px 0;
-  }
-
-  .home1-hero-tag {
-    gap: 7px;
-    margin-bottom: 14px;
-    font-size: 13px;
-  }
-
-  .home1-hero-tag svg {
-    width: 17px;
-    height: 17px;
-  }
-
-  .home1-hero-content h1 {
-    margin-bottom: 18px;
-    font-size: 34px;
-    line-height: 1.16;
-    letter-spacing: -0.5px;
-  }
-
-  .home1-hero-description {
-    margin-bottom: 26px;
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  .home1-hero-buttons {
-    width: 100%;
-
-    flex-direction: column;
-    align-items: stretch;
-
-    gap: 11px;
-
-    margin-bottom: 30px;
-  }
-
-  .home1-hero-primary-btn,
-  .home1-hero-secondary-btn {
-    width: 100%;
-    min-height: 48px;
-  }
 }
+
+.home1-hero-overlay {
+background: rgba(0, 0, 0, 0.68);
+}
+
+.home1-hero-container {
+width: 88%;
+}
+
+.home1-hero-content {
+width: 100%;
+max-width: 320px;
+}
+
+.home1-hero-tag {
+gap: 6px;
+
+margin-bottom: 16px;
+padding: 6px 13px;
+
+font-size: 10px;
+
+}
+
+.home1-hero-tag svg {
+width: 15px;
+height: 15px;
+}
+
+.home1-hero-content h1 {
+margin-bottom: 18px;
+
+font-size: 34px;
+line-height: 1.16;
+letter-spacing: -0.6px;
+
+}
+
+.home1-hero-description {
+max-width: 300px;
+
+
+margin-bottom: 26px;
+
+font-size: 12px;
+line-height: 1.7;
+
+
+}
+
+.home1-hero-buttons {
+width: 100%;
+
+
+flex-direction: column;
+align-items: center;
+
+gap: 11px;
+
+
+}
+
+.home1-hero-primary-btn,
+.home1-hero-secondary-btn {
+width: 100%;
+min-width: 0;
+height: 48px;
+padding: 0 20px;
+
+font-size: 12px;
+
+}
+}
+
 
 /* =========================================================
    HOME 1 - IMPACT SECTION
@@ -1584,7 +1681,7 @@
   height: 100%;
   display: block;
   object-fit: cover;
-   /* object-position: center; */
+  /* object-position: center; */
 }
 
 .home1-waste-image-badge {
@@ -1869,12 +1966,12 @@
     gap: 50px;
   }
   .home1-waste-content {
-  order: 1;
-}
+    order: 1;
+  }
 
-.home1-waste-image {
-  order: 2;
-}
+  .home1-waste-image {
+    order: 2;
+  }
 
   .home1-waste-image {
     height: 420px;
@@ -1912,12 +2009,12 @@
     gap: 35px;
   }
   .home1-waste-content {
-  order: 1;
-}
+    order: 1;
+  }
 
-.home1-waste-image {
-  order: 2;
-}
+  .home1-waste-image {
+    order: 2;
+  }
 
   .home1-waste-image {
     height: 300px;
@@ -3072,116 +3169,232 @@
   }
 }
 /* =====================================================
-   CTA SECTION
+HOME 1 — CTA SECTION
 ===================================================== */
 
 .home1-cta {
   width: 100%;
-  padding: 80px 0;
+  padding: 100px 0;
   background: var(--light-bg);
 }
 
 .home1-cta-container {
+  position: relative;
   width: 85%;
-  max-width: 1000px;
+  max-width: 1200px;
+  min-height: 500px;
   margin: 0 auto;
+  padding: 65px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: var(--light-bg);
+  overflow: hidden;
 }
 
-.home1-cta-content {
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 55px 50px;
-  text-align: center;
+.home1-cta-container::before,
+.home1-cta-container::after {
+  content: "";
+  position: absolute;
+  bottom: -95px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   background: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 20px;
+  opacity: 0.08;
+}
+
+.home1-cta-container::before {
+  left: -90px;
+}
+
+.home1-cta-container::after {
+  right: -90px;
 }
 
 /* =====================================================
-   CTA TAG
+BOTANICAL CORNER DETAILS
+===================================================== */
+
+.home1-cta-content::before,
+.home1-cta-content::after {
+  content: "";
+  position: absolute;
+  bottom: -190px;
+  width: 170px;
+  height: 280px;
+  background: var(--primary-color);
+  opacity: 0.7;
+  clip-path: polygon(
+    50% 100%,
+    43% 82%,
+    27% 72%,
+    35% 58%,
+    18% 46%,
+    34% 35%,
+    25% 18%,
+    45% 27%,
+    55% 5%,
+    62% 29%,
+    78% 15%,
+    72% 40%,
+    91% 35%,
+    75% 55%,
+    88% 67%,
+    66% 68%
+  );
+}
+
+.home1-cta-content::before {
+  left: -170px;
+  transform: rotate(-8deg);
+}
+
+.home1-cta-content::after {
+  right: -170px;
+  transform: scaleX(-1) rotate(-8deg);
+}
+
+/* =====================================================
+CTA CONTENT
+===================================================== */
+
+.home1-cta-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =====================================================
+CTA TAG
 ===================================================== */
 
 .home1-cta-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 14px;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  color: var(--primary-color);
-  padding: 7px;
+  gap: 9px;
+
+  margin-bottom: 42px;
+  padding: 6px 18px 6px 6px;
+
+  border: 2px solid var(--secondary-color);
   border-radius: 50px;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--white);
+
+  color: var(--primary-color);
+  background: var(--light-bg);
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.1px;
 }
 
-.home1-cta-tag svg {
-  width: 20px;
-  height: 20px;
-  stroke-width: 2;
-  color: var(--white);
-  border-radius: 50px;
-  padding: 2px;
+.home1-cta-tag-icon {
+  width: 31px;
+  height: 31px;
 
-  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home1-cta-tag-icon svg {
+  width: 15px;
+  height: 15px;
 }
 
 /* =====================================================
-   CTA TITLE
+CTA TITLE
 ===================================================== */
 
 .home1-cta-title {
-  margin-bottom: 14px;
-  font-size: 32px;
-  line-height: 1.3;
-  font-weight: 600;
-  color: var(--light-bg);
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.home1-cta-title span {
+  display: block;
+  color: var(--primary-color);
 }
 
 /* =====================================================
-   CTA DESCRIPTION
+CTA DESCRIPTION
 ===================================================== */
 
 .home1-cta-description {
-  max-width: 600px;
-  margin: 0 auto 28px;
-  font-size: 15px;
-  line-height: 1.7;
-  font-weight: 400;
-  color: var(--light-bg);
+  max-width: 650px;
+  margin: 25px auto 0;
+
+  color: var(--text-color);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  opacity: 0.72;
 }
 
 /* =====================================================
-   CTA BUTTON
+CTA DIVIDER
+===================================================== */
+
+.home1-cta-divider {
+  width: 80px;
+  height: 5px;
+
+  margin-top: 32px;
+
+  border-radius: 50px;
+  background: var(--primary-color);
+}
+
+/* =====================================================
+CTA BUTTON
 ===================================================== */
 
 .home1-cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  min-width: 175px;
-  padding: 13px 24px;
-  border-radius: 50px;
-  background: var(--white);
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
 
-.home1-cta-button i {
-  width: 17px;
-  height: 17px;
-  stroke-width: 2;
+  min-width: 190px;
+  min-height: 54px;
+
+  margin-top: 34px;
+  padding: 14px 28px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+
+  background: var(--primary-color);
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
 }
 
 .home1-cta-button:hover {
@@ -3189,7 +3402,7 @@
 }
 
 /* =====================================================
-   RTL
+RTL
 ===================================================== */
 
 [dir="rtl"] .home1-cta {
@@ -3197,94 +3410,191 @@
 }
 
 /* =====================================================
-   NEST HUB / TABLET
+NEST HUB — 1024 × 600
 ===================================================== */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home1-cta {
+    padding: 80px 0;
+  }
+
+  .home1-cta-container {
+    width: 88%;
+    min-height: 560px;
+    padding: 50px 55px;
+    border-radius: 28px;
+  }
+
+  .home1-cta-tag {
+    margin-bottom: 32px;
+  }
+
+  .home1-cta-title {
+    font-size: 46px;
+  }
+
+  .home1-cta-description {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .home1-cta-divider {
+    margin-top: 26px;
+  }
+
+  .home1-cta-button {
+    margin-top: 28px;
+  }
+
+  .home1-cta-content::before,
+  .home1-cta-content::after {
+    bottom: -175px;
+    width: 145px;
+    height: 245px;
+  }
+}
+
+/* =====================================================
+IPAD MINI — 768 × 1024
+===================================================== */
+
+@media screen and (max-width: 768px) and (min-height: 700px) {
+  .home1-cta {
+    padding: 90px 0;
+  }
+
+  .home1-cta-container {
+    width: 88%;
+    max-width: 650px;
+    min-height: 600px;
+    padding: 55px 40px;
+    border-radius: 26px;
+  }
+
+  .home1-cta-tag {
+    margin-bottom: 30px;
+    font-size: 11px;
+  }
+
+  .home1-cta-title {
+    font-size: 43px;
+    line-height: 1.15;
+    letter-spacing: -1.1px;
+  }
+
+  .home1-cta-description {
+    max-width: 540px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .home1-cta-divider {
+    width: 65px;
+    margin-top: 27px;
+  }
+
+  .home1-cta-button {
+    min-width: 175px;
+    min-height: 50px;
+    margin-top: 28px;
+  }
+
+  .home1-cta-content::before,
+  .home1-cta-content::after {
+    bottom: -175px;
+    width: 135px;
+    height: 230px;
+  }
+}
+
+/* =====================================================
+SAMSUNG GALAXY S8+ — 360 × 740
+===================================================== */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
   .home1-cta {
     padding: 70px 0;
   }
 
   .home1-cta-container {
-    width: 85%;
-  }
-
-  .home1-cta-content {
-    max-width: 800px;
-    padding: 50px 40px;
-  }
-
-  .home1-cta-title {
-    font-size: 30px;
-  }
-}
-
-/* =====================================================
-   IPAD MINI
-===================================================== */
-
-@media screen and (max-width: 768px) {
-  .home1-cta {
-    padding: 60px 0;
-  }
-
-  .home1-cta-container {
     width: 88%;
+    min-height: 500px;
+    padding: 40px 20px;
+    border-radius: 22px;
   }
 
-  .home1-cta-content {
-    padding: 45px 30px;
-    border-radius: 18px;
+  .home1-cta-container::before,
+  .home1-cta-container::after {
+    width: 170px;
+    height: 170px;
+    bottom: -75px;
   }
 
-  .home1-cta-title {
-    font-size: 27px;
+  .home1-cta-container::before {
+    left: -70px;
   }
 
-  .home1-cta-description {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-}
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media screen and (max-width: 480px) {
-  .home1-cta {
-    padding: 50px 0;
-  }
-
-  .home1-cta-container {
-    width: 90%;
-  }
-
-  .home1-cta-content {
-    padding: 38px 20px;
-    border-radius: 16px;
+  .home1-cta-container::after {
+    right: -70px;
   }
 
   .home1-cta-tag {
-    font-size: 13px;
-    margin-bottom: 12px;
+    gap: 7px;
+    margin-bottom: 25px;
+    padding: 5px 12px 5px 5px;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .home1-cta-tag-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .home1-cta-tag-icon svg {
+    width: 13px;
+    height: 13px;
   }
 
   .home1-cta-title {
-    margin-bottom: 12px;
-    font-size: 23px;
-    line-height: 1.35;
+    font-size: 31px;
+    line-height: 1.15;
+    letter-spacing: -0.7px;
   }
 
   .home1-cta-description {
-    margin-bottom: 24px;
-    font-size: 13px;
+    max-width: 280px;
+    margin-top: 17px;
+    font-size: 11px;
     line-height: 1.7;
   }
 
+  .home1-cta-divider {
+    width: 45px;
+    height: 3px;
+    margin-top: 21px;
+  }
+
   .home1-cta-button {
-    min-width: 160px;
-    padding: 12px 20px;
-    font-size: 13px;
+    min-width: 155px;
+    min-height: 46px;
+    margin-top: 22px;
+    padding: 11px 20px;
+    font-size: 11px;
+  }
+
+  .home1-cta-content::before,
+  .home1-cta-content::after {
+    bottom: -145px;
+    width: 105px;
+    height: 185px;
+  }
+
+  .home1-cta-content::before {
+    left: -105px;
+  }
+
+  .home1-cta-content::after {
+    right: -105px;
   }
 }
