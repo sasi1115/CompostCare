@@ -153,7 +153,7 @@
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
   .pricing-hero-section {
-    min-height: 500px;
+    min-height: 100vh;
   }
 
   .pricing-hero-container {
@@ -194,7 +194,7 @@
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
   .pricing-hero-section {
-    min-height: 520px;
+    min-height: 100vh;
   }
 
   .pricing-hero-container {
@@ -236,7 +236,7 @@
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
   .pricing-hero-section {
-    min-height: 500px;
+    min-height: 100vh;
   }
 
   .pricing-hero-container {

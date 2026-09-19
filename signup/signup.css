@@ -132,7 +132,7 @@
 
   object-fit: contain;
 
-  margin: 0 -8px 0 0;
+  margin: 0 -10px 0 0;
 }
 
 .signup-brand-text {
@@ -154,6 +154,14 @@
   color: var(--secondary-color);
 }
 
+[dir="rtl"] .signup-brand {
+  flex-direction: row;
+}
+
+[dir="rtl"] .signup-brand-text {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
 /* =========================================================
    SIGN UP INTRO
 ========================================================= */
@@ -381,7 +389,6 @@
 
 .signup-submit:hover {
   transform: translateY(-2px);
-  
 }
 
 /* =========================================================

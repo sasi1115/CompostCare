@@ -41,7 +41,7 @@ PAGE CONTROLS
   background: var(--light-bg);
   color: var(--text-color);
   cursor: pointer;
-  
+
   transition:
     transform 0.25s ease,
     border-color 0.25s ease;
@@ -123,9 +123,16 @@ LOGIN CONTAINER
 .login-brand-primary {
   color: var(--primary-color);
 }
-
 .login-brand-secondary {
   color: var(--secondary-color);
+}
+[dir="rtl"] .login-brand {
+  flex-direction: row;
+}
+
+[dir="rtl"] .login-brand-text {
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 /* =========================================================
 LOGIN INTRO

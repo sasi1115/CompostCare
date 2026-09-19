@@ -178,15 +178,15 @@ HERO IMAGE
   display: block;
   object-fit: cover;
 }
-
 /* =========================================================
-NEST HUB — 1024 × 600
-Keep desktop-style layout
+   NEST HUB — 1024 × 600
+   Keep desktop-style layout
 ========================================================= */
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
   .services-hero-section {
-    padding: 80px 0 50px;
+    padding: 140px 0 0px;
+    min-height: 100vh;
   }
 
   .services-hero-container {
@@ -225,14 +225,14 @@ Keep desktop-style layout
     border-radius: 24px;
   }
 }
-
 /* =========================================================
 iPAD MINI — 768 × 1024
 ========================================================= */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
   .services-hero-section {
-    padding: 100px 0 60px;
+    padding: 120px 0 0px;
+    min-height: 70vh;
   }
 
   .services-hero-container {
@@ -290,7 +290,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
   .services-hero-section {
-    padding: 80px 0;
+    padding: 90px 0;
   }
 
   .services-hero-container {

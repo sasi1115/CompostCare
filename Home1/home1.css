@@ -3,23 +3,23 @@ HOME1 HERO SECTION
 ===================================================== */
 
 .home1-hero {
-padding-top: 50px;
+  padding-top: 50px;
 
-position: relative;
-width: 100%;
-height: 100vh;
-min-height: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 0;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-background-image: url("../images/home1-hero1.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  background-image: url("../images/home1-hero1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-overflow: hidden;
+  overflow: hidden;
 }
 
 /* =====================================================
@@ -27,12 +27,12 @@ HERO OVERLAY
 ===================================================== */
 
 .home1-hero-overlay {
-position: absolute;
-inset: 0;
+  position: absolute;
+  inset: 0;
 
-background: rgba(0, 0, 0, 0.57);
+  background: rgba(0, 0, 0, 0.57);
 
-z-index: 1;
+  z-index: 1;
 }
 
 /* =====================================================
@@ -40,17 +40,17 @@ HERO CONTAINER
 ===================================================== */
 
 .home1-hero-container {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
 
-width: 85%;
-max-width: 1200px;
+  width: 85%;
+  max-width: 1200px;
 
-margin: 0 auto;
+  margin: 0 auto;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* =====================================================
@@ -58,16 +58,16 @@ HERO CONTENT
 ===================================================== */
 
 .home1-hero-content {
-width: 680px;
-max-width: 100%;
+  width: 680px;
+  max-width: 100%;
 
-padding: 0;
+  padding: 0;
 
-text-align: center;
+  text-align: center;
 
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* =====================================================
@@ -75,31 +75,31 @@ HERO TAG
 ===================================================== */
 
 .home1-hero-tag {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-margin-bottom: 20px;
-padding: 8px 16px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
 
-background: var(--primary-color);
-border-radius: 50px;
+  background: var(--primary-color);
+  border-radius: 50px;
 
-font-size: 13px;
-line-height: 1.5;
-font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
 
-color: var(--white);
+  color: var(--white);
 }
 
 .home1-hero-tag svg {
-width: 18px;
-height: 18px;
+  width: 18px;
+  height: 18px;
 
-color: var(--white);
+  color: var(--white);
 
-flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 /* =====================================================
@@ -107,23 +107,23 @@ HERO HEADING
 ===================================================== */
 
 .home1-hero-content h1 {
-margin: 0 0 24px;
+  margin: 0 0 24px;
 
-font-size: 68px;
-line-height: 1.12;
-font-weight: 600;
+  font-size: 68px;
+  line-height: 1.12;
+  font-weight: 600;
 
-letter-spacing: -1.5px;
+  letter-spacing: -1.5px;
 
-text-align: center;
+  text-align: center;
 
-color: var(--white);
+  color: var(--white);
 }
 
 .home1-hero-content h1 span {
-display: block;
+  display: block;
 
-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 /* =====================================================
@@ -131,17 +131,17 @@ HERO DESCRIPTION
 ===================================================== */
 
 .home1-hero-description {
-max-width: 630px;
+  max-width: 630px;
 
-margin: 0 auto 32px;
+  margin: 0 auto 32px;
 
-font-size: 16px;
-line-height: 1.8;
-font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
 
-text-align: center;
+  text-align: center;
 
-color: var(--white);
+  color: var(--white);
 }
 
 /* =====================================================
@@ -149,13 +149,13 @@ HERO BUTTONS
 ===================================================== */
 
 .home1-hero-buttons {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-gap: 14px;
+  gap: 14px;
 
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* =====================================================
@@ -164,30 +164,30 @@ COMMON HERO BUTTON
 
 .home1-hero-primary-btn,
 .home1-hero-secondary-btn {
-min-width: 165px;
-height: 50px;
+  min-width: 165px;
+  height: 50px;
 
-padding: 0 24px;
+  padding: 0 24px;
 
-display: inline-flex;
-align-items: center;
-justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-border-radius: 50px;
+  border-radius: 50px;
 
-font-size: 14px;
-line-height: 1;
-font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
 
-text-decoration: none;
+  text-decoration: none;
 
-cursor: pointer;
+  cursor: pointer;
 
-transition:
-transform 0.3s ease,
-background-color 0.3s ease,
-border-color 0.3s ease,
-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* =====================================================
@@ -195,14 +195,14 @@ PRIMARY HERO BUTTON
 ===================================================== */
 
 .home1-hero-primary-btn {
-background-color: var(--primary-color);
-color: var(--white);
+  background-color: var(--primary-color);
+  color: var(--white);
 
-border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .home1-hero-primary-btn:hover {
-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* =====================================================
@@ -210,18 +210,17 @@ SECONDARY HERO BUTTON
 ===================================================== */
 
 .home1-hero-secondary-btn {
-background-color: transparent;
-color: var(--white);
+  background-color: transparent;
+  color: var(--white);
 
-border: 1px solid var(--white);
+  border: 1px solid var(--white);
 }
 
 .home1-hero-secondary-btn:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
 
-background-color: var(--white);
-color: var(--primary-color);
-
-border-color: var(--white);
+  border-color: var(--white);
 }
 
 /* =====================================================
@@ -229,7 +228,7 @@ DARK MODE
 ===================================================== */
 
 .dark-mode .home1-hero-overlay {
-background: rgba(0, 0, 0, 0.69);
+  background: rgba(0, 0, 0, 0.69);
 }
 
 /* =====================================================
@@ -238,70 +237,65 @@ NEST HUB
 ===================================================== */
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
-.home1-hero {
-padding-top: 50px;
+  .home1-hero {
+    padding-top: 50px;
 
-height: 100vh;
+    height: 100vh;
 
-background-position: center;
+    background-position: center;
+  }
 
-}
+  .home1-hero-container {
+    width: 85%;
+  }
 
-.home1-hero-container {
-width: 85%;
-}
+  .home1-hero-content {
+    width: 600px;
+  }
 
-.home1-hero-content {
-width: 600px;
-}
+  .home1-hero-tag {
+    gap: 7px;
 
-.home1-hero-tag {
-gap: 7px;
+    margin-bottom: 16px;
+    padding: 7px 15px;
 
-margin-bottom: 16px;
-padding: 7px 15px;
+    font-size: 12px;
+  }
 
-font-size: 12px;
+  .home1-hero-tag svg {
+    width: 17px;
+    height: 17px;
+  }
 
-}
+  .home1-hero-content h1 {
+    margin-bottom: 20px;
 
-.home1-hero-tag svg {
-width: 17px;
-height: 17px;
-}
+    font-size: 50px;
+    line-height: 1.12;
+  }
 
-.home1-hero-content h1 {
-margin-bottom: 20px;
+  .home1-hero-description {
+    max-width: 560px;
 
-font-size: 50px;
-line-height: 1.12;
+    margin-bottom: 28px;
 
-}
+    font-size: 14px;
+    line-height: 1.7;
+  }
 
-.home1-hero-description {
-max-width: 560px;
+  .home1-hero-buttons {
+    gap: 12px;
+  }
 
-margin-bottom: 28px;
+  .home1-hero-primary-btn,
+  .home1-hero-secondary-btn {
+    min-width: 155px;
+    height: 48px;
 
-font-size: 14px;
-line-height: 1.7;
+    padding: 0 22px;
 
-}
-
-.home1-hero-buttons {
-gap: 12px;
-}
-
-.home1-hero-primary-btn,
-.home1-hero-secondary-btn {
-min-width: 155px;
-height: 48px;
-
-padding: 0 22px;
-
-font-size: 13px;
-
-}
+    font-size: 13px;
+  }
 }
 
 /* =====================================================
@@ -310,76 +304,71 @@ IPAD MINI
 ===================================================== */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
-.home1-hero {
-padding: 100px 0;
+  .home1-hero {
+    padding: 100px 0;
 
-height: 70vh;
+    height: 70vh;
 
-background-position: 65% center;
+    background-position: 65% center;
+  }
 
-}
+  .home1-hero-overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
 
-.home1-hero-overlay {
-background: rgba(0, 0, 0, 0.65);
-}
+  .home1-hero-container {
+    width: 88%;
+  }
 
-.home1-hero-container {
-width: 88%;
-}
+  .home1-hero-content {
+    width: 100%;
+    max-width: 620px;
+  }
 
-.home1-hero-content {
-width: 100%;
-max-width: 620px;
-}
+  .home1-hero-tag {
+    gap: 7px;
 
-.home1-hero-tag {
-gap: 7px;
+    margin-bottom: 18px;
+    padding: 7px 15px;
 
-margin-bottom: 18px;
-padding: 7px 15px;
+    font-size: 12px;
+  }
 
-font-size: 12px;
+  .home1-hero-tag svg {
+    width: 17px;
+    height: 17px;
+  }
 
-}
+  .home1-hero-content h1 {
+    margin-bottom: 20px;
 
-.home1-hero-tag svg {
-width: 17px;
-height: 17px;
-}
+    font-size: 46px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
 
-.home1-hero-content h1 {
-margin-bottom: 20px;
+  .home1-hero-description {
+    max-width: 580px;
 
-font-size: 46px;
-line-height: 1.15;
-letter-spacing: -1px;
+    margin-bottom: 28px;
 
-}
+    font-size: 15px;
+    line-height: 1.75;
+  }
 
-.home1-hero-description {
-max-width: 580px;
+  .home1-hero-buttons {
+    gap: 12px;
+  }
 
-margin-bottom: 28px;
+  .home1-hero-primary-btn,
+  .home1-hero-secondary-btn {
+    min-width: 160px;
+    height: 50px;
 
-font-size: 15px;
-line-height: 1.75;
+    padding: 0 22px;
 
-}
-
-.home1-hero-buttons {
-gap: 12px;
-}
-
-.home1-hero-primary-btn,
-.home1-hero-secondary-btn {
-min-width: 160px;
-height: 50px;
-
-padding: 0 22px;
-
-font-size: 13px;
-
-}
+    font-size: 13px;
+  }
 }
 
 /* =====================================================
@@ -388,88 +377,77 @@ SAMSUNG GALAXY S8+
 ===================================================== */
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
-.home1-hero {
-padding: 70px 0;
+  .home1-hero {
+    padding: 70px 0;
 
-height: 100vh;
+    height: 100vh;
 
-background-position: 68% center;
+    background-position: 68% center;
+  }
 
+  .home1-hero-overlay {
+    background: rgba(0, 0, 0, 0.68);
+  }
+
+  .home1-hero-container {
+    width: 88%;
+  }
+
+  .home1-hero-content {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .home1-hero-tag {
+    gap: 6px;
+
+    margin-bottom: 16px;
+    padding: 6px 13px;
+
+    font-size: 10px;
+  }
+
+  .home1-hero-tag svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home1-hero-content h1 {
+    margin-bottom: 18px;
+
+    font-size: 34px;
+    line-height: 1.16;
+    letter-spacing: -0.6px;
+  }
+
+  .home1-hero-description {
+    max-width: 300px;
+
+    margin-bottom: 26px;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .home1-hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 11px;
+  }
+
+  .home1-hero-primary-btn,
+  .home1-hero-secondary-btn {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 0 20px;
+
+    font-size: 12px;
+  }
 }
-
-.home1-hero-overlay {
-background: rgba(0, 0, 0, 0.68);
-}
-
-.home1-hero-container {
-width: 88%;
-}
-
-.home1-hero-content {
-width: 100%;
-max-width: 320px;
-}
-
-.home1-hero-tag {
-gap: 6px;
-
-margin-bottom: 16px;
-padding: 6px 13px;
-
-font-size: 10px;
-
-}
-
-.home1-hero-tag svg {
-width: 15px;
-height: 15px;
-}
-
-.home1-hero-content h1 {
-margin-bottom: 18px;
-
-font-size: 34px;
-line-height: 1.16;
-letter-spacing: -0.6px;
-
-}
-
-.home1-hero-description {
-max-width: 300px;
-
-
-margin-bottom: 26px;
-
-font-size: 12px;
-line-height: 1.7;
-
-
-}
-
-.home1-hero-buttons {
-width: 100%;
-
-
-flex-direction: column;
-align-items: center;
-
-gap: 11px;
-
-
-}
-
-.home1-hero-primary-btn,
-.home1-hero-secondary-btn {
-width: 100%;
-min-width: 0;
-height: 48px;
-padding: 0 20px;
-
-font-size: 12px;
-
-}
-}
-
 
 /* =========================================================
    HOME 1 - IMPACT SECTION
@@ -853,10 +831,6 @@ font-size: 12px;
    ABOUT TAG
 ===================================================== */
 
-/* =========================================================
-   ABOUT TAG
-========================================================= */
-
 .home1-about-tag {
   display: inline-flex;
   align-items: center;
@@ -1096,8 +1070,10 @@ font-size: 12px;
 }
 
 /* =====================================================
+
    IPAD MINI
    768 × 1024
+
 ===================================================== */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
@@ -1107,49 +1083,77 @@ font-size: 12px;
 
   .home1-about-container {
     width: 88%;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: 1fr;
+
     gap: 30px;
   }
 
+  .home1-about-content {
+    order: 1;
+
+    max-width: 100%;
+
+    text-align: center;
+  }
+
   .home1-about-image {
+    order: 2;
+
     height: 420px;
   }
 
   .home1-about-tag {
     font-size: 13px;
-    margin-bottom: 12px;
+
+    margin: 0 auto 12px;
   }
 
   .home1-about-content h2 {
     margin-bottom: 16px;
+
     font-size: 32px;
+
     line-height: 1.2;
   }
 
   .home1-about-description {
+    margin-left: auto;
+
+    margin-right: auto;
+
     margin-bottom: 24px;
+
     font-size: 13px;
+
     line-height: 1.7;
   }
 
-  .home1-about-features {
-    gap: 15px;
-    margin-bottom: 26px;
+  .home1-about-feature {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 11px;
   }
 
-  .home1-about-feature {
-    gap: 11px;
+  .home1-about-feature-content {
+    flex: 0 1 auto;
+    text-align: left;
   }
 
   .home1-about-feature-icon {
     width: 38px;
+
     height: 38px;
   }
 
   .home1-about-feature-icon svg {
     width: 17px;
+
     height: 17px;
   }
+
+ 
 
   .home1-about-feature-content h3 {
     font-size: 14px;
@@ -1161,11 +1165,16 @@ font-size: 12px;
 
   .home1-about-btn {
     min-height: 46px;
+
     padding: 0 20px;
+
     font-size: 13px;
+
+    margin-left: auto;
+
+    margin-right: auto;
   }
 }
-
 /* =====================================================
    SAMSUNG GALAXY S8+
    360 × 740
@@ -1180,6 +1189,13 @@ font-size: 12px;
     width: 88%;
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .home1-about-content {
+    order: 1;
+  }
+
+  .home1-about-image {
+    order: 2;
   }
 
   .home1-about-image {
@@ -1955,7 +1971,7 @@ font-size: 12px;
    768 × 1024
 ========================================================= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (max-height: 1024px) {
   .home1-waste {
     padding: 80px 0;
   }
@@ -1967,6 +1983,11 @@ font-size: 12px;
   }
   .home1-waste-content {
     order: 1;
+  }
+  .home1-waste-tag {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
   }
 
   .home1-waste-image {
@@ -1999,7 +2020,7 @@ font-size: 12px;
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 360px) and (max-height: 740px) {
   .home1-waste {
     padding: 60px 0;
   }
@@ -2038,8 +2059,9 @@ font-size: 12px;
     width: 14px;
     height: 14px;
   }
-
   .home1-waste-tag {
+    width: fit-content;
+    margin: 0 auto;
     gap: 7px;
     padding: 5px 12px 5px 5px;
     font-size: 10px;
@@ -3458,7 +3480,7 @@ NEST HUB — 1024 × 600
 IPAD MINI — 768 × 1024
 ===================================================== */
 
-@media screen and (max-width: 768px) and (min-height: 700px) {
+@media screen and (max-width: 768px) and (max-height: 1024px) {
   .home1-cta {
     padding: 90px 0;
   }
