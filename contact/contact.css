@@ -849,6 +849,11 @@ SAMSUNG GALAXY S8+
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
+.contact-form-group textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+}
 
 .contact-form-group input::placeholder,
 .contact-form-group textarea::placeholder {

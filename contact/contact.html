@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>CompostCare</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="184x184"
+      href="../images/logo.png"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -275,82 +281,26 @@
 
             <!-- Service -->
             <div class="contact-form-group">
-              <label for="contactService"> Service Interested In </label>
+              <label for="contactService">Service Interested In</label>
 
               <select id="contactService" name="service" required>
                 <option value="" selected disabled>Select a service</option>
 
-                <optgroup label="Home">
-                  <option value="home-composting-setup">
-                    Home Composting Setup
-                  </option>
+                <option value="kitchen-waste-composting-kits">
+                  Kitchen Waste Composting Kits
+                </option>
 
-                  <option value="kitchen-waste-composting">
-                    Kitchen Waste Composting
-                  </option>
+                <option value="community-composting">
+                  Community Composting
+                </option>
 
-                  <option value="home-composting-maintenance">
-                    Home Composting Maintenance
-                  </option>
+                <option value="waste-pickup-services">
+                  Waste Pickup Services
+                </option>
 
-                  <option value="kitchen-waste-composting-kits">
-                    Kitchen Waste Composting Kits
-                  </option>
-                </optgroup>
-
-                <optgroup label="Apartments">
-                  <option value="apartment-composting-setup">
-                    Apartment Composting Setup
-                  </option>
-
-                  <option value="community-composting">
-                    Community Composting
-                  </option>
-
-                  <option value="waste-pickup-services">
-                    Waste Pickup Services
-                  </option>
-
-                  <option value="resident-composting-programs">
-                    Resident Composting Programs
-                  </option>
-                </optgroup>
-
-                <optgroup label="Offices">
-                  <option value="office-composting-setup">
-                    Office Composting Setup
-                  </option>
-
-                  <option value="waste-pickup-services-office">
-                    Waste Pickup Services
-                  </option>
-
-                  <option value="workplace-composting-maintenance">
-                    Workplace Composting Maintenance
-                  </option>
-
-                  <option value="employee-composting-programs">
-                    Employee Composting Programs
-                  </option>
-                </optgroup>
-
-                <optgroup label="Commercial">
-                  <option value="commercial-composting-setup">
-                    Commercial Composting Setup
-                  </option>
-
-                  <option value="commercial-waste-pickup">
-                    Commercial Waste Pickup
-                  </option>
-
-                  <option value="commercial-composting-operations">
-                    Commercial Composting Operations
-                  </option>
-
-                  <option value="waste-processing-compost-management">
-                    Waste Processing &amp; Compost Management
-                  </option>
-                </optgroup>
+                <option value="compost-delivery-service">
+                  Compost Delivery Service
+                </option>
               </select>
             </div>
 
@@ -362,6 +312,7 @@
                 id="contactMessage"
                 name="message"
                 rows="5"
+                cols="5"
                 placeholder="Tell us how we can help..."
                 required
               ></textarea>

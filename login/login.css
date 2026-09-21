@@ -77,8 +77,9 @@ LOGIN CONTAINER
 ========================================================= */
 
 .login-container {
-  width: min(370px, 100%);
+  width: min(450px, 100%);
   padding: 18px 25px 16px;
+  
   border: 1px solid var(--border-color);
   border-radius: 16px;
   background: var(--light-bg);
