@@ -1017,3 +1017,34 @@ html[dir="rtl"] .logo {
     height: 36px;
   }
 }
+
+
+/* =========================================================
+   BRAND TAGLINE
+========================================================= */
+.logo-text {
+  flex-wrap: wrap;
+  column-gap: 0;
+}
+
+.logo-text::after {
+  content: "Turn Waste Into Worth";
+  flex: 0 0 100%;
+  margin-top: 4px;
+  color: var(--text-color);
+  font-family: "Outfit", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .logo-text::after {
+    font-size: 7px;
+    letter-spacing: 0.05em;
+  }
+}

@@ -454,7 +454,6 @@
   width: 0;
   height: 0;
 
-  
   border-left: 48px solid transparent;
   border-right: 48px solid transparent;
   border-bottom: 45px solid var(--primary-color);
@@ -478,7 +477,6 @@
   border-right: 49px solid transparent;
   border-bottom: 41px solid var(--light-bg);
 }
-
 
 /* =========================================================
    HOME BODY
@@ -1392,11 +1390,18 @@
    LEFT LEAF
 ========================================================= */
 
+/* =========================================================
+   LEFT LEAF
+========================================================= */
+
 .plant-leaf-left {
   left: 30px;
-  bottom: 58px;
+  bottom: 65px;
+
   transform-origin: bottom right;
-  transform: rotate(-360deg) scale(0.25);
+
+  transform: rotate(-90deg) scale(0.25);
+
   animation: home1LeafLeftGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 4.7s;
 }
@@ -1716,7 +1721,7 @@
   to {
     opacity: 1;
 
-    transform: rotate(-360deg) scale(1);
+    transform: rotate(-90deg) scale(1);
   }
 }
 
@@ -1768,65 +1773,13 @@
   }
 }
 
-/* =========================================================
-   1920 × 1080
-   LARGE DESKTOP
-========================================================= */
-
-@media (min-width: 1600px) {
-  .home1-hero {
-    min-height: 820px;
-  }
-
-  .home1-hero-container {
-    max-width: 1500px;
-    min-height: 820px;
-  }
-
-  .home1-hero-title {
-    font-size: 82px;
-  }
-
-  .home1-hero-description {
-    font-size: 17px;
-    max-width: 560px;
-  }
-
-  .home1-hero-visual {
-    height: 735px;
-
-    transform: translateY(-48px);
-  }
-
-  .home1-origin {
-    left: 4%;
-  }
-
-  .home1-waste-zone {
-    left: 20%;
-  }
-
-  .home1-transformation-path {
-    left: 17%;
-
-    width: 540px;
-  }
-
-  .home1-compost-zone {
-    left: 44%;
-  }
-
-  .home1-life-zone {
-    right: 3%;
-  }
-}
 
 /* =========================================================
    NEST HUB
    1024 × 600
 ========================================================= */
 
-@media (min-width: 769px) and (max-width: 1100px) {
+@media (max-width: 1024px) and (max-height: 600px) {
   .home1-hero {
     min-height: 600px;
   }
@@ -1949,7 +1902,7 @@
    768 × 1024
 ========================================================= */
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (max-width: 768px) and (max-height: 1024px) {
   .home1-hero {
     min-height: auto;
 
@@ -2074,11 +2027,11 @@
    360 × 740
 ========================================================= */
 
-@media (max-width: 599px) {
+@media (max-width: 360px)and (max-height:740px) {
   .home1-hero {
     min-height: auto;
 
-    padding: 45px 0 60px;
+    padding: 60px 0 60px;
   }
 
   .home1-hero-container {
@@ -2106,6 +2059,10 @@
     padding: 5px 12px 5px 5px;
 
     font-size: 10px;
+  }
+  .home1-plant-stem {
+    
+    left:50px;
   }
 
   .home1-tag-icon {

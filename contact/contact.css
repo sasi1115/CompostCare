@@ -98,7 +98,7 @@ HERO TITLE
 .contact-hero-title {
   margin: 0;
   color: var(--primary-color);
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(38px, 5vw, 72px);
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -1.5px;

@@ -808,3 +808,58 @@ if (
     initializeGlobalFeatures();
 
 }
+/* =========================================================
+   SCROLL REVEAL MOTION
+   Adds fade-up / fade-left / fade-right / scale effects to
+   existing page content without requiring HTML changes.
+   ========================================================= */
+
+function initScrollRevealMotion() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const selectors = [
+        "main section h1", "main section h2", "main section h3",
+        "main section p", "main section [class*='card']",
+        "main section [class*='image']", "main section [class*='content']",
+        "section h1", "section h2", "section h3",
+        "section [class*='card']"
+    ];
+
+    const elements = [...new Set(document.querySelectorAll(selectors.join(",")))].filter((el) => {
+        return !el.closest(".site-header, .navbar, .main-navigation, .dropdown-menu, footer") &&
+               !el.classList.contains("reveal-motion");
+    });
+
+    elements.forEach((el, index) => {
+        el.classList.add("reveal-motion");
+
+        const className = (el.className || "").toString().toLowerCase();
+        const isImage = el.tagName === "IMG" || className.includes("image") || className.includes("visual");
+        const isCard = className.includes("card");
+
+        if (isImage) {
+            el.classList.add(index % 2 === 0 ? "fade-right" : "fade-left");
+        } else if (isCard) {
+            el.classList.add("fade-up", `motion-delay-${(index % 4) + 1}`);
+        } else {
+            el.classList.add("fade-up");
+        }
+    });
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -45px 0px" });
+
+    elements.forEach((el) => observer.observe(el));
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initScrollRevealMotion);
+} else {
+    initScrollRevealMotion();
+}

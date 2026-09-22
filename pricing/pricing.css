@@ -137,10 +137,9 @@
 
 .pricing-hero-button:hover {
   transform: translateY(-2px);
- 
 }
 
-.dark-mode  .pricing-hero-overlay{
+.dark-mode .pricing-hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
@@ -578,6 +577,42 @@
 
 .pricing-plan-button:hover {
   transform: translateY(-4px);
+}
+.pricing-plan-button1{
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  
+  border-radius: 50px;
+  background: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+/* =========================================================
+BUSINESS PLAN CONTACT
+========================================================= */
+
+.pricing-plan-contact {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.pricing-plan-contact span {
+  color: var(--primary-color);
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -1448,6 +1483,7 @@
 .pricing-faq-icon svg {
   width: 18px;
   height: 18px;
+  pointer-events: none;
 }
 
 /* =========================================================

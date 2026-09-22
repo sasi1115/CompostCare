@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -7,8 +7,18 @@
 }
 html,
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
+
+/* Site typography: Outfit is the single UI font across every standard text element. */
+body, button, input, textarea, select, option {
+  font-family: "Outfit", sans-serif;
+}
+
+body :where(h1,h2,h3,h4,h5,h6,p,a,span,li,label,small,strong,em,blockquote) {
+  font-family: "Outfit", sans-serif;
+}
+
 :root {
   --primary-color: #1e704b; /* Sea Green */
   --secondary-color: #b35a3a; /* Earth Brown */
@@ -27,4 +37,111 @@ body {
   --dark-bg: #121412;
   --border-color: #cbd5e1;
   --white: #ffff;
+}
+
+/* =========================================================
+   2026 UI ENHANCEMENT — TYPOGRAPHY, HOVERS & SCROLL MOTION
+   ========================================================= */
+
+/* A clean, friendly typeface that suits an eco / compost brand. */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Keep headings confident while maintaining the existing hierarchy. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Outfit", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* Smooth interactive feedback without changing the existing layout. */
+a,
+button,
+[class*="btn"],
+[class*="button"],
+[class*="card"],
+img,
+.nav-link,
+.dropdown-link {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* Universal card lift — applied only to actual card-like components. */
+@media (hover: hover) and (pointer: fine) {
+  [class*="card"]:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 38px rgba(17, 24, 39, 0.12);
+  }
+
+  [class*="btn"]:hover,
+  [class*="button"]:hover,
+  button:hover {
+    transform: translateY(-2px);
+  }
+
+  .nav-link:hover,
+  .dropdown-link:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Images inside content cards get a subtle premium zoom. */
+  [class*="card"] img:hover,
+  [class*="image"] img:hover {
+    transform: scale(1.035);
+  }
+}
+
+/* Scroll reveal base. JS adds one directional class to suitable elements. */
+.reveal-motion {
+  opacity: 0;
+  transition:
+    opacity 0.75s cubic-bezier(0.2, 0.65, 0.3, 1),
+    transform 0.75s cubic-bezier(0.2, 0.65, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-motion.fade-up { transform: translate3d(0, 42px, 0); }
+.reveal-motion.fade-left { transform: translate3d(-46px, 0, 0); }
+.reveal-motion.fade-right { transform: translate3d(46px, 0, 0); }
+.reveal-motion.fade-scale { transform: scale(0.94); }
+
+.reveal-motion.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Stagger children naturally when cards are grouped. */
+.reveal-motion.motion-delay-1 { transition-delay: 0.08s; }
+.reveal-motion.motion-delay-2 { transition-delay: 0.16s; }
+.reveal-motion.motion-delay-3 { transition-delay: 0.24s; }
+.reveal-motion.motion-delay-4 { transition-delay: 0.32s; }
+
+/* Accessibility: users who request reduced motion get an instant layout. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-motion {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
