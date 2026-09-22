@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>CompostCare</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
@@ -35,7 +28,27 @@
   ========================================================= -->
 
     <main class="login-page">
-      
+      <!-- =========================================================
+     LOGIN BACKGROUND ANIMATION
+========================================================= -->
+
+      <div class="login-bg-animation" aria-hidden="true">
+        <span class="login-bg-orb login-bg-orb-one"></span>
+        <span class="login-bg-orb login-bg-orb-two"></span>
+
+        <span class="login-bg-particle particle-one"></span>
+        <span class="login-bg-particle particle-two"></span>
+        <span class="login-bg-particle particle-three"></span>
+        <span class="login-bg-particle particle-four"></span>
+        <span class="login-bg-particle particle-five"></span>
+        <span class="login-bg-particle particle-six"></span>
+
+        <span class="login-bg-ring ring-one"></span>
+        <span class="login-bg-ring ring-two"></span>
+
+        <span class="login-bg-line line-one"></span>
+        <span class="login-bg-line line-two"></span>
+      </div>
       <!-- =====================================================
      PAGE CONTROLS
 ===================================================== -->
@@ -147,6 +160,18 @@
               </button>
             </div>
           </div>
+          <!-- =================================================
+     REMEMBER ME + FORGOT PASSWORD
+================================================= -->
+
+          <div class="login-options">
+            <label class="login-remember">
+              <input type="checkbox" name="remember" />
+              <span>Remember Me</span>
+            </label>
+
+            <a href="#" class="login-forgot"> Forgot Password? </a>
+          </div>
 
           <!-- =================================================
          LOGIN BUTTON
@@ -224,7 +249,6 @@
           </p>
         </form>
       </section>
-      
     </main>
   </body>
 </html>

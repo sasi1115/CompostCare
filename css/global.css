@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 html,
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 :root {
   --primary-color: #1e704b; /* Sea Green */
@@ -14,7 +16,7 @@ body {
   --light-bg: #ffff;
   --dark-bg: #121412;
   --border-color: #cbd5e1;
-  --white:#ffff;
+  --white: #ffff;
 }
 
 .dark-mode {
@@ -23,6 +25,6 @@ body {
   --text-color: #ffff;
   --light-bg: #121412;
   --dark-bg: #121412;
-  --border-color:#cbd5e1;
-  --white:#ffff;
+  --border-color: #cbd5e1;
+  --white: #ffff;
 }

@@ -972,3 +972,48 @@ html[dir="rtl"] .logo {
     font-size: 13px;
   }
 }
+
+/* =========================================================
+   SAMSUNG GALAXY A55
+   360px × 800px
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 800px) {
+  .header-container {
+    width: calc(100% - 20px);
+    min-height: 64px;
+    gap: 4px;
+  }
+
+  .header-logo {
+    width: auto;
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .logo {
+    gap: 4px;
+  }
+
+  .logo-image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .header-actions {
+    width: auto;
+    flex: 0 0 auto;
+    gap: 5px;
+  }
+
+  .rtl-toggle,
+  .theme-toggle,
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,117 +1,139 @@
 /* =========================================================
-  HOME2 HERO
-  ========================================================= */
-
-.home2-hero {
-  width: 100%;
-  min-height: 100vh;
-  padding: 90px 0 80px;
-  background: var(--light-bg);
-  overflow: hidden;
-}
+   COMPOSTCARE HOME HERO
+   FINAL HERO SECTION
+========================================================= */
 
 /* =========================================================
-  HERO CONTAINER
-  ========================================================= */
+   HERO SECTION
+========================================================= */
 
-.home2-hero-container {
+.home-hero {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 60px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+  position: relative;
+}
+
+.home-hero-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1400px;
+  min-height: 620px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   align-items: center;
   gap: 70px;
 }
 
 /* =========================================================
-  HERO CONTENT
-  ========================================================= */
+   LEFT HERO CONTENT
+========================================================= */
 
-.home2-hero-content {
+.home-hero-content {
+  position: relative;
+  z-index: 5;
   max-width: 620px;
 }
 
 /* =========================================================
-  HERO TAG
-  ========================================================= */
+   HERO TAG
+========================================================= */
 
-.home2-hero-tag {
+.home-hero-tag {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding: 8px 16px;
-  background: var(--primary-color);
+  
+  padding: 6px 16px 6px 7px;
+  
   border-radius: 50px;
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 500;
+  color: var(--white);
+  background: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.home-hero-tag-icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
   color: var(--white);
 }
 
-.home2-hero-tag svg {
-  width: 18px;
-  height: 18px;
-  color: var(--white);
-  flex-shrink: 0;
+.home-hero-tag-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.2;
+}
+
+.home-hero-tag-text {
+  display: inline-flex;
+  align-items: center;
 }
 
 /* =========================================================
-  HERO TITLE
-  ========================================================= */
+   HERO TITLE
+========================================================= */
 
-.home2-hero-title {
+.home-hero-title {
+  max-width: 650px;
   margin: 0;
-  font-size: clamp(42px, 5vw, 72px);
+  color: var(--primary-color);
+  font-size: clamp(44px, 4.3vw, 72px);
   line-height: 1.08;
   font-weight: 600;
-  letter-spacing: -2px;
-  color: var(--primary-color);
+  letter-spacing: -2.5px;
 }
 
-.home2-hero-title span {
+.home-hero-title span {
   display: block;
   color: var(--secondary-color);
 }
 
 /* =========================================================
-  HERO DESCRIPTION
-  ========================================================= */
+   HERO DESCRIPTION
+========================================================= */
 
-.home2-hero-text {
-  max-width: 550px;
+.home-hero-description {
+  max-width: 570px;
   margin: 25px 0 32px;
-  font-size: 17px;
-  line-height: 1.8;
-  font-weight: 400;
   color: var(--text-color);
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
 }
 
 /* =========================================================
-  HERO BUTTONS
-  ========================================================= */
+   HERO ACTIONS
+========================================================= */
 
-.home2-hero-actions {
+.home-hero-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-.home2-hero-btn {
-  min-width: 165px;
-  height: 50px;
-  padding: 0 24px;
+.home-hero-primary-btn,
+.home-hero-secondary-btn {
+  min-height: 50px;
+  padding: 0 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
   transition:
     transform 0.3s ease,
     background-color 0.3s ease,
@@ -119,457 +141,1304 @@
     border-color 0.3s ease;
 }
 
-/* =========================================================
-  PRIMARY BUTTON
-  ========================================================= */
-
-.home2-hero-btn-primary {
+.home-hero-primary-btn {
+  background: var(--primary-color);
   color: var(--white);
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
-.home2-hero-btn-primary:hover {
-  transform: translateY(-2px);
-  background-color: var(--primary-color);
-  color: var(--white);
-  border-color: var(--primary-color);
+.home-hero-secondary-btn {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
 }
 
-/* =========================================================
-  SECONDARY BUTTON
-  ========================================================= */
 
-.home2-hero-btn-secondary {
-  background-color: var(--light-bg);
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+
+.home-hero-primary-btn:hover {
+ 
+ 
+   transform: translateY(-2px);
 }
 
-.home2-hero-btn-secondary:hover {
-  transform: translateY(-2px);
-  background-color: var(--primary-color);
+.home-hero-secondary-btn:hover {
+  background: var(--secondary-color);
   color: var(--white);
-  border-color: var(--primary-color);
 }
 
 /* =========================================================
-  HERO TRUST
-  ========================================================= */
+   RIGHT HERO VISUAL
+========================================================= */
 
-.home2-hero-trust {
-  margin-top: 48px;
+.home-hero-visual {
+  width: 100%;
+  min-width: 0;
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.home2-trust-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.home2-trust-item strong {
-  font-size: 15px;
-  line-height: 1.4;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-.home2-trust-item span {
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--text-color);
-}
-
-.home2-trust-divider {
-  width: 1px;
-  height: 32px;
-  background: var(--border-color);
-}
-
-/* =========================================================
-  HERO VISUAL
-  ========================================================= */
-
-.home2-hero-visual {
+  justify-content: center;
   position: relative;
-  min-height: 590px;
+}
+
+.home-hero-animation {
+  width: min(100%, 720px);
+  height: 590px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* =========================================================
-  HERO IMAGE WRAPPER
-  ========================================================= */
+   SUBTLE BACKGROUND GLOW
+========================================================= */
 
-.home2-hero-image-wrap {
-  width: 100%;
-  height: 590px;
-  overflow: hidden;
-  border-radius: 28px;
-  position: relative;
+.hero-visual-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(45px);
+  opacity: 0.16;
+  z-index: 0;
 }
 
-.home2-hero-image {
+.hero-glow-one {
+  width: 280px;
+  height: 280px;
+  top: 70px;
+  left: 80px;
+  background: var(--primary-color);
+  animation: heroGlowOne 7s ease-in-out infinite;
+}
+
+.hero-glow-two {
+  width: 230px;
+  height: 230px;
+  right: 70px;
+  bottom: 65px;
+  background: var(--secondary-color);
+  animation: heroGlowTwo 8s ease-in-out infinite;
+}
+
+/* =========================================================
+   STAGE LABEL
+========================================================= */
+
+.hero-stage-label {
+  display: block;
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.72;
+}
+
+/* =========================================================
+   WASTE STAGE
+========================================================= */
+
+.hero-waste-stage {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  width: 180px;
+  height: 300px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-waste-stage .hero-stage-label {
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   WASTE BIN
+========================================================= */
+
+.hero-waste-bin {
+  width: 122px;
+  height: 175px;
+  position: relative;
+  margin-top: 8px;
+  filter: drop-shadow(0 18px 24px rgba(17, 24, 39, 0.12));
+  animation: wasteBinFloat 5s ease-in-out infinite;
+}
+
+.hero-bin-lid {
+  width: 134px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px 8px 5px 5px;
+  background: var(--secondary-color);
+  z-index: 3;
+}
+
+.hero-bin-lid::after {
+  content: "";
+  width: 32px;
+  height: 6px;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background: var(--secondary-color);
+}
+
+.hero-bin-body {
+  width: 108px;
+  height: 154px;
+  position: absolute;
+  left: 50%;
+  top: 13px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: 13px 13px 20px 20px;
+  background: var(--primary-color);
+}
+
+.hero-bin-front {
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.8s ease;
-}
-
-.home2-hero-image-wrap:hover .home2-hero-image {
-  transform: scale(1.03);
-}
-
-/* =========================================================
-  FLOATING IMPACT CARD
-  ========================================================= */
-
-.home2-hero-impact {
-  position: absolute;
-  left: -35px;
-  bottom: 65px;
   display: flex;
   align-items: center;
-  gap: 13px;
-  padding: 15px 20px;
-  background: var(--light-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
+  justify-content: center;
+}
+
+.hero-bin-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-bin-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.8;
 }
 
 /* =========================================================
-  IMPACT ICON
-  ========================================================= */
+   ORGANIC WASTE ITEMS
+========================================================= */
 
-.home2-impact-icon {
-  width: 42px;
-  height: 42px;
+.hero-waste-items {
+  width: 145px;
+  height: 85px;
+  position: absolute;
+  left: 50%;
+  top: 66px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.hero-waste-item {
+  position: absolute;
+  display: block;
+  border-radius: 45% 55% 48% 52%;
+  transform-origin: center;
+  opacity: 0.95;
+}
+
+.waste-item-one {
+  width: 25px;
+  height: 19px;
+  left: 37px;
+  top: 10px;
+  transform: rotate(-22deg);
+  background: var(--secondary-color);
+}
+
+.waste-item-two {
+  width: 22px;
+  height: 17px;
+  left: 63px;
+  top: 4px;
+  transform: rotate(18deg);
+  background: var(--primary-color);
+}
+
+.waste-item-three {
+  width: 24px;
+  height: 18px;
+  left: 84px;
+  top: 15px;
+  transform: rotate(32deg);
+  background: var(--secondary-color);
+}
+
+.waste-item-four {
+  width: 19px;
+  height: 15px;
+  left: 54px;
+  top: 23px;
+  transform: rotate(-10deg);
+  background: var(--primary-color);
+}
+
+/* =========================================================
+   TRANSFORMATION STAGE
+========================================================= */
+
+.hero-process-stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 245px;
+  height: 190px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.hero-process-line {
+  width: 48px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  background: var(--border-color);
+}
+
+.hero-process-line::after {
+  content: "";
+  width: 22px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -22px;
+  background: var(--primary-color);
+  animation: processLineFlow 3.5s ease-in-out infinite;
+}
+
+.process-line-left {
+  left: 0;
+}
+
+.process-line-right {
+  right: 0;
+}
+
+.process-line-right::after {
+  animation-delay: 1.7s;
+}
+
+/* =========================================================
+   PROCESS CIRCLE
+========================================================= */
+
+.hero-process-circle {
+  width: 92px;
+  height: 92px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--white);
-  background: var(--primary-color);
-  flex-shrink: 0;
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 15px 40px rgba(17, 24, 39, 0.09);
 }
 
-.home2-impact-icon svg {
-  width: 19px;
-  height: 19px;
+.hero-process-ring {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  border: 1px dashed var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0.65;
+  animation: processRingRotate 10s linear infinite;
+}
+
+.hero-process-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+  animation: processIconPulse 3.5s ease-in-out infinite;
+}
+
+.hero-process-icon svg {
+  width: 23px;
+  height: 23px;
+  stroke-width: 2;
+}
+
+.hero-process-label {
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 180px;
+  color: var(--text-color);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.68;
 }
 
 /* =========================================================
-  IMPACT CONTENT
-  ========================================================= */
+   COMPOST STAGE
+========================================================= */
 
-.home2-impact-content {
+.hero-compost-stage {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  width: 190px;
+  height: 315px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-compost-stage .hero-stage-label {
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   COMPOST CONTAINER
+========================================================= */
+
+.hero-compost-container {
+  width: 145px;
+  height: 170px;
+  position: relative;
+  margin-top: 8px;
+  filter: drop-shadow(0 18px 24px rgba(17, 24, 39, 0.11));
+  animation: compostFloat 5.5s ease-in-out infinite;
+}
+
+.hero-compost-rim {
+  width: 152px;
+  height: 22px;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--secondary-color);
+  z-index: 3;
+}
+
+.hero-compost-body {
+  width: 132px;
+  height: 142px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: 16px 16px 28px 28px;
+  background: var(--secondary-color);
+}
+
+.hero-compost-surface {
+  width: 112px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--text-color);
+  opacity: 0.9;
+}
+
+/* =========================================================
+   COMPOST PARTICLES
+========================================================= */
+
+.hero-compost-particle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: var(--text-color);
+  opacity: 0.6;
+  animation: compostParticleFloat 4s ease-in-out infinite;
+}
+
+.compost-particle-one {
+  width: 6px;
+  height: 6px;
+  left: 30px;
+  top: 52px;
+}
+
+.compost-particle-two {
+  width: 4px;
+  height: 4px;
+  left: 62px;
+  top: 62px;
+  animation-delay: 0.8s;
+}
+
+.compost-particle-three {
+  width: 5px;
+  height: 5px;
+  left: 88px;
+  top: 49px;
+  animation-delay: 1.4s;
+}
+
+.compost-particle-four {
+  width: 4px;
+  height: 4px;
+  left: 73px;
+  top: 83px;
+  animation-delay: 2s;
+}
+
+/* =========================================================
+   COMPOST RESULT
+========================================================= */
+
+.hero-compost-result {
+  margin-top: 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  background: var(--light-bg);
+  box-shadow: 0 8px 25px rgba(17, 24, 39, 0.06);
+  animation: resultReveal 4s ease-in-out infinite;
+}
+
+.hero-result-icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.hero-result-icon svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 2.5;
+}
+
+.hero-result-text {
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* =========================================================
+   IMPACT INDICATOR
+========================================================= */
+
+.hero-impact-indicator {
+  position: absolute;
+  right: 8%;
+  bottom: 18%;
+  min-width: 195px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  background: var(--light-bg);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+  z-index: 6;
+  animation: impactFloat 6s ease-in-out infinite;
+}
+
+.hero-impact-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.hero-impact-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.hero-impact-content {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.home2-impact-content span {
-  font-size: 11px;
-  line-height: 1.4;
-  font-weight: 400;
+.hero-impact-label {
   color: var(--text-color);
+  font-size: 10px;
+  line-height: 1.3;
+  font-weight: 500;
+  opacity: 0.65;
 }
 
-.home2-impact-content strong {
-  font-size: 15px;
-  line-height: 1.4;
-  font-weight: 600;
+.hero-impact-value {
   color: var(--primary-color);
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 /* =========================================================
-  NEST HUB — 1024 × 600
-  ========================================================= */
+   FLOW PARTICLES
+========================================================= */
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
-  .home2-hero {
-    min-height: 600px;
-    padding: 75px 0 65px;
+.hero-flow-particle {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.flow-particle-one {
+  left: 27%;
+  top: 49%;
+  animation: flowParticleOne 4s ease-in-out infinite;
+}
+
+.flow-particle-two {
+  left: 49%;
+  top: 49%;
+  animation: flowParticleTwo 4s ease-in-out infinite 1.3s;
+}
+
+.flow-particle-three {
+  left: 69%;
+  top: 49%;
+  animation: flowParticleThree 4s ease-in-out infinite 2.6s;
+}
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+/* Background glow */
+
+@keyframes heroGlowOne {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.13;
   }
 
-  .home2-hero-container {
-    width: 85%;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 40px;
+  50% {
+    transform: translate3d(12px, -10px, 0);
+    opacity: 0.19;
+  }
+}
+
+@keyframes heroGlowTwo {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.12;
   }
 
-  .home2-hero-content {
-    max-width: 100%;
+  50% {
+    transform: translate3d(-12px, 10px, 0);
+    opacity: 0.18;
+  }
+}
+
+/* Waste bin */
+
+@keyframes wasteBinFloat {
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  .home2-hero-tag {
-    margin-bottom: 14px;
-    padding: 7px 14px;
-    font-size: 12px;
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Compost container */
+
+@keyframes compostFloat {
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  .home2-hero-tag svg {
-    width: 17px;
-    height: 17px;
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Process ring */
+
+@keyframes processRingRotate {
+  from {
+    transform: rotate(0deg);
   }
 
-  .home2-hero-title {
-    font-size: 46px;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Process icon */
+
+@keyframes processIconPulse {
+  0%,
+  100% {
+    transform: scale(1);
   }
 
-  .home2-hero-text {
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+/* Process lines */
+
+@keyframes processLineFlow {
+  0% {
+    left: -22px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 48px;
+    opacity: 0;
+  }
+}
+
+/* Compost particles */
+
+@keyframes compostParticleFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.08);
+    opacity: 0.8;
+  }
+}
+
+/* Compost result */
+
+@keyframes resultReveal {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+/* Impact card */
+
+@keyframes impactFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Flow particle 01 */
+
+@keyframes flowParticleOne {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.7;
+  }
+
+  55% {
+    transform: translate(55px, 0) scale(1);
+    opacity: 0.65;
+  }
+
+  80%,
+  100% {
+    transform: translate(85px, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Flow particle 02 */
+
+@keyframes flowParticleTwo {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.65;
+  }
+
+  55% {
+    transform: translate(45px, 0) scale(1);
+    opacity: 0.6;
+  }
+
+  80%,
+  100% {
+    transform: translate(70px, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Flow particle 03 */
+
+@keyframes flowParticleThree {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.65;
+  }
+
+  55% {
+    transform: translate(35px, 0) scale(1);
+    opacity: 0.6;
+  }
+
+  80%,
+  100% {
+    transform: translate(55px, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark-mode .home-hero {
+  background: var(--dark-bg);
+}
+
+
+.dark-mode .hero-process-circle,
+.dark-mode .hero-compost-result,
+.dark-mode .hero-impact-indicator {
+  background: var(--dark-bg);
+}
+
+.dark-mode .hero-process-circle {
+  border-color: var(--border-color);
+}
+
+.dark-mode .hero-bin-icon {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero *,
+  .home-hero *::before,
+  .home-hero *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   NEST HUB
+   1024px × 600px
+========================================================= */
+
+@media (max-width: 1024px) and (max-height:600px) {
+  .home-hero {
+    min-height: auto;
+    padding: 65px 0;
+  }
+
+  .home-hero-container {
+    width: 88%;
+    min-height: 500px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 35px;
+  }
+
+  .home-hero-content {
     max-width: 500px;
-    margin: 20px 0 26px;
+  }
+
+  .home-hero-title {
+    font-size: clamp(38px, 5vw, 52px);
+    letter-spacing: -1.8px;
+  }
+
+  .home-hero-description {
+    max-width: 470px;
+    margin-top: 20px;
+    margin-bottom: 27px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .home-hero-animation {
+    height: 500px;
+  }
+
+  .hero-waste-stage {
+    left: 0;
+    width: 155px;
+  }
+
+  .hero-compost-stage {
+    right: 0;
+    width: 165px;
+  }
+
+  .hero-waste-bin {
+    transform: scale(0.9);
+  }
+
+  .hero-waste-items {
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  .hero-compost-container {
+    transform: scale(0.9);
+  }
+
+  .hero-process-stage {
+    width: 210px;
+  }
+
+  .hero-process-line {
+    width: 38px;
+  }
+
+  .hero-impact-indicator {
+    right: 3%;
+    bottom: 0;
+    min-width: 175px;
+  }
+
+  .hero-glow-one {
+    width: 220px;
+    height: 220px;
+    left: 40px;
+  }
+
+  .hero-glow-two {
+    width: 190px;
+    height: 190px;
+    right: 40px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768px × 1024px
+========================================================= */
+
+@media (max-width: 768px)  and (max-height:1024px){
+  .home-hero {
+    min-height: auto;
+    padding: 90px 0 80px;
+  }
+
+  .home-hero-container {
+    width: 88%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .home-hero-content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-hero-tag {
+    margin-bottom: 21px;
+  }
+
+  .home-hero-title {
+    max-width: 620px;
+    font-size: clamp(40px, 7vw, 54px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+  }
+
+  .home-hero-description {
+    max-width: 590px;
+    margin: 22px auto 28px;
     font-size: 15px;
     line-height: 1.7;
   }
 
-  .home2-hero-actions {
-    gap: 12px;
+  .home-hero-actions {
+    justify-content: center;
   }
 
-  .home2-hero-btn {
-    min-width: 155px;
-    height: 48px;
-    padding: 0 22px;
-    font-size: 13px;
+  .home-hero-visual {
+    width: 100%;
   }
 
-  .home2-hero-trust {
-    margin-top: 32px;
-    gap: 15px;
+  .home-hero-animation {
+    width: min(100%, 650px);
+    height: 500px;
   }
 
-  .home2-trust-item {
-    gap: 3px;
+  .hero-waste-stage {
+    left: 2%;
   }
 
-  .home2-trust-item strong {
-    font-size: 14px;
+  .hero-compost-stage {
+    right: 2%;
   }
 
-  .home2-trust-item span {
+  .hero-process-stage {
+    width: 215px;
+  }
+
+  .hero-impact-indicator {
+    right: 5%;
+    bottom: -25px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360px × 740px
+========================================================= */
+
+@media (max-width: 360px)  and (max-height:740px){
+  .home-hero {
+    padding: 80px 0 65px;
+  }
+
+  .home-hero-container {
+    width: 90%;
+    gap: 10px;
+  }
+
+  .home-hero-tag {
+    gap: 7px;
+    padding: 5px 12px 5px 6px;
     font-size: 11px;
   }
 
-  .home2-trust-divider {
-    height: 28px;
+  .home-hero-tag-icon {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
   }
 
-  .home2-hero-visual {
-    min-height: 470px;
+  .home-hero-tag-icon svg {
+    width: 14px;
+    height: 14px;
   }
 
-  .home2-hero-image-wrap {
-    height: 470px;
-    border-radius: 24px;
+  .home-hero-title {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -1.4px;
   }
 
-  .home2-hero-impact {
-    left: -18px;
-    bottom: 28px;
-    padding: 13px 17px;
-    gap: 11px;
+  .home-hero-description {
+    margin: 18px auto 24px;
+    font-size: 13px;
+    line-height: 1.65;
   }
 
-  .home2-impact-icon {
+  .home-hero-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-hero-primary-btn,
+  .home-hero-secondary-btn {
+    width: 100%;
+    min-height: 47px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+
+  .home-hero-animation {
+    width: 100%;
+    height: 430px;
+  }
+
+  /* Waste stage */
+
+  .hero-waste-stage {
+    left: -5%;
+    top: 45%;
+    width: 120px;
+    height: 230px;
+  }
+
+  .hero-waste-stage .hero-stage-label,
+  .hero-compost-stage .hero-stage-label {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+
+  .hero-waste-bin {
+    width: 92px;
+    height: 140px;
+    margin-top: 3px;
+    transform: scale(0.78);
+  }
+
+  .hero-bin-lid {
+    width: 105px;
+  }
+
+  .hero-bin-body {
+    width: 88px;
+    height: 125px;
+  }
+
+  .hero-bin-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .hero-bin-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-waste-items {
+    top: 50px;
+    transform: translateX(-50%) scale(0.72);
+  }
+
+  /* Process */
+
+  .hero-process-stage {
+    width: 145px;
+    height: 160px;
+    top: 45%;
+  }
+
+  .hero-process-circle {
+    width: 68px;
+    height: 68px;
+  }
+
+  .hero-process-ring {
+    width: 82px;
+    height: 82px;
+  }
+
+  .hero-process-icon {
     width: 38px;
     height: 38px;
   }
 
-  .home2-impact-icon svg {
-    width: 17px;
-    height: 17px;
+  .hero-process-icon svg {
+    width: 19px;
+    height: 19px;
   }
 
-  .home2-impact-content span {
-    font-size: 10px;
+  .hero-process-line {
+    width: 26px;
   }
 
-  .home2-impact-content strong {
-    font-size: 14px;
-  }
-}
-
-/* =========================================================
-  IPAD MINI — 768 × 1024
-  ========================================================= */
-
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home2-hero {
-    min-height: auto;
-    padding: 90px 0 75px;
+  .hero-process-line::after {
+    width: 15px;
+    left: -15px;
   }
 
-  .home2-hero-container {
-    width: 88%;
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .hero-process-label {
+    bottom: -3px;
+    max-width: 125px;
+    font-size: 9px;
   }
 
-  .home2-hero-content {
-    max-width: 100%;
-    text-align: center;
+  /* Compost stage */
+
+  .hero-compost-stage {
+    right: -5%;
+    top: 45%;
+    width: 125px;
+    height: 235px;
   }
 
-  .home2-hero-tag {
-    margin-bottom: 16px;
-    padding: 8px 15px;
-    font-size: 12px;
+  .hero-compost-container {
+    width: 115px;
+    height: 140px;
+    margin-top: 3px;
+    transform: scale(0.76);
   }
 
-  .home2-hero-title {
-    font-size: 48px;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
+  .hero-compost-rim {
+    width: 120px;
   }
 
-  .home2-hero-text {
-    max-width: 620px;
-    margin: 22px auto 30px;
-    font-size: 16px;
-    line-height: 1.75;
+  .hero-compost-body {
+    width: 105px;
+    height: 118px;
   }
 
-  .home2-hero-actions {
-    justify-content: center;
-    gap: 12px;
+  .hero-compost-surface {
+    width: 88px;
+    height: 26px;
   }
 
-  .home2-hero-btn {
+  .hero-compost-result {
+    margin-top: 7px;
+    padding: 5px 9px;
+    gap: 5px;
+  }
+
+  .hero-result-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-result-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hero-result-text {
+    font-size: 9px;
+  }
+
+  /* Impact */
+
+  .hero-impact-indicator {
+    right: 50%;
+    bottom: -12px;
     min-width: 160px;
-    height: 50px;
-    padding: 0 22px;
-    font-size: 13px;
-  }
-
-  .home2-hero-trust {
-    justify-content: center;
-    margin-top: 36px;
-    gap: 18px;
-  }
-
-  .home2-trust-item strong {
-    font-size: 15px;
-  }
-
-  .home2-trust-item span {
-    font-size: 12px;
-  }
-
-  .home2-hero-visual {
-    min-height: 480px;
-  }
-
-  .home2-hero-image-wrap {
-    height: 480px;
-    border-radius: 24px;
-  }
-
-  .home2-hero-impact {
-    left: 18px;
-    bottom: 25px;
-    padding: 14px 18px;
-  }
-}
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-========================================================= */
-
-@media screen and (max-width: 360px) and (max-height: 740px) {
-  /* =======================================================
-     PROCESS SECTION
-  ======================================================= */
-
-  .home2-process-section {
-    padding: 70px 0;
-  }
-
-  .home2-process-container {
-    width: 88%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  /* =======================================================
-     PROCESS CONTENT
-  ======================================================= */
-
-  .home2-process-content {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .home2-process-content h3 {
-    margin: 0 0 10px;
-    font-size: 19px;
-    line-height: 1.4;
-    font-weight: 600;
-    letter-spacing: 0;
-  }
-
-  .home2-process-content p {
-    margin: 0 auto;
-    max-width: 300px;
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  /* =======================================================
-     PROCESS STEPS
-  ======================================================= */
-
-  .home2-process-steps {
-    width: 100%;
-    gap: 12px;
-  }
-
-  .home2-process-step {
+    padding: 9px 11px;
     gap: 8px;
+    transform: translateX(50%);
   }
 
-  .home2-process-step-number {
+  .hero-impact-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    border-radius: 8px;
+  }
+
+  .hero-impact-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .hero-impact-label {
+    font-size: 9px;
+  }
+
+  .hero-impact-value {
     font-size: 10px;
   }
 
-  .home2-process-step-title {
-    font-size: 12px;
-    line-height: 1.4;
+  /* Background glow */
+
+  .hero-glow-one {
+    width: 150px;
+    height: 150px;
+    left: 5px;
+    top: 80px;
+    filter: blur(35px);
   }
 
-  .home2-process-step-description {
-    font-size: 11px;
-    line-height: 1.5;
+  .hero-glow-two {
+    width: 140px;
+    height: 140px;
+    right: 5px;
+    bottom: 70px;
+    filter: blur(35px);
   }
 
-  /* =======================================================
-     PROCESS IMAGE
-  ======================================================= */
+  /* Flow particles */
 
-  .home2-process-image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 18px;
+  .hero-flow-particle {
+    width: 5px;
+    height: 5px;
   }
 
-  .home2-process-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+  .flow-particle-one {
+    left: 30%;
+  }
+
+  .flow-particle-two {
+    left: 49%;
+  }
+
+  .flow-particle-three {
+    left: 67%;
   }
 }
 
@@ -609,13 +1478,12 @@
   padding: 8px 16px;
 
   border-radius: 50px;
-  border: 2px solid var(--secondary-color);
 
   font-size: 13px;
   line-height: 1.5;
   font-weight: 500;
-
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .home2-sustainability-tag svg {
@@ -646,7 +1514,6 @@
   max-width: 650px;
   margin: 0 auto;
 
-  font-family: "Manrope", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
@@ -724,7 +1591,6 @@
 
   margin-bottom: 10px;
 
-  font-family: "Manrope", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   font-weight: 600;
@@ -740,7 +1606,6 @@
 .home2-sustainability-card h3 {
   margin-bottom: 12px;
 
-  font-family: "Manrope", sans-serif;
   font-size: 21px;
   line-height: 1.3;
   font-weight: 600;
@@ -753,7 +1618,6 @@
 ========================================================= */
 
 .home2-sustainability-card p {
-  font-family: "Manrope", sans-serif;
   font-size: 14px;
   line-height: 1.8;
   font-weight: 400;
@@ -1023,8 +1887,8 @@
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: 1px;
-  color: var(--primary-color);
-  border: 2px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
   border-radius: 50px;
 }
 
@@ -1032,7 +1896,7 @@
   width: 20px;
   height: 20px;
   padding: 3px;
-  color: var(--light-bg);
+  color: var(--white);
   background: var(--primary-color);
   border-radius: 50%;
   flex-shrink: 0;
@@ -1086,7 +1950,6 @@
 .home2-resource-number {
   margin-bottom: 18px;
 
-  font-family: "Poppins", sans-serif;
   font-size: 13px;
   line-height: 1;
   font-weight: 600;
@@ -1172,16 +2035,6 @@
   height: 1px;
 
   background: var(--border-color);
-}
-
-.home2-resource-connector i {
-  width: 17px;
-  height: 17px;
-
-  margin-left: -1px;
-
-  color: var(--secondary-color);
-  stroke-width: 1.8;
 }
 
 /* =========================================================
@@ -1587,11 +2440,10 @@
 .home2-services-tag {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
   padding: 6px 16px 6px 6px;
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
-  color: var(--primary-color);
+  color: var(--white);
+  background-color: var(--primary-color);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -2029,14 +2881,17 @@
 
 .home2-process-section {
   width: 100%;
-  padding: 110px 0;
+  padding: 115px 0;
+
   background: var(--light-bg);
+
   overflow: hidden;
 }
 
 .home2-process-container {
   width: 85%;
   max-width: 1400px;
+
   margin: 0 auto;
 }
 
@@ -2045,45 +2900,71 @@
 ========================================================= */
 
 .home2-process-heading {
-  max-width: 760px;
-  margin: 0 auto 75px;
+  max-width: 800px;
+
+  margin: 0 auto 82px;
+
   text-align: center;
 }
+
+/* =========================================================
+   SECTION TAG
+========================================================= */
 
 .home2-process-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  margin-bottom: 14px;
-  padding: 6px 16px;
-  font-size: 14px;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+  padding: 7px 17px;
+
+  font-size: 13px;
   line-height: 1.5;
+
   font-weight: 500;
+
   letter-spacing: 1px;
-  color: var(--primary-color);
-  border: 2px solid var(--secondary-color);
+
+  color: var(--white);
+
+  background: var(--primary-color);
+
   border-radius: 50px;
 }
 
 .home2-process-tag svg {
-  width: 20px;
-  height: 20px;
-  padding: 3px;
-  color: var(--light-bg);
-  background: var(--primary-color);
-  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+
+  padding: 2px;
+
+  color: var(--white);
+
   flex-shrink: 0;
 }
 
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
 .home2-process-heading h2 {
-  max-width: 700px;
+  max-width: 760px;
+
   margin: 0 auto;
-  font-size: clamp(34px, 4vw, 52px);
-  line-height: 1.2;
+
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.18;
+
   font-weight: 600;
+
+  letter-spacing: -1.3px;
+
   color: var(--primary-color);
 }
+
 .home2-process-heading h2 span {
   color: var(--secondary-color);
 }
@@ -2094,8 +2975,18 @@
 
 .home2-process-flow {
   display: grid;
-  grid-template-columns: 1fr 70px 1fr 70px 1fr 70px 1fr;
+
+  grid-template-columns:
+    1fr
+    70px
+    1fr
+    70px
+    1fr
+    70px
+    1fr;
+
   align-items: start;
+
   width: 100%;
 }
 
@@ -2104,29 +2995,82 @@
 ========================================================= */
 
 .home2-process-item {
+  position: relative;
+
   min-width: 0;
+
+  padding: 0 18px 35px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  transition: transform 0.35s ease;
 }
+
+.home2-process-item:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================================================
+   PROCESS TOP
+========================================================= */
 
 .home2-process-top {
   position: relative;
+
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: 62px;
-  margin-bottom: 30px;
-  padding-bottom: 18px;
+  align-items: flex-end;
+  justify-content: center;
+
+  min-height: 92px;
+
+  margin-bottom: 0;
+
+  padding: 0 0 17px;
+
   border-bottom: 1px solid var(--border-color);
 }
 
+/* =========================================================
+   LARGE EDITORIAL NUMBER
+========================================================= */
+
 .home2-process-number {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: -1px;
+  position: static;
+
+  transform: none;
+
+  display: block;
+
+  font-size: 64px;
+  line-height: 0.9;
+
+  font-weight: 600;
+
+  letter-spacing: -3px;
+
   color: var(--secondary-color);
+}
+
+/* =========================================================
+   SMALL NUMBER ACCENT
+========================================================= */
+
+.home2-process-top::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -2px;
+  left: 50%;
+
+  width: 34px;
+  height: 3px;
+
+  transform: translateX(-50%);
+
+  background: var(--primary-color);
 }
 
 /* =========================================================
@@ -2134,58 +3078,156 @@
 ========================================================= */
 
 .home2-process-content {
+  position: relative;
+
   width: 100%;
-  max-width: 250px;
+  max-width: 255px;
+
   margin: 0 auto;
+
+  padding: 27px 8px 0;
+
   text-align: center;
 }
 
+/* =========================================================
+   PROCESS TITLE
+========================================================= */
+
 .home2-process-content h3 {
-  margin: 0 0 10px;
-  font-size: 19px;
+  margin: 0 0 11px;
+
+  font-size: 18px;
   line-height: 1.4;
+
   font-weight: 600;
-  letter-spacing: 0.5px;
+
+  letter-spacing: 0.6px;
+
   color: var(--primary-color);
 }
 
+/* =========================================================
+   PROCESS DESCRIPTION
+========================================================= */
+
 .home2-process-content p {
   margin: 0;
-  font-size: 14px;
+
+  font-size: 13px;
   line-height: 1.8;
+
   font-weight: 400;
+
   color: var(--text-color);
 }
+
 /* =========================================================
-   CONNECTOR
+   SUBTLE STEP ACCENT
+========================================================= */
+
+.home2-process-item::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 34px;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: var(--border-color);
+
+  transition:
+    width 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.home2-process-item:hover::after {
+  width: 60px;
+
+  background: var(--secondary-color);
+}
+
+/* =========================================================
+   PROCESS CONNECTOR
 ========================================================= */
 
 .home2-process-connector {
   position: relative;
-  height: 62px;
+
+  height: 92px;
+
+  margin: 0;
 }
+
+/* =========================================================
+   CONNECTOR LINE
+========================================================= */
 
 .home2-process-connector::before {
   content: "";
+
   position: absolute;
-  top: 31px;
-  left: 50%;
+
+  top: 50%;
+
+  left: 0;
+
   width: 100%;
   height: 1px;
+
+  transform: translateY(-50%);
+
   background: var(--border-color);
-  transform: translateX(-50%);
 }
+
+/* =========================================================
+   CONNECTOR CENTER MARK
+========================================================= */
 
 .home2-process-connector::after {
   content: "";
+
   position: absolute;
-  top: 26px;
-  right: 0;
-  width: 10px;
-  height: 10px;
-  border-top: 1px solid var(--primary-color);
-  border-right: 1px solid var(--primary-color);
-  transform: rotate(45deg);
+
+  top: 50%;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translate(-50%, -50%);
+
+  background: var(--secondary-color);
+
+  border-radius: 50%;
+}
+
+/* =========================================================
+   ALTERNATING STEP ACCENTS
+========================================================= */
+
+.home2-process-item:nth-child(1) .home2-process-top::after,
+.home2-process-item:nth-child(5) .home2-process-top::after {
+  background: var(--primary-color);
+}
+
+.home2-process-item:nth-child(3) .home2-process-top::after,
+.home2-process-item:nth-child(7) .home2-process-top::after {
+  background: var(--secondary-color);
+}
+
+/* =========================================================
+   ALTERNATING NUMBERS
+========================================================= */
+
+.home2-process-item:nth-child(3) .home2-process-number,
+.home2-process-item:nth-child(7) .home2-process-number {
+  color: var(--primary-color);
 }
 
 /* =========================================================
@@ -2194,34 +3236,47 @@
 
 .home2-process-action {
   display: flex;
+
   justify-content: center;
-  margin-top: 70px;
+
+  margin-top: 55px;
 }
 
 .home2-process-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+
+  gap: 9px;
+
   min-height: 50px;
-  padding: 0 25px;
+
+  padding: 0 26px;
+
   border: 1px solid var(--primary-color);
+
   border-radius: 50px;
+
   background: var(--primary-color);
+
   color: var(--white);
+
   font-size: 14px;
+
   font-weight: 500;
+
   text-decoration: none;
+
   transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .home2-process-button svg {
   width: 17px;
   height: 17px;
+
   stroke-width: 1.8;
 }
 
@@ -2230,109 +3285,736 @@
 }
 
 /* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .home2-process-section {
+    padding: 80px 0;
+  }
+
+  .home2-process-container {
+    width: 85%;
+  }
+
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
+  .home2-process-heading {
+    max-width: 720px;
+
+    margin-bottom: 60px;
+  }
+
+  .home2-process-tag {
+    margin-bottom: 16px;
+
+    padding: 6px 14px;
+
+    font-size: 12px;
+  }
+
+  .home2-process-tag svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home2-process-heading h2 {
+    font-size: 40px;
+
+    line-height: 1.18;
+  }
+
+  /* -------------------------------------------------------
+     PROCESS FLOW
+  ------------------------------------------------------- */
+
+  .home2-process-flow {
+    grid-template-columns:
+      1fr
+      42px
+      1fr
+      42px
+      1fr
+      42px
+      1fr;
+  }
+
+  /* -------------------------------------------------------
+     PROCESS TOP
+  ------------------------------------------------------- */
+
+  .home2-process-top {
+    min-height: 72px;
+
+    padding-bottom: 14px;
+  }
+
+  .home2-process-number {
+    font-size: 49px;
+
+    letter-spacing: -2px;
+  }
+
+  .home2-process-top::after {
+    width: 28px;
+  }
+
+  /* -------------------------------------------------------
+     PROCESS CONTENT
+  ------------------------------------------------------- */
+
+  .home2-process-content {
+    max-width: 215px;
+
+    padding-top: 22px;
+  }
+
+  .home2-process-content h3 {
+    margin-bottom: 8px;
+
+    font-size: 16px;
+  }
+
+  .home2-process-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  /* -------------------------------------------------------
+     CONNECTOR
+  ------------------------------------------------------- */
+
+  .home2-process-connector {
+    height: 72px;
+  }
+
+  .home2-process-connector::after {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* -------------------------------------------------------
+     CTA
+  ------------------------------------------------------- */
+
+  .home2-process-action {
+    margin-top: 35px;
+  }
+
+  .home2-process-button {
+    min-height: 47px;
+
+    padding: 0 23px;
+
+    font-size: 13px;
+  }
+
+  .home2-process-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-process-section {
+    padding: 90px 0;
+  }
+
+  .home2-process-container {
+    width: 88%;
+  }
+
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
+  .home2-process-heading {
+    max-width: 650px;
+
+    margin-bottom: 65px;
+  }
+
+  .home2-process-tag {
+    gap: 7px;
+
+    margin-bottom: 17px;
+
+    padding: 6px 14px;
+
+    font-size: 12px;
+  }
+
+  .home2-process-tag svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .home2-process-heading h2 {
+    max-width: 620px;
+
+    font-size: 37px;
+
+    line-height: 1.2;
+  }
+
+  /* -------------------------------------------------------
+     TWO COLUMN PROCESS
+  ------------------------------------------------------- */
+
+  .home2-process-flow {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 45px;
+    row-gap: 48px;
+
+    align-items: start;
+  }
+
+  /* -------------------------------------------------------
+     PROCESS ITEM
+  ------------------------------------------------------- */
+
+  .home2-process-item {
+    padding: 0 8px 28px;
+  }
+
+  .home2-process-item:hover {
+    transform: translateY(-3px);
+  }
+
+  /* -------------------------------------------------------
+     TOP
+  ------------------------------------------------------- */
+
+  .home2-process-top {
+    min-height: 78px;
+
+    padding-bottom: 15px;
+  }
+
+  .home2-process-number {
+    font-size: 54px;
+
+    letter-spacing: -2px;
+  }
+
+  .home2-process-top::after {
+    width: 30px;
+  }
+
+  /* -------------------------------------------------------
+     CONTENT
+  ------------------------------------------------------- */
+
+  .home2-process-content {
+    max-width: 280px;
+
+    padding-top: 24px;
+  }
+
+  .home2-process-content h3 {
+    margin-bottom: 9px;
+
+    font-size: 17px;
+  }
+
+  .home2-process-content p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  /* -------------------------------------------------------
+     CONNECTORS
+  ------------------------------------------------------- */
+
+  .home2-process-connector {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     CTA
+  ------------------------------------------------------- */
+
+  .home2-process-action {
+    margin-top: 48px;
+  }
+
+  .home2-process-button {
+    min-height: 49px;
+
+    padding: 0 24px;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .home2-process-section {
+    padding: 70px 0;
+  }
+
+  .home2-process-container {
+    width: 88%;
+  }
+
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
+  .home2-process-heading {
+    max-width: 100%;
+
+    margin-bottom: 48px;
+  }
+
+  .home2-process-tag {
+    gap: 6px;
+
+    margin-bottom: 15px;
+
+    padding: 5px 11px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .home2-process-tag svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home2-process-heading h2 {
+    max-width: 320px;
+
+    margin: 0 auto;
+
+    font-size: 29px;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.5px;
+  }
+
+  /* -------------------------------------------------------
+     VERTICAL PROCESS
+  ------------------------------------------------------- */
+
+  .home2-process-flow {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+  }
+
+  /* -------------------------------------------------------
+     PROCESS ITEM
+  ------------------------------------------------------- */
+
+  .home2-process-item {
+    width: 100%;
+    max-width: 310px;
+
+    padding: 0 0 20px;
+
+    text-align: center;
+  }
+
+  .home2-process-item:hover {
+    transform: none;
+  }
+
+  /* -------------------------------------------------------
+     TOP
+  ------------------------------------------------------- */
+
+  .home2-process-top {
+    min-height: 65px;
+
+    padding-bottom: 13px;
+  }
+
+  .home2-process-number {
+    font-size: 47px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .home2-process-top::after {
+    width: 27px;
+    height: 2px;
+  }
+
+  /* -------------------------------------------------------
+     CONTENT
+  ------------------------------------------------------- */
+
+  .home2-process-content {
+    max-width: 285px;
+
+    padding: 20px 12px 0;
+  }
+
+  .home2-process-content h3 {
+    margin-bottom: 8px;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+  }
+
+  .home2-process-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  /* -------------------------------------------------------
+     VERTICAL CONNECTOR
+  ------------------------------------------------------- */
+
+  .home2-process-connector {
+    display: block;
+
+    width: 1px;
+    height: 35px;
+
+    margin: 0;
+
+    background: var(--border-color);
+  }
+
+  .home2-process-connector::before {
+    display: none;
+  }
+
+  .home2-process-connector::after {
+    width: 5px;
+    height: 5px;
+
+    background: var(--secondary-color);
+  }
+
+  /* -------------------------------------------------------
+     CTA
+  ------------------------------------------------------- */
+
+  .home2-process-action {
+    margin-top: 32px;
+  }
+
+  .home2-process-button {
+    min-height: 48px;
+
+    padding: 0 21px;
+
+    font-size: 13px;
+  }
+
+  .home2-process-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+/* =========================================================
    WHY COMPOSTCARE
 ========================================================= */
 
 .home2-why-section {
   width: 100%;
-  padding: 110px 0;
+  padding: 115px 0;
+
   background: var(--light-bg);
+
   overflow: hidden;
 }
 
 .home2-why-container {
   width: 85%;
-  max-width: 1400px;
+  max-width: 1250px;
+
   margin: 0 auto;
+
   text-align: center;
 }
 
 /* =========================================================
-   SECTION HEADING
+   SECTION INTRO
 ========================================================= */
 
 .home2-why-heading {
-  max-width: 760px;
-  margin: 0 auto 75px;
+  max-width: 820px;
+
+  margin: 0 auto 70px;
+
   text-align: center;
 }
+
+/* =========================================================
+   SECTION TAG
+========================================================= */
 
 .home2-why-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  margin-bottom: 14px;
-  padding: 6px 16px;
-  font-size: 14px;
-  line-height: 1.5;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+  padding: 7px 17px;
+
+  font-size: 13px;
+  line-height: 1.4;
   font-weight: 500;
+
   letter-spacing: 1px;
-  color: var(--primary-color);
-  border: 2px solid var(--secondary-color);
+
+  color: var(--white);
+
+  background: var(--primary-color);
+
   border-radius: 50px;
 }
 
 .home2-why-tag svg {
-  width: 20px;
-  height: 20px;
-  padding: 3px;
-  color: var(--light-bg);
-  background: var(--primary-color);
-  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+
   flex-shrink: 0;
+
+  color: var(--white);
+
+  stroke-width: 1.8;
 }
 
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
 .home2-why-heading h2 {
-  margin: 0;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.2;
+  margin: 0 0 22px;
+
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.18;
+
   font-weight: 600;
+
+  letter-spacing: -1.2px;
+
   color: var(--primary-color);
 }
+
 .home2-why-heading h2 span {
   color: var(--secondary-color);
 }
 
 /* =========================================================
-   STATS
+   INTRO DESCRIPTION
+========================================================= */
+
+.home2-why-heading p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   IMPACT STATS
 ========================================================= */
 
 .home2-why-stats {
+  width: 100%;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+
   border: 1px solid var(--border-color);
-  border-radius: 50px;
+ 
 }
 
+/* =========================================================
+   STAT CARD
+========================================================= */
+
 .home2-why-stat {
+  position: relative;
+
+  min-height: 290px;
+
+  padding: 32px 45px 38px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 170px;
-  padding: 30px 25px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
+
+/* =========================================================
+   STAT DIVIDER
+========================================================= */
+
+.home2-why-stat:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+/* =========================================================
+   STAT TOP
+========================================================= */
+
+.home2-why-stat-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+   STAT INDEX
+========================================================= */
+
+.home2-why-index {
+  font-size: 11px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   STAT LINE
+========================================================= */
+
+.home2-why-line {
+  width: 38px;
+  height: 2px;
+
+  background: var(--secondary-color);
+
+  border-radius: 50px;
+}
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
 
 .home2-why-number {
   display: block;
-  margin-bottom: 10px;
-  font-size: 42px;
+
+  margin-bottom: 13px;
+
+  font-size: clamp(44px, 4vw, 58px);
   line-height: 1;
+
   font-weight: 600;
+
+  letter-spacing: -1.5px;
+
   color: var(--secondary-color);
 }
 
+/* =========================================================
+   STAT LABEL
+========================================================= */
+
 .home2-why-label {
-  display: block;
-  font-size: 12px;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  margin-bottom: 16px;
+
+  font-size: 11px;
+  line-height: 1.5;
+
   font-weight: 500;
-  letter-spacing: 1px;
+
+  letter-spacing: 1.4px;
+
   color: var(--text-color);
+}
+
+.home2-why-label strong {
+  font-weight: 600;
+
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   STAT DESCRIPTION
+========================================================= */
+
+.home2-why-description {
+  max-width: 250px;
+
+  margin: auto auto 0;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+/* =========================================================
+   STAT HOVER
+========================================================= */
+
+.home2-why-stat:hover {
+  transform: translateY(-5px);
+
+  background: var(--light-bg);
+}
+
+.home2-why-stat:hover .home2-why-line {
+  width: 55px;
+}
+
+.home2-why-line {
+  transition: width 0.3s ease;
 }
 
 /* =========================================================
@@ -2340,235 +4022,266 @@
 ========================================================= */
 
 .home2-why-footer {
-  margin-top: 60px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 50px;
+}
+
+.home2-why-footer-icon {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--white);
+
+  background: var(--primary-color);
+
+  border-radius: 50%;
+}
+
+.home2-why-footer-icon svg {
+  width: 15px;
+  height: 15px;
+
+  stroke-width: 1.8;
 }
 
 .home2-why-footer p {
   margin: 0;
-  font-size: 18px;
-  line-height: 1.7;
+
+  font-size: 15px;
+  line-height: 1.6;
+
   font-weight: 500;
+
   color: var(--text-color);
 }
+
 /* =========================================================
-   NEST HUB - 1024 x 600
+   NEST HUB
+   1024 × 600
 ========================================================= */
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
   .home2-why-section {
-    padding: 75px 0;
+    padding: 80px 0;
   }
 
   .home2-why-container {
     width: 85%;
   }
 
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
   .home2-why-heading {
-    margin-bottom: 50px;
+    max-width: 720px;
+
+    margin-bottom: 55px;
   }
 
   .home2-why-tag {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+
     padding: 6px 14px;
+
     font-size: 12px;
   }
 
   .home2-why-tag svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
   }
 
   .home2-why-heading h2 {
+    margin-bottom: 17px;
+
     font-size: 40px;
-    line-height: 1.2;
+    line-height: 1.18;
   }
 
-  .home2-why-stats {
-    max-width: 900px;
+  .home2-why-heading p {
+    max-width: 600px;
+
+    font-size: 14px;
+    line-height: 1.7;
   }
+
+  /* -------------------------------------------------------
+     STATS
+  ------------------------------------------------------- */
 
   .home2-why-stat {
-    min-height: 145px;
-    padding: 25px 20px;
+    min-height: 250px;
+
+    padding: 27px 25px 30px;
+  }
+
+  .home2-why-stat-top {
+    margin-bottom: 25px;
   }
 
   .home2-why-number {
-    margin-bottom: 9px;
-    font-size: 34px;
+    margin-bottom: 11px;
+
+    font-size: 40px;
   }
 
   .home2-why-label {
-    font-size: 11px;
+    margin-bottom: 13px;
+
+    font-size: 10px;
   }
 
+  .home2-why-description {
+    max-width: 210px;
+
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /* -------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------- */
+
   .home2-why-footer {
-    margin-top: 45px;
+    margin-top: 38px;
   }
 
   .home2-why-footer p {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 14px;
   }
 }
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
 @media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home2-process-section {
-    padding: 80px 0;
+  .home2-why-section {
+    padding: 90px 0;
   }
 
-  .home2-process-container {
+  .home2-why-container {
     width: 88%;
   }
 
-  .home2-process-heading {
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
+  .home2-why-heading {
     max-width: 650px;
-    margin-bottom: 50px;
-    text-align: center;
+
+    margin-bottom: 60px;
   }
 
-  .home2-process-tag {
+  .home2-why-tag {
     gap: 7px;
-    margin-bottom: 13px;
+
+    margin-bottom: 16px;
+
     padding: 6px 14px;
+
     font-size: 12px;
   }
 
-  .home2-process-tag svg {
-    width: 19px;
-    height: 19px;
+  .home2-why-tag svg {
+    width: 17px;
+    height: 17px;
   }
 
-  .home2-process-heading h2 {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 36px;
-    line-height: 1.25;
-    text-align: center;
+  .home2-why-heading h2 {
+    margin-bottom: 18px;
+
+    font-size: 37px;
+    line-height: 1.2;
   }
 
-  /* =======================================================
-     PROCESS FLOW
-  ======================================================= */
+  .home2-why-heading p {
+    max-width: 570px;
 
-  .home2-process-flow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  /* =======================================================
-     PROCESS ITEM
-  ======================================================= */
-
-  .home2-process-item {
-    width: 100%;
-    max-width: 600px;
-    min-width: 0;
-  }
-
-  .home2-process-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: auto;
-    margin-bottom: 22px;
-    padding-bottom: 0;
-
-    border-bottom: none;
-    gap: 22px;
-  }
-
-  .home2-process-number {
-    position: static;
-    transform: none;
-
-    flex-shrink: 0;
-
-    font-size: 32px;
-    line-height: 1;
-  }
-
-  .home2-process-icon {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-  }
-
-  .home2-process-icon svg {
-    width: 19px;
-    height: 19px;
-  }
-
-  /* =======================================================
-     PROCESS CONTENT
-  ======================================================= */
-
-  .home2-process-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .home2-process-content h3 {
-    margin-bottom: 8px;
-    font-size: 19px;
-    line-height: 1.4;
-    text-align: center;
-  }
-
-  .home2-process-content p {
     font-size: 14px;
     line-height: 1.75;
-    text-align: center;
   }
 
-  /* =======================================================
-     VERTICAL CONNECTOR
-  ======================================================= */
+  /* -------------------------------------------------------
+     STATS
+  ------------------------------------------------------- */
 
-  .home2-process-connector {
-    position: relative;
+  .home2-why-stat {
+    min-height: 280px;
 
-    width: 100%;
-    height: 28px;
+    padding: 30px 18px 32px;
   }
 
-  .home2-process-connector::before {
-    top: 0;
-    left: 50%;
-
-    width: 1px;
-    height: 28px;
-
-    transform: translateX(-50%);
-    background: var(--border-color);
+  .home2-why-stat-top {
+    margin-bottom: 27px;
   }
 
-  .home2-process-connector::after {
-    display: none;
+  .home2-why-index {
+    font-size: 10px;
   }
 
-  /* =======================================================
-     CTA
-  ======================================================= */
-
-  .home2-process-action {
-    margin-top: 55px;
+  .home2-why-line {
+    width: 30px;
   }
 
-  .home2-process-button {
-    min-height: 50px;
-    padding: 0 23px;
-    font-size: 14px;
+  .home2-why-number {
+    margin-bottom: 12px;
+
+    font-size: 40px;
   }
 
-  .home2-process-button svg {
-    width: 18px;
-    height: 18px;
+  .home2-why-label {
+    margin-bottom: 13px;
+
+    font-size: 9.5px;
+
+    letter-spacing: 1px;
+  }
+
+  .home2-why-description {
+    max-width: 170px;
+
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /* -------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------- */
+
+  .home2-why-footer {
+    margin-top: 42px;
+  }
+
+  .home2-why-footer-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .home2-why-footer-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .home2-why-footer p {
+    font-size: 13px;
   }
 }
+
 /* =========================================================
    SAMSUNG GALAXY S8+
    360 × 740
@@ -2576,100 +4289,139 @@
 
 @media screen and (max-width: 360px) and (max-height: 740px) {
   .home2-why-section {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 
   .home2-why-container {
     width: 88%;
   }
 
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
   .home2-why-heading {
     max-width: 100%;
-    margin-bottom: 40px;
+
+    margin-bottom: 45px;
   }
 
   .home2-why-tag {
     gap: 6px;
-    margin-bottom: 12px;
+
+    margin-bottom: 14px;
+
     padding: 5px 11px;
+
     font-size: 11px;
+
     letter-spacing: 0.8px;
   }
 
   .home2-why-tag svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
   }
 
   .home2-why-heading h2 {
-    max-width: 100%;
-    font-size: 28px;
+    margin-bottom: 17px;
+
+    font-size: 29px;
     line-height: 1.25;
+
+    letter-spacing: -0.5px;
   }
 
-  /* =======================================================
-     STATS — COLUMN LAYOUT
-  ======================================================= */
+  .home2-why-heading p {
+    max-width: 300px;
 
-  .home2-why-stats {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .home2-why-stat {
-    min-height: 120px;
-    padding: 20px 15px;
-
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .home2-why-stat:last-child {
-    border-bottom: none;
-  }
-
-  .home2-why-number {
-    font-size: 28px;
-  }
-
-  .home2-why-label {
-    font-size: 10.5px;
-    line-height: 1.5;
-  }
-
-  /* =======================================================
-     FOOTER TEXT
-  ======================================================= */
-
-  .home2-why-footer {
-    margin-top: 40px;
-  }
-
-  .home2-why-footer p {
     font-size: 13px;
     line-height: 1.7;
   }
-}
 
-/* =======================================================
-     CTA
-  ======================================================= */
+  /* -------------------------------------------------------
+     STATS
+  ------------------------------------------------------- */
 
-.home2-process-action {
-  margin-top: 40px;
-}
+  .home2-why-stats {
+    display: flex;
+    flex-direction: column;
 
-.home2-process-button {
-  min-height: 47px;
-  padding: 0 19px;
-  font-size: 13px;
-}
+    width: 100%;
+  }
 
-.home2-process-button svg {
-  width: 17px;
-  height: 17px;
+  .home2-why-stat {
+    width: 100%;
+
+    min-height: 205px;
+
+    padding: 25px 20px 28px;
+  }
+
+  .home2-why-stat:not(:last-child) {
+    border-right: none;
+
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .home2-why-stat-top {
+    margin-bottom: 20px;
+  }
+
+  .home2-why-index {
+    font-size: 10px;
+  }
+
+  .home2-why-line {
+    width: 28px;
+  }
+
+  .home2-why-number {
+    margin-bottom: 10px;
+
+    font-size: 36px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .home2-why-label {
+    margin-bottom: 12px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .home2-why-description {
+    max-width: 270px;
+
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /* -------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------- */
+
+  .home2-why-footer {
+    gap: 8px;
+
+    margin-top: 35px;
+  }
+
+  .home2-why-footer-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .home2-why-footer-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .home2-why-footer p {
+    font-size: 12px;
+  }
 }
 
 /* =====================================================
@@ -2703,15 +4455,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
   margin-bottom: 14px;
   padding: 6px 16px;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: 1px;
-  color: var(--primary-color);
-  border: 2px solid var(--secondary-color);
+  color: var(--white);
+  background-color: var(--primary-color);
   border-radius: 50px;
 }
 
@@ -2719,7 +4470,7 @@
   width: 20px;
   height: 20px;
   padding: 3px;
-  color: var(--light-bg);
+  color: var(--white);
   background: var(--primary-color);
   border-radius: 50%;
   flex-shrink: 0;
@@ -3193,12 +4944,12 @@ HOME 2 — FINAL CTA
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
   margin-bottom: 24px;
   padding: 6px 17px 6px 6px;
-  border: 2px solid var(--secondary-color);
+
   border-radius: 50px;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
   font-size: 11px;
   font-weight: 700;
   line-height: 1;

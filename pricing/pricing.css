@@ -51,7 +51,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   margin-bottom: 24px;
   padding: 7px 18px 7px 7px;
   border-radius: 50px;
@@ -317,11 +316,11 @@
 .pricing-plans-tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   padding: 7px 16px 7px 7px;
   margin-bottom: 20px;
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .pricing-plans-tag-icon {
@@ -342,7 +341,7 @@
 }
 
 .pricing-plans-tag-text {
-  color: var(--primary-color);
+  color: var(--white);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -869,11 +868,10 @@
 .pricing-steps-tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   padding: 7px 16px 7px 7px;
   margin-bottom: 20px;
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
+  background-color: var(--primary-color);
 }
 
 .pricing-steps-tag-icon {
@@ -894,7 +892,7 @@
 }
 
 .pricing-steps-tag-text {
-  color: var(--primary-color);
+  color: var(--white);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -1316,11 +1314,11 @@
 .pricing-faq-tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   padding: 7px 16px 7px 7px;
   margin-bottom: 20px;
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
+  color: var(--white);
+  background-color: var(--primary-color);
 }
 
 .pricing-faq-tag-icon {
@@ -1341,7 +1339,7 @@
 }
 
 .pricing-faq-tag-text {
-  color: var(--primary-color);
+  color: var(--white);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -1701,9 +1699,9 @@
   gap: 8px;
   margin-bottom: 20px;
   padding: 8px 18px;
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
-  color: var(--primary-color);
+  color: var(--white);
+  background-color: var(--primary-color);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;

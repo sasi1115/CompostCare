@@ -12,12 +12,7 @@
       href="../images/logo.png"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+   
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
@@ -36,93 +31,391 @@
     <script src="home2.js" defer></script>
   </head>
   <body>
-    <div id="navbar"></div>
+    <!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+  <div class="header-container">
+    <!-- =====================================================
+         BOX 1 — LOGO
+         ===================================================== -->
+
+    <div class="header-logo">
+      <a href="../Home1/home1.html" class="logo" aria-label="Compost Care Home">
+        <img
+          src="../images/logo.png"
+          alt="Compost Care Logo"
+          class="logo-image"
+        />
+
+        <span class="logo-text">
+          <span class="logo-primary">Compost</span>
+          <span class="logo-secondary">Care</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- =====================================================
+         BOX 2 — DESKTOP NAVIGATION
+         ===================================================== -->
+
+    <nav class="main-navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <!-- Home Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            href="home1.html"
+            class="nav-link"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span>Home</span>
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a href="../Home1/home1.html" class="dropdown-link"> Home 1 </a>
+            </li>
+
+            <li>
+              <a href="../Home2/home2.html" class="dropdown-link"> Home 2 </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- About Us -->
+        <li class="nav-item">
+          <a href="../About/about.html" class="nav-link"> About </a>
+        </li>
+
+        <!-- Services -->
+        <li class="nav-item">
+          <a href="../Servicees/service.html" class="nav-link"> Services </a>
+        </li>
+
+        <!-- Pricing -->
+        <li class="nav-item">
+          <a href="../pricing/pricing.html" class="nav-link"> Pricing </a>
+        </li>
+
+        <!-- Contact Us -->
+        <li class="nav-item">
+          <a href="../contact/contact.html" class="nav-link"> Contact </a>
+        </li>
+        
+        <!-- dashboard preview -->
+        <li class="nav-item">
+          <a href="../Dashpreview/Dashpreview.html" class="nav-link">DashView  </a>
+        </li>
+        <!-- dashboard -->
+        <li class="nav-item">
+          <a href="../Dashboard/dashboard.html" class="nav-link"> Dashboard </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- =====================================================
+         BOX 3 — HEADER ACTIONS
+         ===================================================== -->
+
+    <div class="header-actions">
+      <button class="rtl-toggle" id="rtlToggle">RTL</button>
+
+      <button class="theme-toggle" id="themeToggle">
+        <i data-lucide="sun"></i>
+      </button>
+
+      <a href="../login/login.html" class="login-link"> Login </a>
+    </div>
+  </div>
+</header>
 
     <!-- =========================================================
-     HOME2 HERO SECTION
-========================================================= -->
+         COMPOSTCARE HOME HERO
+    ========================================================== -->
 
-    <section class="home2-hero">
-      <div class="home2-hero-container">
-        <!-- HERO CONTENT -->
-        <div class="home2-hero-content">
-          <span class="home2-hero-tag">
-            <i data-lucide="earth"></i>SUSTAINABLE LIVING, MADE SIMPLE
-          </span>
+    <section class="home-hero" id="homeHero">
 
-          <h1 class="home2-hero-title">
+      <div class="home-hero-container">
+
+        <!-- =====================================================
+             LEFT CONTENT
+        ====================================================== -->
+
+          <div class="home-hero-content">
+
+            <!-- Hero Tag -->
+            <span class="home-hero-tag">
+              <span class="home-hero-tag-icon">
+                <i data-lucide="recycle"></i>
+              </span>
+
+              <span class="home-hero-tag-text">
+                From Waste to Compost
+              </span>
+            </span>
+
+
+          <!-- Main Heading -->
+          <h1 class="home-hero-title">
             Turn Everyday Waste
             <span>Into Everyday Impact</span>
           </h1>
 
-          <p class="home2-hero-text">
-            Smart composting and responsible waste solutions designed for homes,
-            communities, and a greener tomorrow.
+
+          <!-- Description -->
+          <p class="home-hero-description">
+            Simple, responsible waste management for homes and communities.
+            CompostCare helps collect, process, and transform organic waste
+            into valuable compost
           </p>
 
-          <div class="home2-hero-actions">
+
+          <!-- CTA Buttons -->
+          <div class="home-hero-actions">
+
             <a
-              href="../pricing/pricing.html"
-              class="home2-hero-btn home2-hero-btn-primary"
+              href="../login/login.html"
+              class="home-hero-primary-btn"
             >
-              Start Composting
+              Get Started
             </a>
 
             <a
-              href="#services"
-              class="home2-hero-btn home2-hero-btn-secondary"
+              href="../Servicees/service.html"
+              class="home-hero-secondary-btn"
             >
               Explore Services
             </a>
+
           </div>
 
-          <!-- HERO TRUST -->
-          <div class="home2-hero-trust">
-            <div class="home2-trust-item">
-              <strong>01</strong>
-              <span>Simple Solutions</span>
-            </div>
-
-            <div class="home2-trust-divider"></div>
-
-            <div class="home2-trust-item">
-              <strong>02</strong>
-              <span>Responsible Waste</span>
-            </div>
-
-            <div class="home2-trust-divider"></div>
-
-            <div class="home2-trust-item">
-              <strong>03</strong>
-              <span>Lasting Impact</span>
-            </div>
-          </div>
         </div>
 
-        <!-- HERO VISUAL -->
-        <div class="home2-hero-visual">
-          <div class="home2-hero-image-wrap">
-            <img
-              src="../images/home2-hero.jpg"
-              alt="Sustainable composting and organic waste management"
-              class="home2-hero-image"
-            />
-          </div>
 
-          <!-- FLOATING IMPACT CARD -->
-          <div class="home2-hero-impact">
-            <div class="home2-impact-icon">
-              <i data-lucide="leaf"></i>
+        <!-- =====================================================
+             RIGHT ANIMATED VISUAL
+        ====================================================== -->
+
+        <div class="home-hero-visual">
+
+          <div class="home-hero-animation">
+
+
+            <!-- =================================================
+                 BACKGROUND DECORATIVE GLOW
+                 Used later for subtle animation
+            ================================================== -->
+
+            <div class="hero-visual-glow hero-glow-one"></div>
+            <div class="hero-visual-glow hero-glow-two"></div>
+
+
+            <!-- =================================================
+                 STAGE 01
+                 HOUSEHOLD ORGANIC WASTE
+            ================================================== -->
+
+            <div class="hero-waste-stage">
+
+              <!-- Small stage label -->
+              <span class="hero-stage-label">
+                Organic Waste
+              </span>
+
+
+              <!-- Waste Bin -->
+              <div class="hero-waste-bin">
+
+                <div class="hero-bin-lid"></div>
+
+                <div class="hero-bin-body">
+
+                  <div class="hero-bin-front">
+
+                    <div class="hero-bin-icon">
+                      <i data-lucide="trash-2"></i>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- Organic Waste Items -->
+              <div class="hero-waste-items">
+
+                <span
+                  class="hero-waste-item waste-item-one"
+                  aria-hidden="true"
+                ></span>
+
+                <span
+                  class="hero-waste-item waste-item-two"
+                  aria-hidden="true"
+                ></span>
+
+                <span
+                  class="hero-waste-item waste-item-three"
+                  aria-hidden="true"
+                ></span>
+
+                <span
+                  class="hero-waste-item waste-item-four"
+                  aria-hidden="true"
+                ></span>
+
+              </div>
+
             </div>
 
-            <div class="home2-impact-content">
-              <span>Our Approach</span>
-              <strong>Waste to Worth</strong>
+
+            <!-- =================================================
+                 TRANSFORMATION PROCESS
+            ================================================== -->
+
+            <div class="hero-process-stage">
+
+              <!-- First process line -->
+              <div class="hero-process-line process-line-left"></div>
+
+
+              <!-- Transformation Circle -->
+              <div class="hero-process-circle">
+
+                <div class="hero-process-ring"></div>
+
+                <div class="hero-process-icon">
+                  <i data-lucide="refresh-cw"></i>
+                </div>
+
+              </div>
+
+
+              <!-- Second process line -->
+              <div class="hero-process-line process-line-right"></div>
+
+
+              <!-- Small process text -->
+              <span class="hero-process-label">
+                Natural Transformation
+              </span>
+
             </div>
+
+
+            <!-- =================================================
+                 STAGE 02
+                 FINISHED COMPOST
+            ================================================== -->
+
+            <div class="hero-compost-stage">
+
+              <!-- Small stage label -->
+              <span class="hero-stage-label">
+                Finished Compost
+              </span>
+
+
+              <!-- Compost Container -->
+              <div class="hero-compost-container">
+
+                <div class="hero-compost-rim"></div>
+
+                <div class="hero-compost-body">
+
+                  <div class="hero-compost-surface"></div>
+
+                  <!-- Compost particles -->
+                  <span
+                    class="hero-compost-particle compost-particle-one"
+                    aria-hidden="true"
+                  ></span>
+
+                  <span
+                    class="hero-compost-particle compost-particle-two"
+                    aria-hidden="true"
+                  ></span>
+
+                  <span
+                    class="hero-compost-particle compost-particle-three"
+                    aria-hidden="true"
+                  ></span>
+
+                  <span
+                    class="hero-compost-particle compost-particle-four"
+                    aria-hidden="true"
+                  ></span>
+
+                </div>
+
+              </div>
+
+
+              <!-- Compost result -->
+              <div class="hero-compost-result">
+
+                <span class="hero-result-icon">
+                  <i data-lucide="check"></i>
+                </span>
+
+                <span class="hero-result-text">
+                  Rich Compost
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SUBTLE IMPACT INDICATOR
+                 This supports the service/impact theme without
+                 turning the hero into a dashboard.
+            ================================================== -->
+
+            
+            </div>
+
+
+            <!-- =================================================
+                 ANIMATION FLOW ELEMENTS
+                 These remain empty intentionally.
+                 CSS will animate them later.
+            ================================================== -->
+
+            <span
+              class="hero-flow-particle flow-particle-one"
+              aria-hidden="true"
+            ></span>
+
+            <span
+              class="hero-flow-particle flow-particle-two"
+              aria-hidden="true"
+            ></span>
+
+            <span
+              class="hero-flow-particle flow-particle-three"
+              aria-hidden="true"
+            ></span>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
+  
+
+
+
     <!-- =========================================================
      HOME2 SUSTAINABILITY SECTION
 ========================================================= -->
@@ -245,7 +538,7 @@
 
           <!-- Connector -->
           <div class="home2-resource-connector" aria-hidden="true">
-            <i data-lucide="arrow-right"></i>
+            
           </div>
 
           <!-- Step 02 -->
@@ -271,7 +564,7 @@
 
           <!-- Connector -->
           <div class="home2-resource-connector" aria-hidden="true">
-            <i data-lucide="arrow-right"></i>
+           
           </div>
 
           <!-- Step 03 -->
@@ -575,10 +868,10 @@
             </div>
 
             <div class="home2-process-content">
-              <h3>WE TRANSFORM</h3>
+              <h3>WE CHANGE</h3>
 
               <p>
-                Organic waste is transformed into rich, useful compost.
+                Organic waste is transformed into rich, useful compost sustainable life.
               </p>
             </div>
           </div>
@@ -619,61 +912,137 @@
      WHY COMPOSTCARE
 ========================================================= -->
 
-    <section class="home2-why-section">
-      <div class="home2-why-container">
-        <!-- SECTION INTRO -->
-        <div class="home2-why-heading">
-          <span class="home2-why-tag">
-            <i data-lucide="badge-check"></i>
-            Why CompostCare
-          </span>
+<section class="home2-why-section">
+  <div class="home2-why-container">
 
-          <h2>
-            A better way to handle<br />
-            the waste you <span>create every day.</span> 
-          </h2>
+    <!-- SECTION INTRO -->
+    <div class="home2-why-heading">
+
+      <span class="home2-why-tag">
+        <i data-lucide="badge-check"></i>
+        Why CompostCare
+      </span>
+
+      <h2>
+        A better way to handle<br />
+        the waste you <span>create every day</span>
+      </h2>
+
+      <p>
+        Small changes in how we manage everyday waste can create
+        meaningful impact for homes, communities, and the environment.
+      </p>
+
+    </div>
+
+
+    <!-- IMPACT STATS -->
+    <div class="home2-why-stats">
+
+      <!-- STAT 01 -->
+      <div class="home2-why-stat">
+
+        <div class="home2-why-stat-top">
+          <span class="home2-why-index">01</span>
+          <span class="home2-why-line"></span>
         </div>
 
-        <!-- STATS -->
-        <div class="home2-why-stats">
-          <div class="home2-why-stat">
-            <span class="home2-why-number" data-target="10000" data-suffix="+">
-              0
-            </span>
+        <span
+          class="home2-why-number"
+          data-target="10000"
+          data-suffix="+"
+        >
+          0
+        </span>
 
-            <span class="home2-why-label">
-              HOUSEHOLDS<br />
-              SERVED
-            </span>
-          </div>
+        <span class="home2-why-label">
+          HOUSEHOLDS
+          <strong>SERVED</strong>
+        </span>
 
-          <div class="home2-why-stat">
-            <span class="home2-why-number" data-target="95" data-suffix="%">
-              0
-            </span>
+        <p class="home2-why-description">
+          Helping households build simpler and more responsible
+          waste habits.
+        </p>
 
-            <span class="home2-why-label">
-              WASTE DIVERTED<br />
-              FROM LANDFILLS
-            </span>
-          </div>
-
-          <div class="home2-why-stat">
-            <span class="home2-why-number" data-target="30" data-suffix="+">
-              0
-            </span>
-
-            <span class="home2-why-label">
-              COMMUNITIES<br />
-              SUPPORTED
-            </span>
-          </div>
-        </div>
-
-       
       </div>
-    </section>
 
+
+      <!-- STAT 02 -->
+      <div class="home2-why-stat">
+
+        <div class="home2-why-stat-top">
+          <span class="home2-why-index">02</span>
+          <span class="home2-why-line"></span>
+        </div>
+
+        <span
+          class="home2-why-number"
+          data-target="95"
+          data-suffix="%"
+        >
+          0
+        </span>
+
+        <span class="home2-why-label">
+          WASTE DIVERTED
+          <strong>FROM LANDFILLS</strong>
+        </span>
+
+        <p class="home2-why-description">
+          Turning organic waste into a useful resource instead of
+          sending it to landfills.
+        </p>
+
+      </div>
+
+
+      <!-- STAT 03 -->
+      <div class="home2-why-stat">
+
+        <div class="home2-why-stat-top">
+          <span class="home2-why-index">03</span>
+          <span class="home2-why-line"></span>
+        </div>
+
+        <span
+          class="home2-why-number"
+          data-target="30"
+          data-suffix="+"
+        >
+          0
+        </span>
+
+        <span class="home2-why-label">
+          COMMUNITIES
+          <strong>SUPPORTED</strong>
+        </span>
+
+        <p class="home2-why-description">
+          Connecting local communities through practical
+          sustainable waste solutions.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- CLOSING STATEMENT -->
+    <div class="home2-why-footer">
+
+      <span class="home2-why-footer-icon">
+        <i data-lucide="leaf"></i>
+      </span>
+
+      <p>
+        Better waste management starts with everyday choices.
+      </p>
+
+    </div>
+
+  </div>
+</section>
     <!-- =====================================================
      FAQ SECTION
 ===================================================== -->
@@ -849,7 +1218,7 @@
 
   <h2>
     Turn everyday waste into
-    <span>something meaningful.</span>
+    <span>something meaningful</span>
   </h2>
 
   <p>
@@ -873,6 +1242,159 @@
 
 </section>
 
-    <div id="footer"></div>
+    <footer class="footer">
+  <div class="footer-container">
+    <!-- Brand -->
+    <div class="footer-col footer-brand">
+      <a href="../home1/home1.html" class="footer-logo">
+        <img
+          src="../images/logo.png"
+          alt="Compost Care Logo"
+          class="sitelogo"
+        />
+
+        <div class="footer-logo-text">
+          <h2>
+            <span class="left">Compost</span><span class="right">Care</span>
+          </h2>
+        </div>
+      </a>
+
+      <p>
+        Compost Care helps homes, communities, and businesses turn organic waste
+        into valuable compost through simple, sustainable waste management
+        solutions.
+      </p>
+
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+
+      <ul>
+        <li>
+          <a href="../home1/home1.html">Home</a>
+        </li>
+
+        <li>
+          <a href="../about/about.html">About</a>
+        </li>
+
+        <li>
+          <a href="../Servicees/service.html">Services</a>
+        </li>
+
+        <li>
+          <a href="../pricing/pricing.html">Pricing</a>
+        </li>
+
+        <li>
+          <a href="../contact/contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="../404/404.html">404</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Our Services -->
+    <div class="footer-col">
+      <h3>Our Services</h3>
+
+      <ul>
+        <li>
+          <a href="../Servicees/service.html">Kitchen Waste Composting Kits</a>
+        </li>
+
+        <li>
+          <a href="../Servicees/service.html">Community Composting</a>
+        </li>
+
+        <li>
+          <a href="../Servicees/service.html">Compost Setup</a>
+        </li>
+
+        <li>
+          <a href="../Servicees/service.html">Compost Delivery</a>
+        </li>
+
+        <li>
+          <a href="../Dashboard/">Dashboard</a>
+        </li>
+
+        <li>
+          <a href="../comingsoon/comingsoon.html">comingsoon</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+
+      <p>
+        <i data-lucide="map-pin"></i>
+        Hyderabad, Telangana, India
+      </p>
+
+      <p>
+        <i data-lucide="phone"></i>
+        +91 98765 43210
+      </p>
+
+      <p>
+        <i data-lucide="mail"></i>
+        info@compostcare.com
+      </p>
+
+      <p>
+        <i data-lucide="clock-3"></i>
+        Mon - Sat : 9:00 AM - 6:00 PM
+      </p>
+
+      
+
+        
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p class="copyright">© 2026 Compost Care. All Rights Reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="../privacypolicy/privacypolicy.html"> Privacy Policy </a>
+
+      <span>|</span>
+
+      <a href="../termsandconditions/termsandconditons.html">
+        Terms & Conditions
+      </a>
+
+      <span>|</span>
+
+      <a href="../cookiespolicy/cookiespolicy.html"> Cookies Policy </a>
+    </div>
+  </div>
+</footer>
+
   </body>
 </html>

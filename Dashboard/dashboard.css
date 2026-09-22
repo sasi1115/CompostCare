@@ -718,14 +718,13 @@ html[dir="rtl"] .dashboard-brand img {
 .dashboard-section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
 
   padding: 6px 14px;
 
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 
-  color: var(--primary-color);
+  color: var(--white);
+  background-color: var(--primary-color);
 
   font-size: 10px;
   font-weight: 700;
@@ -734,8 +733,8 @@ html[dir="rtl"] .dashboard-brand img {
 }
 
 .dashboard-section-tag svg {
-  width: 14px;
-  height: 14px;
+  width: 17px;
+  height: 17px;
   padding: 3px;
   border-radius: 50%;
   background: var(--primary-color);

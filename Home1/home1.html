@@ -12,9 +12,6 @@
       href="../images/logo.png"
     />
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
@@ -30,149 +27,479 @@
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="../components/component.js" defer></script>
     <script src="../global/global.js" defer></script>
-    <script src="home1.js"defer></script>
+    <script src="home1.js" defer></script>
   </head>
 
   <body>
-    <div id="navbar"></div>
-    <!-- =====================================================
-     HOME1 HERO SECTION
-===================================================== -->
+    <!-- =========================================================
+     HEADER
+     ========================================================= -->
 
-    <section class="home1-hero">
-      <!-- Background Overlay -->
-      <div class="home1-hero-overlay"></div>
+    <header class="site-header">
+      <div class="header-container">
+        <!-- =====================================================
+         BOX 1 — LOGO
+         ===================================================== -->
 
+        <div class="header-logo">
+          <a
+            href="../Home1/home1.html"
+            class="logo"
+            aria-label="Compost Care Home"
+          >
+            <img
+              src="../images/logo.png"
+              alt="Compost Care Logo"
+              class="logo-image"
+            />
+
+            <span class="logo-text">
+              <span class="logo-primary">Compost</span>
+              <span class="logo-secondary">Care</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- =====================================================
+         BOX 2 — DESKTOP NAVIGATION
+         ===================================================== -->
+
+        <nav class="main-navigation" aria-label="Main navigation">
+          <ul class="nav-links">
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                href="home1.html"
+                class="nav-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span>Home</span>
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../Home1/home1.html" class="dropdown-link">
+                    Home 1
+                  </a>
+                </li>
+
+                <li>
+                  <a href="../Home2/home2.html" class="dropdown-link">
+                    Home 2
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- About Us -->
+            <li class="nav-item">
+              <a href="../About/about.html" class="nav-link"> About </a>
+            </li>
+
+            <!-- Services -->
+            <li class="nav-item">
+              <a href="../Servicees/service.html" class="nav-link">
+                Services
+              </a>
+            </li>
+
+            <!-- Pricing -->
+            <li class="nav-item">
+              <a href="../pricing/pricing.html" class="nav-link"> Pricing </a>
+            </li>
+
+            <!-- Contact Us -->
+            <li class="nav-item">
+              <a href="../contact/contact.html" class="nav-link"> Contact </a>
+            </li>
+
+            <!-- dashboard preview -->
+            <li class="nav-item">
+              <a href="../Dashpreview/Dashpreview.html" class="nav-link"
+                >DashView
+              </a>
+            </li>
+            <!-- dashboard -->
+            <li class="nav-item">
+              <a href="../Dashboard/dashboard.html" class="nav-link">
+                Dashboard
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- =====================================================
+         BOX 3 — HEADER ACTIONS
+         ===================================================== -->
+
+        <div class="header-actions">
+          <button class="rtl-toggle" id="rtlToggle">RTL</button>
+
+          <button class="theme-toggle" id="themeToggle">
+            <i data-lucide="sun"></i>
+          </button>
+
+          <a href="../login/login.html" class="login-link"> Login </a>
+        </div>
+      </div>
+    </header>
+    <!-- =========================================================
+     HOME1 HERO
+     COMPOSTCARE
+
+     VISUAL STORY:
+     HOME → ORGANIC WASTE → COMPOST → NEW LIFE
+
+     DESIGN:
+     Premium natural lifestyle scene
+     No dashboard / no science-project appearance
+========================================================= -->
+
+    <section class="home1-hero" id="home">
       <div class="home1-hero-container">
-        <div class="home1-hero-content">
-          <!-- Hero Tag -->
-          <div class="home1-hero-tag">
-            <i data-lucide="leaf"></i>
-            <span>Sustainable Waste Management</span>
-          </div>
+        <!-- =====================================================
+         HERO CONTENT
+    ====================================================== -->
 
-          <!-- Main Heading -->
-          <h1>
-            Turn Your Waste
-            <span>Into Something Valuable</span>
+        <div class="home1-hero-content">
+          <span class="home1-hero-tag">
+            <span class="home1-tag-icon">
+              <i data-lucide="leaf"></i>
+            </span>
+
+            Sustainable Waste Management
+          </span>
+
+          <h1 class="home1-hero-title">
+            Turn Everyday Waste
+
+            <span>Into New Life</span>
           </h1>
 
-          <!-- Description -->
           <p class="home1-hero-description">
-            Make a positive difference with simple, sustainable waste management
-            solutions for homes and communities. Compost your kitchen waste,
-            reduce landfill waste, and give organic waste a new purpose.
+            CompostCare makes household waste management simple, sustainable,
+            and meaningful — turning everyday organic waste into something that
+            gives back to the earth.
           </p>
 
-          <!-- Hero Buttons -->
-          <div class="home1-hero-buttons">
+          <div class="home1-hero-actions">
             <a href="../login/login.html" class="home1-hero-primary-btn">
-              <span>Get Started</span>
+              Start Composting
+
               
             </a>
 
             <a
-              href="#ourservice"
+              href="../Servicees/service.html"
               class="home1-hero-secondary-btn"
             >
-              <span>Explore Services</span>
+              Explore Services
             </a>
           </div>
 
-          
+        </div>
+
+        <!-- =====================================================
+         NATURAL ECOSYSTEM VISUAL
+    ====================================================== -->
+
+        <div
+          class="home1-hero-visual"
+          aria-label="CompostCare natural waste transformation"
+        >
+          <!-- ===================================================
+           SOFT ATMOSPHERE
+      ==================================================== -->
+
+          <div class="home1-atmosphere">
+            <span class="home1-atmosphere-dot atmosphere-dot-one"></span>
+
+            <span class="home1-atmosphere-dot atmosphere-dot-two"></span>
+
+            <span class="home1-atmosphere-dot atmosphere-dot-three"></span>
+          </div>
+
+          <!-- ===================================================
+           HOME / KITCHEN ORIGIN
+      ==================================================== -->
+
+          <div class="home1-origin">
+            <span class="home1-origin-label"> From Home </span>
+
+            <div class="home1-home-visual">
+              <div class="home1-home-roof"></div>
+
+              <div class="home1-home-body">
+                <div class="home1-home-door"></div>
+
+                <div class="home1-home-window home-window-one"></div>
+
+                <div class="home1-home-window home-window-two"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================================
+           ORGANIC WASTE
+      ==================================================== -->
+
+          <div class="home1-waste-zone">
+            <span class="home1-stage-label waste-stage-label">
+              Organic Waste
+            </span>
+
+            <div class="home1-waste-cluster">
+              <!-- Leaf -->
+              <div class="home1-waste-object waste-object-leaf">
+                <i data-lucide="leaf"></i>
+              </div>
+
+              <!-- Food Scrap -->
+              <div class="home1-waste-object waste-object-food">
+                <span class="food-shape food-shape-main"></span>
+
+                <span class="food-shape food-shape-small"></span>
+              </div>
+
+              <!-- Vegetable Scrap -->
+              <div class="home1-waste-object waste-object-vegetable">
+                <span class="vegetable-piece vegetable-piece-one"></span>
+
+                <span class="vegetable-piece vegetable-piece-two"></span>
+
+                <span class="vegetable-piece vegetable-piece-three"></span>
+              </div>
+
+              <!-- Small Organic Pieces -->
+
+              <span class="organic-piece organic-piece-one"></span>
+
+              <span class="organic-piece organic-piece-two"></span>
+
+              <span class="organic-piece organic-piece-three"></span>
+            </div>
+          </div>
+
+          <!-- ===================================================
+           NATURAL TRANSFORMATION
+           Very subtle — not a technical flowchart
+      ==================================================== -->
+
+          <div class="home1-transformation">
+            <svg
+              class="home1-transformation-path"
+              viewBox="0 0 520 330"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                class="home1-transformation-path-base"
+                d="
+              M70 55
+              C150 5 245 45 300 115
+              C350 178 370 245 455 275
+            "
+              />
+
+              <path
+                class="home1-transformation-path-flow"
+                d="
+              M70 55
+              C150 5 245 45 300 115
+              C350 178 370 245 455 275
+            "
+              />
+            </svg>
+
+            <!-- Only a few subtle movement particles -->
+
+            <span class="home1-flow-particle flow-particle-one"></span>
+
+            <span class="home1-flow-particle flow-particle-two"></span>
+          </div>
+
+          <!-- ===================================================
+           RICH COMPOST
+      ==================================================== -->
+
+          <div class="home1-compost-zone">
+            <span class="home1-stage-label compost-stage-label">
+              Rich Compost
+            </span>
+
+            <div class="home1-compost">
+              <div class="home1-compost-bin">
+                <div class="compost-bin-rim"></div>
+
+                <div class="compost-bin-body">
+                  <div class="compost-soil">
+                    <span class="soil-piece soil-piece-one"></span>
+
+                    <span class="soil-piece soil-piece-two"></span>
+
+                    <span class="soil-piece soil-piece-three"></span>
+
+                    <span class="soil-piece soil-piece-four"></span>
+
+                    <span class="soil-piece soil-piece-five"></span>
+                  </div>
+
+                  <span class="compost-particle compost-particle-one"></span>
+
+                  <span class="compost-particle compost-particle-two"></span>
+                </div>
+              </div>
+
+              <!-- Very subtle compost atmosphere -->
+
+              <span class="compost-atmosphere compost-atmosphere-one"></span>
+
+              <span class="compost-atmosphere compost-atmosphere-two"></span>
+            </div>
+          </div>
+
+          <!-- ===================================================
+           NEW LIFE
+
+           IMPORTANT:
+           Plant is now a single natural composition.
+           No separate artificial shoot.
+      ==================================================== -->
+
+          <div class="home1-life-zone">
+            <span class="home1-stage-label life-stage-label"> New Life </span>
+
+            <!-- Natural soil -->
+
+            <div class="home1-soil">
+              <div class="soil-surface"></div>
+
+              <span class="soil-grain soil-grain-one"></span>
+
+              <span class="soil-grain soil-grain-two"></span>
+
+              <span class="soil-grain soil-grain-three"></span>
+
+              <span class="soil-grain soil-grain-four"></span>
+
+              <span class="soil-grain soil-grain-five"></span>
+            </div>
+
+            <!-- =================================================
+             NATURAL GROWING PLANT
+        ================================================== -->
+
+            <div class="home1-growing-plant">
+              <!-- Roots -->
+
+              <div class="home1-roots">
+                <span class="root root-one"></span>
+
+                <span class="root root-two"></span>
+
+                <span class="root root-three"></span>
+
+                <span class="root root-four"></span>
+              </div>
+
+              <!-- Main Stem -->
+
+              <div class="home1-plant-stem"></div>
+
+              <!-- Left Natural Leaf -->
+
+              <div class="home1-plant-leaf plant-leaf-left">
+                <i data-lucide="leaf"></i>
+              </div>
+
+              <!-- Right Natural Leaf -->
+
+              <div class="home1-plant-leaf plant-leaf-right">
+                <i data-lucide="leaf"></i>
+              </div>
+
+              <!-- Top Young Leaf -->
+
+              <div class="home1-plant-leaf plant-leaf-top">
+                <i data-lucide="leaf"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================================
+           SUBTLE FLOATING LEAVES
+
+           These are atmosphere only.
+           They should not explain the process.
+      ==================================================== -->
+
+          <div class="home1-floating-leaf floating-leaf-one">
+            <i data-lucide="leaf"></i>
+          </div>
+
+          <div class="home1-floating-leaf floating-leaf-two">
+            <i data-lucide="leaf"></i>
           </div>
         </div>
       </div>
     </section>
-
-   <!-- =========================================================
+    <!-- =========================================================
      HOME 1 - IMPACT SECTION
 ========================================================= -->
 
-<section class="home1-impact" id="impact">
+    <section class="home1-impact" id="impact">
+      <div class="home1-impact-container">
+        <!-- Section Header -->
+        <div class="home1-impact-header">
+          <span class="home1-impact-tag">
+            <i data-lucide="chart-no-axes-combined"></i>
 
-  <div class="home1-impact-container">
+            Our Impact
+          </span>
 
-    <!-- Section Header -->
-    <div class="home1-impact-header">
+          <h2>Making Every <span>Action Count</span></h2>
 
-      <span class="home1-impact-tag">
-          <i data-lucide="chart-no-axes-combined"></i>
-
-        Our Impact
-      </span>
-
-      <h2>
-        Making Every  <span>Action Count</span>
-      </h2>
-
-      <p>
-        Together, we're turning everyday waste into meaningful change
-        for our homes, communities, and planet.
-      </p>
-
-    </div>
-
-
-    <!-- Impact Counters -->
-    <div class="home1-impact-grid">
-
-      <!-- Counter 1 -->
-      <div class="home1-impact-item">
-        <div
-          class="home1-impact-number"
-          data-target="10000"
-        >
-          0
+          <p>
+            Together, we're turning everyday waste into meaningful change for
+            our homes, communities, and planet.
+          </p>
         </div>
 
-        <p>Homes Served</p>
-      </div>
+        <!-- Impact Counters -->
+        <div class="home1-impact-grid">
+          <!-- Counter 1 -->
+          <div class="home1-impact-item">
+            <div class="home1-impact-number" data-target="10000">0</div>
 
+            <p>Homes Served</p>
+          </div>
 
-      <!-- Counter 2 -->
-      <div class="home1-impact-item">
-        <div
-          class="home1-impact-number"
-          data-target="25000"
-        >
-          0
+          <!-- Counter 2 -->
+          <div class="home1-impact-item">
+            <div class="home1-impact-number" data-target="25000">0</div>
+
+            <p>Waste Pickups</p>
+          </div>
+
+          <!-- Counter 3 -->
+          <div class="home1-impact-item">
+            <div class="home1-impact-number" data-target="5000">0</div>
+
+            <p>Composting Kits Delivered</p>
+          </div>
+
+          <!-- Counter 4 -->
+          <div class="home1-impact-item">
+            <div class="home1-impact-number" data-target="2500">0</div>
+
+            <p>Tons of Waste Diverted</p>
+          </div>
         </div>
-
-        <p>Waste Pickups</p>
       </div>
-
-
-      <!-- Counter 3 -->
-      <div class="home1-impact-item">
-        <div
-          class="home1-impact-number"
-          data-target="5000"
-        >
-          0
-        </div>
-
-        <p>Composting Kits Delivered</p>
-      </div>
-
-
-      <!-- Counter 4 -->
-      <div class="home1-impact-item">
-        <div
-          class="home1-impact-number"
-          data-target="2500"
-        >
-          0
-        </div>
-
-        <p>Tons of Waste Diverted</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
     <!-- =====================================================
      HOME1 ABOUT / INTRODUCTION SECTION
 ===================================================== -->
@@ -190,15 +517,13 @@
         <!-- About Content -->
         <div class="home1-about-content">
           <!-- Section Tag -->
-         <span class="home1-about-tag">
-        <i data-lucide="sprout"></i>
-          <span>WHO WE ARE</span>
-</span>
+          <span class="home1-about-tag">
+            <i data-lucide="sprout"></i>
+            <span>WHO WE ARE</span>
+          </span>
 
           <!-- Section Heading -->
-          <h2>
-            Turning Everyday <span>Into a Better Tomorrow</span>
-          </h2>
+          <h2>Turning Everyday <span>Into a Better Tomorrow</span></h2>
 
           <!-- Description -->
           <p class="home1-about-description">
@@ -261,7 +586,6 @@
           <!-- Learn More Button -->
           <a href="../About/about.html" class="home1-about-btn">
             <span>Know More</span>
-            
           </a>
         </div>
       </div>
@@ -277,8 +601,8 @@
         <div class="home1-services-header">
           <span class="home1-services-tag">
             <i data-lucide="recycle"></i>
-              OUR SERVICES
-             </span>
+            OUR SERVICES
+          </span>
 
           <h2>
             Sustainable Solutions
@@ -383,433 +707,498 @@
               <i data-lucide="arrow-right"></i>
             </a>
           </article>
-        </div> 
+        </div>
       </div>
     </section>
     <!-- =========================================================
      KNOW YOUR WASTE
 ========================================================= -->
 
-<section class="home1-waste" id="know-your-waste">
-  <div class="home1-waste-container">
+    <section class="home1-waste" id="know-your-waste">
+      <div class="home1-waste-container">
+        <!-- LEFT IMAGE -->
+        <div class="home1-waste-image">
+          <img
+            src="../images/knowyourwaste.jpg"
+            alt="Household waste sorting for composting and recycling"
+          />
 
-    <!-- LEFT IMAGE -->
-    <div class="home1-waste-image">
-      <img
-        src="../images/knowyourwaste.jpg"
-        alt="Household waste sorting for composting and recycling"
-      />
+          <div class="home1-waste-image-badge">
+            <span class="home1-waste-badge-icon">
+              <i data-lucide="recycle"></i>
+            </span>
+            <span>Waste to Resource</span>
+          </div>
+        </div>
 
-      <div class="home1-waste-image-badge">
-        <span class="home1-waste-badge-icon">
-          <i data-lucide="recycle"></i>
-        </span>
-        <span>Waste to Resource</span>
+        <!-- RIGHT CONTENT -->
+        <div class="home1-waste-content">
+          <!-- SECTION TAG -->
+          <span class="home1-waste-tag">
+            <span class="home1-waste-tag-icon">
+              <i data-lucide="leaf"></i>
+            </span>
+            <span>KNOW YOUR WASTE</span>
+          </span>
+
+          <!-- HEADING -->
+          <h2 class="home1-waste-title">
+            Give Every Waste the
+            <span>Right Destination</span>
+          </h2>
+
+          <!-- DESCRIPTION -->
+          <p class="home1-waste-description">
+            A little sorting at home can make a big difference. Know where your
+            everyday household waste belongs.
+          </p>
+
+          <!-- WASTE CONTENT -->
+          <div class="home1-waste-list">
+            <!-- ORGANIC -->
+            <div class="home1-waste-item">
+              <div class="home1-waste-item-icon">
+                <i data-lucide="sprout"></i>
+              </div>
+
+              <div class="home1-waste-item-content">
+                <div class="home1-waste-item-heading">
+                  <span class="home1-waste-item-number">01</span>
+                  <h3>Organic</h3>
+                </div>
+
+                <p>Food scraps, fruit &amp; vegetable waste, etc.</p>
+
+                <span class="home1-waste-destination">
+                  <i data-lucide="refresh-cw"></i>
+                  Compost It
+                </span>
+              </div>
+            </div>
+
+            <!-- RECYCLABLE -->
+            <div class="home1-waste-item">
+              <div class="home1-waste-item-icon">
+                <i data-lucide="recycle"></i>
+              </div>
+
+              <div class="home1-waste-item-content">
+                <div class="home1-waste-item-heading">
+                  <span class="home1-waste-item-number">02</span>
+                  <h3>Recyclable</h3>
+                </div>
+
+                <p>Paper, cardboard, glass, etc.</p>
+
+                <span class="home1-waste-destination">
+                  <i data-lucide="rotate-cw"></i>
+                  Recycle It
+                </span>
+              </div>
+            </div>
+
+            <!-- NOT SUITABLE -->
+            <div class="home1-waste-item">
+              <div class="home1-waste-item-icon">
+                <i data-lucide="ban"></i>
+              </div>
+
+              <div class="home1-waste-item-content">
+                <div class="home1-waste-item-heading">
+                  <span class="home1-waste-item-number">03</span>
+                  <h3>Not Suitable</h3>
+                </div>
+
+                <p>Plastic, chemicals, etc.</p>
+
+                <span class="home1-waste-destination">
+                  <i data-lucide="circle-x"></i>
+                  Keep Out
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- RIGHT CONTENT -->
-    <div class="home1-waste-content">
-
-      <!-- SECTION TAG -->
-      <span class="home1-waste-tag">
-        <span class="home1-waste-tag-icon">
-          <i data-lucide="leaf"></i>
-        </span>
-        <span>KNOW YOUR WASTE</span>
-      </span>
-
-      <!-- HEADING -->
-      <h2 class="home1-waste-title">
-        Give Every Waste the
-        <span>Right Destination</span>
-      </h2>
-
-      <!-- DESCRIPTION -->
-      <p class="home1-waste-description">
-        A little sorting at home can make a big difference.
-        Know where your everyday household waste belongs.
-      </p>
-
-      <!-- WASTE CONTENT -->
-      <div class="home1-waste-list">
-
-        <!-- ORGANIC -->
-        <div class="home1-waste-item">
-          <div class="home1-waste-item-icon">
-            <i data-lucide="sprout"></i>
-          </div>
-
-          <div class="home1-waste-item-content">
-            <div class="home1-waste-item-heading">
-              <span class="home1-waste-item-number">01</span>
-              <h3>Organic</h3>
-            </div>
-
-            <p>
-              Food scraps, fruit &amp; vegetable waste, etc.
-            </p>
-
-            <span class="home1-waste-destination">
-              <i data-lucide="refresh-cw"></i>
-              Compost It
-            </span>
-          </div>
-        </div>
-
-        <!-- RECYCLABLE -->
-        <div class="home1-waste-item">
-          <div class="home1-waste-item-icon">
-            <i data-lucide="recycle"></i>
-          </div>
-
-          <div class="home1-waste-item-content">
-            <div class="home1-waste-item-heading">
-              <span class="home1-waste-item-number">02</span>
-              <h3>Recyclable</h3>
-            </div>
-
-            <p>
-              Paper, cardboard, glass, etc.
-            </p>
-
-            <span class="home1-waste-destination">
-              <i data-lucide="rotate-cw"></i>
-              Recycle It
-            </span>
-          </div>
-        </div>
-
-        <!-- NOT SUITABLE -->
-        <div class="home1-waste-item">
-          <div class="home1-waste-item-icon">
-            <i data-lucide="ban"></i>
-          </div>
-
-          <div class="home1-waste-item-content">
-            <div class="home1-waste-item-heading">
-              <span class="home1-waste-item-number">03</span>
-              <h3>Not Suitable</h3>
-            </div>
-
-            <p>
-              Plastic, chemicals, etc.
-            </p>
-
-            <span class="home1-waste-destination">
-              <i data-lucide="circle-x"></i>
-              Keep Out
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- =========================================================
      HOME1 HOW IT WORKS SECTION
 ========================================================= -->
 
-<section class="home1-how-it-works" id="how-it-works">
-
-  <div class="home1-how-it-works-container">
-
-    <!-- =====================================================
+    <section class="home1-how-it-works" id="how-it-works">
+      <div class="home1-how-it-works-container">
+        <!-- =====================================================
          SECTION HEADER
     ====================================================== -->
 
-    <div class="home1-how-it-works-header">
+        <div class="home1-how-it-works-header">
+          <span class="home1-how-it-works-tag">
+            <i data-lucide="footprints"></i>
+            Simple Steps Sustainable Living
+          </span>
 
-      <span class="home1-how-it-works-tag">
-        <i data-lucide="footprints"></i>
-        Simple Steps. Sustainable Living.
-      </span>
+          <h2>
+            Turn Your Everyday Waste
+            <span>Into Something Valuable</span>
+          </h2>
 
-      <h2>
-        Turn Your Everyday Waste
-        <span>Into Something Valuable</span>
-      </h2>
+          <p>
+            From separating kitchen waste at home to creating useful compost,
+            our simple process makes sustainable waste management easy for
+            everyone.
+          </p>
+        </div>
 
-      <p>
-        From separating kitchen waste at home to creating useful compost,
-        our simple process makes sustainable waste management easy for everyone.
-      </p>
-
-    </div>
-
-
-    <!-- =====================================================
+        <!-- =====================================================
          PROCESS STEPS
     ====================================================== -->
 
-    <div class="home1-how-it-works-steps">
+        <div class="home1-how-it-works-steps">
+          <!-- STEP 01 -->
 
-      <!-- STEP 01 -->
+          <div class="home1-how-step">
+            <div class="home1-how-step-number">01</div>
 
-      <div class="home1-how-step">
+            <div class="home1-how-step-icon">
+              <i data-lucide="trash-2"></i>
+            </div>
 
-        <div class="home1-how-step-number">
-          01
+            <h3>Separate Your Waste</h3>
+
+            <p>
+              Keep your everyday kitchen and organic waste separate for easy and
+              responsible collection.
+            </p>
+          </div>
+
+          <!-- CONNECTOR -->
+
+          <div class="home1-how-step-connector">
+            <!-- <i data-lucide="arrow-right"></i> -->
+          </div>
+
+          <!-- STEP 02 -->
+
+          <div class="home1-how-step">
+            <div class="home1-how-step-number">02</div>
+
+            <div class="home1-how-step-icon">
+              <i data-lucide="calendar-check"></i>
+            </div>
+
+            <h3>Schedule a Pickup</h3>
+
+            <p>
+              Choose a convenient waste collection slot that works for your home
+              and daily routine.
+            </p>
+          </div>
+
+          <!-- CONNECTOR -->
+
+          <div class="home1-how-step-connector">
+            <!-- <i data-lucide="arrow-right"></i> -->
+          </div>
+
+          <!-- STEP 03 -->
+
+          <div class="home1-how-step">
+            <div class="home1-how-step-number">03</div>
+
+            <div class="home1-how-step-icon">
+              <i data-lucide="refresh-cw"></i>
+            </div>
+
+            <h3>We Compost It</h3>
+
+            <p>
+              Your organic waste is processed through sustainable composting
+              methods.
+            </p>
+          </div>
+
+          <!-- CONNECTOR -->
+
+          <div class="home1-how-step-connector"></div>
+
+          <!-- STEP 04 -->
+
+          <div class="home1-how-step">
+            <div class="home1-how-step-number">04</div>
+
+            <div class="home1-how-step-icon">
+              <i data-lucide="sprout"></i>
+            </div>
+
+            <h3>Give Back to the Earth</h3>
+
+            <p>
+              The finished compost can support gardens, farms, and greener
+              communities.
+            </p>
+          </div>
         </div>
-
-        <div class="home1-how-step-icon">
-          <i data-lucide="trash-2"></i>
-        </div>
-
-        <h3>
-          Separate Your Waste
-        </h3>
-
-        <p>
-          Keep your everyday kitchen and organic waste separate
-          for easy and responsible collection.
-        </p>
-
       </div>
+    </section>
 
-
-      <!-- CONNECTOR -->
-
-      <div class="home1-how-step-connector">
-        <i data-lucide="arrow-right"></i>
-      </div>
-
-
-      <!-- STEP 02 -->
-
-      <div class="home1-how-step">
-
-        <div class="home1-how-step-number">
-          02
-        </div>
-
-        <div class="home1-how-step-icon">
-          <i data-lucide="calendar-check"></i>
-        </div>
-
-        <h3>
-          Schedule a Pickup
-        </h3>
-
-        <p>
-          Choose a convenient waste collection slot
-          that works for your home and  daily routines things.
-        </p>
-
-      </div>
-
-
-      <!-- CONNECTOR -->
-
-      <div class="home1-how-step-connector">
-        <i data-lucide="arrow-right"></i>
-      </div>
-
-
-      <!-- STEP 03 -->
-
-      <div class="home1-how-step">
-
-        <div class="home1-how-step-number">
-          03
-        </div>
-
-        <div class="home1-how-step-icon">
-          <i data-lucide="refresh-cw"></i>
-        </div>
-
-        <h3>
-          We Compost It
-        </h3>
-
-        <p>
-          Your organic waste is processed through
-          sustainable composting methods.
-        </p>
-
-      </div>
-
-
-      <!-- CONNECTOR -->
-
-      <div class="home1-how-step-connector">
-        <i data-lucide="arrow-right"></i>
-      </div>
-
-
-      <!-- STEP 04 -->
-
-      <div class="home1-how-step">
-
-        <div class="home1-how-step-number">
-          04
-        </div>
-
-        <div class="home1-how-step-icon">
-          <i data-lucide="sprout"></i>
-        </div>
-
-        <h3>
-          Give Back to the Earth
-        </h3>
-
-        <p>
-          The finished compost can support gardens,
-          farms, and greener communities.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =====================================================
+    <!-- =====================================================
      TESTIMONIAL SECTION
 ===================================================== -->
 
-<section class="home1-testimonial">
+    <section class="home1-testimonial">
+      <div class="home1-testimonial-container">
+        <!-- Section Header -->
+        <div class="home1-testimonial-header">
+          <span class="home1-testimonial-tag">
+            <i data-lucide="quote"></i>
+            Customer Success Stories
+          </span>
 
-  <div class="home1-testimonial-container">
+          <h2 class="home1-testimonial-title">
+            What Our <span>Customers Say</span>
+          </h2>
 
-    <!-- Section Header -->
-    <div class="home1-testimonial-header">
-
-      <span class="home1-testimonial-tag">
-        <i data-lucide="quote"></i>
-        Customer Success Stories
-      </span>
-
-      <h2 class="home1-testimonial-title">
-        What Our <span>Customers Say</span> 
-      </h2>
-
-      <p class="home1-testimonial-description">
-        Trusted by homes and communities for simple,
-        sustainable, and convenient waste management.
-      </p>
-
-    </div>
-
-
-    <!-- Testimonial Content -->
-    <div class="home1-testimonial-content">
-
-      <!-- Previous Button -->
-      <button
-        type="button"
-        class="home1-testimonial-arrow home1-testimonial-prev"
-        aria-label="Previous testimonial"
-      >
-        <i data-lucide="arrow-left"></i>
-      </button>
-
-
-      <!-- Customer -->
-      <div class="home1-testimonial-main">
-
-        <div class="home1-testimonial-image">
-          <img
-            src="../images/r2.jpg"
-            alt="Priya Sharma"
-          >
-        </div>
-
-        <!-- Rating -->
-        <div
-          class="home1-testimonial-rating"
-          aria-label="5 out of 5 stars"
-        >
-          <i data-lucide="star"></i>
-          <i data-lucide="star"></i>
-          <i data-lucide="star"></i>
-          <i data-lucide="star"></i>
-          <i data-lucide="star"></i>
-        </div>
-
-        <!-- Testimonial -->
-        <blockquote class="home1-testimonial-text">
-          “CompostCare made managing our kitchen waste
-          so easy. The composting kit was simple to use,
-          and we love seeing our waste turn into something
-          useful for our garden.”
-        </blockquote>
-
-        <!-- Customer Details -->
-        <div class="home1-testimonial-customer">
-
-          <h3 class="home1-testimonial-name">
-            Priya Sharma
-          </h3>
-
-          <p class="home1-testimonial-role">
-            Home Composting
+          <p class="home1-testimonial-description">
+            Trusted by homes and communities for simple, sustainable, and
+            convenient waste management.
           </p>
-
         </div>
 
+        <!-- Testimonial Content -->
+        <div class="home1-testimonial-content">
+          <!-- Previous Button -->
+          <button
+            type="button"
+            class="home1-testimonial-arrow home1-testimonial-prev"
+            aria-label="Previous testimonial"
+          >
+            <i data-lucide="arrow-left"></i>
+          </button>
+
+          <!-- Customer -->
+          <div class="home1-testimonial-main">
+            <div class="home1-testimonial-image">
+              <img src="../images/r2.jpg" alt="Priya Sharma" />
+            </div>
+
+            <!-- Rating -->
+            <div class="home1-testimonial-rating" aria-label="5 out of 5 stars">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+
+            <!-- Testimonial -->
+            <blockquote class="home1-testimonial-text">
+              “CompostCare made managing our kitchen waste so easy. The
+              composting kit was simple to use, and we love seeing our waste
+              turn into something useful for our garden.”
+            </blockquote>
+
+            <!-- Customer Details -->
+            <div class="home1-testimonial-customer">
+              <h3 class="home1-testimonial-name">Priya Sharma</h3>
+
+              <p class="home1-testimonial-role">Home Composting</p>
+            </div>
+          </div>
+
+          <!-- Next Button -->
+          <button
+            type="button"
+            class="home1-testimonial-arrow home1-testimonial-next"
+            aria-label="Next testimonial"
+          >
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
       </div>
-
-
-      <!-- Next Button -->
-      <button
-        type="button"
-        class="home1-testimonial-arrow home1-testimonial-next"
-        aria-label="Next testimonial"
-      >
-        <i data-lucide="arrow-right"></i>
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-<!-- =====================================================
+    </section>
+    <!-- =====================================================
      HOME 1 — CTA SECTION
 ===================================================== -->
 
-<section class="home1-cta">
+    <section class="home1-cta">
+      <div class="home1-cta-container">
+        <div class="home1-cta-content">
+          <span class="home1-cta-tag">
+            <span class="home1-cta-tag-icon">
+              <i data-lucide="leaf"></i>
+            </span>
+            Sustainable Living
+          </span>
 
-  <div class="home1-cta-container">
-<div class="home1-cta-content">
+          <h2 class="home1-cta-title">
+            Let's Build a
+            <span>Greener Habit</span>
+          </h2>
 
-  <span class="home1-cta-tag">
-    <span class="home1-cta-tag-icon">
-      <i data-lucide="leaf"></i>
-    </span>
-    Sustainable Living
-  </span>
+          <p class="home1-cta-description">
+            Compost today, reduce waste, and grow a greener tomorrow.
+          </p>
 
-  <h2 class="home1-cta-title">
-    Let's Build a
-    <span>Greener Habit.</span>
-  </h2>
+          <span class="home1-cta-divider"></span>
 
-  <p class="home1-cta-description">
-    Compost today, reduce waste, and grow a greener tomorrow.
-  </p>
+          <a href="../contact/contact.html" class="home1-cta-button">
+            Schedule a Pick Up
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <span class="home1-cta-divider"></span>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Brand -->
+        <div class="footer-col footer-brand">
+          <a href="../home1/home1.html" class="footer-logo">
+            <img
+              src="../images/logo.png"
+              alt="Compost Care Logo"
+              class="sitelogo"
+            />
 
-  <a
-    href="../contact/contact.html"
-    class="home1-cta-button"
-  >
-    Schedule a Pick Up
-  </a>
+            <div class="footer-logo-text">
+              <h2>
+                <span class="left">Compost</span><span class="right">Care</span>
+              </h2>
+            </div>
+          </a>
 
-</div>
+          <p>
+            Compost Care helps homes, communities, and businesses turn organic
+            waste into valuable compost through simple, sustainable waste
+            management solutions.
+          </p>
 
-  </div>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-</section>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
 
-    <div id="footer"></div>
+            <a href="#" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="../home1/home1.html">Home</a>
+            </li>
+
+            <li>
+              <a href="../about/about.html">About</a>
+            </li>
+
+            <li>
+              <a href="../Servicees/service.html">Services</a>
+            </li>
+
+            <li>
+              <a href="../pricing/pricing.html">Pricing</a>
+            </li>
+
+            <li>
+              <a href="../contact/contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="../404/404.html">404</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div class="footer-col">
+          <h3>Our Services</h3>
+
+          <ul>
+            <li>
+              <a href="../Servicees/service.html"
+                >Kitchen Waste Composting Kits</a
+              >
+            </li>
+
+            <li>
+              <a href="../Servicees/service.html">Community Composting</a>
+            </li>
+
+            <li>
+              <a href="../Servicees/service.html">Compost Setup</a>
+            </li>
+
+            <li>
+              <a href="../Servicees/service.html">Compost Delivery</a>
+            </li>
+
+            <li>
+              <a href="../Dashboard/">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="../comingsoon/comingsoon.html">comingsoon</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+
+          <p>
+            <i data-lucide="map-pin"></i>
+            Hyderabad, Telangana, India
+          </p>
+
+          <p>
+            <i data-lucide="phone"></i>
+            +91 98765 43210
+          </p>
+
+          <p>
+            <i data-lucide="mail"></i>
+            info@compostcare.com
+          </p>
+
+          <p>
+            <i data-lucide="clock-3"></i>
+            Mon - Sat : 9:00 AM - 6:00 PM
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Compost Care. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="../privacypolicy/privacypolicy.html"> Privacy Policy </a>
+
+          <span>|</span>
+
+          <a href="../termsandconditions/termsandconditons.html">
+            Terms & Conditions
+          </a>
+
+          <span>|</span>
+
+          <a href="../cookiespolicy/cookiespolicy.html"> Cookies Policy </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

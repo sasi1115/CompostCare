@@ -1,173 +1,209 @@
-/* =====================================================
-HOME1 HERO SECTION
-===================================================== */
+/* =========================================================
+   COMPOSTCARE
+   HOME1 HERO
+   PREMIUM NATURAL HERO VISUAL
+
+   STORY:
+   HOME → ORGANIC WASTE → RICH COMPOST → NEW LIFE
+
+   IMPORTANT:
+   - Uses only project root colors
+   - Uses existing global font
+   - No extra color palette
+   - No dashboard / science-project appearance
+   - Natural animation
+   - Responsive:
+       1920 × 1080
+       1024 × 600
+       768 × 1024
+       360 × 740
+========================================================= */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .home1-hero {
-  padding-top: 50px;
-
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-image: url("../images/home1-hero1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  min-height: 780px;
   overflow: hidden;
+
+  background: var(--light-bg);
+  color: var(--text-color);
 }
 
-/* =====================================================
-HERO OVERLAY
-===================================================== */
-
-.home1-hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.57);
-
-  z-index: 1;
-}
-
-/* =====================================================
-HERO CONTAINER
-===================================================== */
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
 
 .home1-hero-container {
   position: relative;
   z-index: 2;
 
   width: 85%;
-  max-width: 1200px;
+  max-width: 1400px;
+  min-height: 780px;
 
   margin: 0 auto;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
   align-items: center;
-  justify-content: center;
+
+  gap: 25px;
 }
 
-/* =====================================================
-HERO CONTENT
-===================================================== */
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .home1-hero-content {
-  width: 680px;
-  max-width: 100%;
+  position: relative;
+  z-index: 30;
 
-  padding: 0;
+  max-width: 600px;
 
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 45px 0;
 }
 
-/* =====================================================
-HERO TAG
-===================================================== */
+/* =========================================================
+   HERO TAG
+========================================================= */
 
 .home1-hero-tag {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 16px 6px 6px;
+
+  background-color: var(--primary-color);
+  border-radius: 50px;
+
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  animation: home1ContentReveal 0.75s ease forwards;
+
+  animation-delay: 0.15s;
+}
+
+.home1-tag-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
 
-  margin-bottom: 20px;
-  padding: 8px 16px;
+  border-radius: 50%;
 
   background: var(--primary-color);
-  border-radius: 50px;
-
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 500;
-
   color: var(--white);
 }
 
-.home1-hero-tag svg {
-  width: 18px;
-  height: 18px;
+.home1-tag-icon svg {
+  width: 15px;
+  height: 15px;
 
-  color: var(--white);
-
-  flex-shrink: 0;
+  stroke-width: 2.2;
 }
 
-/* =====================================================
-HERO HEADING
-===================================================== */
+/* =========================================================
+   HERO TITLE
+========================================================= */
 
-.home1-hero-content h1 {
-  margin: 0 0 24px;
+.home1-hero-title {
+  max-width: 620px;
 
-  font-size: 68px;
-  line-height: 1.12;
+  margin: 27px 0 20px;
+
+  color: var(--primary-color);
+
+  font-size: clamp(50px, 5vw, 78px);
+  line-height: 1.04;
+
   font-weight: 600;
 
-  letter-spacing: -1.5px;
+  letter-spacing: -3px;
 
-  text-align: center;
+  opacity: 0;
 
-  color: var(--white);
+  transform: translateY(25px);
+
+  animation: home1TitleReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: 0.3s;
 }
 
-.home1-hero-content h1 span {
+.home1-hero-title span {
   display: block;
 
   color: var(--secondary-color);
 }
 
-/* =====================================================
-HERO DESCRIPTION
-===================================================== */
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
 
 .home1-hero-description {
-  max-width: 630px;
+  max-width: 535px;
 
-  margin: 0 auto 32px;
+  margin: 0 0 30px;
+
+  color: var(--text-color);
 
   font-size: 16px;
   line-height: 1.8;
-  font-weight: 400;
 
-  text-align: center;
+  font-weight: 500;
 
-  color: var(--white);
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  animation: home1ContentReveal 0.8s ease forwards;
+
+  animation-delay: 0.65s;
 }
 
-/* =====================================================
-HERO BUTTONS
-===================================================== */
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
 
-.home1-hero-buttons {
+.home1-hero-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  gap: 14px;
+  gap: 13px;
 
-  margin-bottom: 0;
+  opacity: 0;
+
+  transform: translateY(16px);
+
+  animation: home1ContentReveal 0.8s ease forwards;
+
+  animation-delay: 0.82s;
 }
 
-/* =====================================================
-COMMON HERO BUTTON
-===================================================== */
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .home1-hero-primary-btn,
 .home1-hero-secondary-btn {
-  min-width: 165px;
-  height: 50px;
-
-  padding: 0 24px;
+  min-height: 50px;
 
   display: inline-flex;
   align-items: center;
@@ -175,13 +211,10 @@ COMMON HERO BUTTON
 
   border-radius: 50px;
 
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 600;
-
   text-decoration: none;
 
-  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
 
   transition:
     transform 0.3s ease,
@@ -190,262 +223,2065 @@ COMMON HERO BUTTON
     color 0.3s ease;
 }
 
-/* =====================================================
-PRIMARY HERO BUTTON
-===================================================== */
-
 .home1-hero-primary-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
+  gap: 8px;
 
-  border: 1px solid var(--primary-color);
+  padding: 0 20px 0 23px;
+
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home1-hero-primary-btn svg {
+  width: 17px;
+  height: 17px;
+
+  stroke-width: 2.2;
+
+  transition: transform 0.3s ease;
 }
 
 .home1-hero-primary-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-/* =====================================================
-SECONDARY HERO BUTTON
-===================================================== */
+.home1-hero-primary-btn:hover svg {
+  transform: translate(2px, -2px);
+}
 
 .home1-hero-secondary-btn {
-  background-color: transparent;
-  color: var(--white);
+  padding: 0 22px;
 
-  border: 1px solid var(--white);
+  border: 1.5px solid var(--secondary-color);
+
+  background: transparent;
+  color: var(--text-color);
 }
 
 .home1-hero-secondary-btn:hover {
-  background-color: var(--white);
+  background-color: var(--secondary-color);
+
+  color: var(--white);
+}
+
+/* =========================================================
+   RIGHT HERO VISUAL
+
+   IMPORTANT:
+   The complete visual is moved slightly upward.
+========================================================= */
+
+.home1-hero-visual {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 700px;
+
+  overflow: hidden;
+
+  transform: translateY(-42px);
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   SOFT ATMOSPHERE
+========================================================= */
+
+.home1-atmosphere {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.home1-atmosphere::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 54%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  opacity: 0.025;
+
+  filter: blur(30px);
+
+  animation: home1AtmosphereBreath 9s ease-in-out infinite;
+}
+
+.home1-atmosphere::after {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  left: 67%;
+  top: 48%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+
+  opacity: 0.018;
+
+  filter: blur(30px);
+
+  animation: home1AtmosphereBreath 11s ease-in-out infinite reverse;
+}
+
+/* =========================================================
+   ATMOSPHERE DOTS
+========================================================= */
+
+.home1-atmosphere-dot {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  opacity: 0;
+
+  animation:
+    home1AtmosphereDotReveal 0.8s ease forwards,
+    home1TinyFloat 7s ease-in-out infinite;
+}
+
+.atmosphere-dot-one {
+  left: 28%;
+  top: 20%;
+
+  animation-delay: 1.8s, 3s;
+}
+
+.atmosphere-dot-two {
+  left: 75%;
+  top: 18%;
+
+  width: 4px;
+  height: 4px;
+
+  background: var(--secondary-color);
+
+  animation-delay: 2s, 3.5s;
+}
+
+.atmosphere-dot-three {
+  left: 88%;
+  top: 64%;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: 2.2s, 4s;
+}
+
+/* =========================================================
+   HOME / ORIGIN
+========================================================= */
+
+.home1-origin {
+  position: absolute;
+
+  left: 3%;
+  top: 24%;
+
+  width: 145px;
+
+  z-index: 12;
+
+  opacity: 0;
+
+  animation: home1OriginReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: 1.15s;
+}
+
+.home1-origin-label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: var(--text-color);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HOME VISUAL
+========================================================= */
+
+.home1-home-visual {
+  position: relative;
+
+  width: 125px;
+  height: 105px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HOME ROOF
+========================================================= */
+
+.home1-home-roof {
+  position: absolute;
+
+  top: 8px;
+  left: 10px;
+
+  width: 105px;
+  height: 70px;
+
+  background: var(--light-bg);
+
+  border-top: 3px solid var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+
+  border-radius: 8px 0 0 0;
+
+  transform: rotate(45deg) scale(0.72);
+
+  transform-origin: center;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   HOME BODY
+========================================================= */
+
+.home1-home-body {
+  position: absolute;
+
+  left: 17px;
+  bottom: 5px;
+
+  width: 91px;
+  height: 65px;
+
+  background: var(--light-bg);
+
+  border: 2px solid var(--primary-color);
+
+  border-radius: 4px;
+
+  z-index: 2;
+}
+
+.home1-home-door {
+  position: absolute;
+
+  left: 35px;
+  bottom: 0;
+
+  width: 20px;
+  height: 34px;
+
+  border-radius: 4px 4px 0 0;
+
+  background: var(--secondary-color);
+}
+
+.home1-home-window {
+  position: absolute;
+
+  top: 15px;
+
+  width: 18px;
+  height: 18px;
+
+  background: var(--light-bg);
+
+  border: 2px solid var(--primary-color);
+}
+
+.home-window-one {
+  left: 10px;
+}
+
+.home-window-two {
+  right: 10px;
+}
+
+/* =========================================================
+   STAGE LABEL
+========================================================= */
+
+.home1-stage-label {
+  display: block;
+
+  color: var(--text-color);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.waste-stage-label {
+  margin-bottom: 14px;
+}
+
+.compost-stage-label {
+  margin-bottom: 13px;
+
+  color: var(--secondary-color);
+}
+
+.life-stage-label {
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   ORGANIC WASTE ZONE
+========================================================= */
+
+.home1-waste-zone {
+  position: absolute;
+
+  left: 19%;
+  top: 27%;
+
+  width: 185px;
+
+  z-index: 15;
+
+  opacity: 0;
+
+  animation: home1WasteReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: 1.45s;
+}
+
+/* =========================================================
+   WASTE CLUSTER
+========================================================= */
+
+.home1-waste-cluster {
+  position: relative;
+
+  width: 180px;
+  height: 135px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   WASTE OBJECT
+========================================================= */
+
+.home1-waste-object {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--light-bg);
+
+  border: 1.5px solid var(--border-color);
+
+  box-shadow: 0 15px 30px var(--border-color);
+
+  opacity: 0;
+
+  animation:
+    home1WasteObjectReveal 0.7s ease forwards,
+    home1WasteObjectFloat 5.5s ease-in-out infinite;
+}
+
+/* =========================================================
+   WASTE LEAF
+========================================================= */
+
+.waste-object-leaf {
+  left: 8px;
+  top: 22px;
+
+  width: 58px;
+  height: 72px;
+
+  border-radius: 65% 35% 65% 35%;
+
   color: var(--primary-color);
 
-  border-color: var(--white);
+  transform: rotate(-25deg);
+
+  animation-delay: 1.7s, 3.6s;
 }
 
-/* =====================================================
-DARK MODE
-===================================================== */
+.waste-object-leaf svg {
+  width: 29px;
+  height: 29px;
 
-.dark-mode .home1-hero-overlay {
-  background: rgba(0, 0, 0, 0.69);
+  stroke-width: 1.7;
+
+  transform: rotate(25deg);
 }
 
-/* =====================================================
-NEST HUB
-1024 × 600
-===================================================== */
+/* =========================================================
+   FOOD SCRAP
+========================================================= */
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+.waste-object-food {
+  right: 8px;
+  top: 3px;
+
+  width: 72px;
+  height: 60px;
+
+  border-radius: 52% 48% 58% 42%;
+
+  animation-delay: 1.9s, 3.9s;
+}
+
+.food-shape {
+  position: absolute;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+}
+
+.food-shape-main {
+  left: 17px;
+  top: 15px;
+
+  width: 34px;
+  height: 28px;
+
+  transform: rotate(-12deg);
+}
+
+.food-shape-small {
+  left: 43px;
+  top: 9px;
+
+  width: 14px;
+  height: 12px;
+
+  opacity: 0.75;
+}
+
+/* =========================================================
+   VEGETABLE SCRAP
+========================================================= */
+
+.waste-object-vegetable {
+  left: 58px;
+  bottom: 2px;
+
+  width: 70px;
+  height: 55px;
+
+  border-radius: 55% 45% 60% 40%;
+
+  animation-delay: 2.1s, 4.2s;
+}
+
+.vegetable-piece {
+  position: absolute;
+
+  display: block;
+
+  background: var(--primary-color);
+
+  border-radius: 60% 40% 55% 45%;
+}
+
+.vegetable-piece-one {
+  left: 12px;
+  top: 18px;
+
+  width: 30px;
+  height: 18px;
+
+  transform: rotate(-12deg);
+}
+
+.vegetable-piece-two {
+  left: 33px;
+  top: 14px;
+
+  width: 24px;
+  height: 16px;
+
+  transform: rotate(18deg);
+}
+
+.vegetable-piece-three {
+  left: 43px;
+  top: 30px;
+
+  width: 14px;
+  height: 10px;
+
+  opacity: 0.75;
+}
+
+/* =========================================================
+   SMALL ORGANIC PIECES
+========================================================= */
+
+.organic-piece {
+  position: absolute;
+
+  display: block;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+
+  opacity: 0;
+
+  animation:
+    home1OrganicReveal 0.5s ease forwards,
+    home1OrganicFloat 4.5s ease-in-out infinite;
+}
+
+.organic-piece-one {
+  left: 25px;
+  top: 6px;
+
+  animation-delay: 2.2s, 3.7s;
+}
+
+.organic-piece-two {
+  right: 1px;
+  top: 72px;
+
+  width: 5px;
+  height: 5px;
+
+  animation-delay: 2.4s, 4.1s;
+}
+
+.organic-piece-three {
+  left: 94px;
+  bottom: -3px;
+
+  width: 6px;
+  height: 6px;
+
+  animation-delay: 2.6s, 4.5s;
+}
+
+/* =========================================================
+   TRANSFORMATION
+   VERY SUBTLE
+========================================================= */
+
+.home1-transformation {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 8;
+
+  pointer-events: none;
+}
+
+.home1-transformation-path {
+  position: absolute;
+
+  left: 17%;
+  top: 23%;
+
+  width: 500px;
+  height: 330px;
+
+  overflow: visible;
+}
+
+/* =========================================================
+   PATH BASE
+========================================================= */
+
+.home1-transformation-path-base {
+  fill: none;
+
+  stroke: var(--border-color);
+
+  stroke-width: 1.1;
+
+  stroke-linecap: round;
+
+  opacity: 0;
+
+  animation: home1PathReveal 1.2s ease forwards;
+
+  animation-delay: 2.1s;
+}
+
+/* =========================================================
+   PATH FLOW
+
+   Not an arrow.
+   Just a subtle natural movement.
+========================================================= */
+
+.home1-transformation-path-flow {
+  fill: none;
+
+  stroke: var(--secondary-color);
+
+  stroke-width: 1.3;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 2 18;
+
+  opacity: 0;
+
+  animation:
+    home1PathReveal 1s ease forwards,
+    home1PathFlow 6s linear infinite;
+
+  animation-delay: 2.2s, 3.2s;
+}
+
+/* =========================================================
+   FLOW PARTICLES
+========================================================= */
+
+.home1-flow-particle {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+
+  opacity: 0;
+
+  animation:
+    home1FlowReveal 0.5s ease forwards,
+    home1FlowParticle 7s ease-in-out infinite;
+}
+
+.flow-particle-one {
+  left: 29%;
+  top: 30%;
+
+  animation-delay: 2.5s, 3.2s;
+}
+
+.flow-particle-two {
+  left: 47%;
+  top: 32%;
+
+  width: 5px;
+  height: 5px;
+
+  animation-delay: 2.8s, 3.7s;
+}
+
+/* =========================================================
+   RICH COMPOST
+========================================================= */
+
+.home1-compost-zone {
+  position: absolute;
+
+  left: 43%;
+  bottom: 13%;
+
+  width: 170px;
+
+  z-index: 16;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(22px);
+
+  animation: home1CompostReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: 3s;
+}
+
+.home1-compost {
+  position: relative;
+
+  width: 145px;
+  height: 155px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   COMPOST BIN
+========================================================= */
+
+.home1-compost-bin {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 112px;
+  height: 125px;
+
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   COMPOST RIM
+========================================================= */
+
+.compost-bin-rim {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 112px;
+  height: 28px;
+
+  transform: translateX(-50%);
+
+  border: 2px solid var(--secondary-color);
+
+  border-radius: 50%;
+
+  background: var(--light-bg);
+
+  z-index: 4;
+}
+
+/* =========================================================
+   COMPOST BODY
+========================================================= */
+
+.compost-bin-body {
+  position: absolute;
+
+  left: 6px;
+  top: 12px;
+
+  width: 100px;
+  height: 110px;
+
+  overflow: hidden;
+
+  border: 2px solid var(--secondary-color);
+  border-top: 0;
+
+  border-radius: 0 0 38px 38px;
+
+  background: var(--light-bg);
+}
+
+/* =========================================================
+   COMPOST SOIL
+========================================================= */
+
+.compost-soil {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 62%;
+
+  background: var(--secondary-color);
+
+  border-radius: 50% 50% 0 0;
+
+  transform: translateY(100%);
+
+  animation: home1SoilRise 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: 3.6s;
+}
+
+.soil-piece {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--light-bg);
+
+  opacity: 0.35;
+}
+
+.soil-piece-one {
+  left: 18%;
+  top: 28%;
+}
+
+.soil-piece-two {
+  left: 38%;
+  top: 42%;
+}
+
+.soil-piece-three {
+  left: 61%;
+  top: 25%;
+}
+
+.soil-piece-four {
+  left: 74%;
+  top: 52%;
+}
+
+.soil-piece-five {
+  left: 47%;
+  top: 68%;
+}
+
+/* =========================================================
+   COMPOST PARTICLES
+========================================================= */
+
+.compost-particle {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+
+  opacity: 0;
+
+  animation:
+    home1CompostParticleReveal 0.5s ease forwards,
+    home1CompostParticleFloat 4s ease-in-out infinite;
+}
+
+.compost-particle-one {
+  left: -17px;
+  top: 52px;
+
+  animation-delay: 3.7s, 4.5s;
+}
+
+.compost-particle-two {
+  right: -13px;
+  top: 72px;
+
+  animation-delay: 3.9s, 4.9s;
+}
+
+/* =========================================================
+   COMPOST ATMOSPHERE
+========================================================= */
+
+.compost-atmosphere {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+
+  opacity: 0;
+
+  animation:
+    home1AtmosphereDotReveal 0.6s ease forwards,
+    home1TinyFloat 5s ease-in-out infinite;
+}
+
+.compost-atmosphere-one {
+  left: 5px;
+  top: 55px;
+
+  animation-delay: 3.9s, 4.7s;
+}
+
+.compost-atmosphere-two {
+  right: 5px;
+  top: 38px;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: 4.1s, 5.1s;
+}
+
+/* =========================================================
+   NEW LIFE ZONE
+========================================================= */
+
+.home1-life-zone {
+  position: absolute;
+
+  right: 2%;
+  bottom: 6%;
+
+  width: 205px;
+  height: 255px;
+
+  z-index: 18;
+
+  opacity: 0;
+
+  animation: home1LifeReveal 1s ease forwards;
+
+  animation-delay: 3.7s;
+}
+
+/* =========================================================
+   SOIL
+========================================================= */
+
+.home1-soil {
+  position: absolute;
+
+  left: 50%;
+  bottom: 10px;
+
+  width: 185px;
+  height: 70px;
+
+  transform: translateX(-50%);
+}
+
+.soil-surface {
+  position: absolute;
+
+  left: 50%;
+  top: 12px;
+
+  width: 174px;
+  height: 38px;
+
+  transform: translateX(-50%);
+
+  border-top: 3px solid var(--secondary-color);
+
+  border-radius: 50%;
+}
+
+.soil-grain {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--secondary-color);
+
+  opacity: 0.55;
+}
+
+.soil-grain-one {
+  left: 20px;
+  top: 31px;
+}
+
+.soil-grain-two {
+  left: 54px;
+  top: 45px;
+}
+
+.soil-grain-three {
+  right: 42px;
+  top: 33px;
+}
+
+.soil-grain-four {
+  right: 20px;
+  top: 45px;
+}
+
+.soil-grain-five {
+  left: 92px;
+  top: 53px;
+}
+
+/* =========================================================
+   GROWING PLANT
+
+   The whole plant is one natural composition.
+========================================================= */
+
+.home1-growing-plant {
+  position: absolute;
+
+  left: 50%;
+  bottom: 43px;
+
+  width: 120px;
+  height: 190px;
+
+  transform: translateX(-50%) rotate(0deg);
+
+  transform-origin: bottom center;
+
+  animation: home1PlantSway 6s ease-in-out infinite;
+
+  animation-delay: 5.4s;
+}
+
+/* =========================================================
+   ROOT SYSTEM
+========================================================= */
+
+.home1-roots {
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 100px;
+  height: 65px;
+
+  transform: translateX(-50%);
+}
+
+.root {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 2px;
+
+  border-radius: 50px;
+
+  background: var(--secondary-color);
+
+  transform-origin: top;
+
+  transform: scaleY(0);
+
+  animation: home1RootGrow 1s ease forwards;
+}
+
+.root-one {
+  left: 49px;
+  height: 58px;
+
+  transform: rotate(9deg) scaleY(0);
+
+  animation-delay: 4.45s;
+}
+
+.root-two {
+  left: 49px;
+  height: 47px;
+
+  transform: rotate(-25deg) scaleY(0);
+
+  animation-delay: 4.62s;
+}
+
+.root-three {
+  left: 49px;
+  height: 40px;
+
+  transform: rotate(29deg) scaleY(0);
+
+  animation-delay: 4.79s;
+}
+
+.root-four {
+  left: 48px;
+  height: 31px;
+
+  transform: rotate(-42deg) scaleY(0);
+
+  animation-delay: 4.96s;
+}
+
+/* =========================================================
+   MAIN STEM
+========================================================= */
+
+.home1-plant-stem {
+  position: absolute;
+
+  left: 50%;
+  bottom: 13px;
+
+  width: 5px;
+  height: 140px;
+
+  transform: translateX(-50%) scaleY(0);
+
+  transform-origin: bottom center;
+
+  border-radius: 50px;
+
+  background: var(--primary-color);
+
+  animation: home1StemGrow 1.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: 4.1s;
+}
+
+/* =========================================================
+   PLANT LEAVES
+========================================================= */
+
+.home1-plant-leaf {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary-color);
+
+  opacity: 0;
+}
+
+.home1-plant-leaf svg {
+  width: 43px;
+  height: 43px;
+
+  fill: var(--primary-color);
+
+  stroke: var(--primary-color);
+
+  stroke-width: 1.2;
+}
+
+/* =========================================================
+   LEFT LEAF
+========================================================= */
+
+.plant-leaf-left {
+  left: 30px;
+  bottom: 58px;
+  transform-origin: bottom right;
+  transform: rotate(-360deg) scale(0.25);
+  animation: home1LeafLeftGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 4.7s;
+}
+
+/* =========================================================
+   RIGHT LEAF
+========================================================= */
+
+.plant-leaf-right {
+  right: 21px;
+  bottom: 83px;
+  transform-origin: bottom left;
+  transform: rotate(38deg) scale(0.25);
+  animation: home1LeafRightGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 4.95s;
+}
+/* =========================================================
+   TOP LEAF
+========================================================= */
+
+.plant-leaf-top {
+  left: 50%;
+  bottom: 128px;
+  transform-origin: bottom center;
+  transform: translateX(-50%) scale(0.25);
+  animation: home1LeafTopGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 5.2s;
+}
+
+/* =========================================================
+   FLOATING LEAVES
+   ONLY TWO — DECORATION, NOT INFORMATION
+========================================================= */
+
+.home1-floating-leaf {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary-color);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  animation:
+    home1FloatingLeafReveal 0.8s ease forwards,
+    home1FloatingLeaf 8s ease-in-out infinite;
+}
+
+.home1-floating-leaf svg {
+  width: 23px;
+  height: 23px;
+
+  fill: var(--primary-color);
+
+  stroke: var(--primary-color);
+
+  stroke-width: 1.3;
+}
+
+.floating-leaf-one {
+  left: 61%;
+  top: 15%;
+
+  animation-delay: 3s, 4.3s;
+}
+
+.floating-leaf-two {
+  right: 10%;
+  top: 34%;
+
+  animation-delay: 3.3s, 4.8s;
+}
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+@keyframes home1ContentReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home1TitleReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   ATMOSPHERE
+========================================================= */
+
+@keyframes home1AtmosphereBreath {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+}
+
+@keyframes home1AtmosphereDotReveal {
+  to {
+    opacity: 0.42;
+  }
+}
+
+@keyframes home1TinyFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -10px);
+  }
+}
+
+/* =========================================================
+   HOME
+========================================================= */
+
+@keyframes home1OriginReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   WASTE
+========================================================= */
+
+@keyframes home1WasteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home1WasteObjectReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes home1WasteObjectFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+@keyframes home1OrganicReveal {
+  to {
+    opacity: 0.65;
+  }
+}
+
+@keyframes home1OrganicFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+   TRANSFORMATION
+========================================================= */
+
+@keyframes home1PathReveal {
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes home1PathFlow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes home1FlowReveal {
+  to {
+    opacity: 0.65;
+  }
+}
+
+@keyframes home1FlowParticle {
+  0% {
+    transform: translate(0, 0) scale(0.7);
+  }
+
+  25% {
+    transform: translate(55px, -28px) scale(1);
+  }
+
+  50% {
+    transform: translate(125px, 4px) scale(0.8);
+  }
+
+  75% {
+    transform: translate(195px, 65px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(265px, 115px) scale(0.5);
+    opacity: 0.1;
+  }
+}
+
+/* =========================================================
+   COMPOST
+========================================================= */
+
+@keyframes home1CompostReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home1SoilRise {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes home1CompostParticleReveal {
+  to {
+    opacity: 0.45;
+  }
+}
+
+@keyframes home1CompostParticleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* =========================================================
+   PLANT
+========================================================= */
+
+@keyframes home1LifeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home1RootGrow {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes home1StemGrow {
+  to {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes home1LeafLeftGrow {
+  to {
+    opacity: 1;
+
+    transform: rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes home1LeafRightGrow {
+  to {
+    opacity: 1;
+
+    transform: rotate(38deg) scale(1);
+  }
+}
+
+@keyframes home1LeafTopGrow {
+  to {
+    opacity: 1;
+
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes home1PlantSway {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(1.8deg);
+  }
+}
+
+/* =========================================================
+   FLOATING LEAVES
+========================================================= */
+
+@keyframes home1FloatingLeafReveal {
+  to {
+    opacity: 0.42;
+  }
+}
+
+@keyframes home1FloatingLeaf {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-15deg);
+  }
+
+  50% {
+    transform: translate(8px, -12px) rotate(8deg);
+  }
+}
+
+/* =========================================================
+   1920 × 1080
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
   .home1-hero {
-    padding-top: 50px;
-
-    height: 100vh;
-
-    background-position: center;
+    min-height: 820px;
   }
 
   .home1-hero-container {
-    width: 85%;
+    max-width: 1500px;
+    min-height: 820px;
+  }
+
+  .home1-hero-title {
+    font-size: 82px;
+  }
+
+  .home1-hero-description {
+    font-size: 17px;
+    max-width: 560px;
+  }
+
+  .home1-hero-visual {
+    height: 735px;
+
+    transform: translateY(-48px);
+  }
+
+  .home1-origin {
+    left: 4%;
+  }
+
+  .home1-waste-zone {
+    left: 20%;
+  }
+
+  .home1-transformation-path {
+    left: 17%;
+
+    width: 540px;
+  }
+
+  .home1-compost-zone {
+    left: 44%;
+  }
+
+  .home1-life-zone {
+    right: 3%;
+  }
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .home1-hero {
+    min-height: 600px;
+  }
+
+  .home1-hero-container {
+    width: 90%;
+
+    min-height: 600px;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 10px;
   }
 
   .home1-hero-content {
-    width: 600px;
+    padding: 30px 0;
   }
 
   .home1-hero-tag {
-    gap: 7px;
+    font-size: 11px;
+  }
 
-    margin-bottom: 16px;
-    padding: 7px 15px;
+  .home1-tag-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .home1-hero-title {
+    margin: 20px 0 15px;
+
+    font-size: 48px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .home1-hero-description {
+    max-width: 400px;
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+  .home1-hero-primary-btn,
+  .home1-hero-secondary-btn {
+    min-height: 45px;
 
     font-size: 12px;
   }
 
-  .home1-hero-tag svg {
-    width: 17px;
-    height: 17px;
+  .home1-hero-visual {
+    height: 525px;
+
+    transform: translateY(-28px);
   }
 
-  .home1-hero-content h1 {
-    margin-bottom: 20px;
+  .home1-atmosphere::before {
+    width: 370px;
+    height: 370px;
+  }
 
-    font-size: 50px;
-    line-height: 1.12;
+  .home1-atmosphere::after {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home1-origin {
+    left: 0;
+    top: 22%;
+
+    transform: scale(0.78);
+
+    transform-origin: left center;
+  }
+
+  .home1-waste-zone {
+    left: 14%;
+    top: 25%;
+
+    transform: scale(0.78);
+
+    transform-origin: left center;
+  }
+
+  .home1-transformation-path {
+    left: 7%;
+    top: 21%;
+
+    width: 410px;
+    height: 280px;
+  }
+
+  .home1-compost-zone {
+    left: 40%;
+    bottom: 11%;
+
+    transform: scale(0.78);
+
+    transform-origin: center bottom;
+  }
+
+  .home1-life-zone {
+    right: -1%;
+    bottom: 4%;
+
+    transform: scale(0.76);
+
+    transform-origin: center bottom;
+  }
+
+  .home1-floating-leaf-two {
+    right: 3%;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .home1-hero {
+    min-height: auto;
+
+    padding: 65px 0 80px;
+  }
+
+  .home1-hero-container {
+    width: 88%;
+
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .home1-hero-content {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 10px 0 0;
+
+    text-align: center;
+  }
+
+  .home1-hero-tag {
+    margin: 0 auto;
+  }
+
+  .home1-hero-title {
+    margin: 23px auto 18px;
+
+    font-size: clamp(46px, 7vw, 60px);
+
+    line-height: 1.05;
   }
 
   .home1-hero-description {
+    margin: 0 auto 27px;
+
     max-width: 560px;
 
-    margin-bottom: 28px;
-
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .home1-hero-buttons {
-    gap: 12px;
-  }
-
-  .home1-hero-primary-btn,
-  .home1-hero-secondary-btn {
-    min-width: 155px;
-    height: 48px;
-
-    padding: 0 22px;
-
-    font-size: 13px;
-  }
-}
-
-/* =====================================================
-IPAD MINI
-768 × 1024
-===================================================== */
-
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home1-hero {
-    padding: 100px 0;
-
-    height: 70vh;
-
-    background-position: 65% center;
-  }
-
-  .home1-hero-overlay {
-    background: rgba(0, 0, 0, 0.65);
-  }
-
-  .home1-hero-container {
-    width: 88%;
-  }
-
-  .home1-hero-content {
-    width: 100%;
-    max-width: 620px;
-  }
-
-  .home1-hero-tag {
-    gap: 7px;
-
-    margin-bottom: 18px;
-    padding: 7px 15px;
-
-    font-size: 12px;
-  }
-
-  .home1-hero-tag svg {
-    width: 17px;
-    height: 17px;
-  }
-
-  .home1-hero-content h1 {
-    margin-bottom: 20px;
-
-    font-size: 46px;
-    line-height: 1.15;
-    letter-spacing: -1px;
-  }
-
-  .home1-hero-description {
-    max-width: 580px;
-
-    margin-bottom: 28px;
-
     font-size: 15px;
-    line-height: 1.75;
   }
 
-  .home1-hero-buttons {
-    gap: 12px;
+  .home1-hero-actions {
+    justify-content: center;
+  }
+  .home1-hero-visual {
+    width: 100%;
+    max-width: 650px;
+
+    height: 520px;
+
+    margin: 0 auto;
+
+    transform: translateY(-20px);
   }
 
-  .home1-hero-primary-btn,
-  .home1-hero-secondary-btn {
-    min-width: 160px;
-    height: 50px;
+  .home1-atmosphere::before {
+    width: 390px;
+    height: 390px;
+  }
 
-    padding: 0 22px;
+  .home1-atmosphere::after {
+    width: 260px;
+    height: 260px;
+  }
 
-    font-size: 13px;
+  .home1-origin {
+    left: 2%;
+    top: 21%;
+
+    transform: scale(0.82);
+
+    transform-origin: left center;
+  }
+
+  .home1-waste-zone {
+    left: 13%;
+    top: 24%;
+
+    transform: scale(0.84);
+
+    transform-origin: left center;
+  }
+
+  .home1-transformation-path {
+    left: 9%;
+    top: 20%;
+
+    width: 440px;
+    height: 285px;
+  }
+
+  .home1-compost-zone {
+    left: 39%;
+    bottom: 12%;
+
+    transform: scale(0.84);
+
+    transform-origin: center bottom;
+  }
+
+  .home1-life-zone {
+    right: 0;
+    bottom: 5%;
+
+    transform: scale(0.82);
+
+    transform-origin: center bottom;
+  }
+
+  .home1-floating-leaf-two {
+    right: 3%;
   }
 }
 
-/* =====================================================
-SAMSUNG GALAXY S8+
-360 × 740
-===================================================== */
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 × 740
+========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 599px) {
   .home1-hero {
-    padding: 70px 0;
+    min-height: auto;
 
-    height: 100vh;
-
-    background-position: 68% center;
-  }
-
-  .home1-hero-overlay {
-    background: rgba(0, 0, 0, 0.68);
+    padding: 45px 0 60px;
   }
 
   .home1-hero-container {
-    width: 88%;
+    width: 90%;
+
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
   }
 
   .home1-hero-content {
     width: 100%;
-    max-width: 320px;
+
+    padding: 10px 0 0;
+
+    text-align: center;
   }
 
   .home1-hero-tag {
-    gap: 6px;
+    margin: 0 auto;
 
-    margin-bottom: 16px;
-    padding: 6px 13px;
+    padding: 5px 12px 5px 5px;
 
     font-size: 10px;
   }
 
-  .home1-hero-tag svg {
-    width: 15px;
-    height: 15px;
+  .home1-tag-icon {
+    width: 25px;
+    height: 25px;
   }
 
-  .home1-hero-content h1 {
-    margin-bottom: 18px;
+  .home1-tag-icon svg {
+    width: 13px;
+    height: 13px;
+  }
 
-    font-size: 34px;
-    line-height: 1.16;
-    letter-spacing: -0.6px;
+  .home1-hero-title {
+    margin: 19px auto 16px;
+
+    font-size: clamp(35px, 10.5vw, 43px);
+
+    line-height: 1.06;
+
+    letter-spacing: -1.5px;
   }
 
   .home1-hero-description {
-    max-width: 300px;
+    max-width: 330px;
 
-    margin-bottom: 26px;
+    margin: 0 auto 23px;
 
-    font-size: 12px;
+    font-size: 13px;
+
     line-height: 1.7;
   }
 
-  .home1-hero-buttons {
+  .home1-hero-actions {
     width: 100%;
 
     flex-direction: column;
-    align-items: center;
 
-    gap: 11px;
+    gap: 9px;
   }
 
   .home1-hero-primary-btn,
   .home1-hero-secondary-btn {
     width: 100%;
-    min-width: 0;
-    height: 48px;
-    padding: 0 20px;
+
+    min-height: 47px;
 
     font-size: 12px;
+  }
+
+  .home1-hero-note {
+    justify-content: center;
+
+    margin-top: 19px;
+
+    font-size: 10px;
+  }
+
+  /* =====================================================
+     MOBILE VISUAL
+  ====================================================== */
+
+  .home1-hero-visual {
+    width: 100%;
+
+    height: 400px;
+
+    margin-top: 5px;
+
+    transform: translateY(-12px);
+  }
+
+  .home1-atmosphere::before {
+    width: 280px;
+    height: 280px;
+  }
+
+  .home1-atmosphere::after {
+    width: 190px;
+    height: 190px;
+  }
+
+  /* =====================================================
+     HOME
+  ====================================================== */
+
+  .home1-origin {
+    left: -7%;
+    top: 22%;
+
+    transform: scale(0.59);
+
+    transform-origin: left center;
+  }
+
+  .home1-origin-label {
+    font-size: 10px;
+  }
+
+  /* =====================================================
+     WASTE
+  ====================================================== */
+
+  .home1-waste-zone {
+    left: 7%;
+    top: 25%;
+
+    transform: scale(0.61);
+
+    transform-origin: left center;
+  }
+
+  .home1-stage-label {
+    font-size: 9px;
+  }
+
+  /* =====================================================
+     TRANSFORMATION
+  ====================================================== */
+
+  .home1-transformation-path {
+    left: 3%;
+    top: 19%;
+
+    width: 300px;
+    height: 220px;
+  }
+
+  .home1-flow-particle {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* =====================================================
+     COMPOST
+  ====================================================== */
+
+  .home1-compost-zone {
+    left: 34%;
+    bottom: 11%;
+
+    transform: scale(0.64);
+
+    transform-origin: center bottom;
+  }
+
+  /* =====================================================
+     NEW LIFE
+  ====================================================== */
+
+  .home1-life-zone {
+    right: -5%;
+    bottom: 4%;
+
+    transform: scale(0.61);
+
+    transform-origin: center bottom;
+  }
+
+  /* =====================================================
+     FLOATING LEAVES
+  ====================================================== */
+
+  .floating-leaf-two {
+    right: 2%;
+    top: 36%;
+  }
+
+  .home1-atmosphere-dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home1-hero *,
+  .home1-hero *::before,
+  .home1-hero *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
   }
 }
 
@@ -493,17 +2329,18 @@ SAMSUNG GALAXY S8+
   font-weight: 500;
   letter-spacing: 1px;
 
-  color: var(--primary-color);
-  border: 2px solid var(--secondary-color);
+  color: var(--white);
+
+  background-color: var(--primary-color);
   border-radius: 50px;
 }
 
 .home1-impact-tag svg {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   padding: 3px;
 
-  color: var(--light-bg);
+  color: var(--white);
   background: var(--primary-color);
 
   border-radius: 50%;
@@ -843,10 +2680,10 @@ SAMSUNG GALAXY S8+
   font-weight: 500;
   letter-spacing: 1px;
 
-  color: var(--primary-color);
+  color: var(--white);
 
-  background: var(--light-bg);
-  border: 2px solid var(--secondary-color);
+  background: var(--primary-color);
+
   border-radius: 50px;
 
   box-shadow: 0 4px 12px rgba(179, 90, 58, 0.1);
@@ -857,7 +2694,7 @@ SAMSUNG GALAXY S8+
   height: 20px;
   padding: 3px;
 
-  color: var(--light-bg);
+  color: var(--white);
   background: var(--primary-color);
 
   border-radius: 50%;
@@ -1153,8 +2990,6 @@ SAMSUNG GALAXY S8+
     height: 17px;
   }
 
- 
-
   .home1-about-feature-content h3 {
     font-size: 14px;
   }
@@ -1295,10 +3130,9 @@ SAMSUNG GALAXY S8+
   font-weight: 500;
   letter-spacing: 1px;
 
-  color: var(--primary-color);
-  background: var(--light-bg);
+  color: var(--white);
+  background: var(--primary-color);
 
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 
   box-shadow: 0 4px 12px rgba(179, 90, 58, 0.1);
@@ -1309,7 +3143,7 @@ SAMSUNG GALAXY S8+
   height: 20px;
   padding: 3px;
 
-  color: var(--light-bg);
+  color: var(--white);
   background: var(--primary-color);
 
   border-radius: 50%;
@@ -1708,8 +3542,8 @@ SAMSUNG GALAXY S8+
   align-items: center;
   gap: 10px;
   padding: 8px 16px 8px 8px;
-  background: var(--white);
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white);
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
@@ -1722,14 +3556,15 @@ SAMSUNG GALAXY S8+
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+
   background: var(--primary-color);
   color: var(--white);
 }
 
 .home1-waste-badge-icon svg {
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
 }
 
 /* =========================================================
@@ -1748,11 +3583,12 @@ SAMSUNG GALAXY S8+
 .home1-waste-tag {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+
   padding: 6px 16px 6px 6px;
-  border: 2px solid var(--secondary-color);
+
   border-radius: 50px;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -2173,11 +4009,9 @@ SAMSUNG GALAXY S8+
 
   align-items: center;
 
-  gap: 8px;
-
   margin-bottom: 14px;
 
-  padding: 6px 14px 6px 10px;
+  padding: 6px 14px 6px 12px;
 
   font-size: 14px;
 
@@ -2187,11 +4021,9 @@ SAMSUNG GALAXY S8+
 
   letter-spacing: 1px;
 
-  color: var(--primary-color);
+  color: var(--white);
 
-  background: var(--light-bg);
-
-  border: 2px solid var(--secondary-color);
+  background: var(--primary-color);
 
   border-radius: 50px;
 }
@@ -2203,7 +4035,7 @@ SAMSUNG GALAXY S8+
 
   padding: 3px;
 
-  color: var(--light-bg);
+  color: var(--white);
 
   background: var(--primary-color);
 
@@ -2688,7 +4520,6 @@ SAMSUNG GALAXY S8+
   margin-bottom: 22px;
   padding: 6px 14px;
 
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 
   font-size: 14px;
@@ -2697,7 +4528,8 @@ SAMSUNG GALAXY S8+
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  color: var(--primary-color);
+  color: var(--white);
+  background-color: var(--primary-color);
 }
 
 .home1-testimonial-tag svg {
@@ -2706,7 +4538,7 @@ SAMSUNG GALAXY S8+
 
   padding: 3px;
 
-  color: var(--light-bg);
+  color: var(--white);
   background: var(--primary-color);
 
   border-radius: 50%;
@@ -3303,16 +5135,14 @@ CTA TAG
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
 
   margin-bottom: 42px;
   padding: 6px 18px 6px 6px;
 
-  border: 2px solid var(--secondary-color);
   border-radius: 50px;
 
-  color: var(--primary-color);
-  background: var(--light-bg);
+  color: var(--white);
+  background: var(--primary-color);
 
   font-size: 12px;
   font-weight: 700;

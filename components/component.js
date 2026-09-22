@@ -1,36 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadNavbar();
-  loadFooter();
+  initializeNavbar();
+  initializeFooter();
 });
-
-/* =========================================================
-   LOAD NAVBAR
-========================================================= */
-
-async function loadNavbar() {
-  const navbarContainer = document.getElementById("navbar");
-
-  if (!navbarContainer) {
-    return;
-  }
-
-  try {
-    const response = await fetch("../components/navbar.html");
-
-    if (!response.ok) {
-      throw new Error("Failed to load navbar");
-    }
-
-    const navbarHTML = await response.text();
-
-    navbarContainer.innerHTML = navbarHTML;
-
-    /* Navbar HTML is now available */
-    initializeNavbar();
-  } catch (error) {
-    console.error("Navbar loading error:", error);
-  }
-}
 
 /* =========================================================
    NAVBAR INITIALIZATION
@@ -72,6 +43,7 @@ function initializeNavbar() {
      iPad Mini     768 × 1024
      Galaxy S8+    360 × 740
      Nest Hub      1024 × 600 → DESKTOP
+     1920 × 1080   → DESKTOP
   ======================================================= */
 
   function isMobileSize() {
@@ -196,14 +168,10 @@ function initializeNavbar() {
   });
 
   /* =======================================================
-     MOBILE / IPAD DROPDOWN
+     HOME DROPDOWN
      
-    
+     MOBILE / IPAD / DESKTOP / NEST HUB
   ======================================================= */
-  /* =======================================================
-   HOME DROPDOWN
-   MOBILE / IPAD / DESKTOP / NEST HUB
-======================================================= */
 
   const dropdownLinks = document.querySelectorAll(
     ".nav-item.dropdown > .nav-link",
@@ -223,14 +191,14 @@ function initializeNavbar() {
       const isOpen = this.getAttribute("aria-expanded") === "true";
 
       /* ===================================================
-       CLOSE OTHER DROPDOWNS
-    =================================================== */
+         CLOSE OTHER DROPDOWNS
+      =================================================== */
 
       closeAllDropdowns(dropdownItem);
 
       /* ===================================================
-       TOGGLE CURRENT DROPDOWN
-    =================================================== */
+         TOGGLE CURRENT DROPDOWN
+      =================================================== */
 
       if (isOpen) {
         dropdownItem.classList.remove("active");
@@ -243,6 +211,7 @@ function initializeNavbar() {
       }
     });
   });
+
   /* =======================================================
      NORMAL NAVIGATION LINKS
   ======================================================= */
@@ -279,22 +248,22 @@ function initializeNavbar() {
   });
 
   /* =======================================================
-   ACTIVE NAVIGATION LINK
-======================================================= */
+     ACTIVE NAVIGATION LINK
+  ======================================================= */
 
   const currentPage = window.location.pathname.split("/").pop();
 
   /* =======================================================
-   CLEAR ALL ACTIVE LINKS
-======================================================= */
+     CLEAR ALL ACTIVE LINKS
+  ======================================================= */
 
   document.querySelectorAll(".nav-link, .dropdown-link").forEach((link) => {
     link.classList.remove("active");
   });
 
   /* =======================================================
-   NORMAL NAVIGATION LINKS
-======================================================= */
+     NORMAL NAVIGATION LINKS
+  ======================================================= */
 
   document
     .querySelectorAll(".nav-item:not(.dropdown) > .nav-link")
@@ -313,8 +282,8 @@ function initializeNavbar() {
     });
 
   /* =======================================================
-   HOME DROPDOWN LINKS
-======================================================= */
+     HOME DROPDOWN
+  ======================================================= */
 
   const homeDropdown = document.querySelector(".nav-item.dropdown");
 
@@ -325,8 +294,8 @@ function initializeNavbar() {
   );
 
   /* =======================================================
-   HOME 1 / HOME 2 ACTIVE STATE
-======================================================= */
+     HOME 1 / HOME 2 ACTIVE STATE
+  ======================================================= */
 
   if (homeDropdownLinks) {
     homeDropdownLinks.forEach((link) => {
@@ -347,6 +316,7 @@ function initializeNavbar() {
       }
     });
   }
+
   /* =======================================================
      RESIZE HANDLING
   ======================================================= */
@@ -370,34 +340,6 @@ function initializeNavbar() {
   updateMobileButton();
 
   initializeIcons();
-}
-
-/* =========================================================
-   LOAD FOOTER
-========================================================= */
-
-async function loadFooter() {
-  const footerContainer = document.getElementById("footer");
-
-  if (!footerContainer) {
-    return;
-  }
-
-  try {
-    const response = await fetch("../components/footer.html");
-
-    if (!response.ok) {
-      throw new Error("Failed to load footer");
-    }
-
-    const footerHTML = await response.text();
-
-    footerContainer.innerHTML = footerHTML;
-
-    initializeFooter();
-  } catch (error) {
-    console.error("Footer loading error:", error);
-  }
 }
 
 /* =========================================================
