@@ -15,7 +15,7 @@
 .site-header {
   width: 100%;
   background: var(--light-bg);
-  border-bottom: 1px solid var(--primary-color);
+
   position: fixed;
   top: 0;
   left: 0;
@@ -1017,7 +1017,6 @@ html[dir="rtl"] .logo {
     height: 36px;
   }
 }
-
 
 /* =========================================================
    BRAND TAGLINE

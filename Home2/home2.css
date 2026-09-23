@@ -4520,6 +4520,10 @@
   overflow: hidden;
   background: var(--light-bg);
 }
+.home2-faq-item:hover{
+  border:1px solid var(--secondary-color)
+}
+
 
 .home2-faq-item:last-child {
   margin-bottom: 0;
@@ -4574,7 +4578,7 @@
 .home2-faq-question {
   display: block;
   width: 100%;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 /* =====================================================
@@ -4612,6 +4616,7 @@
   height: 18px;
 
   transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
 /* =====================================================

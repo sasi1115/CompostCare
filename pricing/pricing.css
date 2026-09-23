@@ -565,10 +565,10 @@
   margin-top: 30px;
   flex-shrink: 0;
   box-sizing: border-box;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 50px;
-  background: var(--primary-color);
-  color: var(--white);
+  
+  color:var(--text-color);
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -577,8 +577,10 @@
 
 .pricing-plan-button:hover {
   transform: translateY(-4px);
+  background-color: var(--secondary-color);
+  color: var(--white);
 }
-.pricing-plan-button1{
+.pricing-plan-button1 {
   width: 100%;
   min-height: 50px;
   display: flex;
@@ -587,9 +589,9 @@
   margin-top: 30px;
   flex-shrink: 0;
   box-sizing: border-box;
-  
+
   border-radius: 50px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--white);
   text-decoration: none;
   font-size: 14px;
@@ -1425,6 +1427,9 @@ BUSINESS PLAN CONTACT
   overflow: hidden;
   transition: background 0.3s ease;
 }
+.pricing-faq-item:hover {
+  border: 1px solid var(--secondary-color);
+}
 
 /* =========================================================
    SUMMARY
@@ -1457,7 +1462,7 @@ BUSINESS PLAN CONTACT
 .pricing-faq-question {
   flex: 1;
   min-width: 0;
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
@@ -1484,6 +1489,21 @@ BUSINESS PLAN CONTACT
   width: 18px;
   height: 18px;
   pointer-events: none;
+}
+.pricing-faq-icon svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.pricing-faq-item:hover .pricing-faq-icon {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.pricing-faq-item:hover .pricing-faq-icon svg {
+  color: var(--white);
+  stroke: var(--white);
 }
 
 /* =========================================================

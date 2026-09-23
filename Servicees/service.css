@@ -129,7 +129,7 @@ SECONDARY BUTTON
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 50px;
   background-color: var(--light-bg);
   color: var(--text-color);
