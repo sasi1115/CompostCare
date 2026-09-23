@@ -434,26 +434,45 @@ LOGIN CONTAINER
 ========================================================= */
 
 .login-brand {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+}
+
+.login-brand-row {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  margin: 0 auto 0px;
-  text-decoration: none;
-  line-height: 1;
+  margin: 0 auto;
 }
 
-.login-brand img {
-  width: 55px;
-  height: 50px;
+.login-brand-row img {
+  width: 50px;
+  height: 55px;
   display: block;
+  flex-shrink: 0;
   object-fit: contain;
-  margin: 0 -8px 0 0;
+  margin: 0 -8px 0;
 }
 
 .login-brand-text {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.login-brand-name {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   font-weight: 800;
   line-height: 1;
@@ -463,16 +482,55 @@ LOGIN CONTAINER
 .login-brand-primary {
   color: var(--primary-color);
 }
+
 .login-brand-secondary {
   color: var(--secondary-color);
 }
-[dir="rtl"] .login-brand {
+
+.login-brand-tagline {
+  margin-top: 4px;
+  color: var(--text-color);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.72;
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+[dir="rtl"] .login-brand-row {
   flex-direction: row;
 }
 
 [dir="rtl"] .login-brand-text {
   direction: ltr;
   unicode-bidi: isolate;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .login-brand-row img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .login-brand-name {
+    font-size: 18px;
+  }
+
+  .login-brand-tagline {
+    margin-top: 3px;
+    font-size: 7px;
+    letter-spacing: 0.05em;
+  }
 }
 /* =========================================================
 LOGIN INTRO

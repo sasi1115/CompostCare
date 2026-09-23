@@ -45,66 +45,57 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.dashboard-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
+/* =========================================================
+   SIDEBAR BRAND
+========================================================= */
 
+.dashboard-brand {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 0;
   padding: 0;
-
   text-decoration: none;
   color: var(--text-color);
 }
 
-html[dir="rtl"] .dashboard-brand {
-  direction: ltr;
-  flex-direction: row;
-}
-
-html[dir="rtl"] .dashboard-brand-text {
-  direction: ltr;
-  unicode-bidi: isolate;
-  display: inline-flex;
-  flex-direction: row;
-}
-
-html[dir="rtl"] .dashboard-brand-primary,
-html[dir="rtl"] .dashboard-brand-secondary {
-  direction: ltr;
-  unicode-bidi: isolate;
-}
-
-html[dir="rtl"] .dashboard-brand-text {
-  order: 1;
-}
-
-html[dir="rtl"] .dashboard-brand img {
-  order: 2;
-}
-.dashboard-brand img {
-  display: block;
-
-  width: 55px;
-  height: 50px;
-
-  margin: 0 -8px 0 0;
+.dashboard-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
   padding: 0;
+}
 
+.dashboard-brand-row img {
+  width: 50px;
+  height: 55px;
+  display: block;
+  flex-shrink: 0;
   object-fit: contain;
+  margin: 0 -8px 0;
+  padding: 0;
 }
 
 .dashboard-brand-text {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-
+  justify-content: center;
   margin: 0;
   padding: 0;
+}
 
+.dashboard-brand-name {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
+  font-weight: 800;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .dashboard-brand-primary,
@@ -122,23 +113,58 @@ html[dir="rtl"] .dashboard-brand img {
   color: var(--secondary-color);
 }
 
+.dashboard-brand-tagline {
+  margin: 4px 0 0;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.72;
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .dashboard-brand-row {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .dashboard-brand-text {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .dashboard-brand-name {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .dashboard-brand-primary,
+html[dir="rtl"] .dashboard-brand-secondary {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* =========================================================
+   SIDEBAR CLOSE BUTTON
+========================================================= */
+
 .dashboard-sidebar-close {
   display: none;
-
   width: 34px;
   height: 34px;
-
   align-items: center;
   justify-content: center;
-
   padding: 0;
-
   border: 1px solid var(--border-color);
   border-radius: 50%;
-
   background: var(--light-bg);
   color: var(--text-color);
-
   cursor: pointer;
 }
 
@@ -147,6 +173,26 @@ html[dir="rtl"] .dashboard-brand img {
   height: 17px;
 }
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .dashboard-brand-row img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dashboard-brand-name {
+    font-size: 18px;
+  }
+
+  .dashboard-brand-tagline {
+    margin-top: 3px;
+    font-size: 7px;
+    letter-spacing: 0.05em;
+  }
+}
 /* =========================================================
    SIDEBAR NAVIGATION
 ========================================================= */
@@ -2464,7 +2510,6 @@ html.dark-mode .dashboard-section-tag svg {
     width: 100%;
   }
 }
-
 
 /* =========================================================
    RTL DASHBOARD LAYOUT

@@ -455,37 +455,47 @@
 ========================================================= */
 
 .signup-brand {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
-
-  width: fit-content;
-
+  width: 100%;
   margin: 0 auto 7px;
-
+  padding: 0;
   text-decoration: none;
-
-  line-height: 1;
 }
 
-.signup-brand img {
-  width: 55px;
-  height: 50px;
+.signup-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
 
+.signup-brand-row img {
+  width: 50px;
+  height: 55px;
   display: block;
-
+  flex-shrink: 0;
   object-fit: contain;
-
-  margin: 0 -10px 0 0;
+  margin: 0 -8px 0;
 }
 
 .signup-brand-text {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
 
+.signup-brand-name {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   font-size: 20px;
   font-weight: 800;
-
   line-height: 1;
   white-space: nowrap;
 }
@@ -498,13 +508,50 @@
   color: var(--secondary-color);
 }
 
-[dir="rtl"] .signup-brand {
+.signup-brand-tagline {
+  margin-top: 4px;
+  color: var(--text-color);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.72;
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+[dir="rtl"] .signup-brand-row {
   flex-direction: row;
 }
 
 [dir="rtl"] .signup-brand-text {
   direction: ltr;
   unicode-bidi: isolate;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .signup-brand-row img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .signup-brand-name {
+    font-size: 18px;
+  }
+
+  .signup-brand-tagline {
+    margin-top: 3px;
+    font-size: 7px;
+    letter-spacing: 0.05em;
+  }
 }
 /* =========================================================
    SIGN UP INTRO
