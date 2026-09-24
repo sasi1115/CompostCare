@@ -48,16 +48,20 @@
 ========================================================= */
 
 .header-logo {
-  width: 100%;
+  width: auto;
+  flex: 0 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-
 .logo {
   display: inline-flex;
   align-items: center;
+
+  width: max-content;
+  max-width: max-content;
+
   direction: ltr;
   unicode-bidi: isolate;
 
@@ -73,13 +77,21 @@ html[dir="rtl"] .logo {
   height: 50px;
 
   display: block;
-  object-fit: contain;
-  margin: 0 -8px 0 0;
-}
+  flex: 0 0 55px;
 
+  object-fit: contain;
+
+  margin: 0;
+  padding: 0;
+}
 .logo-text {
   display: inline-flex;
   align-items: center;
+
+  width: max-content;
+  max-width: max-content;
+
+  flex: 0 0 auto;
 
   font-size: 22px;
   font-weight: 700;
@@ -95,13 +107,13 @@ html[dir="rtl"] .logo {
 .logo-secondary {
   color: var(--secondary-color);
 }
-
 /* =========================================================
    BOX 2 — MAIN NAVIGATION
 ========================================================= */
 
 .main-navigation {
-  width: 100%;
+  width: auto;
+  flex: 1 1 auto;
 
   display: flex;
   align-items: center;
@@ -1022,28 +1034,42 @@ html[dir="rtl"] .logo {
    BRAND TAGLINE
 ========================================================= */
 .logo-text {
-  flex-wrap: wrap;
-  column-gap: 0;
+  display: inline-block;
+
+  width: max-content;
+  max-width: max-content;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.logo-primary,
+.logo-secondary {
+  display: inline;
+  white-space: nowrap;
 }
 
 .logo-text::after {
   content: "Turn Waste Into Worth";
-  flex: 0 0 100%;
+
+  display: block;
+
   margin-top: 4px;
+
+  width: max-content;
+
   color: var(--text-color);
   font-family: "Outfit", sans-serif;
   font-size: 9px;
   font-weight: 600;
   line-height: 1.1;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   opacity: 0.72;
   white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-  .logo-text::after {
-    font-size: 7px;
-    letter-spacing: 0.05em;
-  }
 }
