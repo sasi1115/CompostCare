@@ -125,7 +125,7 @@
   min-width: 150px;
   min-height: 50px;
   padding: 13px 28px;
-  border-radius: 50px;
+  border-radius: 12px;
   background: var(--primary-color);
   color: var(--white);
   font-size: 15px;
@@ -139,11 +139,7 @@
   transform: translateY(-2px);
 }
 
-.dark-mode .pricing-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-}
+
 /* =========================================================
    NEST HUB
    1024 × 600
@@ -232,7 +228,7 @@
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px)  {
   .pricing-hero-section {
     min-height: 100vh;
   }
@@ -566,7 +562,7 @@
   flex-shrink: 0;
   box-sizing: border-box;
   border: 1px solid var(--secondary-color);
-  border-radius: 50px;
+  border-radius: 12px;
   
   color:var(--text-color);
   text-decoration: none;
@@ -590,7 +586,7 @@
   flex-shrink: 0;
   box-sizing: border-box;
 
-  border-radius: 50px;
+  border-radius: 12px;
   background: var(--primary-color);
   color: var(--white);
   text-decoration: none;
@@ -734,7 +730,7 @@ BUSINESS PLAN CONTACT
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px){
   .pricing-plans-section {
     padding: 65px 0 35px;
   }
@@ -1149,7 +1145,7 @@ BUSINESS PLAN CONTACT
   .pricing-step-number {
     grid-column: 1;
     grid-row: 1;
-    margin: 8px 0 0;
+    margin: 8px 0 10px;
     text-align: center;
   }
 
@@ -1163,6 +1159,7 @@ BUSINESS PLAN CONTACT
   }
 
   .pricing-step-icon svg {
+    
     width: 23px;
     height: 23px;
   }
@@ -1183,11 +1180,8 @@ BUSINESS PLAN CONTACT
   }
 
   .pricing-step-line {
-    display: block;
-    top: 92px;
-    left: 27px;
-    width: 1px;
-    height: calc(100% - 50px);
+    display:none;
+   
   }
 
   .pricing-step-item:last-child {
@@ -1269,7 +1263,7 @@ BUSINESS PLAN CONTACT
   .pricing-step-number {
     grid-column: 1;
     grid-row: 1;
-    margin: 7px 0 0;
+    margin: 7px 0 5px;
     font-size: 11px;
     text-align: center;
   }
@@ -1307,11 +1301,8 @@ BUSINESS PLAN CONTACT
   }
 
   .pricing-step-line {
-    display: block;
-    top: 82px;
-    left: 24px;
-    width: 1px;
-    height: calc(100% - 43px);
+    display: none;
+   
   }
 
   .pricing-step-item:last-child {
@@ -1626,7 +1617,7 @@ BUSINESS PLAN CONTACT
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px)  {
   .pricing-faq-section {
     padding: 65px 0 60px;
   }
@@ -1816,7 +1807,7 @@ BUSINESS PLAN CONTACT
   min-width: 170px;
   padding: 13px 26px;
   border: 2px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 12px;
   background: var(--primary-color);
   color: var(--white);
   text-decoration: none;
@@ -1922,7 +1913,7 @@ BUSINESS PLAN CONTACT
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px)  {
   .pricing-cta-section {
     padding: 60px 0;
   }

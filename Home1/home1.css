@@ -1,1546 +1,304 @@
 /* =========================================================
-   COMPOSTCARE
-   HOME1 HERO
-   PREMIUM NATURAL HERO VISUAL
+   COMPOST CARE HERO
+   ========================================================= */
 
-   STORY:
-   HOME → ORGANIC WASTE → RICH COMPOST → NEW LIFE
-
-   IMPORTANT:
-   - Uses only project root colors
-   - Uses existing global font
-   - No extra color palette
-   - No dashboard / science-project appearance
-   - Natural animation
-   - Responsive:
-       1920 × 1080
-       1024 × 600
-       768 × 1024
-       360 × 740
-========================================================= */
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.home1-hero {
-  position: relative;
-  width: 100%;
-  min-height: 780px;
-  overflow: hidden;
-
-  background: var(--light-bg);
-  color: var(--text-color);
-}
-
-/* =========================================================
-   HERO CONTAINER
-========================================================= */
-
-.home1-hero-container {
-  position: relative;
-  z-index: 2;
-
-  width: 85%;
-  max-width: 1400px;
-  min-height: 780px;
-
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 0.88fr 1.12fr;
-  align-items: center;
-
-  gap: 25px;
-}
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
-.home1-hero-content {
-  position: relative;
-  z-index: 30;
-
-  max-width: 600px;
-
-  padding: 45px 0;
-}
-
-/* =========================================================
-   HERO TAG
-========================================================= */
-
-.home1-hero-tag {
-  width: fit-content;
-
-  display: inline-flex;
-  align-items: center;
-
-  padding: 6px 16px 6px 6px;
-
-  background-color: var(--primary-color);
-  border-radius: 50px;
-
-  color: var(--white);
-
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.1px;
-
-  opacity: 0;
-
-  transform: translateY(18px);
-
-  animation: home1ContentReveal 0.75s ease forwards;
-
-  animation-delay: 0.15s;
-}
-
-.home1-tag-icon {
-  width: 30px;
-  height: 30px;
-
-  flex-shrink: 0;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: var(--primary-color);
-  color: var(--white);
-}
-
-.home1-tag-icon svg {
-  width: 15px;
-  height: 15px;
-
-  stroke-width: 2.2;
-}
-
-/* =========================================================
-   HERO TITLE
-========================================================= */
-
-.home1-hero-title {
-  max-width: 620px;
-
-  margin: 27px 0 20px;
-
-  color: var(--primary-color);
-
-  font-size: clamp(50px, 5vw, 78px);
-  line-height: 1.04;
-
-  font-weight: 600;
-
-  letter-spacing: -3px;
-
-  opacity: 0;
-
-  transform: translateY(25px);
-
-  animation: home1TitleReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-
-  animation-delay: 0.3s;
-}
-
-.home1-hero-title span {
-  display: block;
-
-  color: var(--secondary-color);
-}
-
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
-
-.home1-hero-description {
-  max-width: 535px;
-
-  margin: 0 0 30px;
-
-  color: var(--text-color);
-
-  font-size: 16px;
-  line-height: 1.8;
-
-  font-weight: 500;
-
-  opacity: 0;
-
-  transform: translateY(18px);
-
-  animation: home1ContentReveal 0.8s ease forwards;
-
-  animation-delay: 0.65s;
-}
-
-/* =========================================================
-   HERO ACTIONS
-========================================================= */
-
-.home1-hero-actions {
+.compost-hero {
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
-
-  gap: 13px;
-
-  opacity: 0;
-
-  transform: translateY(16px);
-
-  animation: home1ContentReveal 0.8s ease forwards;
-
-  animation-delay: 0.82s;
+  overflow: hidden;
+  background: var(--light-bg);
 }
 
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
+.compost-hero-container {
+  width: min(1150px, calc(100% - 80px));
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: 60px;
+  padding: 70px 0 35px;
+}
 
-.home1-hero-primary-btn,
-.home1-hero-secondary-btn {
-  min-height: 50px;
+.compost-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 590px;
+}
 
+.compost-hero-title {
+  max-width: 570px;
+  margin-bottom: 22px;
+  color: var(--text-color);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.compost-hero-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.compost-hero-description {
+  max-width: 520px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.7;
+  opacity: 0.78;
+}
+
+.compost-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.compost-hero-btn {
+  min-width: 165px;
+  height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 50px;
-
+  gap: 9px;
+  padding: 0 22px;
+  border-radius: 10px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
   text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
 }
 
-.home1-hero-primary-btn {
-  gap: 8px;
-
-  padding: 0 20px 0 23px;
-
-  background: var(--primary-color);
-  color: var(--white);
-}
-
-.home1-hero-primary-btn svg {
+.compost-hero-btn svg {
   width: 17px;
   height: 17px;
-
-  stroke-width: 2.2;
-
-  transition: transform 0.3s ease;
 }
 
-.home1-hero-primary-btn:hover {
-  transform: translateY(-3px);
+.compost-hero-btn-primary {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
 }
 
-.home1-hero-primary-btn:hover svg {
-  transform: translate(2px, -2px);
-}
-
-.home1-hero-secondary-btn {
-  padding: 0 22px;
-
-  border: 1.5px solid var(--secondary-color);
-
+.compost-hero-btn-secondary {
+  border: 1px solid var(--secondary-color);
   background: transparent;
   color: var(--text-color);
 }
 
-.home1-hero-secondary-btn:hover {
-  background-color: var(--secondary-color);
-
+.compost-hero-btn-secondary:hover {
+  background: var(--secondary-color);
   color: var(--white);
 }
 
-/* =========================================================
-   RIGHT HERO VISUAL
-
-   IMPORTANT:
-   The complete visual is moved slightly upward.
-========================================================= */
-
-.home1-hero-visual {
+.compost-hero-visual {
   position: relative;
-  z-index: 5;
-
   width: 100%;
-  height: 700px;
-
-  overflow: hidden;
-
-  transform: translateY(-42px);
-
-  isolation: isolate;
-}
-
-/* =========================================================
-   SOFT ATMOSPHERE
-========================================================= */
-
-.home1-atmosphere {
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-}
-
-.home1-atmosphere::before {
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-  height: 500px;
-
-  left: 54%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border-radius: 50%;
-
-  background: var(--primary-color);
-
-  opacity: 0.025;
-
-  filter: blur(30px);
-
-  animation: home1AtmosphereBreath 9s ease-in-out infinite;
-}
-
-.home1-atmosphere::after {
-  content: "";
-
-  position: absolute;
-
-  width: 330px;
-  height: 330px;
-
-  left: 67%;
-  top: 48%;
-
-  transform: translate(-50%, -50%);
-
-  border-radius: 50%;
-
-  background: var(--secondary-color);
-
-  opacity: 0.018;
-
-  filter: blur(30px);
-
-  animation: home1AtmosphereBreath 11s ease-in-out infinite reverse;
-}
-
-/* =========================================================
-   ATMOSPHERE DOTS
-========================================================= */
-
-.home1-atmosphere-dot {
-  position: absolute;
-
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: var(--primary-color);
-
-  opacity: 0;
-
-  animation:
-    home1AtmosphereDotReveal 0.8s ease forwards,
-    home1TinyFloat 7s ease-in-out infinite;
-}
-
-.atmosphere-dot-one {
-  left: 28%;
-  top: 20%;
-
-  animation-delay: 1.8s, 3s;
-}
-
-.atmosphere-dot-two {
-  left: 75%;
-  top: 18%;
-
-  width: 4px;
-  height: 4px;
-
-  background: var(--secondary-color);
-
-  animation-delay: 2s, 3.5s;
-}
-
-.atmosphere-dot-three {
-  left: 88%;
-  top: 64%;
-
-  width: 4px;
-  height: 4px;
-
-  animation-delay: 2.2s, 4s;
-}
-
-/* =========================================================
-   HOME / ORIGIN
-========================================================= */
-
-.home1-origin {
-  position: absolute;
-
-  left: 3%;
-  top: 24%;
-
-  width: 145px;
-
-  z-index: 12;
-
-  opacity: 0;
-
-  animation: home1OriginReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-
-  animation-delay: 1.15s;
-}
-
-.home1-origin-label {
-  display: block;
-
-  margin-bottom: 13px;
-
-  color: var(--text-color);
-
-  font-size: 11px;
-  font-weight: 700;
-
-  text-align: center;
-}
-
-/* =========================================================
-   HOME VISUAL
-========================================================= */
-
-.home1-home-visual {
-  position: relative;
-
-  width: 125px;
-  height: 105px;
-
-  margin: 0 auto;
-}
-
-/* =========================================================
-   HOME ROOF
-========================================================= */
-
-.home1-home-roof {
-  position: absolute;
-
-  top: 0;
-  left: 12px;
-
-  width: 0;
-  height: 0;
-
-  border-left: 48px solid transparent;
-  border-right: 48px solid transparent;
-  border-bottom: 45px solid var(--primary-color);
-
-  z-index: 1;
-}
-
-/* Inner triangle cuts out the green border */
-.home1-home-roof::after {
-  content: "";
-
-  position: absolute;
-
-  left: -49px;
-  top: 4px;
-
-  width: 0;
-  height: 0;
-
-  border-left: 49px solid transparent;
-  border-right: 49px solid transparent;
-  border-bottom: 41px solid var(--light-bg);
-}
-
-/* =========================================================
-   HOME BODY
-========================================================= */
-
-.home1-home-body {
-  position: absolute;
-
-  left: 17px;
-  bottom: 5px;
-
-  width: 91px;
-  height: 65px;
-
-  background: var(--light-bg);
-
-  border: 2px solid var(--primary-color);
-
-  border-radius: 4px;
-
-  z-index: 2;
-}
-
-.home1-home-door {
-  position: absolute;
-
-  left: 35px;
-  bottom: 0;
-
-  width: 20px;
-  height: 34px;
-
-  border-radius: 4px 4px 0 0;
-
-  background: var(--secondary-color);
-}
-
-.home1-home-window {
-  position: absolute;
-
-  top: 15px;
-
-  width: 18px;
-  height: 18px;
-
-  background: var(--light-bg);
-
-  border: 2px solid var(--primary-color);
-}
-
-.home-window-one {
-  left: 10px;
-}
-
-.home-window-two {
-  right: 10px;
-}
-
-/* =========================================================
-   STAGE LABEL
-========================================================= */
-
-.home1-stage-label {
-  display: block;
-
-  color: var(--text-color);
-
-  font-size: 11px;
-  font-weight: 700;
-
-  text-align: center;
-}
-
-.waste-stage-label {
-  margin-bottom: 14px;
-}
-
-.compost-stage-label {
-  margin-bottom: 13px;
-
-  color: var(--secondary-color);
-}
-
-.life-stage-label {
-  color: var(--primary-color);
-}
-
-/* =========================================================
-   ORGANIC WASTE ZONE
-========================================================= */
-
-.home1-waste-zone {
-  position: absolute;
-
-  left: 19%;
-  top: 27%;
-
-  width: 185px;
-
-  z-index: 15;
-
-  opacity: 0;
-
-  animation: home1WasteReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-
-  animation-delay: 1.45s;
-}
-
-/* =========================================================
-   WASTE CLUSTER
-========================================================= */
-
-.home1-waste-cluster {
-  position: relative;
-
-  width: 180px;
-  height: 135px;
-
-  margin: 0 auto;
-}
-
-/* =========================================================
-   WASTE OBJECT
-========================================================= */
-
-.home1-waste-object {
-  position: absolute;
-
+  height: min(620px, 76vh);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: var(--light-bg);
-
-  border: 1.5px solid var(--border-color);
-
-  box-shadow: 0 15px 30px var(--border-color);
-
-  opacity: 0;
-
-  animation:
-    home1WasteObjectReveal 0.7s ease forwards,
-    home1WasteObjectFloat 5.5s ease-in-out infinite;
 }
 
-/* =========================================================
-   WASTE LEAF
-========================================================= */
-
-.waste-object-leaf {
-  left: 8px;
-  top: 22px;
-
-  width: 58px;
-  height: 72px;
-
-  border-radius: 65% 35% 65% 35%;
-
-  color: var(--primary-color);
-
-  transform: rotate(-25deg);
-
-  animation-delay: 1.7s, 3.6s;
+.compost-hero-image-wrap {
+  position: relative;
+  width: min(510px, 82%);
+  height: min(480px, 67vh);
 }
 
-.waste-object-leaf svg {
-  width: 29px;
-  height: 29px;
-
-  stroke-width: 1.7;
-
-  transform: rotate(25deg);
+.compost-hero-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 8px solid var(--white);
+  border-radius: 34px;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  animation: compostHeroImageReveal 1s ease both;
 }
 
-/* =========================================================
-   FOOD SCRAP
-========================================================= */
-
-.waste-object-food {
-  right: 8px;
-  top: 3px;
-
-  width: 72px;
-  height: 60px;
-
-  border-radius: 52% 48% 58% 42%;
-
-  animation-delay: 1.9s, 3.9s;
-}
-
-.food-shape {
+.compost-hero-image::after {
+  content: "";
   position: absolute;
-
-  display: block;
-
-  border-radius: 50%;
-
-  background: var(--secondary-color);
-}
-
-.food-shape-main {
-  left: 17px;
-  top: 15px;
-
-  width: 34px;
-  height: 28px;
-
-  transform: rotate(-12deg);
-}
-
-.food-shape-small {
-  left: 43px;
-  top: 9px;
-
-  width: 14px;
-  height: 12px;
-
-  opacity: 0.75;
-}
-
-/* =========================================================
-   VEGETABLE SCRAP
-========================================================= */
-
-.waste-object-vegetable {
-  left: 58px;
-  bottom: 2px;
-
-  width: 70px;
-  height: 55px;
-
-  border-radius: 55% 45% 60% 40%;
-
-  animation-delay: 2.1s, 4.2s;
-}
-
-.vegetable-piece {
-  position: absolute;
-
-  display: block;
-
-  background: var(--primary-color);
-
-  border-radius: 60% 40% 55% 45%;
-}
-
-.vegetable-piece-one {
-  left: 12px;
-  top: 18px;
-
-  width: 30px;
-  height: 18px;
-
-  transform: rotate(-12deg);
-}
-
-.vegetable-piece-two {
-  left: 33px;
-  top: 14px;
-
-  width: 24px;
-  height: 16px;
-
-  transform: rotate(18deg);
-}
-
-.vegetable-piece-three {
-  left: 43px;
-  top: 30px;
-
-  width: 14px;
-  height: 10px;
-
-  opacity: 0.75;
-}
-
-/* =========================================================
-   SMALL ORGANIC PIECES
-========================================================= */
-
-.organic-piece {
-  position: absolute;
-
-  display: block;
-
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: var(--secondary-color);
-
-  opacity: 0;
-
-  animation:
-    home1OrganicReveal 0.5s ease forwards,
-    home1OrganicFloat 4.5s ease-in-out infinite;
-}
-
-.organic-piece-one {
-  left: 25px;
-  top: 6px;
-
-  animation-delay: 2.2s, 3.7s;
-}
-
-.organic-piece-two {
-  right: 1px;
-  top: 72px;
-
-  width: 5px;
-  height: 5px;
-
-  animation-delay: 2.4s, 4.1s;
-}
-
-.organic-piece-three {
-  left: 94px;
-  bottom: -3px;
-
-  width: 6px;
-  height: 6px;
-
-  animation-delay: 2.6s, 4.5s;
-}
-
-/* =========================================================
-   TRANSFORMATION
-   VERY SUBTLE
-========================================================= */
-
-.home1-transformation {
-  position: absolute;
-
   inset: 0;
-
-  z-index: 8;
-
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    color-mix(in srgb, var(--text-color) 12%, transparent)
+  );
   pointer-events: none;
 }
 
-.home1-transformation-path {
+.compost-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  animation: compostHeroImageZoom 1.4s ease both;
+}
+
+.compost-hero-decoration {
   position: absolute;
-
-  left: 17%;
-  top: 23%;
-
-  width: 500px;
-  height: 330px;
-
-  overflow: visible;
-}
-
-/* =========================================================
-   PATH BASE
-========================================================= */
-
-.home1-transformation-path-base {
-  fill: none;
-
-  stroke: var(--border-color);
-
-  stroke-width: 1.1;
-
-  stroke-linecap: round;
-
-  opacity: 0;
-
-  animation: home1PathReveal 1.2s ease forwards;
-
-  animation-delay: 2.1s;
-}
-
-/* =========================================================
-   PATH FLOW
-
-   Not an arrow.
-   Just a subtle natural movement.
-========================================================= */
-
-.home1-transformation-path-flow {
-  fill: none;
-
-  stroke: var(--secondary-color);
-
-  stroke-width: 1.3;
-
-  stroke-linecap: round;
-
-  stroke-dasharray: 2 18;
-
-  opacity: 0;
-
-  animation:
-    home1PathReveal 1s ease forwards,
-    home1PathFlow 6s linear infinite;
-
-  animation-delay: 2.2s, 3.2s;
-}
-
-/* =========================================================
-   FLOW PARTICLES
-========================================================= */
-
-.home1-flow-particle {
-  position: absolute;
-
-  width: 6px;
-  height: 6px;
-
-  border-radius: 50%;
-
-  background: var(--secondary-color);
-
-  opacity: 0;
-
-  animation:
-    home1FlowReveal 0.5s ease forwards,
-    home1FlowParticle 7s ease-in-out infinite;
-}
-
-.flow-particle-one {
-  left: 29%;
-  top: 30%;
-
-  animation-delay: 2.5s, 3.2s;
-}
-
-.flow-particle-two {
-  left: 47%;
-  top: 32%;
-
-  width: 5px;
-  height: 5px;
-
-  animation-delay: 2.8s, 3.7s;
-}
-
-/* =========================================================
-   RICH COMPOST
-========================================================= */
-
-.home1-compost-zone {
-  position: absolute;
-
-  left: 43%;
-  bottom: 13%;
-
-  width: 170px;
-
-  z-index: 16;
-
-  text-align: center;
-
-  opacity: 0;
-
-  transform: translateY(22px);
-
-  animation: home1CompostReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-
-  animation-delay: 3s;
-}
-
-.home1-compost {
-  position: relative;
-
-  width: 145px;
-  height: 155px;
-
-  margin: 0 auto;
-}
-
-/* =========================================================
-   COMPOST BIN
-========================================================= */
-
-.home1-compost-bin {
-  position: absolute;
-
-  left: 50%;
-  bottom: 0;
-
-  width: 112px;
-  height: 125px;
-
-  transform: translateX(-50%);
-}
-
-/* =========================================================
-   COMPOST RIM
-========================================================= */
-
-.compost-bin-rim {
-  position: absolute;
-
-  left: 50%;
-  top: 0;
-
-  width: 112px;
-  height: 28px;
-
-  transform: translateX(-50%);
-
-  border: 2px solid var(--secondary-color);
-
-  border-radius: 50%;
-
+  top: 8px;
+  right: -20px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px 12px 12px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 12%, transparent);
+  border-radius: 18px;
   background: var(--light-bg);
+  box-shadow: var(--shadow-md);
+  animation: compostHeroBadgeReveal 0.8s 0.45s ease both;
+}
 
+.compost-hero-decoration-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--primary-color) 10%, transparent);
+  color: var(--primary-color);
+}
+
+.compost-hero-decoration-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.compost-hero-decoration span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.compost-hero-decoration strong {
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.04em;
+}
+
+.compost-hero-decoration small {
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+}
+
+.compost-hero-floating-badge {
+  position: absolute;
+  left: -52px;
+  bottom: 35px;
   z-index: 4;
-}
-
-/* =========================================================
-   COMPOST BODY
-========================================================= */
-
-.compost-bin-body {
-  position: absolute;
-
-  left: 6px;
-  top: 12px;
-
-  width: 100px;
-  height: 110px;
-
-  overflow: hidden;
-
-  border: 2px solid var(--secondary-color);
-  border-top: 0;
-
-  border-radius: 0 0 38px 38px;
-
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 17px 12px 12px;
+  border-radius: 17px;
   background: var(--light-bg);
-}
-
-/* =========================================================
-   COMPOST SOIL
-========================================================= */
-
-.compost-soil {
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: 62%;
-
-  background: var(--secondary-color);
-
-  border-radius: 50% 50% 0 0;
-
-  transform: translateY(100%);
-
-  animation: home1SoilRise 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-
-  animation-delay: 3.6s;
-}
-
-.soil-piece {
-  position: absolute;
-
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: var(--light-bg);
-
-  opacity: 0.35;
-}
-
-.soil-piece-one {
-  left: 18%;
-  top: 28%;
-}
-
-.soil-piece-two {
-  left: 38%;
-  top: 42%;
-}
-
-.soil-piece-three {
-  left: 61%;
-  top: 25%;
-}
-
-.soil-piece-four {
-  left: 74%;
-  top: 52%;
-}
-
-.soil-piece-five {
-  left: 47%;
-  top: 68%;
-}
-
-/* =========================================================
-   COMPOST PARTICLES
-========================================================= */
-
-.compost-particle {
-  position: absolute;
-
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: var(--secondary-color);
-
-  opacity: 0;
-
+  box-shadow: var(--shadow-md);
   animation:
-    home1CompostParticleReveal 0.5s ease forwards,
-    home1CompostParticleFloat 4s ease-in-out infinite;
+    compostHeroBadgeReveal 0.8s 0.75s ease both,
+    compostHeroFloat 4s 1.8s ease-in-out infinite;
 }
 
-.compost-particle-one {
-  left: -17px;
-  top: 52px;
-
-  animation-delay: 3.7s, 4.5s;
-}
-
-.compost-particle-two {
-  right: -13px;
-  top: 72px;
-
-  animation-delay: 3.9s, 4.9s;
-}
-
-/* =========================================================
-   COMPOST ATMOSPHERE
-========================================================= */
-
-.compost-atmosphere {
-  position: absolute;
-
-  width: 5px;
-  height: 5px;
-
+.compost-hero-badge-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   border-radius: 50%;
-
-  background: var(--secondary-color);
-
-  opacity: 0;
-
-  animation:
-    home1AtmosphereDotReveal 0.6s ease forwards,
-    home1TinyFloat 5s ease-in-out infinite;
-}
-
-.compost-atmosphere-one {
-  left: 5px;
-  top: 55px;
-
-  animation-delay: 3.9s, 4.7s;
-}
-
-.compost-atmosphere-two {
-  right: 5px;
-  top: 38px;
-
-  width: 4px;
-  height: 4px;
-
-  animation-delay: 4.1s, 5.1s;
-}
-
-/* =========================================================
-   NEW LIFE ZONE
-========================================================= */
-
-.home1-life-zone {
-  position: absolute;
-
-  right: 2%;
-  bottom: 6%;
-
-  width: 205px;
-  height: 255px;
-
-  z-index: 18;
-
-  opacity: 0;
-
-  animation: home1LifeReveal 1s ease forwards;
-
-  animation-delay: 3.7s;
-}
-
-/* =========================================================
-   SOIL
-========================================================= */
-
-.home1-soil {
-  position: absolute;
-
-  left: 50%;
-  bottom: 10px;
-
-  width: 185px;
-  height: 70px;
-
-  transform: translateX(-50%);
-}
-
-.soil-surface {
-  position: absolute;
-
-  left: 50%;
-  top: 12px;
-
-  width: 174px;
-  height: 38px;
-
-  transform: translateX(-50%);
-
-  border-top: 3px solid var(--secondary-color);
-
-  border-radius: 50%;
-}
-
-.soil-grain {
-  position: absolute;
-
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: var(--secondary-color);
-
-  opacity: 0.55;
-}
-
-.soil-grain-one {
-  left: 20px;
-  top: 31px;
-}
-
-.soil-grain-two {
-  left: 54px;
-  top: 45px;
-}
-
-.soil-grain-three {
-  right: 42px;
-  top: 33px;
-}
-
-.soil-grain-four {
-  right: 20px;
-  top: 45px;
-}
-
-.soil-grain-five {
-  left: 92px;
-  top: 53px;
-}
-
-/* =========================================================
-   GROWING PLANT
-
-   The whole plant is one natural composition.
-========================================================= */
-
-.home1-growing-plant {
-  position: absolute;
-
-  left: 50%;
-  bottom: 43px;
-
-  width: 120px;
-  height: 190px;
-
-  transform: translateX(-50%) rotate(0deg);
-
-  transform-origin: bottom center;
-
-  animation: home1PlantSway 6s ease-in-out infinite;
-
-  animation-delay: 5.4s;
-}
-
-/* =========================================================
-   ROOT SYSTEM
-========================================================= */
-
-.home1-roots {
-  position: absolute;
-
-  left: 50%;
-  bottom: -9px;
-
-  width: 100px;
-  height: 65px;
-
-  transform: translateX(-50%);
-}
-
-.root {
-  position: absolute;
-
-  bottom: 0;
-
-  width: 2px;
-
-  border-radius: 50px;
-
-  background: var(--secondary-color);
-
-  transform-origin: top;
-
-  transform: scaleY(0);
-
-  animation: home1RootGrow 1s ease forwards;
-}
-
-.root-one {
-  left: 49px;
-  height: 58px;
-
-  transform: rotate(9deg) scaleY(0);
-
-  animation-delay: 4.45s;
-}
-
-.root-two {
-  left: 49px;
-  height: 47px;
-
-  transform: rotate(-25deg) scaleY(0);
-
-  animation-delay: 4.62s;
-}
-
-.root-three {
-  left: 49px;
-  height: 40px;
-
-  transform: rotate(29deg) scaleY(0);
-
-  animation-delay: 4.79s;
-}
-
-.root-four {
-  left: 48px;
-  height: 31px;
-
-  transform: rotate(-42deg) scaleY(0);
-
-  animation-delay: 4.96s;
-}
-
-/* =========================================================
-   MAIN STEM
-========================================================= */
-
-.home1-plant-stem {
-  position: absolute;
-
-  left: 50%;
-  bottom: 13px;
-
-  width: 5px;
-  height: 140px;
-
-  transform: translateX(-50%) scaleY(0);
-
-  transform-origin: bottom center;
-
-  border-radius: 50px;
-
   background: var(--primary-color);
-
-  animation: home1StemGrow 1.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-
-  animation-delay: 4.1s;
+  color: var(--white);
 }
 
-/* =========================================================
-   PLANT LEAVES
-========================================================= */
+.compost-hero-badge-icon svg {
+  width: 19px;
+  height: 19px;
+}
 
-.home1-plant-leaf {
+.compost-hero-badge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.compost-hero-badge-content strong {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+}
+
+.compost-hero-badge-content small {
+  color: var(--text-color);
+  font-size: 11px;
+  font-weight: var(--fw-regular);
+  opacity: 0.65;
+}
+
+.compost-hero-process {
   position: absolute;
-
+  right: -35px;
+  bottom: 35px;
+  z-index: 3;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  color: var(--primary-color);
-
-  opacity: 0;
+  gap: 9px;
+  padding: 10px 13px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 10%, transparent);
+  border-radius: 16px;
+  background: var(--light-bg);
+  box-shadow: var(--shadow-md);
+  animation: compostHeroBadgeReveal 0.8s 0.95s ease both;
 }
 
-.home1-plant-leaf svg {
-  width: 43px;
-  height: 43px;
-
-  fill: var(--primary-color);
-
-  stroke: var(--primary-color);
-
-  stroke-width: 1.2;
-}
-
-/* =========================================================
-   LEFT LEAF
-========================================================= */
-
-/* =========================================================
-   LEFT LEAF
-========================================================= */
-
-.plant-leaf-left {
-  left: 30px;
-  bottom: 65px;
-
-  transform-origin: bottom right;
-
-  transform: rotate(-90deg) scale(0.25);
-
-  animation: home1LeafLeftGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 4.7s;
-}
-
-/* =========================================================
-   RIGHT LEAF
-========================================================= */
-
-.plant-leaf-right {
-  right: 21px;
-  bottom: 83px;
-  transform-origin: bottom left;
-  transform: rotate(38deg) scale(0.25);
-  animation: home1LeafRightGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 4.95s;
-}
-/* =========================================================
-   TOP LEAF
-========================================================= */
-
-.plant-leaf-top {
-  left: 50%;
-  bottom: 128px;
-  transform-origin: bottom center;
-  transform: translateX(-50%) scale(0.25);
-  animation: home1LeafTopGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 5.2s;
-}
-
-/* =========================================================
-   FLOATING LEAVES
-   ONLY TWO — DECORATION, NOT INFORMATION
-========================================================= */
-
-.home1-floating-leaf {
-  position: absolute;
-
+.compost-hero-process-item {
   display: flex;
   align-items: center;
+  gap: 5px;
+  color: var(--text-color);
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+}
+
+.compost-hero-process-icon {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary-color) 9%, transparent);
   color: var(--primary-color);
-
-  opacity: 0;
-
-  pointer-events: none;
-
-  animation:
-    home1FloatingLeafReveal 0.8s ease forwards,
-    home1FloatingLeaf 8s ease-in-out infinite;
 }
 
-.home1-floating-leaf svg {
-  width: 23px;
-  height: 23px;
-
-  fill: var(--primary-color);
-
-  stroke: var(--primary-color);
-
-  stroke-width: 1.3;
+.compost-hero-process-icon svg {
+  width: 13px;
+  height: 13px;
 }
 
-.floating-leaf-one {
-  left: 61%;
-  top: 15%;
-
-  animation-delay: 3s, 4.3s;
+.compost-hero-process-line {
+  width: 15px;
+  height: 1px;
+  background: var(--border-color);
 }
 
-.floating-leaf-two {
-  right: 10%;
-  top: 34%;
-
-  animation-delay: 3.3s, 4.8s;
-}
-
-/* =========================================================
-   KEYFRAMES
-========================================================= */
-
-/* =========================================================
-   CONTENT
-========================================================= */
-
-@keyframes home1ContentReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes home1TitleReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================================================
-   ATMOSPHERE
-========================================================= */
-
-@keyframes home1AtmosphereBreath {
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scale(0.96);
-  }
-
-  50% {
-    transform: translate(-50%, -50%) scale(1.04);
-  }
-}
-
-@keyframes home1AtmosphereDotReveal {
-  to {
-    opacity: 0.42;
-  }
-}
-
-@keyframes home1TinyFloat {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(5px, -10px);
-  }
-}
-
-/* =========================================================
-   HOME
-========================================================= */
-
-@keyframes home1OriginReveal {
+@keyframes compostHeroImageReveal {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(25px);
   }
 
   to {
@@ -1549,718 +307,316 @@
   }
 }
 
-/* =========================================================
-   WASTE
-========================================================= */
-
-@keyframes home1WasteReveal {
+@keyframes compostHeroImageZoom {
   from {
-    opacity: 0;
-    transform: translateY(18px);
+    transform: scale(1.07);
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes home1WasteObjectReveal {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 1;
     transform: scale(1);
   }
 }
 
-@keyframes home1WasteObjectFloat {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-6px) rotate(2deg);
-  }
-}
-
-@keyframes home1OrganicReveal {
-  to {
-    opacity: 0.65;
-  }
-}
-
-@keyframes home1OrganicFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-/* =========================================================
-   TRANSFORMATION
-========================================================= */
-
-@keyframes home1PathReveal {
-  to {
-    opacity: 0.3;
-  }
-}
-
-@keyframes home1PathFlow {
-  to {
-    stroke-dashoffset: -40;
-  }
-}
-
-@keyframes home1FlowReveal {
-  to {
-    opacity: 0.65;
-  }
-}
-
-@keyframes home1FlowParticle {
-  0% {
-    transform: translate(0, 0) scale(0.7);
-  }
-
-  25% {
-    transform: translate(55px, -28px) scale(1);
-  }
-
-  50% {
-    transform: translate(125px, 4px) scale(0.8);
-  }
-
-  75% {
-    transform: translate(195px, 65px) scale(0.9);
-  }
-
-  100% {
-    transform: translate(265px, 115px) scale(0.5);
-    opacity: 0.1;
-  }
-}
-
-/* =========================================================
-   COMPOST
-========================================================= */
-
-@keyframes home1CompostReveal {
+@keyframes compostHeroBadgeReveal {
   from {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(15px) scale(0.94);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-@keyframes home1SoilRise {
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes home1CompostParticleReveal {
-  to {
-    opacity: 0.45;
-  }
-}
-
-@keyframes home1CompostParticleFloat {
+@keyframes compostHeroFloat {
   0%,
   100% {
     transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-9px);
+    transform: translateY(-6px);
   }
 }
 
-/* =========================================================
-   PLANT
-========================================================= */
-
-@keyframes home1LifeReveal {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes home1RootGrow {
-  to {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes home1StemGrow {
-  to {
-    transform: translateX(-50%) scaleY(1);
-  }
-}
-
-@keyframes home1LeafLeftGrow {
-  to {
-    opacity: 1;
-
-    transform: rotate(-90deg) scale(1);
-  }
-}
-
-@keyframes home1LeafRightGrow {
-  to {
-    opacity: 1;
-
-    transform: rotate(38deg) scale(1);
-  }
-}
-
-@keyframes home1LeafTopGrow {
-  to {
-    opacity: 1;
-
-    transform: translateX(-50%) scale(1);
-  }
-}
-
-@keyframes home1PlantSway {
-  0%,
-  100% {
-    transform: translateX(-50%) rotate(0deg);
-  }
-
-  50% {
-    transform: translateX(-50%) rotate(1.8deg);
-  }
-}
-
-/* =========================================================
-   FLOATING LEAVES
-========================================================= */
-
-@keyframes home1FloatingLeafReveal {
-  to {
-    opacity: 0.42;
-  }
-}
-
-@keyframes home1FloatingLeaf {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(-15deg);
-  }
-
-  50% {
-    transform: translate(8px, -12px) rotate(8deg);
-  }
-}
-
-
-/* =========================================================
-   NEST HUB
-   1024 × 600
-========================================================= */
-
-@media (max-width: 1024px) and (max-height: 600px) {
-  .home1-hero {
-    min-height: 600px;
-  }
-
-  .home1-hero-container {
-    width: 90%;
-
-    min-height: 600px;
-
+@media screen and (width: 1024px) and (height: 600px) {
+  .compost-hero-container {
+    width: min(920px, calc(100% - 56px));
     grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 10px;
+    gap: 35px;
+    padding: 58px 0 25px;
   }
 
-  .home1-hero-content {
-    padding: 30px 0;
+  .compost-hero-title {
+    font-size: 40px;
+    margin-bottom: 16px;
   }
 
-  .home1-hero-tag {
-    font-size: 11px;
-  }
-
-  .home1-tag-icon {
-    width: 27px;
-    height: 27px;
-  }
-
-  .home1-hero-title {
-    margin: 20px 0 15px;
-
-    font-size: 48px;
-
-    letter-spacing: -1.8px;
-  }
-
-  .home1-hero-description {
-    max-width: 400px;
-
+  .compost-hero-description {
+    max-width: 440px;
     margin-bottom: 22px;
-
-    font-size: 13px;
-
-    line-height: 1.65;
-  }
-
-  .home1-hero-primary-btn,
-  .home1-hero-secondary-btn {
-    min-height: 45px;
-
-    font-size: 12px;
-  }
-
-  .home1-hero-visual {
-    height: 525px;
-
-    transform: translateY(-28px);
-  }
-
-  .home1-atmosphere::before {
-    width: 370px;
-    height: 370px;
-  }
-
-  .home1-atmosphere::after {
-    width: 250px;
-    height: 250px;
-  }
-
-  .home1-origin {
-    left: 0;
-    top: 22%;
-
-    transform: scale(0.78);
-
-    transform-origin: left center;
-  }
-
-  .home1-waste-zone {
-    left: 14%;
-    top: 25%;
-
-    transform: scale(0.78);
-
-    transform-origin: left center;
-  }
-
-  .home1-transformation-path {
-    left: 7%;
-    top: 21%;
-
-    width: 410px;
-    height: 280px;
-  }
-
-  .home1-compost-zone {
-    left: 40%;
-    bottom: 11%;
-
-    transform: scale(0.78);
-
-    transform-origin: center bottom;
-  }
-
-  .home1-life-zone {
-    right: -1%;
-    bottom: 4%;
-
-    transform: scale(0.76);
-
-    transform-origin: center bottom;
-  }
-
-  .home1-floating-leaf-two {
-    right: 3%;
-  }
-}
-
-/* =========================================================
-   IPAD MINI
-   768 × 1024
-========================================================= */
-
-@media (max-width: 768px) and (max-height: 1024px) {
-  .home1-hero {
-    min-height: auto;
-
-    padding: 65px 0 80px;
-  }
-
-  .home1-hero-container {
-    width: 88%;
-
-    min-height: auto;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 20px;
-  }
-
-  .home1-hero-content {
-    width: 100%;
-    max-width: 650px;
-
-    padding: 10px 0 0;
-
-    text-align: center;
-  }
-
-  .home1-hero-tag {
-    margin: 0 auto;
-  }
-
-  .home1-hero-title {
-    margin: 23px auto 18px;
-
-    font-size: clamp(46px, 7vw, 60px);
-
-    line-height: 1.05;
-  }
-
-  .home1-hero-description {
-    margin: 0 auto 27px;
-
-    max-width: 560px;
-
     font-size: 15px;
+    line-height: 1.55;
   }
 
-  .home1-hero-actions {
-    justify-content: center;
-  }
-  .home1-hero-visual {
-    width: 100%;
-    max-width: 650px;
-
-    height: 520px;
-
-    margin: 0 auto;
-
-    transform: translateY(-20px);
+  .compost-hero-btn {
+    min-width: 145px;
+    height: 46px;
   }
 
-  .home1-atmosphere::before {
-    width: 390px;
+  .compost-hero-visual {
+    height: 490px;
+  }
+
+  .compost-hero-image-wrap {
+    width: min(440px, 92%);
     height: 390px;
   }
 
-  .home1-atmosphere::after {
-    width: 260px;
-    height: 260px;
+  .compost-hero-decoration {
+    top: 0;
+    right: -12px;
+    padding: 9px 14px 9px 9px;
   }
 
-  .home1-origin {
-    left: 2%;
-    top: 21%;
-
-    transform: scale(0.82);
-
-    transform-origin: left center;
+  .compost-hero-decoration-icon {
+    width: 36px;
+    height: 36px;
   }
 
-  .home1-waste-zone {
-    left: 13%;
-    top: 24%;
-
-    transform: scale(0.84);
-
-    transform-origin: left center;
+  .compost-hero-decoration-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
-  .home1-transformation-path {
-    left: 9%;
-    top: 20%;
-
-    width: 440px;
-    height: 285px;
+  .compost-hero-floating-badge {
+    left: -28px;
+    bottom: 20px;
+    padding: 9px 13px 9px 9px;
   }
 
-  .home1-compost-zone {
-    left: 39%;
-    bottom: 12%;
-
-    transform: scale(0.84);
-
-    transform-origin: center bottom;
+  .compost-hero-badge-icon {
+    width: 36px;
+    height: 36px;
   }
 
-  .home1-life-zone {
-    right: 0;
-    bottom: 5%;
-
-    transform: scale(0.82);
-
-    transform-origin: center bottom;
-  }
-
-  .home1-floating-leaf-two {
-    right: 3%;
+  .compost-hero-process {
+    right: -18px;
+    bottom: 20px;
+    padding: 8px 10px;
   }
 }
 
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-========================================================= */
-
-@media (max-width: 360px)and (max-height:740px) {
-  .home1-hero {
-    min-height: auto;
-
-    padding: 60px 0 60px;
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .compost-hero {
+    height: auto;
+    min-height: 100vh;
   }
 
-  .home1-hero-container {
-    width: 90%;
-
-    min-height: auto;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 8px;
+  .compost-hero-container {
+    width: min(680px, calc(100% - 48px));
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 105px 0 55px;
   }
 
-  .home1-hero-content {
-    width: 100%;
-
-    padding: 10px 0 0;
-
+  .compost-hero-content {
+    max-width: 100%;
     text-align: center;
   }
 
-  .home1-hero-tag {
-    margin: 0 auto;
-
-    padding: 5px 12px 5px 5px;
-
-    font-size: 10px;
-  }
-  .home1-plant-stem {
-    
-    left:50px;
+  .compost-hero-title {
+    max-width: 620px;
+    margin: 0 auto 20px;
+    font-size: 44px;
   }
 
-  .home1-tag-icon {
-    width: 25px;
-    height: 25px;
+  .compost-hero-description {
+    max-width: 570px;
+    margin: 0 auto 26px;
   }
 
-  .home1-tag-icon svg {
-    width: 13px;
-    height: 13px;
-  }
-
-  .home1-hero-title {
-    margin: 19px auto 16px;
-
-    font-size: clamp(35px, 10.5vw, 43px);
-
-    line-height: 1.06;
-
-    letter-spacing: -1.5px;
-  }
-
-  .home1-hero-description {
-    max-width: 330px;
-
-    margin: 0 auto 23px;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-  }
-
-  .home1-hero-actions {
-    width: 100%;
-
-    flex-direction: column;
-
-    gap: 9px;
-  }
-
-  .home1-hero-primary-btn,
-  .home1-hero-secondary-btn {
-    width: 100%;
-
-    min-height: 47px;
-
-    font-size: 12px;
-  }
-
-  .home1-hero-note {
+  .compost-hero-actions {
     justify-content: center;
-
-    margin-top: 19px;
-
-    font-size: 10px;
   }
 
-  /* =====================================================
-     MOBILE VISUAL
-  ====================================================== */
-
-  .home1-hero-visual {
-    width: 100%;
-
-    height: 400px;
-
-    margin-top: 5px;
-
-    transform: translateY(-12px);
+  .compost-hero-visual {
+    height: 500px;
   }
 
-  .home1-atmosphere::before {
-    width: 280px;
-    height: 280px;
+  .compost-hero-image-wrap {
+    width: min(500px, 78%);
+    height: 450px;
   }
 
-  .home1-atmosphere::after {
-    width: 190px;
-    height: 190px;
+  .compost-hero-decoration {
+    right: -8px;
   }
 
-  /* =====================================================
-     HOME
-  ====================================================== */
-
-  .home1-origin {
-    left: -7%;
-    top: 22%;
-
-    transform: scale(0.59);
-
-    transform-origin: left center;
+  .compost-hero-floating-badge {
+    left: -20px;
   }
 
-  .home1-origin-label {
-    font-size: 10px;
-  }
-
-  /* =====================================================
-     WASTE
-  ====================================================== */
-
-  .home1-waste-zone {
-    left: 7%;
-    top: 25%;
-
-    transform: scale(0.61);
-
-    transform-origin: left center;
-  }
-
-  .home1-stage-label {
-    font-size: 9px;
-  }
-
-  /* =====================================================
-     TRANSFORMATION
-  ====================================================== */
-
-  .home1-transformation-path {
-    left: 3%;
-    top: 19%;
-
-    width: 300px;
-    height: 220px;
-  }
-
-  .home1-flow-particle {
-    width: 5px;
-    height: 5px;
-  }
-
-  /* =====================================================
-     COMPOST
-  ====================================================== */
-
-  .home1-compost-zone {
-    left: 34%;
-    bottom: 11%;
-
-    transform: scale(0.64);
-
-    transform-origin: center bottom;
-  }
-
-  /* =====================================================
-     NEW LIFE
-  ====================================================== */
-
-  .home1-life-zone {
-    right: -5%;
-    bottom: 4%;
-
-    transform: scale(0.61);
-
-    transform-origin: center bottom;
-  }
-
-  /* =====================================================
-     FLOATING LEAVES
-  ====================================================== */
-
-  .floating-leaf-two {
-    right: 2%;
-    top: 36%;
-  }
-
-  .home1-atmosphere-dot {
-    width: 4px;
-    height: 4px;
+  .compost-hero-process {
+    right: -10px;
   }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
+@media screen and (max-width: 480px) {
+  .compost-hero {
+    height: auto;
+    min-height: 100vh;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .home1-hero *,
-  .home1-hero *::before,
-  .home1-hero *::after {
-    animation-duration: 0.01ms !important;
+  .compost-hero-container {
+    width: calc(100% - 32px);
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 92px 0 42px;
+  }
 
-    animation-iteration-count: 1 !important;
+  .compost-hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
 
-    transition-duration: 0.01ms !important;
+  .compost-hero-title {
+    max-width: 100%;
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 1.08;
+  }
 
-    scroll-behavior: auto !important;
+  .compost-hero-description {
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  }
+
+  .compost-hero-actions {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .compost-hero-btn {
+    min-width: 0;
+    height: 46px;
+    padding: 0 16px;
+    gap: 7px;
+    font-size: var(--fs-small);
+  }
+
+  .compost-hero-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .compost-hero-visual {
+    height: 390px;
+  }
+
+  .compost-hero-image-wrap {
+    width: 86%;
+    height: 330px;
+  }
+
+  .compost-hero-image {
+    border-width: 6px;
+    border-radius: 25px;
+  }
+
+  .compost-hero-decoration {
+    top: -12px;
+    right: -10px;
+    gap: 7px;
+    padding: 8px 11px 8px 8px;
+    border-radius: 13px;
+  }
+
+  .compost-hero-decoration-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+
+  .compost-hero-decoration-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .compost-hero-decoration strong {
+    font-size: 10px;
+  }
+
+  .compost-hero-decoration small {
+    font-size: 9px;
+  }
+
+  .compost-hero-floating-badge {
+    left: -12px;
+    bottom: 10px;
+    gap: 8px;
+    padding: 8px 11px 8px 8px;
+    border-radius: 13px;
+  }
+
+  .compost-hero-badge-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .compost-hero-badge-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .compost-hero-badge-content strong {
+    font-size: 11px;
+  }
+
+  .compost-hero-badge-content small {
+    font-size: 9px;
+  }
+
+  .compost-hero-process {
+    right: -5px;
+    bottom: 10px;
+    gap: 5px;
+    padding: 7px 8px;
+    border-radius: 12px;
+  }
+
+  .compost-hero-process-item {
+    gap: 3px;
+    font-size: 8px;
+  }
+
+  .compost-hero-process-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .compost-hero-process-icon svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .compost-hero-process-line {
+    width: 8px;
   }
 }
 
 /* =========================================================
    HOME 1 - IMPACT SECTION
-========================================================= */
+   ========================================================= */
 
 .home1-impact {
   width: 100%;
-  padding: 90px 0;
+  padding: 105px 0;
   background: var(--light-bg);
 }
 
@@ -2270,87 +626,40 @@
   margin: 0 auto;
 }
 
-/* =========================================================
-   IMPACT SECTION HEADER
-========================================================= */
-
 .home1-impact-header {
-  max-width: 700px;
-  margin: 0 auto 55px;
+  max-width: 720px;
+  margin: 0 auto 65px;
   text-align: center;
 }
 
-/* =========================================================
-   IMPACT TAG
-========================================================= */
-
-.home1-impact-tag {
+.home1-impact-header .tagline {
+  margin-left: auto;
+  margin-right: auto;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-
-  margin-bottom: 14px;
-  padding: 6px 16px;
-
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 1px;
-
-  color: var(--white);
-
-  background-color: var(--primary-color);
-  border-radius: 50px;
+  gap: 5px;
 }
-
-.home1-impact-tag svg {
-  width: 25px;
-  height: 25px;
-  padding: 3px;
-
-  color: var(--white);
-  background: var(--primary-color);
-
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   IMPACT HEADING
-========================================================= */
 
 .home1-impact-header h2 {
-  margin: 0 0 16px;
-
-  font-size: 38px;
-  line-height: 1.25;
-  font-weight: 600;
-
+  margin: 0 0 18px;
   color: var(--primary-color);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  line-height: 1.18;
+  letter-spacing: -0.8px;
 }
 
 .home1-impact-header h2 span {
   color: var(--secondary-color);
 }
-/* =========================================================
-   IMPACT DESCRIPTION
-========================================================= */
 
 .home1-impact-header p {
   max-width: 650px;
   margin: 0 auto;
-
-  font-size: 16px;
-  line-height: 1.7;
-  font-weight: 400;
-
   color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.75;
 }
-
-/* =========================================================
-   IMPACT COUNTER GRID
-========================================================= */
 
 .home1-impact-grid {
   display: grid;
@@ -2359,73 +668,133 @@
   align-items: stretch;
 }
 
-/* =========================================================
-   IMPACT COUNTER ITEM
-========================================================= */
-
 .home1-impact-item {
-  min-height: 150px;
-  padding: 28px 20px;
-
+  position: relative;
+  isolation: isolate;
+  min-height: 175px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
+  overflow: hidden;
   background: var(--light-bg);
   border: 1px solid var(--border-color);
-  border-radius: 15px;
-
+  border-radius: 20px;
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background-color 0.4s ease;
 }
 
-/* =========================================================
-   IMPACT NUMBER
-========================================================= */
+.home1-impact-item::after {
+  content: "";
+  position: absolute;
+  right: -75px;
+  bottom: -75px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary-color) 9%, transparent);
+  transform: scale(0);
+  transition: transform 0.55s ease;
+  z-index: -1;
+}
+
+.home1-impact-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 45px;
+  height: 3px;
+  background: var(--secondary-color);
+  transform: translateX(-50%);
+  border-radius: 0 0 5px 5px;
+  transition:
+    width 0.4s ease,
+    height 0.4s ease;
+}
+
+.home1-impact-shine {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    color-mix(in srgb, var(--white) 35%, transparent),
+    transparent
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 3;
+}
 
 .home1-impact-number {
-  margin-bottom: 8px;
-
-  font-size: 38px;
-  line-height: 1.2;
-  font-weight: 600;
-
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
   color: var(--primary-color);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
 }
-
-/* =========================================================
-   IMPACT TEXT
-========================================================= */
 
 .home1-impact-item p {
+  position: relative;
+  z-index: 2;
+  max-width: 190px;
   margin: 0;
-
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 400;
-
   color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
 }
 
-/* =========================================================
-   HOVER
-========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  .home1-impact-item:hover {
+    transform: translateY(-9px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+  }
 
-.home1-impact-item:hover {
-  transform: translateY(-4px);
-  border-color: var(--secondary-color);
+  .home1-impact-item:hover::after {
+    transform: scale(1.8);
+  }
+
+  .home1-impact-item:hover::before {
+    width: 75px;
+    height: 4px;
+  }
+
+  .home1-impact-item:hover .home1-impact-number {
+    color: var(--secondary-color);
+    transform: scale(1.06);
+  }
+
+  .home1-impact-item:hover p {
+    transform: translateY(-2px);
+  }
+
+  .home1-impact-item:hover .home1-impact-shine {
+    left: 150%;
+    transition: left 0.8s ease;
+  }
 }
 
-/* =========================================================
-   NEST HUB
-   1024 × 600
-========================================================= */
-
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+@media screen and (width: 1024px) and (height: 600px) {
   .home1-impact {
     padding: 65px 0;
   }
@@ -2435,44 +804,42 @@
   }
 
   .home1-impact-header {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .home1-impact-header h2 {
+    margin-bottom: 14px;
     font-size: 34px;
   }
 
   .home1-impact-header p {
-    font-size: 15px;
+    font-size: var(--fs-small);
+    line-height: 1.6;
   }
 
   .home1-impact-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    gap: 16px;
   }
 
   .home1-impact-item {
-    min-height: 135px;
-    padding: 22px 15px;
+    min-height: 140px;
+    padding: 24px 15px;
+    border-radius: 17px;
   }
 
   .home1-impact-number {
+    margin-bottom: 7px;
     font-size: 34px;
   }
 
   .home1-impact-item p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
-/* =========================================================
-   IPAD MINI
-   768 × 1024
-========================================================= */
-
 @media screen and (max-width: 768px) and (max-height: 1024px) {
   .home1-impact {
-    padding: 70px 0;
+    padding: 75px 0;
   }
 
   .home1-impact-container {
@@ -2480,17 +847,13 @@
   }
 
   .home1-impact-header {
-    margin-bottom: 40px;
-  }
-
-  .home1-impact-tag {
-    font-size: 13px;
-    padding: 6px 15px;
+    margin-bottom: 45px;
   }
 
   .home1-impact-header h2 {
-    font-size: 32px;
-    line-height: 1.3;
+    margin-bottom: 15px;
+    font-size: 34px;
+    line-height: 1.25;
   }
 
   .home1-impact-header p {
@@ -2504,27 +867,27 @@
   }
 
   .home1-impact-item {
-    min-height: 140px;
-    padding: 25px 15px;
+    min-height: 155px;
+    padding: 28px 18px;
+    border-radius: 18px;
   }
 
   .home1-impact-number {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .home1-impact-item p {
-    font-size: 14px;
+    font-size: var(--fs-small);
   }
 }
 
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-========================================================= */
-
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .home1-impact {
-    padding: 55px 0;
+    padding: 60px 0;
+  }
+  .tagline{
+    margin:0 auto 0;
+    
   }
 
   .home1-impact-container {
@@ -2532,28 +895,20 @@
   }
 
   .home1-impact-header {
-    margin-bottom: 35px;
-  }
-
-  .home1-impact-tag {
-    gap: 6px;
-    font-size: 13px;
-    padding: 5px 14px;
-  }
-
-  .home1-impact-tag svg {
-    width: 18px;
-    height: 18px;
+    margin-bottom: 38px;
   }
 
   .home1-impact-header h2 {
-    font-size: 28px;
-    line-height: 1.3;
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-size: 29px;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
   }
 
   .home1-impact-header p {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: var(--fs-small);
+    line-height: 1.65;
   }
 
   .home1-impact-grid {
@@ -2562,80 +917,82 @@
   }
 
   .home1-impact-item {
-    min-height: 125px;
-    padding: 22px 15px;
+    min-height: 135px;
+    padding: 25px 18px;
+    border-radius: 17px;
+  }
+
+  .home1-impact-item::before {
+    width: 38px;
   }
 
   .home1-impact-number {
-    font-size: 32px;
+    margin-bottom: 8px;
+    font-size: 34px;
   }
 
   .home1-impact-item p {
-    font-size: 14px;
+    max-width: 220px;
+    font-size: var(--fs-small);
+    line-height: 1.5;
+  }
+
+  .home1-impact-shine {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home1-impact-item,
+  .home1-impact-item::before,
+  .home1-impact-item::after,
+  .home1-impact-number,
+  .home1-impact-item p {
+    transition: none;
+  }
+
+  .home1-impact-shine {
+    display: none;
   }
 }
 /* =====================================================
-   HOME1 ABOUT / INTRODUCTION SECTION
+   HOME 1 - ABOUT / INTRODUCTION SECTION
 ===================================================== */
 
 .home1-about {
   width: 100%;
   padding: 90px 0;
-
-  background-color: var(--light-bg);
+  background: var(--light-bg);
 }
-
-/* =====================================================
-   ABOUT CONTAINER
-===================================================== */
 
 .home1-about-container {
   width: 85%;
   max-width: 1200px;
-
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   align-items: center;
   gap: 70px;
 }
 
-/* =====================================================
-   ABOUT IMAGE
-===================================================== */
-
 .home1-about-image {
   width: 100%;
   height: 510px;
-
   overflow: hidden;
-
   border-radius: 10px;
 }
 
 .home1-about-image img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
 }
-
-/* =====================================================
-   ABOUT CONTENT
-===================================================== */
 
 .home1-about-content {
   width: 100%;
   max-width: 560px;
 }
-
-/* =====================================================
-   ABOUT TAG
-===================================================== */
 
 .home1-about-tag {
   display: inline-flex;
@@ -2643,120 +1000,76 @@
   gap: 9px;
   margin-bottom: 18px;
   padding: 7px 15px 7px 10px;
-
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 500;
-  letter-spacing: 1px;
-
   color: var(--white);
-
   background: var(--primary-color);
-
   border-radius: 50px;
-
-  box-shadow: 0 4px 12px rgba(179, 90, 58, 0.1);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-sm);
 }
 
 .home1-about-tag svg {
   width: 20px;
   height: 20px;
   padding: 3px;
-
+  flex-shrink: 0;
   color: var(--white);
   background: var(--primary-color);
-
   border-radius: 50%;
-  flex-shrink: 0;
 }
-
-/* =====================================================
-   ABOUT HEADING
-===================================================== */
 
 .home1-about-content h2 {
   margin: 0 0 20px;
-
-  font-size: clamp(34px, 4vw, 48px);
-  line-height: 1.2;
-  font-weight: 600;
-
   color: var(--primary-color);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
 }
 
 .home1-about-content h2 span {
   display: block;
-
   color: var(--secondary-color);
 }
 
-/* =====================================================
-   ABOUT DESCRIPTION
-===================================================== */
-
 .home1-about-description {
   margin: 0 0 30px;
-
-  font-size: 15px;
-  line-height: 1.8;
-  font-weight: 400;
-
   color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
 }
-
-/* =====================================================
-   ABOUT FEATURES
-===================================================== */
 
 .home1-about-features {
   display: flex;
   flex-direction: column;
-
   gap: 20px;
-
   margin-bottom: 32px;
 }
-
-/* =====================================================
-   SINGLE ABOUT FEATURE
-===================================================== */
 
 .home1-about-feature {
   display: flex;
   align-items: flex-start;
-
   gap: 14px;
 }
-
-/* =====================================================
-   FEATURE ICON
-===================================================== */
 
 .home1-about-feature-icon {
   width: 42px;
   height: 42px;
-
   flex-shrink: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background: var(--primary-color);
   border-radius: 8px;
-
-  background-color: var(--primary-color);
 }
 
 .home1-about-feature-icon svg {
   width: 19px;
   height: 19px;
-
   color: var(--white);
 }
-
-/* =====================================================
-   FEATURE CONTENT
-===================================================== */
 
 .home1-about-feature-content {
   flex: 1;
@@ -2764,55 +1077,39 @@
 
 .home1-about-feature-content h3 {
   margin: 0 0 4px;
-
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 500;
-
   color: var(--primary-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
 }
 
 .home1-about-feature-content p {
   margin: 0;
-
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
-
   color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
 }
-
-/* =====================================================
-   LEARN MORE BUTTON
-===================================================== */
 
 .home1-about-btn {
   min-height: 48px;
-
   padding: 0 22px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 9px;
-
-  border-radius: 50px;
-
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   border: 1px solid var(--primary-color);
-
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 500;
-
+  border-radius: 12px;
   color: var(--white);
-
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
   text-decoration: none;
-
   transition:
     transform 0.3s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .home1-about-btn svg {
@@ -2820,15 +1117,14 @@
   height: 16px;
 }
 
-.home1-about-btn:hover {
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .home1-about-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
 }
-/* =====================================================
-   NEST HUB
-   1024 × 600
-===================================================== */
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+@media screen and (width: 1024px) and (height: 600px) {
   .home1-about {
     padding: 65px 0;
   }
@@ -2847,7 +1143,7 @@
   }
 
   .home1-about-description {
-    font-size: 14px;
+    font-size: var(--fs-small);
     line-height: 1.75;
   }
 
@@ -2867,20 +1163,13 @@
   }
 
   .home1-about-feature-content h3 {
-    font-size: 15px;
+    font-size: var(--fs-small);
   }
 
   .home1-about-feature-content p {
     font-size: 12px;
   }
 }
-
-/* =====================================================
-
-   IPAD MINI
-   768 × 1024
-
-===================================================== */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
   .home1-about {
@@ -2889,56 +1178,44 @@
 
   .home1-about-container {
     width: 88%;
-
     grid-template-columns: 1fr;
-
     gap: 30px;
   }
 
   .home1-about-content {
     order: 1;
-
     max-width: 100%;
-
     text-align: center;
   }
 
   .home1-about-image {
     order: 2;
-
     height: 420px;
   }
 
   .home1-about-tag {
-    font-size: 13px;
-
     margin: 0 auto 12px;
+    font-size: 13px;
   }
 
   .home1-about-content h2 {
     margin-bottom: 16px;
-
     font-size: 32px;
-
     line-height: 1.2;
   }
 
   .home1-about-description {
-    margin-left: auto;
-
     margin-right: auto;
-
     margin-bottom: 24px;
-
+    margin-left: auto;
     font-size: 13px;
-
     line-height: 1.7;
   }
 
   .home1-about-feature {
     width: fit-content;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     gap: 11px;
   }
 
@@ -2949,18 +1226,16 @@
 
   .home1-about-feature-icon {
     width: 38px;
-
     height: 38px;
   }
 
   .home1-about-feature-icon svg {
     width: 17px;
-
     height: 17px;
   }
 
   .home1-about-feature-content h3 {
-    font-size: 14px;
+    font-size: var(--fs-small);
   }
 
   .home1-about-feature-content p {
@@ -2969,22 +1244,14 @@
 
   .home1-about-btn {
     min-height: 46px;
-
-    padding: 0 20px;
-
-    font-size: 13px;
-
-    margin-left: auto;
-
     margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    font-size: 13px;
   }
 }
-/* =====================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-===================================================== */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .home1-about {
     padding: 50px 0;
   }
@@ -2994,26 +1261,21 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .home1-about-content {
     order: 1;
+    max-width: 100%;
   }
 
   .home1-about-image {
     order: 2;
-  }
-
-  .home1-about-image {
     height: 270px;
     border-radius: 8px;
   }
 
-  .home1-about-content {
-    max-width: 100%;
-  }
-
   .home1-about-tag {
-    font-size: 13px;
     margin-bottom: 10px;
+    font-size: 13px;
   }
 
   .home1-about-content h2 {
@@ -3062,259 +1324,383 @@
   }
 }
 /* =========================================================
-   HOME1 SERVICES SECTION
-========================================================= */
+   COMPOST CARE - HOME1 SERVICES
+   ========================================================= */
 
 .home1-services {
-  width: 100%;
-  padding: 90px 0;
-  background: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      color-mix(in srgb, var(--primary-color) 8%, transparent),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 80%,
+      color-mix(in srgb, var(--secondary-color) 7%, transparent),
+      transparent 30%
+    ),
+    var(--light-bg);
+}
+
+.home1-services::before,
+.home1-services::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+  opacity: 0.55;
+}
+
+.home1-services::before {
+  top: -150px;
+  left: -130px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 15%, transparent);
+  animation: servicesFloat 8s ease-in-out infinite;
+}
+
+.home1-services::after {
+  right: -150px;
+  bottom: -150px;
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 14%, transparent);
+  animation: servicesFloat 10s ease-in-out infinite reverse;
 }
 
 .home1-services-container {
-  width: 85%;
-  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+  width: min(1200px, calc(100% - 40px));
   margin: 0 auto;
 }
 
-/* =========================================================
-   SERVICES HEADER
-========================================================= */
-
 .home1-services-header {
-  max-width: 680px;
-  margin: 0 auto 55px;
+  max-width: 720px;
+  margin: 0 auto 65px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(35px);
+  animation: servicesHeaderIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
 }
 
-.home1-services-tag {
+.home1-services-header .tagline {
+  margin: 0 auto 0;
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-  padding: 6px 14px 6px 10px;
-
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 1px;
-
-  color: var(--white);
-  background: var(--primary-color);
-
-  border-radius: 50px;
-
-  box-shadow: 0 4px 12px rgba(179, 90, 58, 0.1);
-}
-
-.home1-services-tag svg {
-  width: 20px;
-  height: 20px;
-  padding: 3px;
-
-  color: var(--white);
-  background: var(--primary-color);
-
-  border-radius: 50%;
-  flex-shrink: 0;
+  gap:5px;
 }
 
 .home1-services-header h2 {
-  margin: 0 0 18px;
+  margin-top: 10px;
+  margin-bottom: 18px;
   color: var(--primary-color);
-  font-size: 38px;
-  line-height: 1.25;
-  font-weight: 600;
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
 }
 
 .home1-services-header h2 span {
   display: block;
   color: var(--secondary-color);
-  font-weight: 600;
 }
 
 .home1-services-header p {
-  margin: 0;
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.7;
-  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto;
+  color: color-mix(in srgb, var(--text-color) 68%, transparent);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.75;
 }
-
-/* =========================================================
-   SERVICES GRID
-========================================================= */
 
 .home1-services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
-  align-items: stretch;
 }
-
-/* =========================================================
-   SERVICE CARD
-========================================================= */
 
 .home1-service-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 355px;
+  padding: 32px 27px 28px;
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  padding: 30px 24px;
-  background: var(--light-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 12%, transparent);
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--light-bg) 96%, transparent),
+    color-mix(in srgb, var(--primary-color) 3%, var(--light-bg))
+  );
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(55px);
+  animation: serviceCardReveal 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-  text-align: center;
-  align-items: center;
+    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
 }
 
-.home1-service-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--secondary-color);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+.home1-service-card:nth-child(1) {
+  animation-delay: 0.15s;
 }
 
-/* =========================================================
-   SERVICE ICON
-========================================================= */
+.home1-service-card:nth-child(2) {
+  animation-delay: 0.27s;
+}
+
+.home1-service-card:nth-child(3) {
+  animation-delay: 0.39s;
+}
+
+.home1-service-card:nth-child(4) {
+  animation-delay: 0.51s;
+}
+
+.home1-service-card::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary-color) 9%, transparent);
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+  z-index: -1;
+}
+
+.home1-service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+  opacity: 0;
+  transition:
+    left 0.7s ease,
+    opacity 0.4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home1-service-card:hover {
+    transform: translateY(-12px);
+    border-color: color-mix(in srgb, var(--primary-color) 32%, transparent);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .home1-service-card:hover::before {
+    transform: scale(1.6);
+  }
+
+  .home1-service-card:hover::after {
+    left: 130%;
+    opacity: 1;
+  }
+}
 
 .home1-service-icon {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 22px;
-  background: var(--primary-color);
-  color: var(--light-bg);
-  border-radius: 8px;
+  margin-bottom: 26px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--primary-color) 10%, var(--light-bg));
+  color: var(--primary-color);
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
+    background-color 0.45s ease,
+    color 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 .home1-service-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke-width: 1.8;
+  width: 27px;
+  height: 27px;
+  stroke-width: 1.9;
+  transition: transform 0.45s ease;
 }
 
-/* =========================================================
-   SERVICE TITLE
-========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  .home1-service-card:hover .home1-service-icon {
+    transform: translateY(-4px) rotate(-4deg);
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .home1-service-card:hover .home1-service-icon svg {
+    transform: scale(1.1) rotate(4deg);
+  }
+}
 
 .home1-service-card h3 {
-  min-height: 56px;
-  margin: 0 0 14px;
-  color: var(--primary-color);
-  font-size: 20px;
-  line-height: 1.4;
-  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.18;
 }
 
 .home1-service-card h3 span {
   display: block;
-  color: var(--secondary-color);
-  font-weight: 600;
+  color: var(--primary-color);
 }
-
-/* =========================================================
-   SERVICE DESCRIPTION
-========================================================= */
 
 .home1-service-card p {
-  min-height: 96px;
-  margin: 0 0 22px;
-  color: var(--text-color);
-  font-size: 14px;
+  margin-bottom: 25px;
+  color: color-mix(in srgb, var(--text-color) 67%, transparent);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
   line-height: 1.7;
-  font-weight: 400;
 }
-
-/* =========================================================
-   SERVICE LINK
-========================================================= */
 
 .home1-service-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
   width: fit-content;
   margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--primary-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.home1-service-link:hover {
-  color: var(--secondary-color);
+  transition:
+    gap 0.35s ease,
+    color 0.35s ease;
 }
 
 .home1-service-link svg {
   width: 17px;
   height: 17px;
-  stroke-width: 2;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
 }
 
-.home1-service-link:hover svg {
-  transform: translateX(4px);
+@media (hover: hover) and (pointer: fine) {
+  .home1-service-link:hover {
+    gap: 13px;
+    color: var(--secondary-color);
+  }
+
+  .home1-service-link:hover svg {
+    transform: translateX(4px);
+  }
 }
 
-/* =========================================================
-   DARK MODE
-========================================================= */
+@keyframes servicesHeaderIn {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
 
-.dark-mode .home1-service-card {
-  box-shadow: none;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.dark-mode .home1-service-card:hover {
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+@keyframes serviceCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(55px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-/* =========================================================
-   NEST HUB
-   1024 × 600
-========================================================= */
+@keyframes recycleSpin {
+  0% {
+    transform: rotate(0deg);
+  }
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes servicesFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, 18px);
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
   .home1-services {
     padding: 65px 0;
   }
 
   .home1-services-container {
-    width: 85%;
+    width: min(940px, calc(100% - 48px));
   }
 
   .home1-services-header {
-    margin-bottom: 40px;
+    max-width: 650px;
+    margin-bottom: 38px;
+  }
+
+  .home1-services-tag {
+    margin-bottom: 13px;
+    padding: 6px 13px 6px 10px;
+    font-size: 12px;
+  }
+
+  .home1-services-tag svg {
+    width: 15px;
+    height: 15px;
   }
 
   .home1-services-header h2 {
-    font-size: 32px;
+    margin-bottom: 10px;
+    font-size: 36px;
   }
 
   .home1-services-header p {
-    font-size: 15px;
+    font-size: var(--fs-small);
+    line-height: 1.5;
   }
 
   .home1-services-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .home1-service-card {
-    padding: 24px 18px;
+    min-height: 270px;
+    padding: 22px 18px;
+    border-radius: 18px;
   }
 
   .home1-service-icon {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 18px;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 17px;
+    border-radius: 14px;
   }
 
   .home1-service-icon svg {
@@ -3323,46 +1709,52 @@
   }
 
   .home1-service-card h3 {
+    margin-bottom: 9px;
     font-size: 18px;
-    min-height: 52px;
   }
 
   .home1-service-card p {
-    font-size: 13px;
-    min-height: 100px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .home1-service-link {
+    font-size: 12px;
+  }
+
+  .home1-service-link svg {
+    width: 15px;
+    height: 15px;
   }
 }
 
-/* =========================================================
-   IPAD MINI
-   768 × 1024
-========================================================= */
-
 @media screen and (max-width: 768px) and (max-height: 1024px) {
   .home1-services {
-    padding: 75px 0;
+    padding: 80px 0;
   }
 
   .home1-services-container {
-    width: 88%;
+    width: min(680px, calc(100% - 40px));
   }
 
   .home1-services-header {
     max-width: 620px;
-    margin-bottom: 42px;
+    margin-bottom: 50px;
   }
 
   .home1-services-tag {
-    font-size: 13px;
+    margin-bottom: 18px;
   }
 
   .home1-services-header h2 {
-    font-size: 32px;
-    line-height: 1.3;
+    font-size: 42px;
+    line-height: 1.08;
   }
 
   .home1-services-header p {
     font-size: 15px;
+    line-height: 1.7;
   }
 
   .home1-services-grid {
@@ -3371,202 +1763,285 @@
   }
 
   .home1-service-card {
-    padding: 28px 22px;
+    min-height: 330px;
+    padding: 28px 24px;
+    border-radius: 22px;
   }
 
   .home1-service-icon {
-    width: 46px;
-    height: 46px;
-    margin-bottom: 20px;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 22px;
+    border-radius: 17px;
   }
 
   .home1-service-icon svg {
-    width: 23px;
-    height: 23px;
+    width: 25px;
+    height: 25px;
   }
 
   .home1-service-card h3 {
-    font-size: 19px;
-    min-height: 54px;
+    font-size: 21px;
+    line-height: 1.2;
   }
 
   .home1-service-card p {
-    min-height: 92px;
-    font-size: 14px;
+    font-size: var(--fs-small);
+    line-height: 1.65;
+  }
+
+  .home1-service-link {
+    font-size: var(--fs-small);
   }
 }
 
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-========================================================= */
-
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .home1-services {
-    padding: 50px 0;
+    padding: 65px 0;
   }
 
   .home1-services-container {
-    width: 88%;
+    width: calc(100% - 28px);
   }
 
   .home1-services-header {
-    margin-bottom: 35px;
+    margin-bottom: 38px;
   }
 
   .home1-services-tag {
-    font-size: 13px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    padding: 7px 13px 7px 10px;
+    font-size: 11px;
+  }
+
+  .home1-services-tag svg {
+    width: 15px;
+    height: 15px;
   }
 
   .home1-services-header h2 {
-    font-size: 27px;
-    line-height: 1.3;
-    margin-bottom: 14px;
+    font-size: 32px;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
   }
 
   .home1-services-header p {
-    font-size: 14px;
+    font-size: var(--fs-small);
     line-height: 1.65;
   }
 
   .home1-services-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 15px;
   }
 
   .home1-service-card {
+    min-height: auto;
     padding: 25px 22px;
+    border-radius: 20px;
   }
 
   .home1-service-icon {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 18px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 19px;
+    border-radius: 16px;
   }
 
   .home1-service-icon svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
 
   .home1-service-card h3 {
-    min-height: auto;
-    margin-bottom: 12px;
-    font-size: 19px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .home1-service-card p {
-    min-height: auto;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.65;
+  }
+
+  .home1-service-link {
+    font-size: 13px;
+  }
+
+  .home1-service-link svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home1-services::before,
+  .home1-services::after,
+  .home1-services-tag svg,
+  .home1-services-header,
+  .home1-service-card,
+  .home1-service-icon,
+  .home1-service-icon svg,
+  .home1-service-link,
+  .home1-service-link svg {
+    animation: none;
+    transition: none;
+  }
+
+  .home1-services-header,
+  .home1-service-card {
+    opacity: 1;
+    transform: none;
   }
 }
 /* =========================================================
-   KNOW YOUR WASTE
-========================================================= */
+   HOME1 — KNOW YOUR WASTE
+   ========================================================= */
 
 .home1-waste {
-  width: 100%;
-  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
   background: var(--light-bg);
 }
 
 .home1-waste-container {
-  width: 85%;
-  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+  width: min(1200px, calc(100% - 40px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   align-items: center;
   gap: 80px;
 }
 
-/* =========================================================
-   LEFT IMAGE
-========================================================= */
-
 .home1-waste-image {
   position: relative;
-  width: 100%;
-  height: 550px;
-  border-radius: 24px;
+  min-height: 570px;
+  border-radius: 30px;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(-55px);
+  animation: wasteImageReveal 0.95s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  box-shadow: var(--shadow-lg);
+}
+
+.home1-waste-image::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    color-mix(in srgb, var(--text-color) 32%, transparent)
+  );
+  pointer-events: none;
+}
+
+.home1-waste-image::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: -100%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--white) 16%, transparent),
+    transparent
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  animation: wasteImageShine 1.5s ease 0.8s forwards;
 }
 
 .home1-waste-image img {
   width: 100%;
   height: 100%;
+  min-height: 570px;
   display: block;
   object-fit: cover;
-  /* object-position: center; */
+  transform: scale(1.06);
+  animation: wasteImageZoom 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  transition: transform 0.8s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home1-waste-image:hover img {
+    transform: scale(1.045);
+  }
 }
 
 .home1-waste-image-badge {
   position: absolute;
-  left: 24px;
-  bottom: 24px;
+  z-index: 5;
+  left: 25px;
+  bottom: 25px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px 8px 8px;
-  background: var(--primary-color);
-  color: var(--white);
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.14);
+  gap: 11px;
+  padding: 9px 17px 9px 9px;
+  border: 1px solid color-mix(in srgb, var(--white) 30%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--white) 92%, transparent);
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: wasteBadgeReveal 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.9s forwards;
 }
 
 .home1-waste-badge-icon {
   width: 34px;
   height: 34px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  border-radius: 50%;
   background: var(--primary-color);
   color: var(--white);
 }
 
 .home1-waste-badge-icon svg {
-  width: 20px;
-  height: 20px;
-  background-color: var(--primary-color);
+  width: 17px;
+  height: 17px;
+  animation: wasteRecycleSpin 5s linear infinite;
 }
-
-/* =========================================================
-   RIGHT CONTENT
-========================================================= */
 
 .home1-waste-content {
-  width: 100%;
-  max-width: 560px;
+  opacity: 0;
+  transform: translateX(55px);
+  animation: wasteContentReveal 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s
+    forwards;
 }
 
-/* =========================================================
-   SECTION TAG
-========================================================= */
-
 .home1-waste-tag {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
-
-  padding: 6px 16px 6px 6px;
-
-  border-radius: 50px;
-  background-color: var(--primary-color);
+  gap: 5px;
+  margin-bottom: 22px;
+  padding: 7px 15px 7px 8px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 18%, transparent);
+  border-radius: 999px;
+  background: var(--primary-color);
   color: var(--white);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.08em;
 }
 
 .home1-waste-tag-icon {
   width: 30px;
   height: 30px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -3577,91 +2052,151 @@
 .home1-waste-tag-icon svg {
   width: 15px;
   height: 15px;
+  animation: wasteLeafFloat 3s ease-in-out infinite;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
-
 .home1-waste-title {
-  margin: 22px 0 16px;
+  max-width: 600px;
+  margin-bottom: 18px;
   color: var(--primary-color);
-  font-size: 42px;
-  line-height: 1.18;
-  font-weight: 600;
-  letter-spacing: -0.8px;
+  font-size: var(--fs-title);
+  line-height: 1.05;
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.045em;
 }
 
 .home1-waste-title span {
+  display: block;
   color: var(--secondary-color);
 }
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
 .home1-waste-description {
-  max-width: 520px;
-  margin: 0 0 34px;
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.7;
+  max-width: 570px;
+  margin-bottom: 32px;
+  color: color-mix(in srgb, var(--text-color) 67%, transparent);
+  font-size: var(--fs-body);
+  line-height: 1.75;
+  font-weight: var(--fw-regular);
 }
 
-/* =========================================================
-   WASTE LIST
-========================================================= */
-
 .home1-waste-list {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 13px;
 }
 
 .home1-waste-item {
-  width: 100%;
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  gap: 17px;
+  padding: 18px 20px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 10%, transparent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--light-bg) 94%, var(--primary-color));
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: wasteItemReveal 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 }
 
-.home1-waste-item:first-child {
-  padding-top: 0;
+.home1-waste-item:nth-child(1) {
+  animation-delay: 0.45s;
 }
 
-.home1-waste-item:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
+.home1-waste-item:nth-child(2) {
+  animation-delay: 0.58s;
 }
 
-/* =========================================================
-   WASTE ICON
-========================================================= */
+.home1-waste-item:nth-child(3) {
+  animation-delay: 0.71s;
+}
+
+.home1-waste-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--primary-color);
+  transition: height 0.45s ease;
+}
+
+.home1-waste-item::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: -70px;
+  top: -70px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary-color) 6%, transparent);
+  transition: transform 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home1-waste-item:hover {
+    transform: translateX(7px);
+    border-color: color-mix(in srgb, var(--primary-color) 25%, transparent);
+    box-shadow: 0 15px 34px
+      color-mix(in srgb, var(--primary-color) 10%, transparent);
+  }
+
+  .home1-waste-item:hover::before {
+    height: 100%;
+  }
+
+  .home1-waste-item:hover::after {
+    transform: scale(1.7);
+  }
+}
 
 .home1-waste-item-icon {
-  flex: 0 0 46px;
-  width: 46px;
-  height: 46px;
+  position: relative;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  background: var(--primary-color);
-  color: var(--white);
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--primary-color) 9%, transparent);
+  color: var(--primary-color);
+  transition:
+    transform 0.4s ease,
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 .home1-waste-item-icon svg {
-  width: 21px;
-  height: 21px;
+  width: 23px;
+  height: 23px;
+  stroke-width: 1.9;
+  transition: transform 0.4s ease;
 }
 
-/* =========================================================
-   WASTE ITEM CONTENT
-========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  .home1-waste-item:hover .home1-waste-item-icon {
+    transform: rotate(-5deg) scale(1.06);
+    background: var(--primary-color);
+    color: var(--white);
+  }
+
+  .home1-waste-item:hover .home1-waste-item-icon svg {
+    transform: scale(1.1);
+  }
+}
 
 .home1-waste-item-content {
+  position: relative;
+  z-index: 2;
   flex: 1;
   min-width: 0;
 }
@@ -3669,207 +2204,185 @@
 .home1-waste-item-heading {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 5px;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
 .home1-waste-item-number {
-  color: var(--secondary-color);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  color: color-mix(in srgb, var(--primary-color) 65%, transparent);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
 }
 
 .home1-waste-item-heading h3 {
-  margin: 0;
-  color: var(--primary-color);
-  font-size: 19px;
-  line-height: 1.3;
-  font-weight: 650;
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: var(--fw-semibold);
 }
 
 .home1-waste-item-content p {
-  margin: 0 0 9px;
-  color: var(--text-color);
-  font-size: 14px;
-  line-height: 1.6;
+  margin-bottom: 8px;
+  color: color-mix(in srgb, var(--text-color) 62%, transparent);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
 }
 
-/* =========================================================
-   DESTINATION
-========================================================= */
-
 .home1-waste-destination {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  color: var(--secondary-color);
+  gap: 6px;
+  color: var(--primary-color);
   font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
+  font-weight: var(--fw-semibold);
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
 }
 
 .home1-waste-destination svg {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
 }
 
-/* =========================================================
-   NEST HUB
-   1024 × 600
-========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  .home1-waste-item:hover .home1-waste-destination {
+    transform: translateX(4px);
+    color: var(--secondary-color);
+  }
+}
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+@keyframes wasteImageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wasteImageZoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes wasteImageShine {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+
+@keyframes wasteBadgeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wasteContentReveal {
+  from {
+    opacity: 0;
+    transform: translateX(55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wasteItemReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wasteRecycleSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wasteLeafFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
   .home1-waste {
-    padding: 70px 0;
+    padding: 58px 0;
   }
 
   .home1-waste-container {
-    width: 88%;
+    width: min(940px, calc(100% - 48px));
     gap: 45px;
   }
 
   .home1-waste-image {
-    height: 430px;
-    border-radius: 20px;
+    min-height: 420px;
+    border-radius: 24px;
+  }
+
+  .home1-waste-image img {
+    min-height: 420px;
   }
 
   .home1-waste-image-badge {
     left: 18px;
     bottom: 18px;
-  }
-
-  .home1-waste-title {
-    font-size: 34px;
-    margin-top: 18px;
-  }
-
-  .home1-waste-description {
-    margin-bottom: 24px;
-    font-size: 14px;
-  }
-
-  .home1-waste-item {
-    padding: 14px 0;
-    gap: 14px;
-  }
-
-  .home1-waste-item-icon {
-    flex-basis: 40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-  }
-
-  .home1-waste-item-heading h3 {
-    font-size: 17px;
-  }
-
-  .home1-waste-item-content p {
-    font-size: 13px;
-  }
-}
-
-/* =========================================================
-   IPAD MINI
-   768 × 1024
-========================================================= */
-
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home1-waste {
-    padding: 80px 0;
-  }
-
-  .home1-waste-container {
-    width: 88%;
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  .home1-waste-content {
-    order: 1;
-  }
-  .home1-waste-tag {
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-  }
-
-  .home1-waste-image {
-    order: 2;
-  }
-
-  .home1-waste-image {
-    height: 420px;
-  }
-
-  .home1-waste-content {
-    max-width: 100%;
-  }
-
-  .home1-waste-title {
-    font-size: 36px;
-  }
-
-  .home1-waste-description {
-    max-width: 650px;
-  }
-
-  .home1-waste-item {
-    padding: 18px 0;
-  }
-}
-
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-========================================================= */
-
-@media screen and (max-width: 360px) and (max-height: 740px) {
-  .home1-waste {
-    padding: 60px 0;
-  }
-
-  .home1-waste-container {
-    width: 88%;
-    gap: 35px;
-  }
-  .home1-waste-content {
-    order: 1;
-  }
-
-  .home1-waste-image {
-    order: 2;
-  }
-
-  .home1-waste-image {
-    height: 300px;
-    border-radius: 18px;
-  }
-
-  .home1-waste-image-badge {
-    left: 12px;
-    bottom: 12px;
-    gap: 7px;
-    padding: 6px 12px 6px 6px;
+    padding: 7px 13px 7px 7px;
     font-size: 11px;
   }
 
   .home1-waste-badge-icon {
-    width: 28px;
-    height: 28px;
+    width: 29px;
+    height: 29px;
   }
 
-  .home1-waste-badge-icon svg {
-    width: 14px;
-    height: 14px;
+  .home1-waste-content {
+    max-width: 470px;
   }
+
   .home1-waste-tag {
-    width: fit-content;
-    margin: 0 auto;
-    gap: 7px;
-    padding: 5px 12px 5px 5px;
-    font-size: 10px;
+    margin-bottom: 13px;
+    padding: 5px 12px 5px 7px;
+    font-size: 11px;
   }
 
   .home1-waste-tag-icon {
@@ -3877,63 +2390,203 @@
     height: 26px;
   }
 
-  .home1-waste-tag-icon svg {
-    width: 13px;
-    height: 13px;
-  }
-
   .home1-waste-title {
-    margin: 18px 0 12px;
-    font-size: 29px;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    font-size: 37px;
   }
 
   .home1-waste-description {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.55;
+  }
+
+  .home1-waste-list {
+    gap: 8px;
   }
 
   .home1-waste-item {
     gap: 12px;
-    padding: 15px 0;
+    padding: 11px 13px;
+    border-radius: 14px;
   }
 
   .home1-waste-item-icon {
-    flex-basis: 38px;
-    width: 38px;
-    height: 38px;
-    border-radius: 11px;
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    border-radius: 12px;
   }
 
   .home1-waste-item-icon svg {
-    width: 18px;
-    height: 18px;
+    width: 19px;
+    height: 19px;
   }
 
   .home1-waste-item-heading {
-    gap: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+  }
+
+  .home1-waste-item-heading h3 {
+    font-size: 15px;
   }
 
   .home1-waste-item-number {
+    font-size: 9px;
+  }
+
+  .home1-waste-item-content p {
+    margin-bottom: 4px;
     font-size: 10px;
+  }
+
+  .home1-waste-destination {
+    font-size: 10px;
+  }
+
+  .home1-waste-destination svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-waste {
+    padding: 85px 0;
+  }
+
+  .home1-waste-container {
+    width: min(680px, calc(100% - 40px));
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .home1-waste-image {
+    min-height: 430px;
+    max-height: 480px;
+    border-radius: 26px;
+  }
+
+  .home1-waste-image img {
+    min-height: 430px;
+  }
+
+  .home1-waste-content {
+    max-width: 680px;
+  }
+
+  .home1-waste-title {
+    font-size: 44px;
+  }
+
+  .home1-waste-description {
+    font-size: 15px;
+  }
+
+  .home1-waste-item {
+    padding: 18px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home1-waste {
+    padding: 65px 0;
+  }
+
+  .home1-waste-container {
+    width: calc(100% - 28px);
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .home1-waste-image {
+    min-height: 330px;
+    max-height: 360px;
+    border-radius: 22px;
+  }
+
+  .home1-waste-image img {
+    min-height: 330px;
+  }
+
+  .home1-waste-image-badge {
+    left: 15px;
+    bottom: 15px;
+    padding: 7px 12px 7px 7px;
+    font-size: 11px;
+  }
+
+  .home1-waste-badge-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .home1-waste-badge-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home1-waste-tag {
+    margin-bottom: 17px;
+    padding: 6px 12px 6px 7px;
+    font-size: 10px;
+  }
+
+  .home1-waste-tag-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .home1-waste-title {
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 1.08;
+  }
+
+  .home1-waste-description {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .home1-waste-list {
+    gap: 11px;
+  }
+
+  .home1-waste-item {
+    gap: 13px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .home1-waste-item-icon {
+    width: 45px;
+    height: 45px;
+    flex-basis: 45px;
+    border-radius: 13px;
+  }
+
+  .home1-waste-item-icon svg {
+    width: 21px;
+    height: 21px;
   }
 
   .home1-waste-item-heading h3 {
     font-size: 16px;
   }
 
+  .home1-waste-item-number {
+    font-size: 9px;
+  }
+
   .home1-waste-item-content p {
-    margin-bottom: 7px;
-    font-size: 12px;
-    line-height: 1.5;
+    margin-bottom: 6px;
+    font-size: 11px;
+    line-height: 1.45;
   }
 
   .home1-waste-destination {
-    gap: 5px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .home1-waste-destination svg {
@@ -3941,349 +2594,526 @@
     height: 13px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .home1-waste-image,
+  .home1-waste-content,
+  .home1-waste-item,
+  .home1-waste-image-badge {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .home1-waste-image img {
+    animation: none;
+    transform: none;
+  }
+
+  .home1-waste-image::after {
+    display: none;
+  }
+
+  .home1-waste-badge-icon svg,
+  .home1-waste-tag-icon svg {
+    animation: none;
+  }
+}
 /* =========================================================
-    HOME1 HOW IT WORKS SECTION
- ========================================================= */
+   HOME1 — HOW IT WORKS
+   ========================================================= */
 
 .home1-how-it-works {
-  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 115px 0;
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      color-mix(in srgb, var(--primary-color) 7%, transparent),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      color-mix(in srgb, var(--secondary-color) 6%, transparent),
+      transparent 28%
+    ),
+    var(--light-bg);
+}
 
-  padding: 90px 0;
+.home1-how-it-works::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: -180px;
+  right: -120px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 10%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-  background: var(--light-bg);
+.home1-how-it-works::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  bottom: -130px;
+  left: -90px;
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 10%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .home1-how-it-works-container {
-  width: 85%;
-
-  max-width: 1200px;
-
+  position: relative;
+  z-index: 2;
+  width: min(1200px, calc(100% - 40px));
   margin: 0 auto;
 }
 
-/* =========================================================
-   HOW IT WORKS HEADER
-========================================================= */
-
 .home1-how-it-works-header {
-  max-width: 680px;
-
-  margin: 0 auto 60px;
-
+  max-width: 760px;
+  margin: 0 auto 78px;
   text-align: center;
 }
 
 .home1-how-it-works-tag {
+  width: fit-content;
+  margin: 0 auto 20px;
   display: inline-flex;
-
   align-items: center;
-
-  margin-bottom: 14px;
-
-  padding: 6px 14px 6px 12px;
-
-  font-size: 14px;
-
-  line-height: 1.5;
-
-  font-weight: 500;
-
-  letter-spacing: 1px;
-
-  color: var(--white);
-
+  gap: 9px;
+  padding: 7px 15px 7px 9px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 18%, transparent);
+  border-radius: 999px;
   background: var(--primary-color);
-
-  border-radius: 50px;
+  color: var(--white);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.07em;
 }
 
 .home1-how-it-works-tag svg {
-  width: 20px;
-
-  height: 20px;
-
-  padding: 3px;
-
-  color: var(--white);
-
-  background: var(--primary-color);
-
-  border-radius: 50%;
-
-  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
 }
 
 .home1-how-it-works-header h2 {
-  margin: 0 0 18px;
-
+  max-width: 720px;
+  margin: 0 auto 18px;
   color: var(--primary-color);
-
-  font-size: 38px;
-
-  line-height: 1.25;
-
-  font-weight: 600;
+  font-size: var(--fs-title);
+  line-height: 1.08;
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.04em;
 }
 
 .home1-how-it-works-header h2 span {
   display: block;
-
   color: var(--secondary-color);
-
-  font-weight: 600;
 }
 
 .home1-how-it-works-header p {
-  margin: 0;
-
-  color: var(--text-color);
-
-  font-size: 16px;
-
-  line-height: 1.7;
-
-  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto;
+  color: color-mix(in srgb, var(--text-color) 65%, transparent);
+  font-size: var(--fs-body);
+  line-height: 1.75;
+  font-weight: var(--fw-regular);
 }
-
-/* =========================================================
-   PROCESS STEPS
-========================================================= */
 
 .home1-how-it-works-steps {
+  position: relative;
   display: grid;
-
-  grid-template-columns:
-    1fr
-    auto
-    1fr
-    auto
-    1fr
-    auto
-    1fr;
-
-  align-items: center;
-
-  gap: 18px;
+  grid-template-columns: 1fr 80px 1fr 80px 1fr 80px 1fr;
+  align-items: start;
 }
-
-/* =========================================================
-   STEP
-========================================================= */
 
 .home1-how-step {
   position: relative;
-
-  min-width: 0;
-
-  min-height: 285px;
-
-  padding: 28px 22px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: flex-start;
-
   text-align: center;
-
-  background: var(--light-bg);
-
-  border: 1px solid var(--border-color);
-
-  border-radius: 10px;
-
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: howStepReveal 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
 }
 
-.home1-how-step:hover {
-  transform: translateY(-5px);
-
-  border-color: var(--secondary-color);
-
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+.home1-how-step:nth-child(1) {
+  animation-delay: 0.15s;
 }
 
-/* =========================================================
-   STEP NUMBER
-========================================================= */
+.home1-how-step:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.home1-how-step:nth-child(5) {
+  animation-delay: 0.45s;
+}
+
+.home1-how-step:nth-child(7) {
+  animation-delay: 0.6s;
+}
 
 .home1-how-step-number {
   position: absolute;
-
-  top: 12px;
-
-  right: 14px;
-
-  font-size: 12px;
-
-  line-height: 1;
-
-  font-weight: 600;
-
-  color: var(--secondary-color);
-
-  letter-spacing: 0.5px;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1em;
 }
-
-/* =========================================================
-   STEP ICON
-========================================================= */
 
 .home1-how-step-icon {
-  width: 58px;
-
-  height: 58px;
-
-  margin: 4px auto 20px;
-
+  position: relative;
+  width: 82px;
+  height: 82px;
+  margin: 10px auto 28px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  background: var(--primary-color);
-
-  color: var(--light-bg);
-
+  border: 7px solid var(--light-bg);
   border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--primary-color) 18%, transparent),
+    var(--shadow-md);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background-color 0.4s ease;
 }
 
-.home1-how-step-icon svg {
-  width: 26px;
-
-  height: 26px;
-
-  stroke-width: 1.8;
+.home1-how-step-icon::before {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border: 1px dashed color-mix(in srgb, var(--primary-color) 30%, transparent);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
 }
 
-/* =========================================================
-   STEP TITLE
-========================================================= */
+.home1-how-step-number {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home1-how-step:hover .home1-how-step-icon {
+    transform: translateY(-7px) scale(1.05);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--primary-color) 25%, transparent),
+      var(--shadow-lg);
+  }
+
+  .home1-how-step:hover .home1-how-step-icon::before {
+    transform: rotate(45deg) scale(1.08);
+  }
+}
 
 .home1-how-step h3 {
-  margin: 0 0 12px;
-
-  color: var(--primary-color);
-
+  margin-bottom: 11px;
+  color: var(--text-color);
   font-size: 19px;
-
-  line-height: 1.4;
-
-  font-weight: 600;
+  line-height: 1.3;
+  font-weight: var(--fw-semibold);
 }
-
-/* =========================================================
-   STEP DESCRIPTION
-========================================================= */
 
 .home1-how-step p {
-  margin: 0;
-
-  color: var(--text-color);
-
-  font-size: 14px;
-
-  line-height: 1.7;
-
-  font-weight: 400;
+  max-width: 220px;
+  margin: 0 auto;
+  color: color-mix(in srgb, var(--text-color) 62%, transparent);
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  font-weight: var(--fw-regular);
 }
-
-/* =========================================================
-   CONNECTOR
-========================================================= */
 
 .home1-how-step-connector {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: var(--secondary-color);
+  position: relative;
+  height: 82px;
 }
 
-.home1-how-step-connector svg {
-  width: 22px;
-
-  height: 22px;
-
-  stroke-width: 1.8;
+.home1-how-step-connector::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--primary-color) 25%, transparent),
+    color-mix(in srgb, var(--primary-color) 12%, transparent)
+  );
 }
 
-/* =========================================================
-   DARK MODE
-========================================================= */
-
-.dark-mode .home1-how-step {
-  box-shadow: none;
+.home1-how-step-connector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  transform: translateY(-50%) rotate(45deg);
 }
 
-.dark-mode .home1-how-step:hover {
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+.home1-how-step:nth-child(4) + .home1-how-step-connector::before {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--secondary-color) 25%, transparent),
+    color-mix(in srgb, var(--secondary-color) 12%, transparent)
+  );
 }
 
-/* =========================================================
-   NEST HUB
-   1024 × 600
-========================================================= */
+.home1-how-step:nth-child(4) + .home1-how-step-connector::after {
+  border-color: var(--secondary-color);
+}
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+@keyframes howStepReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[dir="rtl"] .home1-how-step-connector::after {
+  right: auto;
+  left: 1px;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+[dir="rtl"] .home1-how-step-connector::before {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--primary-color) 12%, transparent),
+    color-mix(in srgb, var(--primary-color) 25%, transparent)
+  );
+}
+
+@media screen and (max-width: 480px) {
+  [dir="rtl"] .home1-how-step-connector::before {
+    left: 33px;
+    right: auto;
+  }
+}
+@media screen and (width: 1024px) and (height: 600px) {
+  .home1-how-it-works {
+    padding: 58px 0;
+  }
+
+  .home1-how-it-works-container {
+    width: min(940px, calc(100% - 48px));
+  }
+
+  .home1-how-it-works-header {
+    margin-bottom: 48px;
+  }
+
+  .home1-how-it-works-tag {
+    margin-bottom: 13px;
+    padding: 5px 12px 5px 7px;
+    font-size: 11px;
+  }
+
+  .home1-how-it-works-tag svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home1-how-it-works-header h2 {
+    margin-bottom: 10px;
+    font-size: 37px;
+  }
+
+  .home1-how-it-works-header p {
+    max-width: 610px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .home1-how-it-works-steps {
+    grid-template-columns: 1fr 48px 1fr 48px 1fr 48px 1fr;
+  }
+
+  .home1-how-step-icon {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 21px;
+    border-width: 5px;
+  }
+
+  .home1-how-step-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .home1-how-step-number {
+    top: -10px;
+    font-size: 9px;
+  }
+
+  .home1-how-step h3 {
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+
+  .home1-how-step p {
+    max-width: 165px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .home1-how-step-connector {
+    height: 62px;
+  }
+}
+
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home1-how-it-works {
+    padding: 90px 32px;
+  }
+
+  .home1-how-it-works-container {
+    width: 100%;
+  }
+
+  .home1-how-it-works-header {
+    max-width: 720px;
+    margin: 0 auto 60px;
+  }
+
+  .home1-how-it-works-header h2 {
+    font-size: 38px;
+  }
+
+  .home1-how-it-works-header p {
+    font-size: var(--fs-body);
+    max-width: 620px;
+  }
+
+  .home1-how-it-works-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px 50px;
+    align-items: start;
+  }
+
+  .home1-how-step {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home1-how-step-number {
+    top: -18px;
+  }
+
+  .home1-how-step-icon {
+    width: 78px;
+    height: 78px;
+    margin: 16px auto 28px;
+  }
+
+  .home1-how-step-icon i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .home1-how-step h3 {
+    font-size: 20px;
+  }
+
+  .home1-how-step p {
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: var(--fs-small);
+  }
+
+  .home1-how-step-connector {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
   .home1-how-it-works {
     padding: 65px 0;
   }
 
   .home1-how-it-works-container {
-    width: 85%;
+    width: calc(100% - 28px);
   }
 
   .home1-how-it-works-header {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+  }
+
+  .home1-how-it-works-tag {
+    margin-bottom: 16px;
+    padding: 6px 12px 6px 8px;
+    font-size: 10px;
+  }
+
+  .home1-how-it-works-tag svg {
+    width: 14px;
+    height: 14px;
   }
 
   .home1-how-it-works-header h2 {
-    font-size: 34px;
+    margin-bottom: 14px;
+    font-size: 32px;
+    line-height: 1.08;
   }
 
   .home1-how-it-works-header p {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.65;
   }
 
   .home1-how-it-works-steps {
-    grid-template-columns:
-      1fr
-      auto
-      1fr
-      auto
-      1fr
-      auto
-      1fr;
-
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
 
   .home1-how-step {
-    min-height: 255px;
-    padding: 24px 16px;
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    column-gap: 20px;
+    align-items: center;
+    min-height: 125px;
+    text-align: left;
   }
 
   .home1-how-step-number {
-    top: 11px;
-    right: 12px;
-    font-size: 11px;
+    top: 6px;
+    left: 34px;
+    transform: translateX(-50%);
   }
 
   .home1-how-step-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 16px;
+    grid-row: 1 / 4;
+    width: 68px;
+    height: 68px;
+    margin: 0;
+    border-width: 5px;
   }
 
   .home1-how-step-icon svg {
@@ -4292,166 +3122,84 @@
   }
 
   .home1-how-step h3 {
+    margin-bottom: 5px;
     font-size: 17px;
-    margin-bottom: 10px;
   }
 
   .home1-how-step p {
-    font-size: 13px;
-    line-height: 1.65;
-  }
-
-  .home1-how-step-connector svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* =========================================================
-   IPAD MINI
-   768 × 1024
-========================================================= */
-
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home1-how-it-works {
-    padding: 70px 0;
-  }
-
-  .home1-how-it-works-container {
-    width: 88%;
-  }
-
-  .home1-how-it-works-header {
-    max-width: 620px;
-    margin-bottom: 42px;
-  }
-
-  .home1-how-it-works-tag {
-    font-size: 13px;
-  }
-
-  .home1-how-it-works-header h2 {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-
-  .home1-how-it-works-header p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .home1-how-it-works-steps {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .home1-how-step {
-    min-height: 270px;
-    padding: 26px 20px;
+    max-width: none;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.55;
   }
 
   .home1-how-step-connector {
+    width: 68px;
+    height: 38px;
+    margin-left: 0;
+  }
+
+  .home1-how-step-connector::before {
+    top: 0;
+    left: 33px;
+    width: 2px;
+    height: 100%;
+    transform: none;
+    background: color-mix(in srgb, var(--primary-color) 22%, transparent);
+  }
+
+  .home1-how-step-connector::after {
     display: none;
   }
 
-  .home1-how-step-icon {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 18px;
-  }
-
-  .home1-how-step-icon svg {
-    width: 25px;
-    height: 25px;
-  }
-
-  .home1-how-step h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .home1-how-step p {
-    font-size: 14px;
-    line-height: 1.7;
+  .home1-how-step:nth-child(4) + .home1-how-step-connector::before {
+    background: color-mix(in srgb, var(--secondary-color) 22%, transparent);
   }
 }
 
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360 × 740
-========================================================= */
-
-@media screen and (max-width: 360px) and (max-height: 740px) {
-  .home1-how-it-works {
-    padding: 55px 0;
-  }
-
-  .home1-how-it-works-container {
-    width: 88%;
-  }
-
-  .home1-how-it-works-header {
-    margin-bottom: 35px;
-  }
-
-  .home1-how-it-works-tag {
-    gap: 7px;
-    margin-bottom: 12px;
-    padding: 5px 11px 5px 8px;
-    font-size: 12px;
-  }
-
-  .home1-how-it-works-tag svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .home1-how-it-works-header h2 {
-    font-size: 27px;
-    line-height: 1.3;
-    margin-bottom: 14px;
-  }
-
-  .home1-how-it-works-header p {
-    font-size: 13px;
-    line-height: 1.65;
-  }
-
-  .home1-how-it-works-steps {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
+@media (prefers-reduced-motion: reduce) {
   .home1-how-step {
-    min-height: auto;
-    padding: 24px 18px;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
-  .home1-how-step-number {
-    top: 10px;
-    right: 12px;
-    font-size: 11px;
+  .home1-how-step-icon,
+  .home1-how-step-icon::before {
+    transition: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  [dir="rtl"] .home1-how-step {
+    direction: rtl;
+    text-align: right;
+    grid-template-columns: 68px 1fr;
   }
 
-  .home1-how-step-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 16px;
+  [dir="rtl"] .home1-how-step-number {
+    left: auto;
+    right: 34px;
+    transform: translateX(50%);
   }
 
-  .home1-how-step-icon svg {
-    width: 23px;
-    height: 23px;
+  [dir="rtl"] .home1-how-step-icon {
+    grid-column: 1;
+    grid-row: 1 / 4;
   }
 
-  .home1-how-step h3 {
-    font-size: 17px;
-    margin-bottom: 9px;
+  [dir="rtl"] .home1-how-step h3,
+  [dir="rtl"] .home1-how-step p {
+    text-align: right;
   }
 
-  .home1-how-step p {
-    font-size: 13px;
-    line-height: 1.65;
+  [dir="rtl"] .home1-how-step-connector {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  [dir="rtl"] .home1-how-step-connector::before {
+    left: auto;
+    right: 33px;
   }
 }
 /* =====================================================
@@ -4672,7 +3420,7 @@
 .home1-testimonial-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  
 
   display: flex;
   align-items: center;
@@ -4694,7 +3442,7 @@
   pointer-events: auto;
 
   transition:
-    transform 0.3s ease,
+    
     opacity 0.3s ease;
 }
 
@@ -4708,6 +3456,7 @@
 
 .home1-testimonial-arrow:hover {
   opacity: 0.9;
+  transform: none;
 }
 
 .home1-testimonial-prev {
@@ -4884,7 +3633,7 @@
    360 × 740
 ===================================================== */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .home1-testimonial {
     padding: 55px 0;
   }
@@ -5204,7 +3953,7 @@ CTA BUTTON
   padding: 14px 28px;
 
   border: 1px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 12px;
 
   background: var(--primary-color);
   color: var(--white);
@@ -5219,7 +3968,7 @@ CTA BUTTON
 }
 
 .home1-cta-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* =====================================================
@@ -5332,7 +4081,7 @@ IPAD MINI — 768 × 1024
 SAMSUNG GALAXY S8+ — 360 × 740
 ===================================================== */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .home1-cta {
     padding: 70px 0;
   }

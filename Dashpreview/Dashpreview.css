@@ -99,7 +99,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
+  border-radius: 12px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -118,9 +118,10 @@
 }
 
 .dashboard-preview-secondary-btn {
+
   background-color: var(--light-bg);
   color: var(--text-color);
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .dashboard-preview-primary-btn:hover {
@@ -456,14 +457,14 @@
   background: var(--border-color);
 }
 
-.dashboard-preview-progress-active {
+/* .dashboard-preview-progress-active {
   position: absolute;
   top: 0;
   left: 0;
   width: 65%;
   height: 3px;
   background: var(--primary-color);
-}
+} */
 
 .dashboard-preview-progress-steps {
   margin-top: -8px;
@@ -678,7 +679,7 @@
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .dashboard-preview-hero-section {
     height: 100vh;
     padding: 80px 0;
@@ -1256,7 +1257,7 @@ NEST HUB — 1024 × 600
 iPAD MINI — 768 × 1024
 ========================================================= */
 
-@media (max-width: 768px) and (min-height: 700px) {
+@media (max-width: 768px) and (max-height: 1024px) {
   .dashboard-preview-features-section {
     padding: 90px 0;
   }
@@ -1867,7 +1868,7 @@ NEST HUB — 1024 × 600
 iPAD MINI — 768 × 1024
 ========================================================= */
 
-@media (max-width: 768px) and (min-height: 700px) {
+@media (max-width: 768px) and (max-height: 1024px) {
   .dashboard-preview-impact-section {
     padding: 90px 0;
   }
@@ -1901,7 +1902,7 @@ iPAD MINI — 768 × 1024
 SAMSUNG GALAXY S8+ — 360 × 740
 ========================================================= */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 360px){
   .dashboard-preview-impact-section {
     padding: 70px 0;
   }
@@ -2230,7 +2231,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 
     border-radius: 20px;
 
-    /* Important: keep every card's content at the same position */
+   
     justify-content: flex-start;
   }
 
@@ -2253,10 +2254,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
     height: 17px;
   }
 
-  /* CONTENT */
-  .dashboard-preview-how-card-content {
-    margin-top: 28px;
-  }
+  
 
   .dashboard-preview-how-card-content h3 {
     font-size: 14px;
@@ -2296,20 +2294,18 @@ SAMSUNG GALAXY S8+ — 360 × 740
   }
 
   .dashboard-preview-how-card {
-    min-height: 240px;
+    min-height: 200px;
     padding: 25px;
   }
 
-  .dashboard-preview-how-card-content {
-    margin-top: 45px;
-  }
+  
 
   .dashboard-preview-how-card-content p {
     max-width: 300px;
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 360px) {
   .dashboard-preview-how-section {
     padding: 70px 0;
   }
@@ -2348,7 +2344,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
   }
 
   .dashboard-preview-how-card {
-    min-height: 190px;
+    min-height: 150px;
     padding: 20px;
     border-radius: 20px;
   }
@@ -2367,9 +2363,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
     height: 16px;
   }
 
-  .dashboard-preview-how-card-content {
-    margin-top: 35px;
-  }
+  
 
   .dashboard-preview-how-card-content h3 {
     font-size: 14px;
@@ -2460,7 +2454,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
   margin-top: 28px;
   padding: 13px 24px;
   border: 2px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 12px;
   background: var(--primary-color);
   color: var(--white);
   font-size: 12px;

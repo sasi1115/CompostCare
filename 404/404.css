@@ -97,8 +97,8 @@
 }
 
 .error-logo-row img {
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 55px;
   display: block;
   flex-shrink: 0;
   object-fit: contain;

@@ -179,8 +179,8 @@ html[dir="rtl"] .dashboard-brand-secondary {
 
 @media (max-width: 480px) {
   .dashboard-brand-row img {
-    width: 28px;
-    height: 28px;
+    width: 50px;
+    height: 55px;
   }
 
   .dashboard-brand-name {
@@ -1108,7 +1108,7 @@ html.dark-mode .dashboard-section-tag svg {
 
   padding: 0 18px;
 
-  border-radius: 50px;
+  border-radius: 12px;
 
   font-size: 11px;
   font-weight: 700;
@@ -2188,7 +2188,7 @@ html.dark-mode .dashboard-section-tag svg {
    SIDEBAR BECOMES TOGGLE
 ========================================================= */
 
-@media (width: 360px) and (height: 740px) {
+@media (max-width: 480px) {
   .dashboard-sidebar {
     width: 285px;
 

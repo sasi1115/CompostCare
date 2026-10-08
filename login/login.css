@@ -375,8 +375,8 @@ PAGE CONTROLS
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
   background: var(--light-bg);
   color: var(--text-color);
   cursor: pointer;

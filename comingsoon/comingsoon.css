@@ -101,7 +101,7 @@ COMING SOON SECTION
 
 .coming-logo-row img {
   width: 50px;
-  height: 55px;
+  height: 55px; 
   display: block;
   flex-shrink: 0;
   object-fit: contain;

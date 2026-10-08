@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>CompostCare</title>
+    <title>CompostCare | Create Account</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css" />
@@ -12,27 +12,24 @@
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="signup.css" />
 
-    <!-- Icons -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="../components/component.js" defer></script>
     <script src="../global/global.js" defer></script>
     <script src="signup.js" defer></script>
   </head>
+
   <body>
-    <!-- =========================================================
-         SIGN UP PAGE
-    ========================================================= -->
-
     <main class="signup-page">
-      <!-- =========================================================
-     SIGN UP BACKGROUND ANIMATION
-========================================================= -->
-
+      <!-- =====================================================
+           BACKGROUND ANIMATION
+      ====================================================== -->
       <div class="login-bg-animation" aria-hidden="true">
         <span class="login-bg-orb login-bg-orb-one"></span>
         <span class="login-bg-orb login-bg-orb-two"></span>
@@ -50,10 +47,10 @@
         <span class="login-bg-line line-one"></span>
         <span class="login-bg-line line-two"></span>
       </div>
-      <!-- =====================================================
-             PAGE CONTROLS
-        ===================================================== -->
 
+      <!-- =====================================================
+           PAGE CONTROLS — OUTSIDE THE CARD
+      ====================================================== -->
       <div class="signup-page-controls">
         <button
           type="button"
@@ -75,14 +72,10 @@
       </div>
 
       <!-- =====================================================
-             SIGN UP CARD
-        ===================================================== -->
-
+           SIGNUP CARD — EVERYTHING BELOW IS INSIDE THIS CARD
+      ====================================================== -->
       <section class="signup-container">
-        <!-- =================================================
-     LOGO + BRAND
-================================================= -->
-
+        <!-- BRAND -->
         <a
           href="../Home1/home1.html"
           class="signup-brand"
@@ -93,38 +86,27 @@
 
             <div class="signup-brand-text">
               <div class="signup-brand-name">
-                <span class="signup-brand-primary">Compost</span
-                ><span class="signup-brand-secondary">Care</span>
+                <span class="signup-brand-primary">Compost</span>
+                <span class="signup-brand-secondary">Care</span>
               </div>
 
               <div class="signup-brand-tagline">Turn Waste Into Worth</div>
             </div>
           </div>
         </a>
-        <!-- =================================================
-                 SIGN UP INTRO
-            ================================================= -->
 
+        <!-- INTRO -->
         <div class="signup-intro">
           <h1>Create Your Account</h1>
-
           <p>Join CompostCare and start making a difference.</p>
         </div>
 
-        <!-- =================================================
-                 SIGN UP FORM
-            ================================================= -->
-
+        <!-- FORM -->
         <form class="signup-form" id="signupForm">
-          <!-- =================================================
-                     FIRST NAME + LAST NAME
-                ================================================= -->
-
+          <!-- FIRST + LAST NAME -->
           <div class="signup-name-row">
-            <!-- FIRST NAME -->
-
             <div class="signup-field">
-              <label for="signupFirstName"> First Name </label>
+              <label for="signupFirstName">First Name</label>
 
               <div class="signup-input-wrapper">
                 <i data-lucide="user"></i>
@@ -140,10 +122,8 @@
               </div>
             </div>
 
-            <!-- LAST NAME -->
-
             <div class="signup-field">
-              <label for="signupLastName"> Last Name </label>
+              <label for="signupLastName">Last Name</label>
 
               <div class="signup-input-wrapper">
                 <i data-lucide="user"></i>
@@ -160,12 +140,9 @@
             </div>
           </div>
 
-          <!-- =================================================
-                     EMAIL
-                ================================================== -->
-
+          <!-- EMAIL -->
           <div class="signup-field">
-            <label for="signupEmail"> Email Address </label>
+            <label for="signupEmail">Email Address</label>
 
             <div class="signup-input-wrapper">
               <i data-lucide="mail"></i>
@@ -181,12 +158,9 @@
             </div>
           </div>
 
-          <!-- =================================================
-                     PHONE NUMBER
-                ================================================== -->
-
+          <!-- PHONE NUMBER -->
           <div class="signup-field">
-            <label for="signupPhone"> Phone Number </label>
+            <label for="signupPhone">Phone Number</label>
 
             <div class="signup-input-wrapper">
               <i data-lucide="phone"></i>
@@ -197,17 +171,15 @@
                 name="phone"
                 placeholder="Enter your phone number"
                 autocomplete="tel"
+                inputmode="tel"
                 required
               />
             </div>
           </div>
 
-          <!-- =================================================
-                     PASSWORD
-                ================================================== -->
-
+          <!-- PASSWORD -->
           <div class="signup-field">
-            <label for="signupPassword"> Password </label>
+            <label for="signupPassword">Password</label>
 
             <div class="signup-input-wrapper">
               <i data-lucide="lock"></i>
@@ -232,12 +204,9 @@
             </div>
           </div>
 
-          <!-- =================================================
-                     CONFIRM PASSWORD
-                ================================================== -->
-
+          <!-- CONFIRM PASSWORD -->
           <div class="signup-field">
-            <label for="signupConfirmPassword"> Confirm Password </label>
+            <label for="signupConfirmPassword">Confirm Password</label>
 
             <div class="signup-input-wrapper">
               <i data-lucide="lock-keyhole"></i>
@@ -262,6 +231,7 @@
             </div>
           </div>
 
+          <!-- TERMS -->
           <div class="signup-terms">
             <label class="signup-terms-label">
               <input type="checkbox" id="signupTerms" name="terms" required />
@@ -275,58 +245,40 @@
             </label>
           </div>
 
-          <!-- =================================================
-                     SIGN UP BUTTON
-                ================================================== -->
-
+          <!-- SUBMIT -->
           <button type="submit" class="signup-submit">Create Account</button>
 
-          <!-- =================================================
-                     SOCIAL SIGN UP DIVIDER
-                ================================================== -->
-
-          <div class="signup-divider">
+          <!-- SOCIAL DIVIDER -->
+          <div class="signup-divider" aria-hidden="true">
             <span></span>
-
             <p>Or continue with</p>
-
             <span></span>
           </div>
 
-          <!-- =================================================
-                     SOCIAL SIGN UP OPTIONS
-                ================================================== -->
-
+          <!-- SOCIAL BUTTONS -->
           <div class="signup-social-options">
-            <!-- GOOGLE -->
-
             <button type="button" class="signup-social-btn signup-google">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill="#4285F4"
                   d="M21.35 12.27c0-.79-.07-1.55-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"
                 />
-
                 <path
                   fill="#34A853"
                   d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.5A9.74 9.74 0 0 0 12 21.75z"
                 />
-
                 <path
                   fill="#FBBC05"
                   d="M6.54 13.85A5.85 5.85 0 0 1 6.23 12c0-.64.11-1.27.31-1.85v-2.5H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.06 1.05 4.35l3.24-2.5z"
                 />
-
                 <path
                   fill="#EA4335"
                   d="M12 6.12c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.2 14.63 2.25 12 2.25a9.74 9.74 0 0 0-8.7 5.4l3.24 2.5C6.31 7.84 8.46 6.12 12 6.12z"
                 />
               </svg>
 
-              <span> Google </span>
+              <span>Google</span>
             </button>
-
-            <!-- APPLE -->
 
             <button type="button" class="signup-social-btn signup-apple">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -336,18 +288,14 @@
                 />
               </svg>
 
-              <span> Apple </span>
+              <span>Apple</span>
             </button>
           </div>
 
-          <!-- =================================================
-                     LOGIN LINK
-                ================================================== -->
-
+          <!-- LOGIN LINK — INSIDE THE FORM AND CARD -->
           <p class="signup-login-link">
             Already have an account?
-
-            <a href="../Login/login.html"> Login </a>
+            <a href="../Login/login.html">Login</a>
           </p>
         </form>
       </section>

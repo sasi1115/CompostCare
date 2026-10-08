@@ -11,40 +11,128 @@ body {
 }
 
 /* Site typography: Outfit is the single UI font across every standard text element. */
-body, button, input, textarea, select, option {
+body,
+button,
+input,
+textarea,
+select,
+option {
   font-family: "Outfit", sans-serif;
 }
 
-body :where(h1,h2,h3,h4,h5,h6,p,a,span,li,label,small,strong,em,blockquote) {
+body
+  :where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span,
+    li,
+    label,
+    small,
+    strong,
+    em,
+    blockquote
+  ) {
   font-family: "Outfit", sans-serif;
 }
 
 :root {
-  --primary-color: #1e704b; /* Sea Green */
-  --secondary-color: #b35a3a; /* Earth Brown */
+  /* =========================
+     COLORS
+  ========================= */
+
+  --primary-color: #1e704b;
+  --secondary-color: #b35a3a;
+
   --text-color: #111827;
-  --light-bg: #ffff;
+
+  --light-bg: #ffffff;
   --dark-bg: #121412;
+
   --border-color: #cbd5e1;
-  --white: #ffff;
+  --white: #ffffff;
+
+  /* =========================
+     FONT SIZES
+  ========================= */
+
+  --fs-title: 48px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  /* =========================
+     FONT WEIGHTS
+  ========================= */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* =========================
+     BOX SHADOWS
+  ========================= */
+
+  --shadow-sm: 0 4px 12px color-mix(in srgb, var(--text-color) 6%, transparent);
+
+  --shadow-md: 0 12px 30px
+    color-mix(in srgb, var(--text-color) 10%, transparent);
+
+  --shadow-lg: 0 24px 60px
+    color-mix(in srgb, var(--text-color) 14%, transparent);
 }
 
 .dark-mode {
+  /* =========================
+     COLORS
+  ========================= */
+
   --primary-color: #1e704b;
   --secondary-color: #b35a3a;
-  --text-color: #ffff;
+
+  --text-color: #ffffff;
+
   --light-bg: #121412;
   --dark-bg: #121412;
-  --border-color: #cbd5e1;
-  --white: #ffff;
-}
 
+  --border-color: #cbd5e1;
+  --white: #ffffff;
+
+  /* =========================
+     FONT SIZES
+  ========================= */
+
+  --fs-title: 48px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  /* =========================
+     FONT WEIGHTS
+  ========================= */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* =========================
+     BOX SHADOWS
+  ========================= */
+
+  --shadow-sm: 0 4px 12px color-mix(in srgb, var(--text-color) 6%, transparent);
+
+  --shadow-md: 0 12px 30px
+    color-mix(in srgb, var(--text-color) 10%, transparent);
+
+  --shadow-lg: 0 24px 60px
+    color-mix(in srgb, var(--text-color) 14%, transparent);
+}
 /* =========================================================
    2026 UI ENHANCEMENT — TYPOGRAPHY, HOVERS & SCROLL MOTION
    ========================================================= */
-
-/* A clean, friendly typeface that suits an eco / compost brand. */
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
 
 html,
 body,
@@ -56,7 +144,12 @@ select {
 }
 
 /* Keep headings confident while maintaining the existing hierarchy. */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Outfit", sans-serif;
   letter-spacing: -0.025em;
 }
@@ -79,16 +172,9 @@ img,
     opacity 0.35s ease;
 }
 
-/* Universal card lift — applied only to actual card-like components. */
 @media (hover: hover) and (pointer: fine) {
-  [class*="card"]:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 16px 38px rgba(17, 24, 39, 0.12);
-  }
-
   [class*="btn"]:hover,
-  [class*="button"]:hover,
-  button:hover {
+  [class*="button"]:hover {
     transform: translateY(-2px);
   }
 
@@ -97,26 +183,24 @@ img,
     transform: translateY(-1px);
   }
 
-  /* Images inside content cards get a subtle premium zoom. */
   [class*="card"] img:hover,
   [class*="image"] img:hover {
     transform: scale(1.035);
   }
 }
 
-/* Scroll reveal base. JS adds one directional class to suitable elements. */
-.reveal-motion {
-  opacity: 0;
-  transition:
-    opacity 0.75s cubic-bezier(0.2, 0.65, 0.3, 1),
-    transform 0.75s cubic-bezier(0.2, 0.65, 0.3, 1);
-  will-change: opacity, transform;
+.reveal-motion.fade-up {
+  transform: translate3d(0, 42px, 0);
 }
-
-.reveal-motion.fade-up { transform: translate3d(0, 42px, 0); }
-.reveal-motion.fade-left { transform: translate3d(-46px, 0, 0); }
-.reveal-motion.fade-right { transform: translate3d(46px, 0, 0); }
-.reveal-motion.fade-scale { transform: scale(0.94); }
+.reveal-motion.fade-left {
+  transform: translate3d(-46px, 0, 0);
+}
+.reveal-motion.fade-right {
+  transform: translate3d(46px, 0, 0);
+}
+.reveal-motion.fade-scale {
+  transform: scale(0.94);
+}
 
 .reveal-motion.is-visible {
   opacity: 1;
@@ -124,16 +208,28 @@ img,
 }
 
 /* Stagger children naturally when cards are grouped. */
-.reveal-motion.motion-delay-1 { transition-delay: 0.08s; }
-.reveal-motion.motion-delay-2 { transition-delay: 0.16s; }
-.reveal-motion.motion-delay-3 { transition-delay: 0.24s; }
-.reveal-motion.motion-delay-4 { transition-delay: 0.32s; }
+.reveal-motion.motion-delay-1 {
+  transition-delay: 0.08s;
+}
+.reveal-motion.motion-delay-2 {
+  transition-delay: 0.16s;
+}
+.reveal-motion.motion-delay-3 {
+  transition-delay: 0.24s;
+}
+.reveal-motion.motion-delay-4 {
+  transition-delay: 0.32s;
+}
 
 /* Accessibility: users who request reduced motion get an instant layout. */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto !important; }
+  html {
+    scroll-behavior: auto !important;
+  }
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -144,4 +240,37 @@ img,
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* Global Tagline */
+.tagline {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+  padding: 3px 10px 4px 9px;
+
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tagline-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.tagline-icon svg {
+  width: 17px;
+  height: 17px;
 }

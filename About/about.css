@@ -172,7 +172,7 @@ body {
   margin-top: 34px;
   padding: 0 28px;
 
-  border-radius: 50px;
+  border-radius:12px;
 
   background: var(--primary-color);
   color: var(--white);
@@ -292,7 +292,7 @@ body {
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 360px)  {
   /* =======================================================
      HERO
   ======================================================= */
@@ -436,13 +436,8 @@ body {
     height: 16px;
   }
 }
-/* =========================================================
-   DARK MODE
-========================================================= */
 
-.dark-mode .ourstory-hero-overlay {
-  background: rgba(0, 0, 0, 0.55);
-}
+
 
 /* =========================================================
    WHY WE STARTED SECTION
@@ -878,7 +873,7 @@ body {
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px)  {
   .ourstory-why-section {
     padding: 65px 0;
   }
@@ -1434,7 +1429,7 @@ body {
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .ourstory-approach-section {
     padding: 65px 0;
   }
@@ -2002,7 +1997,7 @@ html[dir="rtl"] .about-transformation-arrow svg {
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px){
   .about-transformation-section {
     padding: 65px 0;
   }
@@ -2405,7 +2400,7 @@ html[dir="rtl"] .about-transformation-arrow svg {
    360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px){
   /* =======================================================
      OUR PHILOSOPHY SECTION
   ======================================================= */
@@ -2711,7 +2706,7 @@ CTA BUTTON
   padding: 12px 25px;
 
   border: 1px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 12px;
 
   background: var(--primary-color);
   color: var(--white);

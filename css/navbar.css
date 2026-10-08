@@ -160,6 +160,7 @@ html[dir="rtl"] .logo {
 
 .nav-link:hover {
   color: var(--primary-color);
+  transform: none;
 }
 /* =========================================================
    ACTIVE NAVIGATION LINK
@@ -264,7 +265,7 @@ html[dir="rtl"] .logo {
 ========================================================= */
 
 .header-actions {
-  width: 100%;
+  width: auto;
 
   display: flex;
   align-items: center;
@@ -289,7 +290,7 @@ html[dir="rtl"] .logo {
 
   background: transparent;
   border: 1px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 12px;
 
   color: var(--text-color);
 
@@ -306,6 +307,7 @@ html[dir="rtl"] .logo {
 .rtl-toggle:hover {
   color: var(--light-bg);
   background: var(--primary-color);
+  transform: none;
 }
 
 /* =========================================================
@@ -325,7 +327,7 @@ html[dir="rtl"] .logo {
 
   background: transparent;
   border: 1px solid var(--primary-color);
-  border-radius: 50%;
+  border-radius: 12px;
 
   color: var(--text-color);
 
@@ -353,6 +355,7 @@ html[dir="rtl"] .logo {
 .theme-toggle:hover {
   color: var(--white);
   background-color: var(--primary-color);
+  transform: none;
 }
 
 /* Icon */
@@ -379,7 +382,7 @@ html[dir="rtl"] .logo {
 
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 12px;
 
   color: var(--white);
   text-decoration: none;
