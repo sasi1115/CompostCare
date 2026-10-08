@@ -10,7 +10,7 @@ SERVICES HERO
 
 .services-hero-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 0.9fr;
@@ -370,7 +370,7 @@ OUR COMPOSTING SERVICES
 
 .services-main-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -751,7 +751,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 
 .waste-calculator-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -1421,7 +1421,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 
 .solutions-scale-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -1712,7 +1712,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 
 .service-covers-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 

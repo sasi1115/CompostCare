@@ -10,7 +10,7 @@
 .home-hero {
   width: 100%;
   min-height: calc(100vh - 80px);
-  padding: 60px 0;
+  padding: 100px 0;
   overflow: hidden;
   background: var(--light-bg);
   position: relative;
@@ -18,7 +18,7 @@
 
 .home-hero-container {
   width: 85%;
-  max-width: 1400px;
+  max-width: 1150px;
   min-height: 620px;
   margin: 0 auto;
   display: grid;
@@ -1437,665 +1437,842 @@
   }
 }
 
-.compost-myth-section {
+/* =====================================================
+   HOME 2 — DESIGNED AROUND YOUR HOME
+===================================================== */
+
+.home2-designed {
   position: relative;
   width: 100%;
-  padding: 115px 0 125px;
-  overflow: hidden;
+  padding: 100px 0;
   background: var(--light-bg);
   color: var(--text-color);
+  overflow: hidden;
 }
 
-.compost-myth-section::before {
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
+.home2-designed::before,
+.home2-designed::after {
   content: "";
   position: absolute;
-  width: 420px;
-  height: 420px;
-  top: 80px;
-  left: -220px;
-  border: 1px solid var(--primary-color);
   border-radius: 50%;
-  opacity: 0.08;
-  animation: compostMythOrbit 12s linear infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.compost-myth-section::after {
-  content: "";
-  position: absolute;
+.home2-designed::before {
+  width: 360px;
+  height: 360px;
+  top: -180px;
+  left: -180px;
+  background: color-mix(in srgb, var(--primary-color) 7%, transparent);
+}
+
+.home2-designed::after {
   width: 300px;
   height: 300px;
   right: -150px;
-  bottom: 70px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 50%;
-  opacity: 0.08;
-  animation: compostMythOrbitReverse 15s linear infinite;
+  bottom: -150px;
+  background: color-mix(in srgb, var(--secondary-color) 7%, transparent);
 }
 
-.compost-myth-container {
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.home2-designed-container {
+  position: relative;
+  z-index: 1;
+
+  width: 85%;
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+
+  gap: 75px;
+}
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.home2-designed-content {
   position: relative;
   z-index: 2;
-  width: min(1200px, 88%);
-  margin: 0 auto;
-  text-align: center;
 }
 
-.compost-myth-heading {
-  max-width: 850px;
-  margin: 0 auto 58px;
-}
+/* =====================================================
+   TAGLINE
+===================================================== */
 
-.compost-myth-eyebrow {
+.home2-designed-tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 9px;
-  padding: 10px 17px;
-  border-radius: 999px;
+
+  padding: 9px 16px;
+
   background: var(--primary-color);
   color: var(--white);
+
+  border-radius: 999px;
+
   font-size: var(--fs-small);
   font-weight: var(--fw-semibold);
-  letter-spacing: 1.5px;
   line-height: 1;
-  box-shadow: var(--shadow-sm);
-  
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 25px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.compost-myth-eyebrow i {
+.home2-designed-tag svg {
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
+  stroke-width: 2;
 }
 
-.compost-myth-title {
-  margin: 25px 0 0;
-  font-size: var(--fs-title);
+.home2-designed-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.home2-designed-title {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: clamp(38px, 4vw, 52px);
   font-weight: var(--fw-semibold);
   line-height: 1.08;
-  letter-spacing: -2px;
+  letter-spacing: -0.035em;
+
+  color: var(--primary-color);
+}
+
+.home2-designed-title span {
+  display: block;
+  color: var(--secondary-color);
+}
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.home2-designed-description {
+  max-width: 590px;
+
+  margin: 25px 0 0;
+
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+
   color: var(--text-color);
 }
 
-.compost-myth-subtitle {
-  max-width: 700px;
-  margin: 20px auto 0;
-  font-size: 17px;
-  line-height: 1.75;
-  color: var(--text-color);
-  opacity: 0.68;
-}
+/* =====================================================
+   DIVIDER
+===================================================== */
 
-.compost-myth-cards {
+.home2-designed-divider {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 26px;
+
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
+  max-width: 520px;
 
-.compost-myth-cards::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70px;
   height: 1px;
-  transform: translate(-50%, -50%);
+
+  margin: 34px 0 30px;
+
   background: var(--border-color);
-  opacity: 0.7;
 }
 
-.compost-myth-card {
+.home2-designed-divider::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 75px;
+  height: 2px;
+
+  background: var(--primary-color);
+}
+
+/* =====================================================
+   LIFESTYLE POINTS
+===================================================== */
+
+.home2-designed-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+  max-width: 620px;
+}
+
+/* =====================================================
+   INDIVIDUAL POINT
+===================================================== */
+
+.home2-designed-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  min-height: 65px;
+  padding: 0 22px;
+
+  border-right: 1px solid var(--border-color);
+}
+
+.home2-designed-point:first-child {
+  padding-left: 0;
+}
+
+.home2-designed-point:last-child {
+  border-right: none;
+}
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.home2-designed-number {
+  flex-shrink: 0;
+
+  padding-top: 2px;
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+
+  color: var(--primary-color);
+
+  letter-spacing: 0.08em;
+}
+
+/* =====================================================
+   POINT CONTENT
+===================================================== */
+
+.home2-designed-point-content h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+  font-weight: var(--fw-semibold);
+
+  color: var(--text-colr);
+}
+
+.home2-designed-point-content p {
+  margin: 0;
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+
+  line-height: 1.5;
+
+  color: var(--text-color);
+}
+
+/* =====================================================
+   RIGHT VISUAL
+===================================================== */
+
+.home2-designed-visual {
   position: relative;
-  height: 380px;
-  padding: 34px 38px 32px;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================================================
+   IMAGE WRAPPER
+===================================================== */
+
+.home2-designed-image-wrap {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  aspect-ratio: 0.86;
+
   overflow: hidden;
-  border: 1px solid var(--border-color);
-  border-radius: 28px;
+
+  border-radius: 38px 38px 38px 110px;
+
   background: var(--light-bg);
-  box-shadow: var(--shadow-md);
-  text-align: left;
+
+  box-shadow: var(--shadow-lg);
+
+  transform: rotate(1deg);
+
   transition:
-    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
-    box-shadow 0.45s ease,
-    border-color 0.45s ease;
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
-.compost-myth-card::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  top: -90px;
-  right: -70px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  opacity: 0.07;
-  transition:
-    transform 0.6s ease,
-    opacity 0.4s ease;
-}
-
-.compost-myth-card::after {
-  content: "";
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  right: 28px;
-  bottom: -55px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  opacity: 0.06;
-}
-
-.compost-myth-card:hover {
-  transform: translateY(-8px);
+.home2-designed-image-wrap:hover {
+  transform: rotate(0deg) translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
-.compost-myth-card:hover::before {
-  transform: scale(1.18) rotate(20deg);
-  opacity: 0.11;
-}
+/* =====================================================
+   IMAGE
+===================================================== */
 
-.compost-myth-card-myth {
-  color: var(--secondary-color);
-}
+.home2-designed-image-wrap img {
+  width: 100%;
+  height: 100%;
 
-.compost-myth-card-reality {
-  color: var(--primary-color);
-}
-
-.compost-myth-card-top {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.compost-myth-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  font-size: var(--fs-small);
-  font-weight: var(--fw-semibold);
-  color: inherit;
-  background: var(--light-bg);
-}
-
-.compost-myth-card-label {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 13px;
-  border-radius: 999px;
-  background: currentColor;
-  color: var(--white);
-  font-size: 11px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 2px;
-  line-height: 1;
-}
-
-.compost-myth-reality-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--primary-color);
-}
-
-.compost-myth-card-content {
-  position: relative;
-  z-index: 2;
-  max-width: 440px;
-  margin-top: 30px;
-}
-
-.compost-myth-card-kicker {
   display: block;
-  margin-bottom: 15px;
-  font-size: 10px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 2px;
-  color: var(--text-color);
-  opacity: 0.48;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
 }
 
-.compost-myth-question,
-.compost-myth-answer {
-  margin: 0;
-  font-size: 29px;
-  font-weight: var(--fw-semibold);
-  line-height: 1.28;
-  letter-spacing: -0.7px;
-  color: var(--text-color);
+.home2-designed-image-wrap:hover img {
+  transform: scale(1.04);
 }
 
-.compost-myth-card-description,
-.compost-myth-explanation {
-  max-width: 430px;
-  margin: 20px 0 0;
-  font-size: var(--fs-body);
-  line-height: 1.75;
-  color: var(--text-color);
-  opacity: 0.67;
-}
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
 
-.compost-myth-card-icon {
+.home2-designed-image-wrap::after {
+  content: "";
+
   position: absolute;
-  right: 34px;
-  bottom: 30px;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--text-color) 18%, transparent),
+    transparent 45%
+  );
+}
+
+/* =====================================================
+   IMAGE BADGE
+===================================================== */
+
+.home2-designed-image-badge {
+  position: absolute;
+
+  left: 24px;
+  bottom: 24px;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 17px;
+
+  background: var(--white);
+  color: var(--text-color);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-md);
+
+  transition: transform 0.3s ease;
+}
+
+.home2-designed-image-badge:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================================
+   BADGE ICON
+===================================================== */
+
+.home2-designed-badge-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 12px;
+
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.home2-designed-badge-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* =====================================================
+   BADGE CONTENT
+===================================================== */
+
+.home2-designed-badge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.home2-designed-badge-content strong {
+  font-size: 17px;
+  font-weight: var(--fw-semibold);
+
+  color: var(--text-color);
+}
+
+.home2-designed-badge-content span {
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+
+  color: var(--text-color);
+}
+
+/* =====================================================
+   FLOATING LEAF DECORATION
+===================================================== */
+
+.home2-designed-leaf {
+  position: absolute;
+
   width: 48px;
   height: 48px;
-  border: 1px solid var(--border-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
-  background: var(--light-bg);
-  color: var(--secondary-color);
-  opacity: 0.9;
-  animation: compostMythIconFloat 4s ease-in-out infinite;
+
+  background: var(--white);
+  color: var(--primary-color);
+
+  box-shadow: var(--shadow-md);
+
+  z-index: 3;
+
+  animation: home2DesignedFloat 4s ease-in-out infinite;
 }
 
-.compost-myth-card-icon svg {
+.home2-designed-leaf svg {
   width: 20px;
   height: 20px;
 }
 
-.compost-myth-tip {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  max-width: 420px;
-  margin-top: 25px;
-  padding: 14px 16px;
-  border: 1px solid var(--border-color);
-  border-radius: 15px;
-  background: var(--light-bg);
+.home2-designed-leaf-one {
+  top: 65px;
+  right: 8px;
+
+  transform: rotate(-18deg);
 }
 
-.compost-myth-tip > i {
-  width: 19px;
-  height: 19px;
-  flex-shrink: 0;
-  margin-top: 1px;
-  color: var(--primary-color);
+.home2-designed-leaf-two {
+  right: 12px;
+  bottom: 65px;
+
+  width: 40px;
+  height: 40px;
+
+  animation-delay: -1.5s;
 }
 
-.compost-myth-tip span {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 10px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 1.4px;
-  color: var(--primary-color);
+.home2-designed-leaf-two svg {
+  width: 17px;
+  height: 17px;
 }
 
-.compost-myth-tip p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--text-color);
-  opacity: 0.68;
-}
+/* =====================================================
+   FLOAT ANIMATION
+===================================================== */
 
-.compost-myth-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  margin-top: 42px;
-}
-
-.compost-myth-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  background: var(--light-bg);
-  color: var(--text-color);
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-    
-}
-
-.compost-myth-arrow:hover {
- 
-  border-color: var(--primary-color);
-  background: var(--primary-color);
-  color: var(--white);
-  box-shadow: var(--shadow-md);
-}
-
-.compost-myth-arrow svg {
-  width: 18px;
-  height: 18px;
-  pointer-events: none;
-  
-}
-
-.compost-myth-current {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  min-width: 65px;
-  justify-content: center;
-}
-
-.compost-myth-current-number {
-  font-size: 23px;
-  font-weight: var(--fw-semibold);
-  color: var(--primary-color);
-}
-
-.compost-myth-current-label {
-  font-size: 10px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 1px;
-  color: var(--text-color);
-  opacity: 0.45;
-}
-
-.compost-myth-instruction {
-  margin: 18px 0 0;
-  font-size: var(--fs-small);
-  line-height: 1.5;
-  color: var(--text-color);
-  opacity: 0.48;
-}
-
-
-
-@keyframes compostMythIconFloat {
+@keyframes home2DesignedFloat {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(-8deg);
   }
 
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-9px) rotate(5deg);
   }
 }
 
-@keyframes compostMythOrbit {
-  from {
-    transform: rotate(0deg);
-  }
+/* =====================================================
+   RTL
+===================================================== */
 
-  to {
-    transform: rotate(360deg);
-  }
+html[dir="rtl"] .home2-designed-divider::before {
+  left: auto;
+  right: 0;
 }
 
-@keyframes compostMythOrbitReverse {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
+html[dir="rtl"] .home2-designed-point {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
 }
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
-  .compost-myth-section {
-    padding: 70px 0 75px;
-  }
-
-  .compost-myth-heading {
-    margin-bottom: 38px;
-  }
-
-  .compost-myth-title {
-    font-size: 40px;
-  }
-
-  .compost-myth-subtitle {
-    margin-top: 12px;
-    font-size: 15px;
-  }
-
-  .compost-myth-cards {
-    max-width: 820px;
-    gap: 20px;
-  }
-
-  .compost-myth-card {
-    min-height: 285px;
-    padding: 25px 28px;
-    border-radius: 23px;
-  }
-
-  .compost-myth-card-content {
-    margin-top: 27px;
-  }
-
-  .compost-myth-question,
-  .compost-myth-answer {
-    font-size: 24px;
-  }
-
-  .compost-myth-card-description,
-  .compost-myth-explanation {
-    margin-top: 12px;
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  .compost-myth-tip {
-    margin-top: 15px;
-    padding: 10px 13px;
-  }
-
-  .compost-myth-navigation {
-    margin-top: 25px;
-  }
-
-  .compost-myth-instruction {
-    margin-top: 12px;
-  }
+html[dir="rtl"] .home2-designed-point:first-child {
+  padding-left: 22px;
+  padding-right: 0;
 }
 
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  .compost-myth-section {
-    padding: 90px 0 95px;
-  }
-
-  .compost-myth-container {
-    width: min(680px, 90%);
-  }
-
-  .compost-myth-heading {
-    margin-bottom: 45px;
-  }
-
-  .compost-myth-title {
-    font-size: 42px;
-  }
-
-  .compost-myth-subtitle {
-    font-size: 16px;
-  }
-
-  .compost-myth-cards {
-    gap: 18px;
-  }
-
-  .compost-myth-card {
-    min-height: 350px;
-    padding: 28px;
-    border-radius: 24px;
-  }
-
-  .compost-myth-card-content {
-    margin-top: 35px;
-  }
-
-  .compost-myth-question,
-  .compost-myth-answer {
-    font-size: 25px;
-  }
-
-  .compost-myth-card-description,
-  .compost-myth-explanation {
-    font-size: 14px;
-  }
-
-  .compost-myth-tip {
-    padding: 13px;
-  }
+html[dir="rtl"] .home2-designed-point:last-child {
+  border-left: none;
 }
 
-@media screen and (max-width: 480px) {
-  .compost-myth-section {
-    padding: 70px 0 75px;
+html[dir="rtl"] .home2-designed-image-badge {
+  left: auto;
+  right: 24px;
+}
+
+/* =====================================================
+   NEST HUB — 1024 × 600
+===================================================== */
+
+@media screen and (width: 1024px) and (height: 600px) {
+  .home2-designed {
+    padding: 65px 0;
   }
 
-  .compost-myth-container {
+  .home2-designed-container {
     width: 90%;
+    gap: 45px;
   }
 
-  .compost-myth-heading {
-    margin-bottom: 35px;
+  .home2-designed-tag {
+    margin-bottom: 18px;
+    padding: 8px 14px;
   }
 
-  .compost-myth-eyebrow {
-    gap: 7px;
-    padding: 9px 13px;
-    font-size: 10px;
-    letter-spacing: 1px;
+  .home2-designed-title {
+    font-size: 38px;
   }
 
-  .compost-myth-eyebrow i {
-    width: 14px;
-    height: 14px;
-  }
-
-  .compost-myth-title {
-    margin-top: 20px;
-    font-size: 32px;
-    letter-spacing: -1px;
-  }
-
-  .compost-myth-subtitle {
-    margin-top: 14px;
+  .home2-designed-description {
+    margin-top: 18px;
     font-size: 14px;
     line-height: 1.65;
   }
 
-  .compost-myth-cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .home2-designed-divider {
+    margin: 24px 0 22px;
   }
 
-  .compost-myth-cards::before {
-    display: none;
+  .home2-designed-point {
+    gap: 9px;
+    padding: 0 12px;
   }
 
-  .compost-myth-card {
-    min-height: 310px;
-    padding: 25px 23px;
-    border-radius: 22px;
+  .home2-designed-point-content h3 {
+    font-size: 14px;
   }
 
-  .compost-myth-card-content {
-    margin-top: 30px;
-  }
-
-  .compost-myth-number {
-    width: 40px;
-    height: 40px;
+  .home2-designed-point-content p {
     font-size: 12px;
   }
 
-  .compost-myth-card-label {
-    padding: 7px 10px;
-    font-size: 9px;
-    letter-spacing: 1.5px;
+  .home2-designed-visual {
+    min-height: 430px;
   }
 
-  .compost-myth-card-kicker {
-    margin-bottom: 12px;
-    font-size: 9px;
-    letter-spacing: 1.5px;
+  .home2-designed-image-wrap {
+    max-width: 365px;
   }
 
-  .compost-myth-question,
-  .compost-myth-answer {
-    font-size: 24px;
-    line-height: 1.3;
+  .home2-designed-leaf-one {
+    top: 35px;
+    right: 0;
   }
 
-  .compost-myth-card-description,
-  .compost-myth-explanation {
-    margin-top: 15px;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .compost-myth-card-icon {
-    right: 22px;
-    bottom: 22px;
-    width: 42px;
-    height: 42px;
-  }
-
-  .compost-myth-card-icon i {
-    width: 18px;
-    height: 18px;
-  }
-
-  .compost-myth-tip {
-    margin-top: 18px;
-    padding: 12px;
-  }
-
-  .compost-myth-tip span {
-    font-size: 9px;
-  }
-
-  .compost-myth-tip p {
-    font-size: 12px;
-  }
-
-  .compost-myth-navigation {
-    gap: 17px;
-    margin-top: 28px;
-  }
-
-  .compost-myth-arrow {
-    width: 44px;
-    height: 44px;
-  }
-
-  .compost-myth-current-number {
-    font-size: 21px;
-  }
-
-  .compost-myth-instruction {
-    margin-top: 14px;
-    font-size: 11px;
+  .home2-designed-leaf-two {
+    right: 0;
+    bottom: 35px;
   }
 }
 
+/* =====================================================
+   IPAD MINI — 768 × 1024
+===================================================== */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .home2-designed {
+    padding: 85px 0;
+  }
+
+  .home2-designed-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .home2-designed-content {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home2-designed-tag {
+    margin-bottom: 22px;
+  }
+
+  .home2-designed-title {
+    margin: 0 auto;
+    font-size: 44px;
+  }
+
+  .home2-designed-description {
+    margin: 22px auto 0;
+  }
+
+  .home2-designed-divider {
+    margin: 30px auto;
+  }
+
+  .home2-designed-divider::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home2-designed-points {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .home2-designed-visual {
+    min-height: 500px;
+  }
+
+  .home2-designed-image-wrap {
+    max-width: 440px;
+  }
+
+  .home2-designed-leaf-one {
+    right: calc(50% - 260px);
+    top: 30px;
+  }
+
+  .home2-designed-leaf-two {
+    right: calc(50% - 250px);
+    bottom: 35px;
+  }
+
+  html[dir="rtl"] .home2-designed-points {
+    text-align: right;
+  }
+}
+
+/* =====================================================
+   MOBILE — 480px AND BELOW
+===================================================== */
+
+@media screen and (max-width: 480px) {
+  .home2-designed {
+    padding: 70px 0;
+  }
+
+  .home2-designed-container {
+    width: 88%;
+    gap: 40px;
+  }
+
+  .home2-designed-tag {
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    font-size: 12px;
+  }
+
+  .home2-designed-tag svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .home2-designed-title {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+
+  .home2-designed-description {
+    margin-top: 18px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .home2-designed-divider {
+    margin: 25px auto;
+  }
+
+  .home2-designed-points {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    max-width: 330px;
+  }
+
+  .home2-designed-point,
+  .home2-designed-point:first-child,
+  html[dir="rtl"] .home2-designed-point:first-child {
+    min-height: auto;
+
+    padding: 13px 0;
+
+    border-right: none;
+    border-left: none;
+
+    border-bottom: 1px solid var(--border-color);
+
+    justify-content: center;
+    text-align: left;
+  }
+
+  .home2-designed-point:last-child,
+  html[dir="rtl"] .home2-designed-point:last-child {
+    border-bottom: none;
+  }
+
+  .home2-designed-number {
+    min-width: 25px;
+  }
+
+  .home2-designed-point-content h3 {
+    font-size: 15px;
+  }
+
+  .home2-designed-point-content p {
+    font-size: 12px;
+  }
+
+  .home2-designed-visual {
+    min-height: auto;
+    padding: 15px 8px 35px;
+  }
+
+  .home2-designed-image-wrap {
+    width: 100%;
+    max-width: 340px;
+
+    aspect-ratio: 0.88;
+
+    border-radius: 28px 28px 28px 75px;
+
+    transform: none;
+  }
+
+  .home2-designed-image-wrap:hover {
+    transform: none;
+  }
+
+  .home2-designed-image-badge {
+    left: 16px;
+    bottom: 16px;
+
+    gap: 9px;
+
+    padding: 9px 12px;
+
+    border-radius: 13px;
+  }
+
+  .home2-designed-badge-icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+  }
+
+  .home2-designed-badge-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home2-designed-badge-content strong {
+    font-size: 15px;
+  }
+
+  .home2-designed-badge-content span {
+    font-size: 11px;
+  }
+
+  .home2-designed-leaf-one {
+    width: 38px;
+    height: 38px;
+
+    top: 0;
+    right: 0;
+  }
+
+  .home2-designed-leaf-two {
+    width: 34px;
+    height: 34px;
+
+    right: 2px;
+    bottom: 10px;
+  }
+
+  .home2-designed-leaf-one svg,
+  .home2-designed-leaf-two svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  html[dir="rtl"] .home2-designed-image-badge {
+    left: auto;
+    right: 16px;
+  }
+
+  html[dir="rtl"] .home2-designed-point,
+  html[dir="rtl"] .home2-designed-point:first-child {
+    text-align: right;
+  }
+}
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .home2-designed-leaf {
+    animation: none;
+  }
+
+  .home2-designed-image-wrap,
+  .home2-designed-image-wrap img,
+  .home2-designed-image-badge,
+  .home2-designed-tag {
+    transition: none;
+  }
+}
 /* =========================================================
    HOME 2 — FROM WASTE TO RESOURCE
 ========================================================= */
@@ -2109,7 +2286,7 @@
 
 .home2-resource-container {
   width: 85%;
-  max-width: 1400px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -2152,7 +2329,7 @@
 .home2-resource-heading h2 {
   margin: 0 0 20px;
 
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: var(--fs-title);
   line-height: 1.18;
   font-weight: 600;
 
@@ -2669,7 +2846,7 @@
 
 .home2-services-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -3137,7 +3314,7 @@
 
 .home2-process-container {
   width: 85%;
-  max-width: 1400px;
+  max-width: 1200px;
 
   margin: 0 auto;
 }
@@ -3998,7 +4175,7 @@
 
 .home2-why-container {
   width: 85%;
-  max-width: 1250px;
+  max-width: 1150px;
 
   margin: 0 auto;
 
@@ -4062,7 +4239,7 @@
 .home2-why-heading h2 {
   margin: 0 0 22px;
 
-  font-size: clamp(34px, 4vw, 50px);
+  font-size: var(--fs-title);
   line-height: 1.18;
 
   font-weight: 600;
@@ -4670,473 +4847,662 @@
   }
 }
 
-/* =====================================================
-   FAQ SECTION
-===================================================== */
-
-.home2-faq-section {
+.compost-myth-section {
+  position: relative;
   width: 100%;
-  padding: 110px 0;
-  background: var(--light-bg);
+  padding: 115px 0 125px;
   overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
 }
 
-.home2-faq-container {
-  width: 85%;
-  max-width: 1100px;
+.compost-myth-section::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 80px;
+  left: -220px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: compostMythOrbit 12s linear infinite;
+}
+
+.compost-myth-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -150px;
+  bottom: 70px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: compostMythOrbitReverse 15s linear infinite;
+}
+
+.compost-myth-container {
+  position: relative;
+  z-index: 2;
+  width: min(1200px, 88%);
   margin: 0 auto;
-}
-
-/* =====================================================
-   FAQ HEADING
-===================================================== */
-
-.home2-faq-heading {
-  max-width: 760px;
-  margin: 0 auto 70px;
   text-align: center;
 }
 
-.home2-faq-tag {
+.compost-myth-heading {
+  max-width: 850px;
+  margin: 0 auto 58px;
+}
+
+.compost-myth-eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
-  padding: 6px 16px;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 1px;
+  gap: 9px;
+  padding: 10px 17px;
+  border-radius: 999px;
+  background: var(--primary-color);
   color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 50px;
+  font-size: var(--fs-small);
+  font-weight: 14px;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
 }
 
-.home2-faq-tag svg {
-  width: 20px;
-  height: 20px;
-  padding: 3px;
-  color: var(--white);
-  background: var(--primary-color);
-  border-radius: 50%;
+.compost-myth-eyebrow i {
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
 }
 
-.home2-faq-heading h2 {
-  margin: 0 0 20px;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.2;
-  font-weight: 600;
+.compost-myth-title {
+  margin: 25px 0 0;
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semibold);
+  line-height: 1.08;
+  letter-spacing: -2px;
   color: var(--primary-color);
 }
-.home2-faq-heading h2 span {
+.compost-myth-title span {
   color: var(--secondary-color);
 }
 
-.home2-faq-heading p {
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.8;
-  font-weight: 400;
+.compost-myth-subtitle {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 17px;
+  line-height: 1.75;
   color: var(--text-color);
+  opacity: 0.68;
 }
 
-/* =====================================================
-   FAQ LIST
-===================================================== */
-
-.home2-faq-list {
-  width: 100%;
-}
-
-/* =====================================================
-   FAQ ITEM
-   EACH FAQ = SEPARATE ROUNDED BOX
-===================================================== */
-
-.home2-faq-item {
-  width: 100%;
-  margin: 0 0 18px;
-  padding: 0;
-
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-
-  overflow: hidden;
-  background: var(--light-bg);
-}
-.home2-faq-item:hover {
-  border: 1px solid var(--secondary-color);
-}
-
-.home2-faq-item:last-child {
-  margin-bottom: 0;
-}
-
-/* =====================================================
-   SUMMARY
-===================================================== */
-
-.home2-faq-item summary {
+.compost-myth-cards {
   position: relative;
-
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
   width: 100%;
-  min-height: 82px;
-
-  padding: 22px 75px 22px 28px;
-
-  display: flex;
-  align-items: center;
-
-  list-style: none;
-  cursor: pointer;
-
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 500;
-
-  color: var(--primary-color);
-  background: transparent;
-
-  outline: none;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Remove browser marker */
-
-.home2-faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.home2-faq-item summary::marker {
-  display: none;
-}
-
-/* =====================================================
-   QUESTION TEXT
-===================================================== */
-
-.home2-faq-question {
-  display: block;
-  width: 100%;
-  color: var(--text-color);
-}
-
-/* =====================================================
-   PLUS ICON
-===================================================== */
-
-.home2-faq-icon {
+.compost-myth-cards::before {
+  content: "";
   position: absolute;
   top: 50%;
-  right: 25px;
+  left: 50%;
+  width: 70px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  background: var(--border-color);
+  opacity: 0.7;
+}
 
-  width: 38px;
-  height: 38px;
+.compost-myth-card {
+  position: relative;
+  height: 380px;
+  padding: 34px 38px 32px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  background: var(--light-bg);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
 
+.compost-myth-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: -70px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.07;
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+}
+
+.compost-myth-card::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  right: 28px;
+  bottom: -55px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.06;
+}
+
+.compost-myth-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.compost-myth-card:hover::before {
+  transform: scale(1.18) rotate(20deg);
+  opacity: 0.11;
+}
+
+.compost-myth-card-myth {
+  color: var(--secondary-color);
+}
+
+.compost-myth-card-reality {
+  color: var(--primary-color);
+}
+
+.compost-myth-card-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compost-myth-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: inherit;
+  background: var(--light-bg);
+}
+
+.compost-myth-card-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: currentColor;
+  color: var(--white);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.compost-myth-reality-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--primary-color);
+}
+
+.compost-myth-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 440px;
+  margin-top: 30px;
+}
+
+.compost-myth-card-kicker {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 2px;
+  color: var(--text-color);
+  opacity: 0.48;
+}
+
+.compost-myth-question,
+.compost-myth-answer {
+  margin: 0;
+  font-size: 29px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.28;
+  letter-spacing: -0.7px;
+  color: var(--text-color);
+}
+
+.compost-myth-card-description,
+.compost-myth-explanation {
+  max-width: 430px;
+  margin: 20px 0 0;
+  font-size: var(--fs-body);
+  line-height: 1.75;
+  color: var(--text-color);
+  opacity: 0.67;
+}
+
+.compost-myth-card-icon {
+  position: absolute;
+  right: 34px;
+  bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transform: translateY(-50%);
-
-  border: 1px solid var(--secondary-color);
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border-color);
   border-radius: 50%;
-
-  background: transparent;
+  background: var(--light-bg);
   color: var(--secondary-color);
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+  opacity: 0.9;
+  animation: compostMythIconFloat 4s ease-in-out infinite;
 }
 
-.home2-faq-icon svg {
+.compost-myth-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.compost-myth-tip {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 420px;
+  margin-top: 25px;
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  background: var(--light-bg);
+}
+
+.compost-myth-tip > i {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--primary-color);
+}
+
+.compost-myth-tip span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 1.4px;
+  color: var(--primary-color);
+}
+
+.compost-myth-tip p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-color);
+  opacity: 0.68;
+}
+
+.compost-myth-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 42px;
+}
+
+.compost-myth-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--light-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.compost-myth-arrow:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.compost-myth-arrow svg {
   width: 18px;
   height: 18px;
-
-  transition: transform 0.3s ease;
   pointer-events: none;
 }
 
-/* =====================================================
-   OPEN FAQ
-===================================================== */
-
-.home2-faq-item[open] {
-  border-color: var(--border-color);
+.compost-myth-current {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 65px;
+  justify-content: center;
 }
 
-.home2-faq-item[open] .home2-faq-icon {
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: var(--white);
+.compost-myth-current-number {
+  font-size: 23px;
+  font-weight: var(--fw-semibold);
+  color: var(--primary-color);
 }
 
-.home2-faq-item[open] .home2-faq-icon svg {
-  transform: rotate(45deg);
-}
-
-/* =====================================================
-   FAQ ANSWER
-===================================================== */
-
-.home2-faq-answer {
-  width: 100%;
-  padding: 0 75px 26px 28px;
-}
-
-.home2-faq-answer p {
-  max-width: 850px;
-  margin: 0;
-
-  font-size: 15px;
-  line-height: 1.8;
-  font-weight: 400;
-
+.compost-myth-current-label {
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 1px;
   color: var(--text-color);
+  opacity: 0.45;
 }
 
-/* =====================================================
-   HOVER
-===================================================== */
-
-.home2-faq-item summary:hover .home2-faq-icon {
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: var(--white);
+.compost-myth-instruction {
+  margin: 18px 0 0;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--text-color);
+  opacity: 0.48;
 }
 
-/* =====================================================
-   FOCUS
-===================================================== */
+@keyframes compostMythIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-.home2-faq-item summary:focus-visible {
-  outline: 2px solid var(--secondary-color);
-  outline-offset: -3px;
+  50% {
+    transform: translateY(-5px);
+  }
 }
-/* =====================================================
-   NEST HUB
-   1024 × 600
-===================================================== */
+
+@keyframes compostMythOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes compostMythOrbitReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {
-  .home2-faq-section {
-    padding: 75px 0;
+  .compost-myth-section {
+    padding: 70px 0 75px;
   }
 
-  .home2-faq-container {
-    width: 85%;
+  .compost-myth-heading {
+    margin-bottom: 38px;
   }
 
-  .home2-faq-heading {
-    margin-bottom: 50px;
-  }
-
-  .home2-faq-tag {
-    margin-bottom: 12px;
-    padding: 6px 14px;
-    font-size: 12px;
-  }
-
-  .home2-faq-tag svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .home2-faq-heading h2 {
+  .compost-myth-title {
     font-size: 40px;
-    line-height: 1.2;
   }
 
-  .home2-faq-heading p {
-    font-size: 14px;
-    line-height: 1.7;
+  .compost-myth-subtitle {
+    margin-top: 12px;
+    font-size: 15px;
   }
 
-  .home2-faq-item {
-    margin-bottom: 14px;
-    border-radius: 14px;
+  .compost-myth-cards {
+    max-width: 820px;
+    gap: 20px;
   }
 
-  .home2-faq-item summary {
-    min-height: 72px;
-    padding: 19px 62px 19px 24px;
-    font-size: 17px;
+  .compost-myth-card {
+    min-height: 285px;
+    padding: 25px 28px;
+    border-radius: 23px;
   }
 
-  .home2-faq-icon {
-    right: 20px;
-    width: 36px;
-    height: 36px;
+  .compost-myth-card-content {
+    margin-top: 27px;
   }
 
-  .home2-faq-icon svg {
-    width: 17px;
-    height: 17px;
+  .compost-myth-question,
+  .compost-myth-answer {
+    font-size: 24px;
   }
 
-  .home2-faq-answer {
-    padding: 0 62px 22px 24px;
-  }
-
-  .home2-faq-answer p {
+  .compost-myth-card-description,
+  .compost-myth-explanation {
+    margin-top: 12px;
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.55;
+  }
+
+  .compost-myth-tip {
+    margin-top: 15px;
+    padding: 10px 13px;
+  }
+
+  .compost-myth-navigation {
+    margin-top: 25px;
+  }
+
+  .compost-myth-instruction {
+    margin-top: 12px;
   }
 }
-
-/* =====================================================
-   IPAD MINI
-   768 × 1024
-===================================================== */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
-  .home2-faq-section {
-    padding: 80px 0;
+  .compost-myth-section {
+    padding: 90px 0 95px;
   }
 
-  .home2-faq-container {
-    width: 88%;
+  .compost-myth-container {
+    width: min(680px, 90%);
   }
 
-  .home2-faq-heading {
-    margin-bottom: 50px;
+  .compost-myth-heading {
+    margin-bottom: 45px;
   }
 
-  .home2-faq-tag {
-    margin-bottom: 12px;
-    padding: 6px 14px;
+  .compost-myth-title {
+    font-size: 42px;
+  }
+
+  .compost-myth-subtitle {
+    font-size: 16px;
+  }
+
+  .compost-myth-cards {
+    gap: 18px;
+  }
+
+  .compost-myth-card {
+    min-height: 350px;
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .compost-myth-card-content {
+    margin-top: 35px;
+  }
+
+  .compost-myth-question,
+  .compost-myth-answer {
+    font-size: 25px;
+  }
+
+  .compost-myth-card-description,
+  .compost-myth-explanation {
+    font-size: 14px;
+  }
+
+  .compost-myth-tip {
+    padding: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .compost-myth-section {
+    padding: 70px 0 75px;
+  }
+
+  .compost-myth-container {
+    width: 90%;
+  }
+
+  .compost-myth-heading {
+    margin-bottom: 35px;
+  }
+
+  .compost-myth-eyebrow {
+    gap: 7px;
+    padding: 9px 13px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .compost-myth-eyebrow i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .compost-myth-title {
+    margin-top: 20px;
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .compost-myth-subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .compost-myth-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .compost-myth-cards::before {
+    display: none;
+  }
+
+  .compost-myth-card {
+    min-height: 310px;
+    padding: 25px 23px;
+    border-radius: 22px;
+  }
+
+  .compost-myth-card-content {
+    margin-top: 30px;
+  }
+
+  .compost-myth-number {
+    width: 40px;
+    height: 40px;
     font-size: 12px;
   }
 
-  .home2-faq-tag svg {
+  .compost-myth-card-label {
+    padding: 7px 10px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .compost-myth-card-kicker {
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .compost-myth-question,
+  .compost-myth-answer {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .compost-myth-card-description,
+  .compost-myth-explanation {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .compost-myth-card-icon {
+    right: 22px;
+    bottom: 22px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .compost-myth-card-icon i {
     width: 18px;
     height: 18px;
   }
 
-  .home2-faq-heading h2 {
-    font-size: 36px;
-    line-height: 1.25;
+  .compost-myth-tip {
+    margin-top: 18px;
+    padding: 12px;
   }
 
-  .home2-faq-heading p {
-    font-size: 15px;
-    line-height: 1.7;
+  .compost-myth-tip span {
+    font-size: 9px;
   }
 
-  .home2-faq-item {
-    margin-bottom: 16px;
-    border-radius: 14px;
+  .compost-myth-tip p {
+    font-size: 12px;
   }
 
-  .home2-faq-item summary {
-    min-height: 75px;
-    padding: 20px 65px 20px 24px;
-    font-size: 17px;
-    line-height: 1.5;
+  .compost-myth-navigation {
+    gap: 17px;
+    margin-top: 28px;
   }
 
-  .home2-faq-icon {
-    right: 22px;
-    width: 36px;
-    height: 36px;
+  .compost-myth-arrow {
+    width: 44px;
+    height: 44px;
   }
 
-  .home2-faq-icon svg {
-    width: 17px;
-    height: 17px;
+  .compost-myth-current-number {
+    font-size: 21px;
   }
 
-  .home2-faq-answer {
-    padding: 0 65px 22px 24px;
-  }
-
-  .home2-faq-answer p {
-    font-size: 14px;
-    line-height: 1.75;
-  }
-}
-
-/* =====================================================
-   GALAXY S8+
-   360 × 740
-===================================================== */
-
-@media screen and (max-width: 480px) {
-  .home2-faq-section {
-    padding: 60px 0;
-  }
-
-  .home2-faq-container {
-    width: 88%;
-  }
-
-  .home2-faq-heading {
-    margin-bottom: 40px;
-  }
-
-  .home2-faq-tag {
-    gap: 6px;
-    margin-bottom: 12px;
-    padding: 6px 11px;
+  .compost-myth-instruction {
+    margin-top: 14px;
     font-size: 11px;
-    letter-spacing: 0.8px;
-  }
-
-  .home2-faq-tag svg {
-    width: 17px;
-    height: 17px;
-    padding: 2px;
-  }
-
-  .home2-faq-heading h2 {
-    font-size: 28px;
-    line-height: 1.25;
-  }
-
-  .home2-faq-heading p {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  .home2-faq-item {
-    margin-bottom: 12px;
-    border-radius: 12px;
-  }
-
-  .home2-faq-item summary {
-    min-height: 66px;
-    padding: 17px 50px 17px 18px;
-    font-size: 15px;
-    line-height: 1.45;
-  }
-
-  .home2-faq-icon {
-    right: 16px;
-    width: 32px;
-    height: 32px;
-  }
-
-  .home2-faq-icon svg {
-    width: 15px;
-    height: 15px;
-  }
-
-  .home2-faq-answer {
-    padding: 0 18px 18px;
-  }
-
-  .home2-faq-answer p {
-    font-size: 13px;
-    line-height: 1.7;
   }
 }
+
 /* =========================================================
 HOME 2 — FINAL CTA
 ========================================================= */

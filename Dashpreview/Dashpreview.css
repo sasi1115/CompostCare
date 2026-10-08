@@ -13,7 +13,7 @@
 
 .dashboard-preview-hero-container {
   width: 85%;
-  max-width: 1400px;
+  max-width: 1150px;
   height: 100%;
   margin: 0 auto;
   display: grid;
@@ -923,7 +923,7 @@
 
 .dashboard-preview-features-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -1448,7 +1448,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 
 .dashboard-preview-impact-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -2036,13 +2036,13 @@ SAMSUNG GALAXY S8+ — 360 × 740
 /* how it works */
 .dashboard-preview-how-section {
   width: 100%;
-  padding: 120px 0;
+  padding: 100px 0;
   background: var(--light-bg);
 }
 
 .dashboard-preview-how-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 

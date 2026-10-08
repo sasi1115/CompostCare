@@ -321,7 +321,7 @@
   background: var(--light-bg);
   color: var(--text-color);
 
-  box-shadow: 0 5px 16px rgba(17, 24, 39, 0.08);
+  
 
   cursor: pointer;
 
@@ -333,7 +333,7 @@
 }
 
 .signup-control-btn:hover {
-  transform: translateY(-2px);
+ 
 
   border-color: var(--primary-color);
 

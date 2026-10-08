@@ -41,7 +41,7 @@ body {
   position: absolute;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 
   z-index: 1;
 }
@@ -455,7 +455,7 @@ body {
 
 .ourstory-why-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 
   display: grid;
@@ -1616,8 +1616,8 @@ body {
 
 .about-transformation-container {
   width: 85%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1150px;
+  margin: 0 auto ;
   background: var(--light-bg);
 }
 

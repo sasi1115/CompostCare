@@ -622,7 +622,7 @@
 
 .home1-impact-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -885,9 +885,8 @@
   .home1-impact {
     padding: 60px 0;
   }
-  .tagline{
-    margin:0 auto 0;
-    
+  .tagline {
+    margin: 0 auto 0;
   }
 
   .home1-impact-container {
@@ -967,7 +966,7 @@
 
 .home1-about-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1374,7 +1373,7 @@
 .home1-services-container {
   position: relative;
   z-index: 2;
-  width: min(1200px, calc(100% - 40px));
+  width: min(1150px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -1390,7 +1389,7 @@
 .home1-services-header .tagline {
   margin: 0 auto 0;
   display: inline-flex;
-  gap:5px;
+  gap: 5px;
 }
 
 .home1-services-header h2 {
@@ -1909,7 +1908,7 @@
 .home1-waste-container {
   position: relative;
   z-index: 2;
-  width: min(1200px, calc(100% - 40px));
+  width: min(1150px, calc(100% - 40px));
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
@@ -2986,7 +2985,6 @@
   }
 }
 
-
 @media screen and (max-width: 768px) and (max-height: 1024px) {
   .home1-how-it-works {
     padding: 90px 32px;
@@ -3214,7 +3212,7 @@
 
 .home1-testimonial-container {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -3420,7 +3418,6 @@
 .home1-testimonial-arrow {
   position: absolute;
   top: 50%;
-  
 
   display: flex;
   align-items: center;
@@ -3441,9 +3438,7 @@
   z-index: 10;
   pointer-events: auto;
 
-  transition:
-    
-    opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .home1-testimonial-arrow svg {
@@ -3741,118 +3736,189 @@
   }
 }
 /* =====================================================
-HOME 1 — CTA SECTION
+   HOME 1 — CTA SECTION
+   Animated Eco Background
 ===================================================== */
 
 .home1-cta {
+  position: relative;
   width: 100%;
   padding: 100px 0;
+  overflow: hidden;
   background: var(--light-bg);
 }
+
+/* =====================================================
+   MAIN CTA CONTAINER
+===================================================== */
 
 .home1-cta-container {
   position: relative;
   width: 85%;
-  max-width: 1200px;
+  max-width: 1150px;
   min-height: 500px;
   margin: 0 auto;
   padding: 65px 70px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid var(--border-color);
   border-radius: 30px;
-  background: var(--light-bg);
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      color-mix(in srgb, var(--primary-color) 10%, transparent),
+      transparent 48%
+    ),
+    var(--light-bg);
+
   overflow: hidden;
-}
+  isolation: isolate;
 
-.home1-cta-container::before,
-.home1-cta-container::after {
-  content: "";
-  position: absolute;
-  bottom: -95px;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  opacity: 0.08;
-}
-
-.home1-cta-container::before {
-  left: -90px;
-}
-
-.home1-cta-container::after {
-  right: -90px;
+  box-shadow: var(--shadow-md);
 }
 
 /* =====================================================
-BOTANICAL CORNER DETAILS
+   SOFT ATMOSPHERIC GLOW
 ===================================================== */
 
-.home1-cta-content::before,
-.home1-cta-content::after {
+.home1-cta-container::before {
   content: "";
   position: absolute;
-  bottom: -190px;
-  width: 170px;
-  height: 280px;
+
+  top: -180px;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
   background: var(--primary-color);
-  opacity: 0.7;
-  clip-path: polygon(
-    50% 100%,
-    43% 82%,
-    27% 72%,
-    35% 58%,
-    18% 46%,
-    34% 35%,
-    25% 18%,
-    45% 27%,
-    55% 5%,
-    62% 29%,
-    78% 15%,
-    72% 40%,
-    91% 35%,
-    75% 55%,
-    88% 67%,
-    66% 68%
-  );
-}
+  opacity: 0.055;
 
-.home1-cta-content::before {
-  left: -170px;
-  transform: rotate(-8deg);
-}
+  filter: blur(10px);
 
-.home1-cta-content::after {
-  right: -170px;
-  transform: scaleX(-1) rotate(-8deg);
+  transform: translateX(-50%);
+  animation: home1CtaGlow 8s ease-in-out infinite;
 }
 
 /* =====================================================
-CTA CONTENT
+   MOVING LIGHT
+===================================================== */
+
+.home1-cta-container::after {
+  content: "";
+
+  position: absolute;
+  top: -30%;
+  left: -20%;
+
+  width: 140%;
+  height: 160%;
+
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    color-mix(in srgb, var(--white) 12%, transparent) 50%,
+    transparent 58%
+  );
+
+  transform: translateX(-45%) rotate(8deg);
+
+  pointer-events: none;
+
+  animation: home1CtaLightSweep 10s ease-in-out infinite;
+}
+
+/* =====================================================
+   FLOATING ORGANIC CIRCLE — LEFT
+===================================================== */
+
+.home1-cta-content::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  left: -145px;
+  bottom: -125px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--primary-color) 16%, transparent),
+    transparent 68%
+  );
+
+  border: 1px solid color-mix(in srgb, var(--primary-color) 12%, transparent);
+
+  filter: blur(0.3px);
+
+  animation: home1CtaOrbLeft 9s ease-in-out infinite;
+}
+
+/* =====================================================
+   FLOATING ORGANIC CIRCLE — RIGHT
+===================================================== */
+
+.home1-cta-content::after {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  right: -115px;
+  top: -110px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--secondary-color) 10%, transparent),
+    transparent 68%
+  );
+
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 10%, transparent);
+
+  animation: home1CtaOrbRight 11s ease-in-out infinite;
+}
+
+/* =====================================================
+   CTA CONTENT
 ===================================================== */
 
 .home1-cta-content {
   position: relative;
-  z-index: 2;
+  z-index: 5;
+
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+
   text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 /* =====================================================
-CTA TAG
+   CTA TAG
 ===================================================== */
 
 .home1-cta-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 
   margin-bottom: 42px;
   padding: 6px 18px 6px 6px;
@@ -3863,10 +3929,19 @@ CTA TAG
   background: var(--primary-color);
 
   font-size: 12px;
-  font-weight: 700;
+  font-weight: var(--fw-semibold);
   line-height: 1;
   letter-spacing: 1.1px;
+
+  box-shadow: 0 8px 25px
+    color-mix(in srgb, var(--primary-color) 18%, transparent);
+
+  animation: home1CtaTagFloat 4s ease-in-out infinite;
 }
+
+/* =====================================================
+   TAG ICON
+===================================================== */
 
 .home1-cta-tag-icon {
   width: 31px;
@@ -3876,8 +3951,12 @@ CTA TAG
   align-items: center;
   justify-content: center;
 
+  flex-shrink: 0;
+
   border-radius: 50%;
-  background: var(--primary-color);
+
+  background: color-mix(in srgb, var(--white) 16%, transparent);
+
   color: var(--white);
 }
 
@@ -3887,7 +3966,7 @@ CTA TAG
 }
 
 /* =====================================================
-CTA TITLE
+   CTA TITLE
 ===================================================== */
 
 .home1-cta-title {
@@ -3903,45 +3982,102 @@ CTA TITLE
 
 .home1-cta-title span {
   display: block;
+
   color: var(--primary-color);
+
+  position: relative;
 }
 
 /* =====================================================
-CTA DESCRIPTION
+   TITLE UNDERLINE GLOW
+===================================================== */
+
+.home1-cta-title span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 3px;
+
+  border-radius: 50px;
+
+  background: var(--secondary-color);
+
+  transform: translateX(-50%);
+
+  animation: home1CtaUnderline 5s ease-in-out infinite;
+}
+
+/* =====================================================
+   CTA DESCRIPTION
 ===================================================== */
 
 .home1-cta-description {
   max-width: 650px;
+
   margin: 25px auto 0;
 
   color: var(--text-color);
 
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   line-height: 1.8;
 
   opacity: 0.72;
 }
 
 /* =====================================================
-CTA DIVIDER
+   CTA DIVIDER
 ===================================================== */
 
 .home1-cta-divider {
+  position: relative;
+
   width: 80px;
   height: 5px;
 
   margin-top: 32px;
 
   border-radius: 50px;
+
   background: var(--primary-color);
+
+  overflow: hidden;
+}
+
+/* Moving highlight inside divider */
+
+.home1-cta-divider::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--white);
+
+  opacity: 0.45;
+
+  animation: home1CtaDividerMove 3.5s ease-in-out infinite;
 }
 
 /* =====================================================
-CTA BUTTON
+   CTA BUTTON
 ===================================================== */
 
 .home1-cta-button {
+  position: relative;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3961,29 +4097,183 @@ CTA BUTTON
   text-decoration: none;
 
   font-size: 13px;
-  font-weight: 700;
+  font-weight: var(--fw-semibold);
   line-height: 1;
 
-  transition: transform 0.3s ease;
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Button light sweep */
+
+.home1-cta-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--white) 25%, transparent),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.65s ease;
+}
+
+.home1-cta-button:hover::before {
+  left: 140%;
 }
 
 .home1-cta-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px
+    color-mix(in srgb, var(--primary-color) 25%, transparent);
 }
 
 /* =====================================================
-RTL
+   DECORATIVE PARTICLES
+===================================================== */
+
+.home1-cta-container {
+  --particle-size: 6px;
+}
+
+/* Small floating particle effect */
+
+.home1-cta-container .home1-cta-content::marker {
+  content: none;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+/* Main glow */
+
+@keyframes home1CtaGlow {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(0.92);
+    opacity: 0.045;
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.12);
+    opacity: 0.085;
+  }
+}
+
+/* Light sweep */
+
+@keyframes home1CtaLightSweep {
+  0%,
+  100% {
+    transform: translateX(-45%) rotate(8deg);
+  }
+
+  50% {
+    transform: translateX(45%) rotate(8deg);
+  }
+}
+
+/* Left orb */
+
+@keyframes home1CtaOrbLeft {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, -25px) scale(1.08);
+  }
+}
+
+/* Right orb */
+
+@keyframes home1CtaOrbRight {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-25px, 30px) scale(1.1);
+  }
+}
+
+/* Tag */
+
+@keyframes home1CtaTagFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Title underline */
+
+@keyframes home1CtaUnderline {
+  0%,
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+
+  35%,
+  65% {
+    width: 65px;
+    opacity: 1;
+  }
+}
+
+/* Divider */
+
+@keyframes home1CtaDividerMove {
+  0% {
+    left: -100%;
+  }
+
+  55%,
+  100% {
+    left: 140%;
+  }
+}
+
+/* =====================================================
+   RTL
 ===================================================== */
 
 [dir="rtl"] .home1-cta {
   direction: rtl;
 }
 
+[dir="rtl"] .home1-cta-button {
+  direction: rtl;
+}
+
 /* =====================================================
-NEST HUB — 1024 × 600
+   NEST HUB — 1024 × 600
 ===================================================== */
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
+@media screen and (width: 1024px) and (height: 600px) {
   .home1-cta {
     padding: 80px 0;
   }
@@ -4016,16 +4306,23 @@ NEST HUB — 1024 × 600
     margin-top: 28px;
   }
 
-  .home1-cta-content::before,
+  .home1-cta-content::before {
+    width: 210px;
+    height: 210px;
+    left: -115px;
+    bottom: -100px;
+  }
+
   .home1-cta-content::after {
-    bottom: -175px;
-    width: 145px;
-    height: 245px;
+    width: 175px;
+    height: 175px;
+    right: -95px;
+    top: -90px;
   }
 }
 
 /* =====================================================
-IPAD MINI — 768 × 1024
+   IPAD MINI — 768 × 1024
 ===================================================== */
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
@@ -4069,16 +4366,23 @@ IPAD MINI — 768 × 1024
     margin-top: 28px;
   }
 
-  .home1-cta-content::before,
+  .home1-cta-content::before {
+    width: 190px;
+    height: 190px;
+    left: -110px;
+    bottom: -95px;
+  }
+
   .home1-cta-content::after {
-    bottom: -175px;
-    width: 135px;
-    height: 230px;
+    width: 160px;
+    height: 160px;
+    right: -90px;
+    top: -80px;
   }
 }
 
 /* =====================================================
-SAMSUNG GALAXY S8+ — 360 × 740
+   SAMSUNG GALAXY S8+ / A55 — 360px
 ===================================================== */
 
 @media screen and (max-width: 480px) {
@@ -4093,25 +4397,23 @@ SAMSUNG GALAXY S8+ — 360 × 740
     border-radius: 22px;
   }
 
-  .home1-cta-container::before,
-  .home1-cta-container::after {
-    width: 170px;
-    height: 170px;
-    bottom: -75px;
-  }
-
   .home1-cta-container::before {
-    left: -70px;
+    width: 350px;
+    height: 350px;
+    top: -120px;
   }
 
   .home1-cta-container::after {
-    right: -70px;
+    width: 150%;
   }
 
   .home1-cta-tag {
     gap: 7px;
+
     margin-bottom: 25px;
+
     padding: 5px 12px 5px 5px;
+
     font-size: 9px;
     letter-spacing: 0.7px;
   }
@@ -4132,9 +4434,15 @@ SAMSUNG GALAXY S8+ — 360 × 740
     letter-spacing: -0.7px;
   }
 
+  .home1-cta-title span::after {
+    bottom: -6px;
+    height: 2px;
+  }
+
   .home1-cta-description {
     max-width: 280px;
     margin-top: 17px;
+
     font-size: 11px;
     line-height: 1.7;
   }
@@ -4148,23 +4456,44 @@ SAMSUNG GALAXY S8+ — 360 × 740
   .home1-cta-button {
     min-width: 155px;
     min-height: 46px;
+
     margin-top: 22px;
     padding: 11px 20px;
+
     font-size: 11px;
   }
 
-  .home1-cta-content::before,
-  .home1-cta-content::after {
-    bottom: -145px;
-    width: 105px;
-    height: 185px;
-  }
-
   .home1-cta-content::before {
-    left: -105px;
+    width: 125px;
+    height: 125px;
+    left: -75px;
+    bottom: -60px;
   }
 
   .home1-cta-content::after {
-    right: -105px;
+    width: 110px;
+    height: 110px;
+    right: -65px;
+    top: -55px;
+  }
+}
+
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .home1-cta-container::before,
+  .home1-cta-container::after,
+  .home1-cta-content::before,
+  .home1-cta-content::after,
+  .home1-cta-tag,
+  .home1-cta-title span::after,
+  .home1-cta-divider::after {
+    animation: none;
+  }
+
+  .home1-cta-button {
+    transition: none;
   }
 }
