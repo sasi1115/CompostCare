@@ -2097,7 +2097,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 .dashboard-preview-how-header p {
   max-width: 680px;
   margin: 20px auto 0;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.8;
   font-weight: 500;
   color: var(--text-color);
@@ -2175,7 +2175,7 @@ SAMSUNG GALAXY S8+ — 360 × 740
 .dashboard-preview-how-card-content p {
   max-width: 240px;
   margin-top: 9px;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
   font-weight: 500;
   color: var(--text-color);

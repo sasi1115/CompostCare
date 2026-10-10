@@ -3756,24 +3756,19 @@
   position: relative;
   width: 85%;
   max-width: 1150px;
-  min-height: 500px;
+  max-height: 450px;
   margin: 0 auto;
   padding: 65px 70px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
   border: 1px solid var(--border-color);
   border-radius: 30px;
 
-  background:
-    radial-gradient(
-      circle at 50% 45%,
-      color-mix(in srgb, var(--primary-color) 10%, transparent),
-      transparent 48%
-    ),
-    var(--light-bg);
+  background:var(--secondary-color);
 
   overflow: hidden;
   isolation: isolate;
